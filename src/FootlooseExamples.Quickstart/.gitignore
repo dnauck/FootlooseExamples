@@ -1,0 +1,5 @@
+/_ReSharper.*
+*.suo
+*.user
+*.sln.cache
+*.sln.proj
