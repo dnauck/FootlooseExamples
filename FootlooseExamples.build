@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<project name="FootlooseExamples" default="all" xmlns="http://nant.sf.net/release/0.86-beta1/nant.xsd">
+
+  <!-- properties -->
+  <property name="nant.verbosity" value="true" overwrite="true" />
+  <property name="build.configuration" value="Debug" overwrite="false" />
+  <property name="build.target" value="Build" overwrite="false" />
+  <property name="build.target.framework" value="3.5" overwrite="false" />
+  <property name="CCNetLabel" value="1.0.0.0" overwrite="false" />
+  <property name="codemetrics.output.type" value="XmlFile" overwrite="false" />
+
+  <!-- common path properties -->
+  <property name="src.dir" value="${path::get-full-path('src')}" readonly="true" />
+  <property name="build.dir" value="${path::get-full-path('Build')}" readonly="true" />
+  <property name="build.metrics.dir" value="${path::get-full-path('BuildMetrics')}" readonly="true" />
+  <property name="publish.dir" value="${path::get-full-path('Publish')}" readonly="true" />
+  <property name="tools.dir" value="${path::get-full-path('Tools')}" readonly="true" />
+  <property name="lib.dir" value="${path::get-full-path('Lib')}" readonly="true" />
+
+  <!-- tool path properties -->
+  <property name="nauckit.nant.assembly" value="${path::combine( path::combine(tools.dir, 'NAnt'), 'NauckIT.NAnt.dll')}" readonly="true" />
+
+  <!-- common assembly info properties -->
+  <property name="assembly.company" value="Nauck IT KG" readonly="true" />
+  <property name="assembly.product" value="Footloose Examples" readonly="true" />
+  <property name="assembly.copyright" value="Copyright © 2008 - ${datetime::get-year(datetime::now())} ${assembly.company}" readonly="true" />
+  <property name="assembly.trademark" value="" readonly="true" />
+  <property name="assembly.version" value="${CCNetLabel}" readonly="true" />
+  <property name="assembly.fileversion" value="${CCNetLabel}" readonly="true" />
+
+  <!-- Framework Support
+	http://nant.sourceforge.net/faq.html#framework-support
+	-->
+  <property name="nant.settings.currentframework" value="${framework::get-family(nant.settings.currentframework)}-${build.target.framework}" />
+
+  <!-- add a by msbuild required trailing slash to OutDir property	-->
+  <if test="${platform::is-unix()}">
+    <property name="build.out.dir" value="${build.dir}/" />
+  </if>
+
+  <if test="${platform::is-windows()}">
+    <property name="build.out.dir" value="${build.dir}\" />
+  </if>
+
+  <!-- Targets -->
+  <target name="all" depends="clean, init, build, package" description="" />
+
+  <target name="clean" description="Clean up">
+    <delete dir="${build.dir}" if="${directory::exists(build.dir)}" verbose="${nant.verbosity}" />
+    <delete dir="${publish.dir}" if="${directory::exists(publish.dir)}" verbose="${nant.verbosity}" />
+  </target>
+
+  <target name="init" description="Initial compilation setup">
+    <mkdir dir="${build.dir}" unless="${directory::exists(build.dir)}" verbose="${nant.verbosity}" />
+    <mkdir dir="${publish.dir}" unless="${directory::exists(publish.dir)}" verbose="${nant.verbosity}" />
+  </target>
+
+  <target name="createAssemblyInfo" description="Create an assembly info file with the current build number">
+    <asminfo language="CSharp" output="${path::combine(src.dir, 'CommonAssemblyInfo.cs')}" verbose="${nant.verbosity}">
+      <imports>
+        <import namespace="System.Reflection" />
+      </imports>
+      <attributes>
+        <attribute type="AssemblyCompanyAttribute" value="${assembly.company}" />
+        <attribute type="AssemblyProductAttribute" value="${assembly.product}" />
+        <attribute type="AssemblyCopyrightAttribute" value="${assembly.copyright}" />
+        <attribute type="AssemblyTrademarkAttribute" value="${assembly.trademark}" />
+        <attribute type="AssemblyVersionAttribute" value="${assembly.version}" />
+        <attribute type="AssemblyFileVersionAttribute" value="${assembly.fileversion}" />
+      </attributes>
+    </asminfo>
+  </target>
+
+  <target name="build" depends="init, createAssemblyInfo" description="Compilation of the build project">
+    <loadtasks assembly="${nauckit.nant.assembly}" />
+
+    <echo message="Build configuration: ${build.configuration}" />
+    <echo message="Source Directory: ${src.dir}" />
+    <echo message="Build Directory: ${build.out.dir}" />
+
+    <foreach item="File" property="projectFile" verbose="${nant.verbosity}">
+      <in>
+        <items basedir="${src.dir}" defaultexcludes="true">
+          <include name="*/*.sln" />
+        </items>
+      </in>
+      <do>
+        <echo message="Build example: ${projectFile}" />
+
+        <msbuild projectFile="${projectFile}" targets="${build.target}" verbosity="Minimal">
+          <property name="Configuration" value="${build.configuration}" />
+        </msbuild>
+      </do>
+    </foreach>
+  </target>
+
+  <!-- packaging and publishing targets -->
+  <target name="package" depends="clean, build" description="Create and copy the Footloose distribution to the publish dictionary">
+    
+    <call target="packageSource" cascade="false" />
+
+    <call target="packageZipDistribution" cascade="false" />
+    
+  </target>
+
+  <target name="packageSource" depends="clean, init" description="Creates a zip file containing all sources and tools to build Footloose Examples">
+    <property name="source.zip.file" value="FootlooseExamples-${assembly.version}.source.zip" />
+
+    <zip zipfile="${path::combine(publish.dir, source.zip.file)}" verbose="${nant.verbosity}">
+      <fileset defaultexcludes="true">
+        <include name="*/**" />
+        <exclude name=".git/**" />
+        <exclude name="nant*.log*" />
+        <exclude name="${build.dir}/**" />
+        <exclude name="${build.metrics.dir}/**" />
+        <exclude name="${publish.dir}/**" />
+        <exclude name="${src.dir}/*/bin/**"/>
+        <exclude name="${src.dir}/*/obj/**"/>
+        <exclude name="${src.dir}/_Resharper*/**"/>
+        <exclude name="${src.dir}/**/*.user"/>
+        <exclude name="${src.dir}/**/*.suo"/>
+        <exclude name="${src.dir}/*.sln.cache"/>
+        <exclude name="${src.dir}/*.sln.proj"/>
+      </fileset>
+    </zip>
+  </target>
+
+  <target name="packageZipDistribution" depends="clean, build" description="Creates a zip file containing the Footloose Examples distribution">
+    <property name="dist.zip.file" value="FootlooseExamples-${assembly.version}.zip" />
+
+    <foreach item="Folder" in="${src.dir}" property="projectFolder">
+      <echo message="Find textfiles in: ${path::get-directory-name(projectFolder)}" />
+
+      <property name="projectName" value="${string::substring(projectFolder, string::get-length(path::get-directory-name(projectFolder)) + 1, string::get-length(projectFolder) - (string::get-length(path::get-directory-name(projectFolder)) + 1))}" />
+      <!--<echo message="projectName: ${projectName}" />-->
+      <copy todir="${path::combine(build.out.dir, projectName)}" verbose="${nant.verbosity}">
+        <fileset basedir="${projectFolder}" defaultexcludes="true">
+          <include name="*.txt" />
+        </fileset>
+      </copy>
+    </foreach>
+
+    <zip zipfile="${path::combine(publish.dir, dist.zip.file)}" verbose="${nant.verbosity}">
+      <fileset basedir="${build.out.dir}" defaultexcludes="true">
+        <include name="*/**" />
+      </fileset>
+    </zip>
+  </target>
+</project>
