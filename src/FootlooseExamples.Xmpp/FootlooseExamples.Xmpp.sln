@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FootlooseExamples.Xmpp.DataModel", "FootlooseExamples.Xmpp.DataModel\FootlooseExamples.Xmpp.DataModel.csproj", "{32BC9224-F6D3-451A-B6BA-EBA84F783539}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FootlooseExamples.Xmpp.Contracts", "FootlooseExamples.Xmpp.Contracts\FootlooseExamples.Xmpp.Contracts.csproj", "{F767F48B-2E08-4286-9705-93FA9596E6FD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FootlooseExamples.Xmpp.DataAccess", "FootlooseExamples.Xmpp.DataAccess\FootlooseExamples.Xmpp.DataAccess.csproj", "{44E8E062-FDC6-4D45-8BE0-F4B2FD9EDBAE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Footloose.WinForms", "Footloose.WinForms\Footloose.WinForms.csproj", "{679F43CC-9D2D-46CC-8702-BE052949E703}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FootlooseExamples.Xmpp.Service", "FootlooseExamples.Xmpp.Service\FootlooseExamples.Xmpp.Service.csproj", "{2A4E27FD-C5F6-491F-AC5E-408094BB2582}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FootlooseExamples.Xmpp.Client", "FootlooseExamples.Xmpp.Client\FootlooseExamples.Xmpp.Client.csproj", "{B9787F33-369E-4D5B-A0D9-73E879DC86F6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{27ECFADA-FB27-4C2C-B301-ABF5ACDBCB4E}"
+	ProjectSection(SolutionItems) = preProject
+		LICENSE.txt = LICENSE.txt
+		README.txt = README.txt
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{32BC9224-F6D3-451A-B6BA-EBA84F783539}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32BC9224-F6D3-451A-B6BA-EBA84F783539}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32BC9224-F6D3-451A-B6BA-EBA84F783539}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32BC9224-F6D3-451A-B6BA-EBA84F783539}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F767F48B-2E08-4286-9705-93FA9596E6FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F767F48B-2E08-4286-9705-93FA9596E6FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F767F48B-2E08-4286-9705-93FA9596E6FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F767F48B-2E08-4286-9705-93FA9596E6FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44E8E062-FDC6-4D45-8BE0-F4B2FD9EDBAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44E8E062-FDC6-4D45-8BE0-F4B2FD9EDBAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44E8E062-FDC6-4D45-8BE0-F4B2FD9EDBAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44E8E062-FDC6-4D45-8BE0-F4B2FD9EDBAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{679F43CC-9D2D-46CC-8702-BE052949E703}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{679F43CC-9D2D-46CC-8702-BE052949E703}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{679F43CC-9D2D-46CC-8702-BE052949E703}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{679F43CC-9D2D-46CC-8702-BE052949E703}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A4E27FD-C5F6-491F-AC5E-408094BB2582}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A4E27FD-C5F6-491F-AC5E-408094BB2582}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A4E27FD-C5F6-491F-AC5E-408094BB2582}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A4E27FD-C5F6-491F-AC5E-408094BB2582}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9787F33-369E-4D5B-A0D9-73E879DC86F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9787F33-369E-4D5B-A0D9-73E879DC86F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9787F33-369E-4D5B-A0D9-73E879DC86F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9787F33-369E-4D5B-A0D9-73E879DC86F6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
