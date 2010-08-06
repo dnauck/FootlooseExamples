@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using Footloose;
 using Footloose.Configuration;
 using Footloose.Contracts;
+using Footloose.Contracts.Configuration;
 using Footloose.DataModel;
 using FootlooseExamples.Xmpp.Contracts;
 using FootlooseExamples.Xmpp.DataModel;
@@ -31,9 +32,10 @@ namespace FootlooseExamples.Xmpp.Client
             if (footloose == null)
             {
                 var credentials = new NetworkCredential(UserNameTextBox.Text, PasswortTextBox.Text, ServerTextBox.Text);
+                var serverAddress = AutoServerResolveCheckBox.Checked ? null : ServerAddressTextBox.Text;
                 var endpointId = EndpointIdTextBox.Text;
                 var priority = Convert.ToInt32(PriorityNumericUpDown.Value);
-                footloose = SetupFootloose(credentials, priority, endpointId);
+                footloose = SetupFootloose(credentials, serverAddress, priority, endpointId);
 
                 EndpointIdentityView.SetEndpointIdentityManager(footloose.EndpointIdentityManager);
             }
@@ -58,6 +60,8 @@ namespace FootlooseExamples.Xmpp.Client
             UserNameTextBox.Enabled = !connected;
             PasswortTextBox.Enabled = !connected;
             ServerTextBox.Enabled = !connected;
+            AutoServerResolveCheckBox.Enabled = !connected;
+            ServerAddressTextBox.Enabled = (!AutoServerResolveCheckBox.Checked && connected);
             EndpointIdTextBox.Enabled = !connected;
             PriorityNumericUpDown.Enabled = connected;
             StatusInfoTextBox.Enabled = connected;
@@ -66,28 +70,48 @@ namespace FootlooseExamples.Xmpp.Client
             BusyStatusRadioButton.Enabled = connected;
             TemporarilyUnavailableStatusRadioButton.Enabled = connected;
             UnavailableStatusRadioButton.Enabled = connected;
+            EndpointIdentityView.Enabled = connected;
+            if (!connected)
+                EndpointIdentityView.Clear();
 
             GetCustomersButton.Enabled = connected;
             UseServiceDiscoCheckBox.Enabled = connected;
             ServiceUriTextBox.Enabled = (!UseServiceDiscoCheckBox.Checked && connected);
         }
 
-        private static IFootlooseService SetupFootloose(NetworkCredential credentials, int priority, string endpointIdentifier)
+        private static IFootlooseService SetupFootloose(NetworkCredential credentials, string serverAddress, int priority, string endpointIdentifier)
         {
             var footlooseInstance = Fluently.Configure()
                 .SerializerOfType<Footloose.Serialization.BinarySerializer>()
                 .ServiceLocator(new ServiceLocatorDummy())
-                .TransportChannel(Footloose.Configuration.XmppTransportChannelConfiguration.Standard
-                                      .AutoResolveServerAddress()
-                                      .ConnectionType(XmppConnectionType.Tcp)
-                                      .DoNot.UseCompression()
-                                      .UseTls()
-                                      .Credentials(credentials)
-                                      .Priority(priority)
-                                      .EndpointIdentifier(endpointIdentifier))
+                .TransportChannel(() => SetupFootlooseTransportChannel(credentials, serverAddress, priority, endpointIdentifier))
                 .CreateFootlooseService();
 
             return footlooseInstance;
+        }
+
+        private static ITransportChannelConfiguration SetupFootlooseTransportChannel(NetworkCredential credentials, string serverAddress, int priority, string endpointIdentifier)
+        {
+            var transportChannelConfig = Footloose.Configuration.XmppTransportChannelConfiguration.Standard
+                .ConnectionType(XmppConnectionType.Tcp)
+                .DoNot.UseCompression()
+                .UseTls()
+                .Credentials(credentials)
+                .Priority(priority)
+                .EndpointIdentifier(endpointIdentifier);
+
+            if (string.IsNullOrEmpty(serverAddress))
+            {
+                transportChannelConfig.AutoResolveServerAddress();
+            }
+            else
+            {
+                transportChannelConfig
+                    .DoNot.AutoResolveServerAddress()
+                    .ServerAddress(serverAddress);
+            }
+
+            return transportChannelConfig;
         }
 
         private void SendPresenceButton_Click(object sender, EventArgs e)
@@ -123,6 +147,11 @@ namespace FootlooseExamples.Xmpp.Client
         private void UseServiceDiscoCheckBox_CheckedChanged(object sender, EventArgs e)
         {
             ServiceUriTextBox.Enabled = !UseServiceDiscoCheckBox.Checked;
+        }
+
+        private void AutoServerResolveCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            ServerAddressTextBox.Enabled = !AutoServerResolveCheckBox.Checked;
         }
 
         private void GetCustomersButton_Click(object sender, EventArgs e)

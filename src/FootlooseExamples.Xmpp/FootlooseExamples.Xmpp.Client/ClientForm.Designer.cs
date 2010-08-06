@@ -39,7 +39,6 @@
             this.PriorityNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.EndpointIdentityView = new Footloose.WinForms.EndpointIdentityView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.ConnectButton = new System.Windows.Forms.Button();
             this.EndpointIdTextBox = new System.Windows.Forms.TextBox();
@@ -56,6 +55,10 @@
             this.GetCustomersButton = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.ServiceUriTextBox = new System.Windows.Forms.TextBox();
+            this.ServerAddressTextBox = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.AutoServerResolveCheckBox = new System.Windows.Forms.CheckBox();
+            this.EndpointIdentityView = new Footloose.WinForms.EndpointIdentityView();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PriorityNumericUpDown)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -74,7 +77,7 @@
             this.groupBox3.Controls.Add(this.StatusInfoTextBox);
             this.groupBox3.Controls.Add(this.PriorityNumericUpDown);
             this.groupBox3.Controls.Add(this.label4);
-            this.groupBox3.Location = new System.Drawing.Point(13, 115);
+            this.groupBox3.Location = new System.Drawing.Point(13, 159);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(599, 119);
             this.groupBox3.TabIndex = 6;
@@ -185,21 +188,16 @@
             this.groupBox2.Controls.Add(this.EndpointIdentityView);
             this.groupBox2.Location = new System.Drawing.Point(618, 12);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(245, 595);
+            this.groupBox2.Size = new System.Drawing.Size(245, 637);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Endpoints";
             // 
-            // EndpointIdentityView
-            // 
-            this.EndpointIdentityView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.EndpointIdentityView.Location = new System.Drawing.Point(3, 16);
-            this.EndpointIdentityView.Name = "EndpointIdentityView";
-            this.EndpointIdentityView.Size = new System.Drawing.Size(239, 576);
-            this.EndpointIdentityView.TabIndex = 2;
-            // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.AutoServerResolveCheckBox);
+            this.groupBox1.Controls.Add(this.ServerAddressTextBox);
+            this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.ConnectButton);
             this.groupBox1.Controls.Add(this.EndpointIdTextBox);
             this.groupBox1.Controls.Add(this.label5);
@@ -212,14 +210,14 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(13, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(599, 97);
+            this.groupBox1.Size = new System.Drawing.Size(599, 131);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Settings";
             // 
             // ConnectButton
             // 
-            this.ConnectButton.Location = new System.Drawing.Point(437, 67);
+            this.ConnectButton.Location = new System.Drawing.Point(437, 95);
             this.ConnectButton.Name = "ConnectButton";
             this.ConnectButton.Size = new System.Drawing.Size(75, 23);
             this.ConnectButton.TabIndex = 12;
@@ -247,7 +245,7 @@
             // DisconnectButton
             // 
             this.DisconnectButton.Enabled = false;
-            this.DisconnectButton.Location = new System.Drawing.Point(518, 67);
+            this.DisconnectButton.Location = new System.Drawing.Point(518, 95);
             this.DisconnectButton.Name = "DisconnectButton";
             this.DisconnectButton.Size = new System.Drawing.Size(75, 23);
             this.DisconnectButton.TabIndex = 6;
@@ -257,7 +255,7 @@
             // 
             // PasswortTextBox
             // 
-            this.PasswortTextBox.Location = new System.Drawing.Point(83, 64);
+            this.PasswortTextBox.Location = new System.Drawing.Point(93, 64);
             this.PasswortTextBox.Name = "PasswortTextBox";
             this.PasswortTextBox.PasswordChar = '*';
             this.PasswortTextBox.Size = new System.Drawing.Size(100, 20);
@@ -266,7 +264,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(21, 67);
+            this.label3.Location = new System.Drawing.Point(31, 67);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(56, 13);
             this.label3.TabIndex = 4;
@@ -274,7 +272,7 @@
             // 
             // ServerTextBox
             // 
-            this.ServerTextBox.Location = new System.Drawing.Point(213, 32);
+            this.ServerTextBox.Location = new System.Drawing.Point(223, 32);
             this.ServerTextBox.Name = "ServerTextBox";
             this.ServerTextBox.Size = new System.Drawing.Size(122, 20);
             this.ServerTextBox.TabIndex = 3;
@@ -283,7 +281,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(189, 35);
+            this.label2.Location = new System.Drawing.Point(199, 35);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(18, 13);
             this.label2.TabIndex = 2;
@@ -291,7 +289,7 @@
             // 
             // UserNameTextBox
             // 
-            this.UserNameTextBox.Location = new System.Drawing.Point(83, 32);
+            this.UserNameTextBox.Location = new System.Drawing.Point(93, 32);
             this.UserNameTextBox.Name = "UserNameTextBox";
             this.UserNameTextBox.Size = new System.Drawing.Size(100, 20);
             this.UserNameTextBox.TabIndex = 1;
@@ -300,7 +298,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(21, 35);
+            this.label1.Location = new System.Drawing.Point(31, 35);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(54, 13);
             this.label1.TabIndex = 0;
@@ -309,7 +307,7 @@
             // CustomersDataGridView
             // 
             this.CustomersDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.CustomersDataGridView.Location = new System.Drawing.Point(13, 240);
+            this.CustomersDataGridView.Location = new System.Drawing.Point(13, 284);
             this.CustomersDataGridView.Name = "CustomersDataGridView";
             this.CustomersDataGridView.Size = new System.Drawing.Size(592, 309);
             this.CustomersDataGridView.TabIndex = 7;
@@ -319,7 +317,7 @@
             this.UseServiceDiscoCheckBox.AutoSize = true;
             this.UseServiceDiscoCheckBox.Checked = true;
             this.UseServiceDiscoCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.UseServiceDiscoCheckBox.Location = new System.Drawing.Point(413, 556);
+            this.UseServiceDiscoCheckBox.Location = new System.Drawing.Point(413, 599);
             this.UseServiceDiscoCheckBox.Name = "UseServiceDiscoCheckBox";
             this.UseServiceDiscoCheckBox.Size = new System.Drawing.Size(193, 17);
             this.UseServiceDiscoCheckBox.TabIndex = 8;
@@ -329,7 +327,7 @@
             // 
             // GetCustomersButton
             // 
-            this.GetCustomersButton.Location = new System.Drawing.Point(413, 580);
+            this.GetCustomersButton.Location = new System.Drawing.Point(413, 623);
             this.GetCustomersButton.Name = "GetCustomersButton";
             this.GetCustomersButton.Size = new System.Drawing.Size(192, 23);
             this.GetCustomersButton.TabIndex = 9;
@@ -340,7 +338,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(34, 559);
+            this.label7.Location = new System.Drawing.Point(34, 602);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(62, 13);
             this.label7.TabIndex = 10;
@@ -349,17 +347,55 @@
             // ServiceUriTextBox
             // 
             this.ServiceUriTextBox.Enabled = false;
-            this.ServiceUriTextBox.Location = new System.Drawing.Point(96, 556);
+            this.ServiceUriTextBox.Location = new System.Drawing.Point(96, 599);
             this.ServiceUriTextBox.Name = "ServiceUriTextBox";
             this.ServiceUriTextBox.Size = new System.Drawing.Size(252, 20);
             this.ServiceUriTextBox.TabIndex = 11;
             this.ServiceUriTextBox.Text = "xmpp:username@jabber.org/Footloose-Service-1";
             // 
+            // ServerAddressTextBox
+            // 
+            this.ServerAddressTextBox.Location = new System.Drawing.Point(93, 97);
+            this.ServerAddressTextBox.Name = "ServerAddressTextBox";
+            this.ServerAddressTextBox.PasswordChar = '*';
+            this.ServerAddressTextBox.Size = new System.Drawing.Size(100, 20);
+            this.ServerAddressTextBox.TabIndex = 14;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(5, 100);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(82, 13);
+            this.label8.TabIndex = 13;
+            this.label8.Text = "Server Address:";
+            // 
+            // AutoServerResolveCheckBox
+            // 
+            this.AutoServerResolveCheckBox.AutoSize = true;
+            this.AutoServerResolveCheckBox.Checked = true;
+            this.AutoServerResolveCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.AutoServerResolveCheckBox.Location = new System.Drawing.Point(202, 99);
+            this.AutoServerResolveCheckBox.Name = "AutoServerResolveCheckBox";
+            this.AutoServerResolveCheckBox.Size = new System.Drawing.Size(219, 17);
+            this.AutoServerResolveCheckBox.TabIndex = 15;
+            this.AutoServerResolveCheckBox.Text = "Enable automatic server adress resolving";
+            this.AutoServerResolveCheckBox.UseVisualStyleBackColor = true;
+            this.AutoServerResolveCheckBox.CheckedChanged += new System.EventHandler(this.AutoServerResolveCheckBox_CheckedChanged);
+            // 
+            // EndpointIdentityView
+            // 
+            this.EndpointIdentityView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.EndpointIdentityView.Location = new System.Drawing.Point(3, 16);
+            this.EndpointIdentityView.Name = "EndpointIdentityView";
+            this.EndpointIdentityView.Size = new System.Drawing.Size(239, 618);
+            this.EndpointIdentityView.TabIndex = 2;
+            // 
             // ClientForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(871, 619);
+            this.ClientSize = new System.Drawing.Size(871, 661);
             this.Controls.Add(this.ServiceUriTextBox);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.GetCustomersButton);
@@ -412,6 +448,9 @@
         private System.Windows.Forms.Button GetCustomersButton;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox ServiceUriTextBox;
+        private System.Windows.Forms.TextBox ServerAddressTextBox;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.CheckBox AutoServerResolveCheckBox;
     }
 }
 
