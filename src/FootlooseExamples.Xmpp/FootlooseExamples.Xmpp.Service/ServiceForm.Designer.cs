@@ -234,7 +234,6 @@
             // 
             this.ServerAddressTextBox.Location = new System.Drawing.Point(93, 97);
             this.ServerAddressTextBox.Name = "ServerAddressTextBox";
-            this.ServerAddressTextBox.PasswordChar = '*';
             this.ServerAddressTextBox.Size = new System.Drawing.Size(100, 20);
             this.ServerAddressTextBox.TabIndex = 14;
             // 

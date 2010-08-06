@@ -39,7 +39,11 @@
             this.PriorityNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.EndpointIdentityView = new Footloose.WinForms.EndpointIdentityView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.AutoServerResolveCheckBox = new System.Windows.Forms.CheckBox();
+            this.ServerAddressTextBox = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.ConnectButton = new System.Windows.Forms.Button();
             this.EndpointIdTextBox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -55,10 +59,6 @@
             this.GetCustomersButton = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.ServiceUriTextBox = new System.Windows.Forms.TextBox();
-            this.ServerAddressTextBox = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.AutoServerResolveCheckBox = new System.Windows.Forms.CheckBox();
-            this.EndpointIdentityView = new Footloose.WinForms.EndpointIdentityView();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PriorityNumericUpDown)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -193,6 +193,14 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Endpoints";
             // 
+            // EndpointIdentityView
+            // 
+            this.EndpointIdentityView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.EndpointIdentityView.Location = new System.Drawing.Point(3, 16);
+            this.EndpointIdentityView.Name = "EndpointIdentityView";
+            this.EndpointIdentityView.Size = new System.Drawing.Size(239, 618);
+            this.EndpointIdentityView.TabIndex = 2;
+            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.AutoServerResolveCheckBox);
@@ -214,6 +222,35 @@
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Settings";
+            // 
+            // AutoServerResolveCheckBox
+            // 
+            this.AutoServerResolveCheckBox.AutoSize = true;
+            this.AutoServerResolveCheckBox.Checked = true;
+            this.AutoServerResolveCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.AutoServerResolveCheckBox.Location = new System.Drawing.Point(202, 99);
+            this.AutoServerResolveCheckBox.Name = "AutoServerResolveCheckBox";
+            this.AutoServerResolveCheckBox.Size = new System.Drawing.Size(219, 17);
+            this.AutoServerResolveCheckBox.TabIndex = 15;
+            this.AutoServerResolveCheckBox.Text = "Enable automatic server adress resolving";
+            this.AutoServerResolveCheckBox.UseVisualStyleBackColor = true;
+            this.AutoServerResolveCheckBox.CheckedChanged += new System.EventHandler(this.AutoServerResolveCheckBox_CheckedChanged);
+            // 
+            // ServerAddressTextBox
+            // 
+            this.ServerAddressTextBox.Location = new System.Drawing.Point(93, 97);
+            this.ServerAddressTextBox.Name = "ServerAddressTextBox";
+            this.ServerAddressTextBox.Size = new System.Drawing.Size(100, 20);
+            this.ServerAddressTextBox.TabIndex = 14;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(5, 100);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(82, 13);
+            this.label8.TabIndex = 13;
+            this.label8.Text = "Server Address:";
             // 
             // ConnectButton
             // 
@@ -352,44 +389,6 @@
             this.ServiceUriTextBox.Size = new System.Drawing.Size(252, 20);
             this.ServiceUriTextBox.TabIndex = 11;
             this.ServiceUriTextBox.Text = "xmpp:username@jabber.org/Footloose-Service-1";
-            // 
-            // ServerAddressTextBox
-            // 
-            this.ServerAddressTextBox.Location = new System.Drawing.Point(93, 97);
-            this.ServerAddressTextBox.Name = "ServerAddressTextBox";
-            this.ServerAddressTextBox.PasswordChar = '*';
-            this.ServerAddressTextBox.Size = new System.Drawing.Size(100, 20);
-            this.ServerAddressTextBox.TabIndex = 14;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(5, 100);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(82, 13);
-            this.label8.TabIndex = 13;
-            this.label8.Text = "Server Address:";
-            // 
-            // AutoServerResolveCheckBox
-            // 
-            this.AutoServerResolveCheckBox.AutoSize = true;
-            this.AutoServerResolveCheckBox.Checked = true;
-            this.AutoServerResolveCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.AutoServerResolveCheckBox.Location = new System.Drawing.Point(202, 99);
-            this.AutoServerResolveCheckBox.Name = "AutoServerResolveCheckBox";
-            this.AutoServerResolveCheckBox.Size = new System.Drawing.Size(219, 17);
-            this.AutoServerResolveCheckBox.TabIndex = 15;
-            this.AutoServerResolveCheckBox.Text = "Enable automatic server adress resolving";
-            this.AutoServerResolveCheckBox.UseVisualStyleBackColor = true;
-            this.AutoServerResolveCheckBox.CheckedChanged += new System.EventHandler(this.AutoServerResolveCheckBox_CheckedChanged);
-            // 
-            // EndpointIdentityView
-            // 
-            this.EndpointIdentityView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.EndpointIdentityView.Location = new System.Drawing.Point(3, 16);
-            this.EndpointIdentityView.Name = "EndpointIdentityView";
-            this.EndpointIdentityView.Size = new System.Drawing.Size(239, 618);
-            this.EndpointIdentityView.TabIndex = 2;
             // 
             // ClientForm
             // 

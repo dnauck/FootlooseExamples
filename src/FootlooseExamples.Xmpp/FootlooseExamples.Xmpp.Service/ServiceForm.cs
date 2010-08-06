@@ -65,7 +65,7 @@ namespace FootlooseExamples.Xmpp.Service
             PasswortTextBox.Enabled = !connected;
             ServerTextBox.Enabled = !connected;
             AutoServerResolveCheckBox.Enabled = !connected;
-            ServerAddressTextBox.Enabled = (!AutoServerResolveCheckBox.Checked && connected);
+            ServerAddressTextBox.Enabled = (!AutoServerResolveCheckBox.Checked && !connected);
             EndpointIdTextBox.Enabled = !connected;
             PriorityNumericUpDown.Enabled = connected;
             StatusInfoTextBox.Enabled = connected;
