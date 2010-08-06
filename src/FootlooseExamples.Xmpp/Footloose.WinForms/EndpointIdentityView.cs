@@ -26,6 +26,11 @@ namespace Footloose.WinForms
             SetupEvents();
         }
 
+        public void Clear()
+        {
+            EndpointTreeView.Nodes.Clear();
+        }
+
         private void SetupEvents()
         {
             endpointIdentityManager.PresenceNotificationReceived += EndpointIdentityManager_PresenceNotificationReceived;
