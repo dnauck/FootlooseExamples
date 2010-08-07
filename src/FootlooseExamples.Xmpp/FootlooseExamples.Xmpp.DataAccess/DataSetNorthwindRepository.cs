@@ -11,7 +11,7 @@ namespace FootlooseExamples.Xmpp.DataAccess
 
         static DataSetNorthwindRepository()
         {
-            dataSet.ReadXml("Northwind.Data.xml", XmlReadMode.Auto);
+            dataSet.ReadXml("Northwind.Data.xml", XmlReadMode.IgnoreSchema);
         }
 
         public DataSetNorthwindRepository()
