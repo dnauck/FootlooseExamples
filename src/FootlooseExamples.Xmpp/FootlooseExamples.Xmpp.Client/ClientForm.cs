@@ -90,7 +90,7 @@ namespace FootlooseExamples.Xmpp.Client
             return footlooseInstance;
         }
 
-        private static ITransportChannelConfiguration SetupFootlooseTransportChannel(NetworkCredential credentials, string serverAddress, int priority, string endpointIdentifier)
+        private static IFluentTransportChannelConfiguration SetupFootlooseTransportChannel(NetworkCredential credentials, string serverAddress, int priority, string endpointIdentifier)
         {
             var transportChannelConfig = Footloose.Configuration.XmppTransportChannelConfiguration.Standard
                 .ConnectionType(XmppConnectionType.Tcp)
