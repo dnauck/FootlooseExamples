@@ -13,7 +13,7 @@ namespace FootlooseExamples.Quickstart.Service.Runner
         static void Main(string[] args)
         {
             var serviceLocator = new ServiceLocatorDummy();
-            var endpointIdentifier = "Footloose-Quickstart-Service";
+            var endpointIdentifier = "footloose-quickstart-service";
             var footloose = ConfigureFootloose(serviceLocator, endpointIdentifier);
 
             //register events
@@ -48,7 +48,7 @@ namespace FootlooseExamples.Quickstart.Service.Runner
                             type.IsPublic &&
                             type.Namespace.EndsWith("Contracts"));
                 })
-                .TransportChannel(Footloose.Configuration.RemotingTransportChannelConfiguration.Standard
+                .TransportChannel(Footloose.Configuration.Fluent.RemotingTransportChannelConfiguration.Standard
                                       .EndpointIdentifier(endpointIdentifier) // Uri will be "ipc://<endpointIdentifier>/FootlooseServiceProxy.rem"
                                       .TimeOut(5000)
                 )

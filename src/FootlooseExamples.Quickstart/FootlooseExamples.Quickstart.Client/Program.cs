@@ -13,7 +13,7 @@ namespace FootlooseExamples.Quickstart.Client
         static void Main(string[] args)
         {
             var serviceLocator = new ServiceLocatorDummy();
-            var endpointIdentifier = "Footloose-Quickstart-Client";
+            var endpointIdentifier = "footloose-quickstart-client";
             var footloose = ConfigureFootloose(serviceLocator, endpointIdentifier);
 
             //register events
@@ -28,7 +28,7 @@ namespace FootlooseExamples.Quickstart.Client
             Console.WriteLine("Press Enter to start...");
             Console.ReadLine();
 
-            var serviceUri = new Uri("ipc://Footloose-Quickstart-Service/FootlooseServiceProxy.rem");
+            var serviceUri = new Uri("ipc://footloose-quickstart-service/FootlooseServiceProxy.rem");
             var methodCallId = footloose.CallMethod(typeof(ISimpleService), "DoIt", serviceUri);
             Console.WriteLine("Called method 'DoIt' of 'ISimpleService' on '" + serviceUri + "'. CorrelationId is '" +
                               methodCallId + "'.");
@@ -78,7 +78,7 @@ namespace FootlooseExamples.Quickstart.Client
             var footloose = Fluently.Configure()
                 .SerializerOfType<Footloose.Serialization.BinarySerializer>()
                 .ServiceLocator(serviceLocator)
-                .TransportChannel(Footloose.Configuration.RemotingTransportChannelConfiguration.Standard
+                .TransportChannel(Footloose.Configuration.Fluent.RemotingTransportChannelConfiguration.Standard
                                       .EndpointIdentifier(endpointIdentifier) // Uri will be "ipc://<endpointIdentifier>/FootlooseServiceProxy.rem"
                                       .TimeOut(5000)
                 )
