@@ -104,7 +104,7 @@ namespace FootlooseExamples.Xmpp.Service
 
         private static IFluentTransportChannelConfiguration SetupFootlooseTransportChannel(NetworkCredential credentials, string serverAddress, int priority, string endpointIdentifier)
         {
-            var transportChannelConfig = Footloose.Configuration.XmppTransportChannelConfiguration.Standard
+            var transportChannelConfig = Footloose.Configuration.Fluent.XmppTransportChannelConfiguration.Standard
                 .ConnectionType(XmppConnectionType.Tcp)
                 .DoNot.UseCompression()
                 .UseTls()
