@@ -12,7 +12,7 @@ using System.Reflection;
 
 [assembly: AssemblyCompanyAttribute("Nauck IT KG")]
 [assembly: AssemblyProductAttribute("Footloose Examples")]
-[assembly: AssemblyCopyrightAttribute("Copyright © 2008 - 2010 Nauck IT KG")]
+[assembly: AssemblyCopyrightAttribute("Copyright © 2008 - 2011 Nauck IT KG")]
 [assembly: AssemblyTrademarkAttribute("")]
 [assembly: AssemblyVersionAttribute("1.0.0.0")]
 [assembly: AssemblyFileVersionAttribute("1.0.0.0")]
