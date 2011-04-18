@@ -1,17 +1,17 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual Studio 2008
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FootlooseExamples.Config.File", "FootlooseExamples.Config.File\FootlooseExamples.Config.File.csproj", "{FC1D6675-CA54-41AF-945F-30FD5535C5C5}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FootlooseExamples.Config.ByCode", "FootlooseExamples.Config.ByCode\FootlooseExamples.Config.ByCode.csproj", "{3261A1D0-FC7A-4F50-AA3E-018F2DF5675F}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FootlooseExamples.Config.Fluent", "FootlooseExamples.Config.Fluent\FootlooseExamples.Config.Fluent.csproj", "{4C7E7A2E-FD72-4CF8-BE69-90122B164655}"
-EndProject
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{D12CC6EB-30DB-48C4-B488-53E6DF22B792}"
 	ProjectSection(SolutionItems) = preProject
 		LICENSE.txt = LICENSE.txt
 		README.txt = README.txt
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FootlooseExamples.Config.File", "FootlooseExamples.Config.File\FootlooseExamples.Config.File.csproj", "{FC1D6675-CA54-41AF-945F-30FD5535C5C5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FootlooseExamples.Config.ByCode", "FootlooseExamples.Config.ByCode\FootlooseExamples.Config.ByCode.csproj", "{3261A1D0-FC7A-4F50-AA3E-018F2DF5675F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FootlooseExamples.Config.Fluent", "FootlooseExamples.Config.Fluent\FootlooseExamples.Config.Fluent.csproj", "{4C7E7A2E-FD72-4CF8-BE69-90122B164655}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
