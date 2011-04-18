@@ -6,7 +6,7 @@
   <property name="nant.verbosity" value="true" overwrite="true" />
   <property name="build.configuration" value="Debug" overwrite="false" />
   <property name="build.target" value="Build" overwrite="false" />
-  <property name="build.target.framework" value="3.5" overwrite="false" />
+  <property name="build.target.framework" value="4.0" overwrite="false" />
   <property name="CCNetLabel" value="1.0.0.0" overwrite="false" />
   <property name="codemetrics.output.type" value="XmlFile" overwrite="false" />
 
