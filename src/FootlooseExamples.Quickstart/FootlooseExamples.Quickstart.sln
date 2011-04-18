@@ -1,6 +1,12 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual Studio 2008
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{EC25FA25-52CB-4B1B-97C6-52DB54A10F38}"
+	ProjectSection(SolutionItems) = preProject
+		LICENSE.txt = LICENSE.txt
+		README.txt = README.txt
+	EndProjectSection
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FootlooseExamples.Quickstart.Service", "FootlooseExamples.Quickstart.Service\FootlooseExamples.Quickstart.Service.csproj", "{3B6AC14B-A8F6-41E1-ADEC-3DCCDBC2E942}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FootlooseExamples.Quickstart.Contracts", "FootlooseExamples.Quickstart.Contracts\FootlooseExamples.Quickstart.Contracts.csproj", "{2A329C6D-BC62-4D72-8BFE-E70DC87E17B0}"
@@ -8,12 +14,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FootlooseExamples.Quickstart.Service.Runner", "FootlooseExamples.Quickstart.Service.Runner\FootlooseExamples.Quickstart.Service.Runner.csproj", "{D81E89AA-238D-46DA-9D82-B75E08DBA02F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FootlooseExamples.Quickstart.Client", "FootlooseExamples.Quickstart.Client\FootlooseExamples.Quickstart.Client.csproj", "{6CE6A6F6-73B1-4587-9708-71D7E9A0BE20}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{EC25FA25-52CB-4B1B-97C6-52DB54A10F38}"
-	ProjectSection(SolutionItems) = preProject
-		LICENSE.txt = LICENSE.txt
-		README.txt = README.txt
-	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
