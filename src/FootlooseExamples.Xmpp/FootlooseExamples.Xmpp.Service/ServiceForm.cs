@@ -9,8 +9,7 @@ using System.Text;
 using System.Windows.Forms;
 using Footloose;
 using Footloose.Configuration;
-using Footloose.Contracts;
-using Footloose.Contracts.Configuration;
+using Footloose.Configuration.Fluent;
 using Footloose.DataModel;
 using FootlooseExamples.Xmpp.Contracts;
 

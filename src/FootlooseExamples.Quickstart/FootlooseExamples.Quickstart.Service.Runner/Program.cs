@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Footloose;
-using Footloose.Contracts;
 using FootlooseExamples.Quickstart.Contracts;
 
 namespace FootlooseExamples.Quickstart.Service.Runner
@@ -33,7 +32,7 @@ namespace FootlooseExamples.Quickstart.Service.Runner
         private static IFootlooseService ConfigureFootloose(ServiceLocatorDummy serviceLocator, string endpointIdentifier)
         {
             var footloose = Fluently.Configure()
-                .SerializerOfType<Footloose.Serialization.BinarySerializer>()
+                .SerializerOfType<Footloose.Serialization.TextSerializer>()
                 .ServiceLocator(serviceLocator)
                 .ServiceContracts(contracts =>
                 {

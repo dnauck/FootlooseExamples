@@ -13,7 +13,8 @@ namespace FootlooseExamples.Config.File
         static void Main(string[] args)
         {
             // create FootlooseService instance from App.config settings
-            var footloose = Footloose.FootlooseServiceFactory.CreateFootlooseService(serviceLocator);
+            ServiceLocator.SetLocatorProvider(() => serviceLocator);
+            var footloose = Footloose.FootlooseServiceFactory.CreateFootlooseService();
             Console.WriteLine("Footloose is connected: " + footloose.IsConnected);
             Console.ReadLine();
         }

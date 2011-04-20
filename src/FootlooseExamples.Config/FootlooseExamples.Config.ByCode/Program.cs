@@ -58,7 +58,8 @@ namespace FootlooseExamples.Config.ByCode
 
 
             // create FootlooseService instance from Configuration
-            var footloose = Footloose.FootlooseServiceFactory.CreateFootlooseService(serviceLocator, footlooseConfig);
+            ServiceLocator.SetLocatorProvider(() => serviceLocator);
+            var footloose = Footloose.FootlooseServiceFactory.CreateFootlooseService(footlooseConfig);
             Console.WriteLine("Footloose is connected: " + footloose.IsConnected);
             Console.ReadLine();
         }

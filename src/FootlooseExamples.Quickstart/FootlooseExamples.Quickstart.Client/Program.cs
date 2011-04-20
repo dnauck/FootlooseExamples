@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Footloose;
-using Footloose.Contracts;
 using FootlooseExamples.Quickstart.Contracts;
 
 namespace FootlooseExamples.Quickstart.Client
@@ -76,7 +75,7 @@ namespace FootlooseExamples.Quickstart.Client
         private static IFootlooseService ConfigureFootloose(ServiceLocatorDummy serviceLocator, string endpointIdentifier)
         {
             var footloose = Fluently.Configure()
-                .SerializerOfType<Footloose.Serialization.BinarySerializer>()
+                .SerializerOfType<Footloose.Serialization.TextSerializer>()
                 .ServiceLocator(serviceLocator)
                 .TransportChannel(Footloose.Configuration.Fluent.RemotingTransportChannelConfiguration.Standard
                                       .EndpointIdentifier(endpointIdentifier) // Uri will be "ipc://<endpointIdentifier>/FootlooseServiceProxy.rem"
