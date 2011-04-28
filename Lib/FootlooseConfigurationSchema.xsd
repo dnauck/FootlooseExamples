@@ -37,11 +37,6 @@
         <xs:documentation>The identifier of this communication endpoint.</xs:documentation>
       </xs:annotation>
     </xs:attribute>
-    <xs:attribute name="timeout" use="optional" type="xs:int">
-      <xs:annotation>
-        <xs:documentation>The the length of time, in milliseconds, before a request times out.</xs:documentation>
-      </xs:annotation>
-    </xs:attribute>
   </xs:complexType>
 
   <xs:complexType name="Footloose.Configuration.CredentialConfigurationElementCollection">
@@ -150,6 +145,16 @@
     <xs:attribute name="type" use="required" type="xs:string">
       <xs:annotation>
         <xs:documentation>The type of the transport channel.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="timeout" use="optional" type="xs:int">
+      <xs:annotation>
+        <xs:documentation>The length of time, in milliseconds, before a request times out.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="maxMessageBodyLength" use="optional" type="xs:int">
+      <xs:annotation>
+        <xs:documentation>The maximum length of the message body. The serializised message body must not exceed the specified maximum message body lenght; otherwise it'll be strip down into several smaller chunks and send separately.</xs:documentation>
       </xs:annotation>
     </xs:attribute>
     <xs:anyAttribute processContents="skip" />
