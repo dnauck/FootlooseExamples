@@ -97,7 +97,8 @@ namespace FootlooseExamples.Xmpp.Client
                 .UseTls()
                 .Credentials(credentials)
                 .Priority(priority)
-                .EndpointIdentifier(endpointIdentifier);
+                .EndpointIdentifier(endpointIdentifier)
+                .MaxMessageBodyLength(20000);
 
             if (string.IsNullOrEmpty(serverAddress))
             {
