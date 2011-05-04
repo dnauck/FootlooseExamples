@@ -153,7 +153,7 @@ namespace FootlooseExamples.Xmpp.Service
                 return CommunicationEndpointStatusType.Unavailable;
 
             else
-                return CommunicationEndpointStatusType.Unkown;
+                return CommunicationEndpointStatusType.Online;
         }
 
         private void AutoServerResolveCheckBox_CheckedChanged(object sender, EventArgs e)

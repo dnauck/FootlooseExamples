@@ -49,8 +49,8 @@ namespace Footloose.WinForms
             EndpointTreeView.Nodes.AddRange(
                 endpoints.Select(
                     identity =>
-                    new TreeNode(identity.Key.ToString(),
-                                 identity.Value.Endpoints.Select(endpoint => new TreeNode(endpoint.Uri.ToString())).ToArray())).ToArray());
+                    new TreeNode(identity.Uri.ToString(),
+                                 identity.Endpoints.Select(endpoint => new TreeNode(endpoint.Uri.ToString())).ToArray())).ToArray());
         }
 
         void EndpointIdentityManager_PresenceNotificationReceived(object sender, PresenceEventArgs e)

@@ -141,7 +141,7 @@ namespace FootlooseExamples.Xmpp.Client
                 return CommunicationEndpointStatusType.Unavailable;
 
             else
-                return CommunicationEndpointStatusType.Unkown;
+                return CommunicationEndpointStatusType.Online;
         }
 
         private void UseServiceDiscoCheckBox_CheckedChanged(object sender, EventArgs e)
