@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>Message.GetObjectData Method (SerializationInfo, StreamingContext)</title>
+<title>ITransportChannel.SetDiscoInfo Method (DiscoInfo)</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">Message.GetObjectData Method (SerializationInfo, StreamingContext)</div>
+<div id="PageTitle">ITransportChannel.SetDiscoInfo Method (DiscoInfo)</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 </div>
@@ -24,10 +24,11 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Populates a SerializationInfo with the data needed to serialize the target object.
+Sets the service discovery information the transport channel should
+            send on discovery requests.
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/2/185.html">Message</a><br />
-<b>Namespace:</b> <a href="../../Contents/1/9.html">Footloose.Messaging</a><br />
+<b>Declaring type:</b> <a href="../../Contents/1/178.html">ITransportChannel</a><br />
+<b>Namespace:</b> <a href="../../Contents/1/13.html">Footloose.TransportChannels</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">Footloose</a>
 </div>
 <div id="SectionHeader0" class="SectionHeader">
@@ -40,18 +41,13 @@ Syntax
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public void GetObjectData (
-        SerializationInfo <i>info</i>,
-        StreamingContext <i>context</i>
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public abstract void SetDiscoInfo (
+        DiscoInfo <i>discoInfo</i>
 ) </pre></td></tr></table>
 <div class="CommentHeader">Parameters</div>
-<div class="CommentParameterName">info</div>
+<div class="CommentParameterName">discoInfo</div>
 <div class="ParameterCommentContainer">
-The SerializationInfo to populate with data.
-</div>
-<div class="CommentParameterName">context</div>
-<div class="ParameterCommentContainer">
-The destination for this serialization.
+Service discovery information for this service node.
 </div>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>

@@ -6,14 +6,14 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>FootlooseConfigurationSectionGroup.GetConfiguration Method</title>
+<title>EndpointIdentityManagerBase.RequestDiscoInfo Method (Uri, string)</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">FootlooseConfigurationSectionGroup.GetConfiguration Method</div>
+<div id="PageTitle">EndpointIdentityManagerBase.RequestDiscoInfo Method (Uri, string)</div>
 <div id="HeaderShortcuts">
-<a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Overload List</a>&nbsp;
+<a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 </div>
 <div class="DarkLine"></div>
 <div class="LightLine"></div>
@@ -24,54 +24,35 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Creates a new <a href="../../Contents/1/173.html">FootlooseConfigurationSectionGroup</a> from the
-            application configuration.
+Request asynchronously service discovery information from the given service with the specified capabilities.
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/1/173.html">FootlooseConfigurationSectionGroup</a><br />
-<b>Namespace:</b> <a href="../../Contents/1/5.html">Footloose.Configuration</a><br />
+<b>Declaring type:</b> <a href="../../Contents/1/286.html">EndpointIdentityManagerBase</a><br />
+<b>Namespace:</b> <a href="../../Contents/1/3.html">Footloose</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">Footloose</a>
 </div>
 <div id="SectionHeader0" class="SectionHeader">
 <img id="SectionExpanderImg0" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(0);" />
 <span class="SectionHeader">
 <span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(0);">
-Overload List
+Syntax
 </span>
 </span>
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="MembersTable">
-<col width="7%" />
-<col width="38%" />
-<col width="55%" />
-<tr>
-<th>&nbsp;</th>
-<th>Name</th>
-<th>Description</th>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Static.gif" alt="Static" /></td>
-<td><a href="../../Contents/1/336.html">FootlooseConfigurationSectionGroup.GetConfiguration ()</a></td>
-<td>Creates a new <a href="../../Contents/1/173.html">FootlooseConfigurationSectionGroup</a> from the
-            application configuration.</td>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Static.gif" alt="Static" /></td>
-<td><a href="../../Contents/1/337.html">FootlooseConfigurationSectionGroup.GetConfiguration (ConfigurationUserLevel)</a></td>
-<td>Creates a new <a href="../../Contents/1/173.html">FootlooseConfigurationSectionGroup</a> from the
-            application configuration with the specified <span class="PseudoLink">System.Configuration.ConfigurationUserLevel</span>.</td>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Static.gif" alt="Static" /></td>
-<td><a href="../../Contents/1/338.html">FootlooseConfigurationSectionGroup.GetConfiguration (Configuration)</a></td>
-<td>Creates a new <a href="../../Contents/1/173.html">FootlooseConfigurationSectionGroup</a> from the
-            provided <span class="PseudoLink">System.Configuration.Configuration</span> object.</td>
-</tr>
-</table>
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">protected abstract void RequestDiscoInfo (
+        Uri <i>to</i>,
+        string <i>capabilities</i>
+) </pre></td></tr></table>
+<div class="CommentHeader">Parameters</div>
+<div class="CommentParameterName">to</div>
+<div class="ParameterCommentContainer">
+The service to request the disco information from.
+</div>
+<div class="CommentParameterName">capabilities</div>
+<div class="ParameterCommentContainer">
+The provided capabilities of the service.
+</div>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>
 <div id="Footer">

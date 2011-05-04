@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>IHashAlgorithm.CheckString Method (string, string, string)</title>
+<title>XmppTransportChannelConfiguration.RemoteCertificateValidationCallback Method (RemoteCertificateValidationCallback)</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">IHashAlgorithm.CheckString Method (string, string, string)</div>
+<div id="PageTitle">XmppTransportChannelConfiguration.RemoteCertificateValidationCallback Method (RemoteCertificateValidationCallback)</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 </div>
@@ -24,11 +24,11 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Cheks a plaintext string matches a previously hashed one.
+Specify the callback that verifies the remote Secure Sockets Layer (SSL) certificate used for authentication.
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/2/242.html">IHashAlgorithm</a><br />
-<b>Namespace:</b> <a href="../../Contents/1/11.html">Footloose.Security.Cryptography</a><br />
-<b>Assembly:</b> <a href="../../Contents/1/1.html">Footloose</a>
+<b>Declaring type:</b> <a href="../../Contents/2/239.html">XmppTransportChannelConfiguration</a><br />
+<b>Namespace:</b> <a href="../../Contents/2/237.html">Footloose.Configuration.Fluent</a><br />
+<b>Assembly:</b> <a href="../../Contents/1/2.html">Footloose.Xmpp</a>
 </div>
 <div id="SectionHeader0" class="SectionHeader">
 <img id="SectionExpanderImg0" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(0);" />
@@ -40,27 +40,17 @@ Syntax
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public abstract bool CheckString (
-        string <i>plaintext</i>,
-        string <i>hashed</i>,
-        string <i>key</i>
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public XmppTransportChannelConfiguration RemoteCertificateValidationCallback (
+        RemoteCertificateValidationCallback <i>callback</i>
 ) </pre></td></tr></table>
 <div class="CommentHeader">Parameters</div>
-<div class="CommentParameterName">plaintext</div>
+<div class="CommentParameterName">callback</div>
 <div class="ParameterCommentContainer">
-The plaintext string to verify.
-</div>
-<div class="CommentParameterName">hashed</div>
-<div class="ParameterCommentContainer">
-The previously hashed string.
-</div>
-<div class="CommentParameterName">key</div>
-<div class="ParameterCommentContainer">
-The key to use in the hash algorithm.
+A <a href="../../Contents/2/248.html">RemoteCertificateValidationCallback</a>.
 </div>
 <div class="CommentHeader">Return Value</div>
 <div class="ParameterCommentContainer">
-true if the string matches; otherwise false.
+<a href="../../Contents/2/239.html">XmppTransportChannelConfiguration</a>
 </div>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>

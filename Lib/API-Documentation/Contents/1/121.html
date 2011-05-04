@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>SynchronizedObservableCollection&lt;T&gt;.SetItem Method (int, T)</title>
+<title>IFluentTransportChannelConfiguration.Apply Method (TransportChannelConfigurationSection)</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">SynchronizedObservableCollection&lt;T&gt;.SetItem Method (int, T)</div>
+<div id="PageTitle">IFluentTransportChannelConfiguration.Apply Method (TransportChannelConfigurationSection)</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 </div>
@@ -24,10 +24,10 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Replaces the element at the specified index.
+Applies the transport channel configuration data to the <a href="../../Contents/1/102.html">TransportChannelConfigurationSection</a>.
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/1/22.html">SynchronizedObservableCollection&lt;T&gt;</a><br />
-<b>Namespace:</b> <a href="../../Contents/1/4.html">Footloose.Collections</a><br />
+<b>Declaring type:</b> <a href="../../Contents/1/65.html">IFluentTransportChannelConfiguration</a><br />
+<b>Namespace:</b> <a href="../../Contents/1/6.html">Footloose.Configuration.Fluent</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">Footloose</a>
 </div>
 <div id="SectionHeader0" class="SectionHeader">
@@ -40,18 +40,13 @@ Syntax
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">protected override void SetItem (
-        int <i>index</i>,
-        T <i>item</i>
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public abstract void Apply (
+        TransportChannelConfigurationSection <i>configuration</i>
 ) </pre></td></tr></table>
 <div class="CommentHeader">Parameters</div>
-<div class="CommentParameterName">index</div>
+<div class="CommentParameterName">configuration</div>
 <div class="ParameterCommentContainer">
-The zero-based index of the element to replace.
-</div>
-<div class="CommentParameterName">item</div>
-<div class="ParameterCommentContainer">
-The new value for the element at the specified index.
+The <a href="../../Contents/1/108.html">ServiceContractConfigurationSection</a> configuration.
 </div>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>

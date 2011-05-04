@@ -6,15 +6,14 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>DiscoInfoRequest Class Members</title>
+<title>IFootlooseService.CallMethod&lt;T1, T2, T3&gt; Method (Type, string, Uri, T1, T2, T3)</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">DiscoInfoRequest Class Members</div>
+<div id="PageTitle">IFootlooseService.CallMethod&lt;T1, T2, T3&gt; Method (Type, string, Uri, T1, T2, T3)</div>
 <div id="HeaderShortcuts">
-<a href="#SectionHeader30" onclick="javascript: SetSectionVisibility(30, true); SetExpandCollapseAllToCollapseAll();">Constructors</a>&nbsp;
-<a href="#SectionHeader40" onclick="javascript: SetSectionVisibility(40, true); SetExpandCollapseAllToCollapseAll();">Properties</a>&nbsp;
+<a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 </div>
 <div class="DarkLine"></div>
 <div class="LightLine"></div>
@@ -25,66 +24,73 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-A service discovery request that is send by the requiesting communication endpoint
-            to discover information about another communication endpoint on the nwtwork.
+Invokes asynchronous the specified method of the given <span class="PseudoLink">System.Type</span> on a remote <a href="../../Contents/1/293.html">IFootlooseService</a> with the specified arguments.
+            Once the method call returns the <a href="../../Contents/1/295.html">MethodResponseReceived</a> event ist called.
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/1/381.html">DiscoInfoRequest</a><br />
-<b>Namespace:</b> <a href="../../Contents/1/8.html">Footloose.DataModel</a><br />
+<b>Declaring type:</b> <a href="../../Contents/1/293.html">IFootlooseService</a><br />
+<b>Namespace:</b> <a href="../../Contents/1/3.html">Footloose</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">Footloose</a>
 </div>
-<div id="SectionHeader30" class="SectionHeader">
-<img id="SectionExpanderImg30" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(30);" />
+<div id="SectionHeader0" class="SectionHeader">
+<img id="SectionExpanderImg0" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(0);" />
 <span class="SectionHeader">
-<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(30);">
-Public Constructors
+<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(0);">
+Syntax
 </span>
 </span>
 </div>
 
-<div id="SectionContainerDiv30" class="SectionContainer">
-<table class="MembersTable">
-<col width="7%" />
-<col width="38%" />
-<col width="55%" />
-<tr>
-<th>&nbsp;</th>
-<th>Name</th>
-<th>Description</th>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicMethod.gif" alt="Public Method" /></td>
-<td><a href="../../Contents/1/432.html">DiscoInfoRequest</a></td>
-<td><p>There is no summary.</p></td>
-</tr>
-</table>
-<div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
-<div id="SectionHeader40" class="SectionHeader">
-<img id="SectionExpanderImg40" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(40);" />
-<span class="SectionHeader">
-<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(40);">
-Public Properties
-</span>
-</span>
+<div id="SectionContainerDiv0" class="SectionContainer">
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public abstract Guid CallMethod&lt;T1, T2, T3&gt; (
+        Type <i>type</i>,
+        string <i>methodName</i>,
+        Uri <i>service</i>,
+        T1 <i>arg1</i>,
+        T2 <i>arg2</i>,
+        T3 <i>arg3</i>
+) </pre></td></tr></table>
+<div class="CommentHeader">Type Parameters</div>
+<div class="CommentParameterName">T1</div>
+<div class="ParameterCommentContainer">
+The type of the first parameter of the method.
 </div>
-
-<div id="SectionContainerDiv40" class="SectionContainer">
-<table class="MembersTable">
-<col width="7%" />
-<col width="38%" />
-<col width="55%" />
-<tr>
-<th>&nbsp;</th>
-<th>Name</th>
-<th>Description</th>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicProperty.gif" alt="Public Property" /></td>
-<td><a href="../../Contents/1/433.html">Capabilities</a></td>
-<td>Gets or sets the capabilities version string.</td>
-</tr>
-</table>
+<div class="CommentParameterName">T2</div>
+<div class="ParameterCommentContainer">
+The type of the second parameter of the method.
+</div>
+<div class="CommentParameterName">T3</div>
+<div class="ParameterCommentContainer">
+The type of the third parameter of the method.
+</div>
+<div class="CommentHeader">Parameters</div>
+<div class="CommentParameterName">type</div>
+<div class="ParameterCommentContainer">
+The <span class="PseudoLink">System.Type</span> the method belongs to.
+</div>
+<div class="CommentParameterName">methodName</div>
+<div class="ParameterCommentContainer">
+The name of the method to invoke.
+</div>
+<div class="CommentParameterName">service</div>
+<div class="ParameterCommentContainer">
+The <span class="PseudoLink">System.Uri</span> of the service the method should invoked on.
+</div>
+<div class="CommentParameterName">arg1</div>
+<div class="ParameterCommentContainer">
+The first parameter of the method.
+</div>
+<div class="CommentParameterName">arg2</div>
+<div class="ParameterCommentContainer">
+The second parameter of the method.
+</div>
+<div class="CommentParameterName">arg3</div>
+<div class="ParameterCommentContainer">
+The third parameter of the method.
+</div>
+<div class="CommentHeader">Return Value</div>
+<div class="ParameterCommentContainer">
+A unique correlation identifier for this method call.
+</div>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>
 <div id="Footer">

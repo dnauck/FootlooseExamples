@@ -157,6 +157,11 @@
         <xs:documentation>The maximum length of the message body. The serializised message body must not exceed the specified maximum message body lenght; otherwise it'll be strip down into several smaller chunks and send separately.</xs:documentation>
       </xs:annotation>
     </xs:attribute>
+    <xs:attribute name="priority" use="optional" type="xs:integer">
+      <xs:annotation>
+        <xs:documentation>The priority for this communication endpoint. The value must be an integer between -128 and +127. Default is 10.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
     <xs:anyAttribute processContents="skip" />
   </xs:complexType>
 
@@ -220,11 +225,6 @@
     <xs:attribute name="port" use="optional" type="xs:integer">
       <xs:annotation>
         <xs:documentation>The XMPP server port to connect. Default is 5222.</xs:documentation>
-      </xs:annotation>
-    </xs:attribute>
-    <xs:attribute name="priority" use="optional" type="xs:integer">
-      <xs:annotation>
-        <xs:documentation>The XMPP priority for this communication endpoint. The value must be an integer between -128 and +127. Default is 10.</xs:documentation>
       </xs:annotation>
     </xs:attribute>
     <xs:attribute name="autoResolveServerAddress" use="optional" type="xs:boolean">

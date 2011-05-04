@@ -46,17 +46,6 @@
                 <see cref="T:Footloose.Configuration.Fluent.XmppTransportChannelConfiguration" />
             </returns>
         </member>
-        <member name="M:Footloose.Configuration.Fluent.XmppTransportChannelConfiguration.Priority(System.Int32)">
-            <summary>
-            Specify the XMPP priority for this communication endpoint.
-            The value must be an integer between -128 and +127.
-            Default is 10.
-            </summary>
-            <param name="priority">A value between -128 and +127.</param>
-            <returns>
-                <see cref="T:Footloose.Configuration.Fluent.XmppTransportChannelConfiguration" />
-            </returns>
-        </member>
         <member name="M:Footloose.Configuration.Fluent.XmppTransportChannelConfiguration.Port(System.Int32)">
             <summary>
             Specify the XMPP server port to connect. Default is 5222.
@@ -176,13 +165,6 @@
         <member name="P:Footloose.Configuration.XmppTransportChannelConfigurationElement.Port">
             <summary>
              Gets or sets the XMPP server port to connect. Default is 5222.
-            </summary>
-        </member>
-        <member name="P:Footloose.Configuration.XmppTransportChannelConfigurationElement.Priority">
-            <summary>
-             Gets or sets the XMPP priority for this communication endpoint.
-             The value must be an integer between -128 and +127.
-             Default is 10.
             </summary>
         </member>
         <member name="P:Footloose.Configuration.XmppTransportChannelConfigurationElement.AutoResolveServerAddress">

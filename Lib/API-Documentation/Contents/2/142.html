@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>IFootlooseService.CallMethod&lt;T1, TResult&gt; Method (Type, string, Uri, Action&lt;TResult&gt;, T1)</title>
+<title>IMessageBufferRepository.GetBuffer Method (Guid)</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">IFootlooseService.CallMethod&lt;T1, TResult&gt; Method (Type, string, Uri, Action&lt;TResult&gt;, T1)</div>
+<div id="PageTitle">IMessageBufferRepository.GetBuffer Method (Guid)</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 </div>
@@ -24,11 +24,10 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Invokes asynchronous the specified method of the given <span class="PseudoLink">System.Type</span> on a remote <a href="../../Contents/2/28.html">IFootlooseService</a> with the specified argument.
-            Once the method call returns the callback action delegate is called.
+<p>There is no summary.</p>
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/2/28.html">IFootlooseService</a><br />
-<b>Namespace:</b> <a href="../../Contents/1/3.html">Footloose</a><br />
+<b>Declaring type:</b> <a href="../../Contents/2/104.html">IMessageBufferRepository</a><br />
+<b>Namespace:</b> <a href="../../Contents/1/9.html">Footloose.Messaging</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">Footloose</a>
 </div>
 <div id="SectionHeader0" class="SectionHeader">
@@ -41,46 +40,17 @@ Syntax
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public abstract Guid CallMethod&lt;T1, TResult&gt; (
-        Type <i>type</i>,
-        string <i>methodName</i>,
-        Uri <i>service</i>,
-        Action&lt;TResult&gt; <i>callback</i>,
-        T1 <i>arg1</i>
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public abstract IEnumerable&lt;Message&gt; GetBuffer (
+        Guid <i>correlationIdentifier</i>
 ) </pre></td></tr></table>
-<div class="CommentHeader">Type Parameters</div>
-<div class="CommentParameterName">T1</div>
-<div class="ParameterCommentContainer">
-The type of the first parameter of the method.
-</div>
-<div class="CommentParameterName">TResult</div>
-<div class="ParameterCommentContainer">
-The type of the return value of the method.
-</div>
 <div class="CommentHeader">Parameters</div>
-<div class="CommentParameterName">type</div>
+<div class="CommentParameterName">correlationIdentifier</div>
 <div class="ParameterCommentContainer">
-The <span class="PseudoLink">System.Type</span> the method belongs to.
-</div>
-<div class="CommentParameterName">methodName</div>
-<div class="ParameterCommentContainer">
-The name of the method to invoke.
-</div>
-<div class="CommentParameterName">service</div>
-<div class="ParameterCommentContainer">
-The <span class="PseudoLink">System.Uri</span> of the service the method should invoked on.
-</div>
-<div class="CommentParameterName">callback</div>
-<div class="ParameterCommentContainer">
-The callback method.
-</div>
-<div class="CommentParameterName">arg1</div>
-<div class="ParameterCommentContainer">
-The first parameter of the method.
+<p>There is no description.</p>
 </div>
 <div class="CommentHeader">Return Value</div>
 <div class="ParameterCommentContainer">
-A unique correlation identifier for this method call.
+<p>There is no description.</p>
 </div>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>
