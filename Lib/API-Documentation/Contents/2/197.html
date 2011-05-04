@@ -6,14 +6,15 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>IMethodInvoker.InvokeGenericMethod Method (Type, string, IEnumerable&lt;Type&gt;, object[])</title>
+<title>DiscoInfoResponseMessageBuilder Class Members</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">IMethodInvoker.InvokeGenericMethod Method (Type, string, IEnumerable&lt;Type&gt;, object[])</div>
+<div id="PageTitle">DiscoInfoResponseMessageBuilder Class Members</div>
 <div id="HeaderShortcuts">
-<a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
+<a href="#SectionHeader30" onclick="javascript: SetSectionVisibility(30, true); SetExpandCollapseAllToCollapseAll();">Constructors</a>&nbsp;
+<a href="#SectionHeader35" onclick="javascript: SetSectionVisibility(35, true); SetExpandCollapseAllToCollapseAll();">Methods</a>&nbsp;
 </div>
 <div class="DarkLine"></div>
 <div class="LightLine"></div>
@@ -24,49 +25,67 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Invokes the specified generic method on the specified type.
+Builds up messages from <a href="../../Contents/1/382.html">DiscoInfoResponse</a> objects.
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/2/52.html">IMethodInvoker</a><br />
-<b>Namespace:</b> <a href="../../Contents/1/3.html">Footloose</a><br />
+<b>Declaring type:</b> <a href="../../Contents/2/183.html">DiscoInfoResponseMessageBuilder</a><br />
+<b>Namespace:</b> <a href="../../Contents/1/9.html">Footloose.Messaging</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">Footloose</a>
 </div>
-<div id="SectionHeader0" class="SectionHeader">
-<img id="SectionExpanderImg0" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(0);" />
+<div id="SectionHeader30" class="SectionHeader">
+<img id="SectionExpanderImg30" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(30);" />
 <span class="SectionHeader">
-<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(0);">
-Syntax
+<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(30);">
+Public Constructors
 </span>
 </span>
 </div>
 
-<div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public abstract object InvokeGenericMethod (
-        Type <i>type</i>,
-        string <i>methodName</i>,
-        IEnumerable&lt;Type&gt; <i>genericArguments</i>,
-        params object[] <i>methodArgs</i>
-) </pre></td></tr></table>
-<div class="CommentHeader">Parameters</div>
-<div class="CommentParameterName">type</div>
-<div class="ParameterCommentContainer">
-The <span class="PseudoLink">System.Type</span> the method belongs to.
+<div id="SectionContainerDiv30" class="SectionContainer">
+<table class="MembersTable">
+<col width="7%" />
+<col width="38%" />
+<col width="55%" />
+<tr>
+<th>&nbsp;</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicMethod.gif" alt="Public Method" /></td>
+<td><a href="../../Contents/2/198.html">DiscoInfoResponseMessageBuilder</a></td>
+<td>Initializes a new instance of the <a href="../../Contents/2/183.html">DiscoInfoResponseMessageBuilder</a> class with
+            specified <a href="../../Contents/1/217.html">ISerializer</a>.</td>
+</tr>
+</table>
+<div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
+<div id="SectionHeader35" class="SectionHeader">
+<img id="SectionExpanderImg35" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(35);" />
+<span class="SectionHeader">
+<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(35);">
+Public Methods
+</span>
+</span>
 </div>
-<div class="CommentParameterName">methodName</div>
-<div class="ParameterCommentContainer">
-The <span class="PseudoLink">System.String</span> containing the method name.
-</div>
-<div class="CommentParameterName">genericArguments</div>
-<div class="ParameterCommentContainer">
-An array of <span class="PseudoLink">System.Type</span> objects representing the number, order, and type of the generic arguments for the method.
-</div>
-<div class="CommentParameterName">methodArgs</div>
-<div class="ParameterCommentContainer">
-An array containing the arguments to pass to the method to invoke.
-</div>
-<div class="CommentHeader">Return Value</div>
-<div class="ParameterCommentContainer">
-An <span class="PseudoLink">System.Object</span> representing the return value of the invoked member.
-</div>
+
+<div id="SectionContainerDiv35" class="SectionContainer">
+<table class="MembersTable">
+<col width="7%" />
+<col width="38%" />
+<col width="55%" />
+<tr>
+<th>&nbsp;</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicMethod.gif" alt="Public Method" /></td>
+<td><a href="../../Contents/2/199.html">BuildupMessages</a></td>
+<td>Build up a list of messages for the specified transport channel
+            with the provided message data.</td>
+</tr>
+</table>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>
 <div id="Footer">

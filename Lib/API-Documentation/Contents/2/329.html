@@ -6,16 +6,14 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>XmppTransportChannelConfiguration Class Members</title>
+<title>RemotingTransportChannel.ServiceUri Property </title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">XmppTransportChannelConfiguration Class Members</div>
+<div id="PageTitle">RemotingTransportChannel.ServiceUri Property </div>
 <div id="HeaderShortcuts">
-<a href="#SectionHeader30" onclick="javascript: SetSectionVisibility(30, true); SetExpandCollapseAllToCollapseAll();">Constructors</a>&nbsp;
-<a href="#SectionHeader35" onclick="javascript: SetSectionVisibility(35, true); SetExpandCollapseAllToCollapseAll();">Methods</a>&nbsp;
-<a href="#SectionHeader40" onclick="javascript: SetSectionVisibility(40, true); SetExpandCollapseAllToCollapseAll();">Properties</a>&nbsp;
+<a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 </div>
 <div class="DarkLine"></div>
 <div class="LightLine"></div>
@@ -26,153 +24,27 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Configuration class for the <a href="../../Contents/2/328.html">XmppTransportChannel</a>.
+Gets the Uri of this service node.
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/2/327.html">XmppTransportChannelConfiguration</a><br />
-<b>Namespace:</b> <a href="../../Contents/2/325.html">Footloose.Configuration.Fluent</a><br />
-<b>Assembly:</b> <a href="../../Contents/1/2.html">Footloose.Xmpp</a>
+<b>Declaring type:</b> <a href="../../Contents/1/154.html">RemotingTransportChannel</a><br />
+<b>Namespace:</b> <a href="../../Contents/1/14.html">Footloose.TransportChannels.Remoting</a><br />
+<b>Assembly:</b> <a href="../../Contents/1/1.html">Footloose</a>
 </div>
-<div id="SectionHeader30" class="SectionHeader">
-<img id="SectionExpanderImg30" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(30);" />
+<div id="SectionHeader0" class="SectionHeader">
+<img id="SectionExpanderImg0" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(0);" />
 <span class="SectionHeader">
-<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(30);">
-Public Constructors
+<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(0);">
+Syntax
 </span>
 </span>
 </div>
 
-<div id="SectionContainerDiv30" class="SectionContainer">
-<table class="MembersTable">
-<col width="7%" />
-<col width="38%" />
-<col width="55%" />
-<tr>
-<th>&nbsp;</th>
-<th>Name</th>
-<th>Description</th>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicMethod.gif" alt="Public Method" /></td>
-<td><a href="../../Contents/2/330.html">XmppTransportChannelConfiguration</a></td>
-<td>Initializes a new instance of the <a href="../../Contents/1/153.html">RemotingTransportChannelConfiguration</a> class
-            with default settings.</td>
-</tr>
-</table>
-<div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
-<div id="SectionHeader35" class="SectionHeader">
-<img id="SectionExpanderImg35" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(35);" />
-<span class="SectionHeader">
-<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(35);">
-Public Methods
-</span>
-</span>
+<div id="SectionContainerDiv0" class="SectionContainer">
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public override Uri ServiceUri { get; }</pre></td></tr></table>
+<div class="CommentHeader">Property Value</div>
+<div class="ParameterCommentContainer">
+<p>There is no description.</p>
 </div>
-
-<div id="SectionContainerDiv35" class="SectionContainer">
-<table class="MembersTable">
-<col width="7%" />
-<col width="38%" />
-<col width="55%" />
-<tr>
-<th>&nbsp;</th>
-<th>Name</th>
-<th>Description</th>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Virtual.gif" alt="Virtual" /></td>
-<td><a href="../../Contents/2/331.html">Apply</a></td>
-<td>Applies the transport channel configuration data to the <a href="../../Contents/1/193.html">TransportChannelConfigurationSection</a>.</td>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicMethod.gif" alt="Public Method" /></td>
-<td><a href="../../Contents/2/332.html">AutoResolveServerAddress</a></td>
-<td>Enables auto resolve of the XMPP server address via SRV DNS Records. Default is on.</td>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicMethod.gif" alt="Public Method" /></td>
-<td><a href="../../Contents/2/333.html">ConnectionType</a></td>
-<td>Specify the XMPP connection type to the remote XMPP server. Default is TCP.</td>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicMethod.gif" alt="Public Method" /></td>
-<td><a href="../../Contents/2/334.html">Credentials</a></td>
-<td>Specify the <span class="PseudoLink">System.Net.NetworkCredential</span> for authentication with the XMPP server.
-            <span class="PseudoLink">System.Net.NetworkCredential.UserName</span> is the user part, <span class="PseudoLink">System.Net.NetworkCredential.Domain</span>
-            is the server part of the XMPP Jid.</td>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicMethod.gif" alt="Public Method" /></td>
-<td><a href="../../Contents/2/335.html">Port</a></td>
-<td>Specify the XMPP server port to connect. Default is 5222.</td>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicMethod.gif" alt="Public Method" /></td>
-<td><a href="../../Contents/2/336.html">Priority</a></td>
-<td>Specify the XMPP priority for this communication endpoint.
-            The value must be an integer between -128 and +127.
-            Default is 10.</td>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicMethod.gif" alt="Public Method" /></td>
-<td><a href="../../Contents/2/337.html">RemoteCertificateValidationCallback</a></td>
-<td>Specify the callback that verifies the remote Secure Sockets Layer (SSL) certificate used for authentication.</td>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicMethod.gif" alt="Public Method" /></td>
-<td><a href="../../Contents/2/338.html">ServerAddress</a></td>
-<td>Specify the XMPP server to connect. Use this setting for XMPP servers
-            without SRV records or HTTP Polling and BOSH connections.</td>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicMethod.gif" alt="Public Method" /></td>
-<td><a href="../../Contents/2/339.html">UseCompression</a></td>
-<td>Enables the use of XMPP stream compression to save bandwidth. Default is off.</td>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicMethod.gif" alt="Public Method" /></td>
-<td><a href="../../Contents/2/340.html">UseTls</a></td>
-<td>Enables the use of Start-TLS for TLS XMPP stream encryption and compression. Default is on.</td>
-</tr>
-</table>
-<div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
-<div id="SectionHeader40" class="SectionHeader">
-<img id="SectionExpanderImg40" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(40);" />
-<span class="SectionHeader">
-<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(40);">
-Public Properties
-</span>
-</span>
-</div>
-
-<div id="SectionContainerDiv40" class="SectionContainer">
-<table class="MembersTable">
-<col width="7%" />
-<col width="38%" />
-<col width="55%" />
-<tr>
-<th>&nbsp;</th>
-<th>Name</th>
-<th>Description</th>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicProperty.gif" alt="Public Property" />&nbsp;<img src="../../GFX/Static.gif" alt="Static" /></td>
-<td><a href="../../Contents/2/341.html">Standard</a></td>
-<td>Initializes a new instance of the <a href="../../Contents/2/327.html">XmppTransportChannelConfiguration</a> class
-            with default settings.</td>
-</tr>
-</table>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>
 <div id="Footer">

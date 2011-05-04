@@ -6,14 +6,14 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>Message Constructor (Uri, string)</title>
+<title>MessageType Class Members</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">Message Constructor (Uri, string)</div>
+<div id="PageTitle">MessageType Class Members</div>
 <div id="HeaderShortcuts">
-<a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
+<a href="#SectionHeader25" onclick="javascript: SetSectionVisibility(25, true); SetExpandCollapseAllToCollapseAll();">Fields</a>&nbsp;
 </div>
 <div class="DarkLine"></div>
 <div class="LightLine"></div>
@@ -24,36 +24,94 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Initializes a new instance of the <a href="../../Contents/2/199.html">Message</a> class
-            with the specified Uri of the recipient for the message and message body.
+Defines types of messages.
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/2/199.html">Message</a><br />
+<b>Declaring type:</b> <a href="../../Contents/2/187.html">MessageType</a><br />
 <b>Namespace:</b> <a href="../../Contents/1/9.html">Footloose.Messaging</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">Footloose</a>
 </div>
-<div id="SectionHeader0" class="SectionHeader">
-<img id="SectionExpanderImg0" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(0);" />
+<div id="SectionHeader25" class="SectionHeader">
+<img id="SectionExpanderImg25" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(25);" />
 <span class="SectionHeader">
-<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(0);">
-Syntax
+<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(25);">
+Public Fields
 </span>
 </span>
 </div>
 
-<div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public Message (
-        Uri <i>to</i>,
-        string <i>messageBody</i>
-) </pre></td></tr></table>
-<div class="CommentHeader">Parameters</div>
-<div class="CommentParameterName">to</div>
-<div class="ParameterCommentContainer">
-The Uri of the recipient for the message.
-</div>
-<div class="CommentParameterName">messageBody</div>
-<div class="ParameterCommentContainer">
-The body of the message.
-</div>
+<div id="SectionContainerDiv25" class="SectionContainer">
+<table class="MembersTable">
+<col width="7%" />
+<col width="38%" />
+<col width="55%" />
+<tr>
+<th>&nbsp;</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicField.gif" alt="Public Field" />&nbsp;<img src="../../GFX/Static.gif" alt="Static" /></td>
+<td><a href="../../Contents/2/225.html">Error</a></td>
+<td>A message that reports an error that has occurred regarding
+            processing or delivery of a previously-sent get or set request.
+            <remarks><p>
+            A communication endpoint hat receives a message of type Result must not response with any further message of type Result or Error.
+            </p></remarks></td>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicField.gif" alt="Public Field" />&nbsp;<img src="../../GFX/Static.gif" alt="Static" /></td>
+<td><a href="../../Contents/2/226.html">Get</a></td>
+<td>A message that requests information, inquires about
+            what data is needed in order to complete further operations, etc.
+            <remarks><p>
+            A communication endpoint hat receives a message of type Get must reply
+            with a message of type Result or Error.
+            </p><p>
+            The response must preserve the 'id' attribute of the request.
+            </p></remarks></td>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicField.gif" alt="Public Field" />&nbsp;<img src="../../GFX/Static.gif" alt="Static" /></td>
+<td><a href="../../Contents/2/227.html">Notification</a></td>
+<td>A message that notify other endpoints about certain events.
+            <remarks><p>
+            This is a one-way message. A communication endpoint hat receives a message of type Notification
+            must not response with any further message of type Result or Error.
+            </p></remarks></td>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicField.gif" alt="Public Field" />&nbsp;<img src="../../GFX/Static.gif" alt="Static" /></td>
+<td><a href="../../Contents/2/228.html">Result</a></td>
+<td>A message that is a response to a successful get or set request.
+            <remarks><p>
+            A Result message must not include any message body.
+            </p><p>
+            A communication endpoint hat receives a message of type Result must not
+            response with any further message of type Result or Error.
+            </p></remarks></td>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicField.gif" alt="Public Field" />&nbsp;<img src="../../GFX/Static.gif" alt="Static" /></td>
+<td><a href="../../Contents/2/229.html">Set</a></td>
+<td>A message that provides data.
+            <remarks><p>A communication endpoint hat receives a message of type Set must reply
+            with a message of type Result or Error.
+            </p><p>
+            The response must preserve the 'id' attribute of the request.
+            </p></remarks></td>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicField.gif" alt="Public Field" /></td>
+<td><a href="../../Contents/2/230.html">value__</a></td>
+<td><p>There is no summary.</p></td>
+</tr>
+</table>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>
 <div id="Footer">

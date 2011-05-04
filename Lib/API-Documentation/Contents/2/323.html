@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>RemotingTransportChannel.ServiceUri Property </title>
+<title>RemotingTransportChannel Constructor (TransportChannelConfigurationSection, RemotingEndpointIdentityManager)</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">RemotingTransportChannel.ServiceUri Property </div>
+<div id="PageTitle">RemotingTransportChannel Constructor (TransportChannelConfigurationSection, RemotingEndpointIdentityManager)</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 </div>
@@ -24,7 +24,8 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Gets the Uri of this service node.
+Initializes a new instance of the <a href="../../Contents/1/154.html">RemotingTransportChannel</a> with the
+            specified <a href="../../Contents/1/193.html">TransportChannelConfigurationSection</a>.
 <div id="ItemLocation">
 <b>Declaring type:</b> <a href="../../Contents/1/154.html">RemotingTransportChannel</a><br />
 <b>Namespace:</b> <a href="../../Contents/1/14.html">Footloose.TransportChannels.Remoting</a><br />
@@ -40,10 +41,18 @@ Syntax
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public override Uri ServiceUri { get; }</pre></td></tr></table>
-<div class="CommentHeader">Property Value</div>
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public RemotingTransportChannel (
+        TransportChannelConfigurationSection <i>configuration</i>,
+        RemotingEndpointIdentityManager <i>endpointIdentityManager</i>
+) </pre></td></tr></table>
+<div class="CommentHeader">Parameters</div>
+<div class="CommentParameterName">configuration</div>
 <div class="ParameterCommentContainer">
-<p>There is no description.</p>
+The <a href="../../Contents/1/193.html">TransportChannelConfigurationSection</a> for this transport channel.
+</div>
+<div class="CommentParameterName">endpointIdentityManager</div>
+<div class="ParameterCommentContainer">
+The <a href="../../Contents/2/315.html">RemotingEndpointIdentityManager</a> for this transport channel.
 </div>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>

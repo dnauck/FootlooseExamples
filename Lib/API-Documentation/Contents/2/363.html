@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>XmppTransportChannel Constructor (TransportChannelConfigurationSection, ISerializer)</title>
+<title>XmppTransportChannelConfigurationElement.ServerAddress Property </title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">XmppTransportChannel Constructor (TransportChannelConfigurationSection, ISerializer)</div>
+<div id="PageTitle">XmppTransportChannelConfigurationElement.ServerAddress Property </div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 </div>
@@ -24,10 +24,11 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-<p>There is no summary.</p>
+Gets or sets the XMPP server to connect. Use this setting for XMPP servers
+            without SRV records or HTTP Polling and BOSH connections.
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/2/328.html">XmppTransportChannel</a><br />
-<b>Namespace:</b> <a href="../../Contents/2/326.html">Footloose.TransportChannels.Xmpp</a><br />
+<b>Declaring type:</b> <a href="../../Contents/2/349.html">XmppTransportChannelConfigurationElement</a><br />
+<b>Namespace:</b> <a href="../../Contents/2/330.html">Footloose.Configuration</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/2.html">Footloose.Xmpp</a>
 </div>
 <div id="SectionHeader0" class="SectionHeader">
@@ -40,16 +41,8 @@ Syntax
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public XmppTransportChannel (
-        TransportChannelConfigurationSection <i>configuration</i>,
-        ISerializer <i>serializer</i>
-) </pre></td></tr></table>
-<div class="CommentHeader">Parameters</div>
-<div class="CommentParameterName">configuration</div>
-<div class="ParameterCommentContainer">
-<p>There is no description.</p>
-</div>
-<div class="CommentParameterName">serializer</div>
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public string ServerAddress { get; set; }</pre></td></tr></table>
+<div class="CommentHeader">Property Value</div>
 <div class="ParameterCommentContainer">
 <p>There is no description.</p>
 </div>
