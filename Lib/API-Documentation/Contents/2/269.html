@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>XmppTransportChannelConfigurationElement.UseTls Property </title>
+<title>XmppConnectionType.HttpPolling Field</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">XmppTransportChannelConfigurationElement.UseTls Property </div>
+<div id="PageTitle">XmppConnectionType.HttpPolling Field</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 <a href="#SectionHeader1" onclick="javascript: SetSectionVisibility(1, true); SetExpandCollapseAllToCollapseAll();">Remarks</a>&nbsp;
@@ -25,10 +25,10 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Enables the use of Start-TLS for TLS XMPP stream encryption and compression. Default is on.
+HTTP polling connection
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/2/254.html">XmppTransportChannelConfigurationElement</a><br />
-<b>Namespace:</b> <a href="../../Contents/2/236.html">Footloose.Configuration</a><br />
+<b>Declaring type:</b> <a href="../../Contents/2/265.html">XmppConnectionType</a><br />
+<b>Namespace:</b> <a href="../../Contents/2/248.html">Footloose.Configuration</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/2.html">Footloose.Xmpp</a>
 </div>
 <div id="SectionHeader0" class="SectionHeader">
@@ -41,11 +41,7 @@ Syntax
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public bool UseTls { get; set; }</pre></td></tr></table>
-<div class="CommentHeader">Property Value</div>
-<div class="ParameterCommentContainer">
-<p>There is no description.</p>
-</div>
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable">public const XmppConnectionType HttpPolling = 1</td></tr></table>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 <div id="SectionHeader1" class="SectionHeader">
 <img id="SectionExpanderImg1" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(1);" />
@@ -58,7 +54,7 @@ Remarks
 
 <div id="SectionContainerDiv1" class="SectionContainer">
 <div class="RemarksContainer">
-See RFC 2246 for further details: http://www.ietf.org/rfc/rfc2246.txt
+See XEP-0025 for further details: http://www.xmpp.org/extensions/xep-0025.html
 </div>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>

@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>XmppConnectionType.Tcp Field</title>
+<title>XmppTransportChannelConfiguration.Credentials Method (NetworkCredential)</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">XmppConnectionType.Tcp Field</div>
+<div id="PageTitle">XmppTransportChannelConfiguration.Credentials Method (NetworkCredential)</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 </div>
@@ -24,10 +24,12 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-TCP/IP socket connection
+Specify the <span class="PseudoLink">System.Net.NetworkCredential</span> for authentication with the XMPP server.
+            <span class="PseudoLink">System.Net.NetworkCredential.UserName</span> is the user part, <span class="PseudoLink">System.Net.NetworkCredential.Domain</span>
+            is the server part of the XMPP Jid.
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/2/253.html">XmppConnectionType</a><br />
-<b>Namespace:</b> <a href="../../Contents/2/236.html">Footloose.Configuration</a><br />
+<b>Declaring type:</b> <a href="../../Contents/2/251.html">XmppTransportChannelConfiguration</a><br />
+<b>Namespace:</b> <a href="../../Contents/2/249.html">Footloose.Configuration.Fluent</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/2.html">Footloose.Xmpp</a>
 </div>
 <div id="SectionHeader0" class="SectionHeader">
@@ -40,7 +42,18 @@ Syntax
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable">public const XmppConnectionType Tcp = 0</td></tr></table>
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public XmppTransportChannelConfiguration Credentials (
+        NetworkCredential <i>credentials</i>
+) </pre></td></tr></table>
+<div class="CommentHeader">Parameters</div>
+<div class="CommentParameterName">credentials</div>
+<div class="ParameterCommentContainer">
+<span class="PseudoLink">System.Net.NetworkCredential</span> with user name, passwort and XMPP server domain.
+</div>
+<div class="CommentHeader">Return Value</div>
+<div class="ParameterCommentContainer">
+<a href="../../Contents/2/251.html">XmppTransportChannelConfiguration</a>
+</div>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>
 <div id="Footer">

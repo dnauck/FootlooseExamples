@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>EndpointIdentityManagerBase.NotifyPresenceNotificationReceived Method (IPresence)</title>
+<title>EndpointIdentityManagerBase.NotifyServiceDiscoveryInfoReceived Method (string, DiscoInfo)</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">EndpointIdentityManagerBase.NotifyPresenceNotificationReceived Method (IPresence)</div>
+<div id="PageTitle">EndpointIdentityManagerBase.NotifyServiceDiscoveryInfoReceived Method (string, DiscoInfo)</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 </div>
@@ -40,13 +40,18 @@ Syntax
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public void NotifyPresenceNotificationReceived (
-        IPresence <i>presence</i>
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public void NotifyServiceDiscoveryInfoReceived (
+        string <i>caps</i>,
+        DiscoInfo <i>discoInfo</i>
 ) </pre></td></tr></table>
 <div class="CommentHeader">Parameters</div>
-<div class="CommentParameterName">presence</div>
+<div class="CommentParameterName">caps</div>
 <div class="ParameterCommentContainer">
-<p>There is no description.</p>
+The capabilities version the disco info belongs to.
+</div>
+<div class="CommentParameterName">discoInfo</div>
+<div class="ParameterCommentContainer">
+The requested disco information.
 </div>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>
