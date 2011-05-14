@@ -6,14 +6,14 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>IFootlooseService.CallMethod&lt;T1, T2, TResult&gt; Method (Type, string, IEnumerable&lt;Type&gt;, Action&lt;TResult&gt;, T1, T2)</title>
+<title>IFootlooseService.CallMethod&lt;T1, TResult&gt; Method</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">IFootlooseService.CallMethod&lt;T1, T2, TResult&gt; Method (Type, string, IEnumerable&lt;Type&gt;, Action&lt;TResult&gt;, T1, T2)</div>
+<div id="PageTitle">IFootlooseService.CallMethod&lt;T1, TResult&gt; Method</div>
 <div id="HeaderShortcuts">
-<a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
+<a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Overload List</a>&nbsp;
 </div>
 <div class="DarkLine"></div>
 <div class="LightLine"></div>
@@ -24,7 +24,7 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Invokes asynchronous the specified generic method of the given <span class="PseudoLink">System.Type</span> on a remote <a href="../../Contents/1/293.html">IFootlooseService</a> with the specified generic types and arguments.
+Invokes asynchronous the specified method of the given <span class="PseudoLink">System.Type</span> on a remote <a href="../../Contents/1/293.html">IFootlooseService</a> with the specified argument.
             The remote service Uri will be determined with the auto service discovery feature.
             Once the method call returns the callback action delegate is called.
 <div id="ItemLocation">
@@ -36,62 +36,82 @@ Invokes asynchronous the specified generic method of the given <span class="Pseu
 <img id="SectionExpanderImg0" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(0);" />
 <span class="SectionHeader">
 <span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(0);">
-Syntax
+Overload List
 </span>
 </span>
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public abstract Guid CallMethod&lt;T1, T2, TResult&gt; (
-        Type <i>type</i>,
-        string <i>methodName</i>,
-        IEnumerable&lt;Type&gt; <i>genericArguments</i>,
-        Action&lt;TResult&gt; <i>callback</i>,
-        T1 <i>arg1</i>,
-        T2 <i>arg2</i>
-) </pre></td></tr></table>
-<div class="CommentHeader">Type Parameters</div>
-<div class="CommentParameterName">T1</div>
-<div class="ParameterCommentContainer">
-The type of the first parameter of the method.
-</div>
-<div class="CommentParameterName">T2</div>
-<div class="ParameterCommentContainer">
-The type of the second parameter of the method.
-</div>
-<div class="CommentParameterName">TResult</div>
-<div class="ParameterCommentContainer">
-The type of the return value of the method.
-</div>
-<div class="CommentHeader">Parameters</div>
-<div class="CommentParameterName">type</div>
-<div class="ParameterCommentContainer">
-The <span class="PseudoLink">System.Type</span> the method belongs to.
-</div>
-<div class="CommentParameterName">methodName</div>
-<div class="ParameterCommentContainer">
-The name of the method to invoke.
-</div>
-<div class="CommentParameterName">genericArguments</div>
-<div class="ParameterCommentContainer">
-An array of types to be substituted for the type parameters of the current generic method definition.
-</div>
-<div class="CommentParameterName">callback</div>
-<div class="ParameterCommentContainer">
-The callback method.
-</div>
-<div class="CommentParameterName">arg1</div>
-<div class="ParameterCommentContainer">
-The first parameter of the method.
-</div>
-<div class="CommentParameterName">arg2</div>
-<div class="ParameterCommentContainer">
-The second parameter of the method.
-</div>
-<div class="CommentHeader">Return Value</div>
-<div class="ParameterCommentContainer">
-A unique correlation identifier for this method call.
-</div>
+<table class="MembersTable">
+<col width="7%" />
+<col width="38%" />
+<col width="55%" />
+<tr>
+<th>&nbsp;</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
+<td><a href="../../Contents/1/435.html">IFootlooseService.CallMethod&lt;T1, TResult&gt; (Type, string, Action&lt;TResult&gt;, T1)</a></td>
+<td>Invokes asynchronous the specified method of the given <span class="PseudoLink">System.Type</span> on a remote <a href="../../Contents/1/293.html">IFootlooseService</a> with the specified argument.
+            The remote service Uri will be determined with the auto service discovery feature.
+            Once the method call returns the callback action delegate is called.</td>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
+<td><a href="../../Contents/1/436.html">IFootlooseService.CallMethod&lt;T1, TResult&gt; (Type, string, IEnumerable&lt;Type&gt;, Action&lt;TResult&gt;, T1)</a></td>
+<td>Invokes asynchronous the specified generic method of the given <span class="PseudoLink">System.Type</span> on a remote <a href="../../Contents/1/293.html">IFootlooseService</a> with the specified generic type and argument.
+            The remote service Uri will be determined with the auto service discovery feature.
+            Once the method call returns the callback action delegate is called.</td>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
+<td><a href="../../Contents/1/437.html">IFootlooseService.CallMethod&lt;T1, TResult&gt; (Type, string, Uri, Action&lt;TResult&gt;, T1)</a></td>
+<td>Invokes asynchronous the specified method of the given <span class="PseudoLink">System.Type</span> on a remote <a href="../../Contents/1/293.html">IFootlooseService</a> with the specified argument.
+            Once the method call returns the callback action delegate is called.</td>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
+<td><a href="../../Contents/1/438.html">IFootlooseService.CallMethod&lt;T1, TResult&gt; (Type, string, IEnumerable&lt;Type&gt;, Uri, Action&lt;TResult&gt;, T1)</a></td>
+<td>Invokes asynchronous the specified generic method of the given <span class="PseudoLink">System.Type</span> on a remote <a href="../../Contents/1/293.html">IFootlooseService</a> with the specified generic type and argument.
+            Once the method call returns the callback action delegate is called.</td>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
+<td><a href="../../Contents/1/439.html">IFootlooseService.CallMethod&lt;T1, T2&gt; (Type, string, T1, T2)</a></td>
+<td>Invokes asynchronous the specified method of the given <span class="PseudoLink">System.Type</span> on a remote <a href="../../Contents/1/293.html">IFootlooseService</a> with the specified arguments.
+            The remote service Uri will be determined with the auto service discovery feature.
+            Once the method call returns the <a href="../../Contents/1/295.html">MethodResponseReceived</a> event ist called.</td>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
+<td><a href="../../Contents/1/440.html">IFootlooseService.CallMethod&lt;T1, T2&gt; (Type, string, IEnumerable&lt;Type&gt;, T1, T2)</a></td>
+<td>Invokes asynchronous the specified generic method of the given <span class="PseudoLink">System.Type</span> on a remote <a href="../../Contents/1/293.html">IFootlooseService</a> with the specified generic types and arguments.
+            The remote service Uri will be determined with the auto service discovery feature.
+            Once the method call returns the <a href="../../Contents/1/295.html">MethodResponseReceived</a> event ist called.</td>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
+<td><a href="../../Contents/1/441.html">IFootlooseService.CallMethod&lt;T1, T2&gt; (Type, string, Uri, T1, T2)</a></td>
+<td>Invokes asynchronous the specified method of the given <span class="PseudoLink">System.Type</span> on a remote <a href="../../Contents/1/293.html">IFootlooseService</a> with the specified arguments.
+            Once the method call returns the <a href="../../Contents/1/295.html">MethodResponseReceived</a> event ist called.</td>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
+<td><a href="../../Contents/1/442.html">IFootlooseService.CallMethod&lt;T1, T2&gt; (Type, string, IEnumerable&lt;Type&gt;, Uri, T1, T2)</a></td>
+<td>Invokes asynchronous the specified generic method of the given <span class="PseudoLink">System.Type</span> on a remote <a href="../../Contents/1/293.html">IFootlooseService</a> with the specified generic types and arguments.
+            Once the method call returns the <a href="../../Contents/1/295.html">MethodResponseReceived</a> event ist called.</td>
+</tr>
+</table>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>
 <div id="Footer">

@@ -1595,6 +1595,163 @@
             <param name="context">The <see cref="T:System.Runtime.Serialization.StreamingContext"/> that contains
             contextual information about the source or destination.</param>
         </member>
+        <member name="T:Footloose.DataModel.PresenceSubscriptionType">
+            <summary>
+            Represents the state of the subscription to the <see cref="T:Footloose.DataModel.IPresence"/>
+            of a <see cref="T:Footloose.DataModel.IEndpointIdentity"/>.
+            </summary>
+        </member>
+        <member name="F:Footloose.DataModel.PresenceSubscriptionType.None">
+            <summary>
+            Neither this instance nor the other <see cref="T:Footloose.DataModel.IEndpointIdentity"/> have a
+            subscription to the <see cref="T:Footloose.DataModel.IPresence"/> notification from each other.
+            </summary>
+        </member>
+        <member name="F:Footloose.DataModel.PresenceSubscriptionType.From">
+            <summary>
+            The other <see cref="T:Footloose.DataModel.IEndpointIdentity"/> has a subscription to the <see cref="T:Footloose.DataModel.IPresence"/>
+            of this instance, but this instance doesn't have a subscription to the other's <see cref="T:Footloose.DataModel.IPresence"/>.
+            </summary>
+        </member>
+        <member name="F:Footloose.DataModel.PresenceSubscriptionType.To">
+            <summary>
+            This instance has a subscription to the <see cref="T:Footloose.DataModel.IPresence"/> of the
+            other <see cref="T:Footloose.DataModel.IEndpointIdentity"/>, but the other <see cref="T:Footloose.DataModel.IEndpointIdentity"/>
+            doesn't have a subscription to this instance.
+            </summary>
+        </member>
+        <member name="F:Footloose.DataModel.PresenceSubscriptionType.Both">
+            <summary>
+            This instance and the other <see cref="T:Footloose.DataModel.IEndpointIdentity"/> have subscriptions to each other's <see cref="T:Footloose.DataModel.IPresence"/>.
+            </summary>
+        </member>
+        <member name="T:Footloose.DataModel.PresenceUnsubscribe">
+            <summary>
+            A presence unsubscribe request that is send by the subscribed endpoint
+            to another <see cref="T:Footloose.DataModel.IEndpointIdentity"/> to unsubscribe from it's presence notifications.
+            </summary>
+        </member>
+        <member name="T:Footloose.DataModel.IMessageBodyData">
+            <summary>
+            Interface to mark data model types that are used as message body data.
+            </summary>
+        </member>
+        <member name="T:Footloose.Messaging.PresenceUnsubscribeMessageHandler">
+            <summary>
+            Process incoming <see cref="T:Footloose.DataModel.PresenceUnsubscribe"/> messages.
+            </summary>
+        </member>
+        <member name="T:Footloose.Messaging.IMessageHandler">
+            <summary>
+            A interface that is responsible to process incoming messages that are handled by the <see cref="T:Footloose.TransportChannels.IMessageDispatcher"/>.
+            </summary>
+        </member>
+        <member name="M:Footloose.Messaging.IMessageHandler.ProcessMessage(Footloose.Messaging.Message)">
+            <summary>
+            Process the specified incoming message.
+            </summary>
+            <param name="message">The incoming message to process.</param>
+        </member>
+        <member name="M:Footloose.Messaging.PresenceUnsubscribeMessageHandler.ProcessMessage(Footloose.Messaging.Message)">
+            <summary>
+            Process the specified incoming message.
+            </summary>
+            <param name="message">The incoming message to process.</param>
+        </member>
+        <member name="T:Footloose.Messaging.PresenceUnsubscribeMessageBuilder">
+            <summary>
+            Builds up messages from <see cref="T:Footloose.DataModel.PresenceUnsubscribe"/> objects.
+            </summary>
+        </member>
+        <member name="M:Footloose.Messaging.IMessageBuilder.BuildupMessages(System.Uri,Footloose.DataModel.IMessageBodyData)">
+            <summary>
+            Build up a list of messages for the specified transport channel
+            with the provided message data.
+            </summary>
+            <param name="to">The Uri of the recipient for the message.</param>
+            <param name="messageData">The data of the message.</param>
+            <returns>A list of messages.</returns>
+        </member>
+        <member name="M:Footloose.Messaging.PresenceUnsubscribeMessageBuilder.#ctor(Footloose.Serialization.ISerializer)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Footloose.Messaging.DiscoInfoResponseMessageBuilder"/> class with
+            specified <see cref="T:Footloose.Serialization.ISerializer"/>.
+            </summary>
+            <param name="serializer"></param>
+        </member>
+        <member name="M:Footloose.Messaging.PresenceUnsubscribeMessageBuilder.BuildupMessages(System.Uri,Footloose.DataModel.IMessageBodyData)">
+            <summary>
+            Build up a list of messages for the specified transport channel
+            with the provided message data.
+            </summary>
+            <param name="to">The Uri of the recipient for the message.</param>
+            <param name="messageData">The data of the message.</param>
+            <returns>A list of messages.</returns>
+        </member>
+        <member name="T:Footloose.PresenceSubscriptionResponseEventArgs">
+            <summary>
+            Provides data for the <see cref="E:Footloose.IEndpointIdentityManager.PresenceSubscriptionResponseReceived"/>
+            event. When a new presence subscription response received an instance of this class is passed to the handler.
+            </summary>
+        </member>
+        <member name="M:Footloose.PresenceSubscriptionResponseEventArgs.#ctor(Footloose.DataModel.IEndpointIdentity,System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Footloose.PresenceSubscriptionResponseEventArgs"/> class
+            with the specified <see cref="T:Footloose.DataModel.IEndpointIdentity"/> and message.
+            </summary>
+            <param name="from">The <see cref="T:Footloose.DataModel.IEndpointIdentity"/> from the sender of this subscription request.</param>
+            <param name="approved">The message that explains the subscription request.</param>
+        </member>
+        <member name="P:Footloose.PresenceSubscriptionResponseEventArgs.From">
+            <summary>
+            Gets the <see cref="T:Footloose.DataModel.IEndpointIdentity"/> from the sender of this subscription request.
+            </summary>
+        </member>
+        <member name="P:Footloose.PresenceSubscriptionResponseEventArgs.Approved">
+            <summary>
+            Gets a value indicating if the subscription request was approved.
+            </summary>
+        </member>
+        <member name="T:Footloose.Messaging.PresenceSubscriptionResponseMessageHandler">
+            <summary>
+            Process incoming <see cref="T:Footloose.DataModel.PresenceSubscriptionResponse"/> messages.
+            </summary>
+        </member>
+        <member name="M:Footloose.Messaging.PresenceSubscriptionResponseMessageHandler.ProcessMessage(Footloose.Messaging.Message)">
+            <summary>
+            Process the specified incoming message.
+            </summary>
+            <param name="message">The incoming message to process.</param>
+        </member>
+        <member name="T:Footloose.PresenceSubscriptionRequestEventArgs">
+            <summary>
+            Provides data for the <see cref="E:Footloose.IEndpointIdentityManager.PresenceSubscriptionRequestReceived"/>
+            event. When a new presence subscription request received an instance of this class is passed to the handler.
+            </summary>
+        </member>
+        <member name="M:Footloose.PresenceSubscriptionRequestEventArgs.#ctor(Footloose.DataModel.IEndpointIdentity,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Footloose.PresenceSubscriptionRequestEventArgs"/> class
+            with the specified <see cref="T:Footloose.DataModel.IEndpointIdentity"/> and reason.
+            </summary>
+            <param name="from">The <see cref="T:Footloose.DataModel.IEndpointIdentity"/> from the sender of this subscription request.</param>
+            <param name="reason">The reason that explains the subscription request.</param>
+        </member>
+        <member name="P:Footloose.PresenceSubscriptionRequestEventArgs.From">
+            <summary>
+            Gets the <see cref="T:Footloose.DataModel.IEndpointIdentity"/> from the sender of this subscription request.
+            </summary>
+        </member>
+        <member name="P:Footloose.PresenceSubscriptionRequestEventArgs.Reason">
+            <summary>
+            Gets a reason that explains the subscription request.
+            </summary>
+        </member>
+        <member name="P:Footloose.PresenceSubscriptionRequestEventArgs.Approve">
+            <summary>
+            Gets or sets a value indicating if the subscription should be approved.
+            </summary>
+        </member>
         <member name="T:Footloose.DataModel.CommunicationEndpoint">
             <summary>
             Internal communication endpoint implementation.
@@ -1713,6 +1870,16 @@
             The communication endpoint is unavailable for an extended period.
             </summary>
         </member>
+        <member name="T:Footloose.DataModel.PresenceSubscriptionResponse">
+            <summary>
+            A presence subscription response to a <see cref="T:Footloose.DataModel.PresenceSubscriptionRequest"/>.
+            </summary>
+        </member>
+        <member name="P:Footloose.DataModel.PresenceSubscriptionResponse.Approved">
+            <summary>
+            Gets or sets a value indicating if the <see cref="T:Footloose.DataModel.PresenceSubscriptionRequest"/> was approved.
+            </summary>
+        </member>
         <member name="T:Footloose.DataModel.DiscoFeature">
             <summary>
             Contains a protocol namespace or other feature offered by the communication endpoint.
@@ -1792,13 +1959,8 @@
         </member>
         <member name="T:Footloose.DataModel.DiscoInfoRequest">
             <summary>
-            A service discovery request that is send by the requiesting communication endpoint
+            A service discovery request that is send by the requesting communication endpoint
             to discover information about another communication endpoint on the network.
-            </summary>
-        </member>
-        <member name="T:Footloose.DataModel.IMessageBodyData">
-            <summary>
-            Interface to mark data model types that are used as message body data.
             </summary>
         </member>
         <member name="P:Footloose.DataModel.DiscoInfoRequest.Capabilities">
@@ -1899,6 +2061,28 @@
             Interface for a identity of a <see cref="T:Footloose.DataModel.ICommunicationEndpoint"/>.
             </summary>
         </member>
+        <member name="M:Footloose.DataModel.IEndpointIdentity.Subscribe">
+            <summary>
+            Sends a subscription request to permanently subscribe to a identity's presence information.
+            </summary>
+        </member>
+        <member name="M:Footloose.DataModel.IEndpointIdentity.Subscribe(System.String)">
+            <summary>
+            Sends a subscription request with the specified reason
+            to permanently subscribe to a identity's presence information.
+            </summary>
+            <param name="reason">A reason that explains the subscription request.</param>
+        </member>
+        <member name="M:Footloose.DataModel.IEndpointIdentity.Unsubscribe">
+            <summary>
+            Unsubscribe from the identity's presence information.
+            </summary>
+        </member>
+        <member name="M:Footloose.DataModel.IEndpointIdentity.RevokeSubscription">
+            <summary>
+            Cancel and revoke the identity's subscription to this instance's presence information.
+            </summary>
+        </member>
         <member name="P:Footloose.DataModel.IEndpointIdentity.Uri">
             <summary>
             Gets the uri of this endpoint identity.
@@ -1914,9 +2098,44 @@
             Gets a list of groups the endpoint identity belongs to.
             </summary>
         </member>
+        <member name="P:Footloose.DataModel.IEndpointIdentity.PresenceSubscriptionType">
+            <summary>
+            Gets the state of the subscription to the <see cref="T:Footloose.DataModel.IPresence"/> of this endpoint identity.
+            </summary>
+        </member>
         <member name="P:Footloose.DataModel.IEndpointIdentity.Endpoints">
             <summary>
             Gets a list of communication endpoints this identity propagates.
+            </summary>
+        </member>
+        <member name="M:Footloose.DataModel.EndpointIdentity.#ctor(System.Lazy{Footloose.EndpointIdentityManagerBase},System.Uri)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Footloose.DataModel.EndpointIdentity"/> class with
+            the specified <see cref="T:Footloose.EndpointIdentityManagerBase"/> instance.
+            </summary>
+            <param name="endpointIdentityManager">The <see cref="T:Footloose.EndpointIdentityManagerBase"/>.</param>
+            <param name="uri">The uri of this <see cref="T:Footloose.DataModel.IEndpointIdentity"/>.</param>
+        </member>
+        <member name="M:Footloose.DataModel.EndpointIdentity.Subscribe">
+            <summary>
+            Sends a subscription request to permanently subscribe to a identity's presence information.
+            </summary>
+        </member>
+        <member name="M:Footloose.DataModel.EndpointIdentity.Subscribe(System.String)">
+            <summary>
+            Sends a subscription request with the specified reason
+            to permanently subscribe to a identity's presence information.
+            </summary>
+            <param name="reason">A reason that explains the subscription request.</param>
+        </member>
+        <member name="M:Footloose.DataModel.EndpointIdentity.Unsubscribe">
+            <summary>
+            Unsubscribe from the identity's presence information.
+            </summary>
+        </member>
+        <member name="M:Footloose.DataModel.EndpointIdentity.RevokeSubscription">
+            <summary>
+            Cancel and revoke the identity's subscription to this instance's presence information.
             </summary>
         </member>
         <member name="M:Footloose.DataModel.EndpointIdentity.SetPresence(Footloose.DataModel.IPresence)">
@@ -1932,12 +2151,17 @@
         </member>
         <member name="P:Footloose.DataModel.EndpointIdentity.Name">
             <summary>
-            Gets the name of this endpoint identity.
+            Gets or sets the name of this endpoint identity.
             </summary>
         </member>
         <member name="P:Footloose.DataModel.EndpointIdentity.Groups">
             <summary>
-            Gets a list of groups the endpoint identity belongs to.
+            Gets or sets a list of groups the endpoint identity belongs to.
+            </summary>
+        </member>
+        <member name="P:Footloose.DataModel.EndpointIdentity.PresenceSubscriptionType">
+            <summary>
+            Gets or sets the state of the subscription to the <see cref="T:Footloose.DataModel.IPresence"/> of this endpoint identity.
             </summary>
         </member>
         <member name="P:Footloose.DataModel.EndpointIdentity.Footloose#DataModel#IEndpointIdentity#Endpoints">
@@ -1963,7 +2187,115 @@
             their <see cref="T:Footloose.DataModel.ICommunicationEndpoint"/>.
             </summary>
         </member>
-        <member name="M:Footloose.DataModel.EndpointIdentityDictionary.#ctor">
+        <member name="M:Footloose.DataModel.IEndpointIdentityCollection.Add(System.Uri)">
+            <summary>
+            Adds a new <see cref="T:Footloose.DataModel.IEndpointIdentity"/> with the specified <see cref="T:System.Uri"/> to the collection
+            and request subscription to the <see cref="T:Footloose.DataModel.IPresence"/> of the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>.
+            </summary>
+            <param name="uri">The <see cref="T:System.Uri"/> of the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>.</param>
+        </member>
+        <member name="M:Footloose.DataModel.IEndpointIdentityCollection.Add(System.Uri,System.Boolean)">
+            <summary>
+            Adds a new <see cref="T:Footloose.DataModel.IEndpointIdentity"/> with the specified <see cref="T:System.Uri"/> to the collection
+            and request subscription to the <see cref="T:Footloose.DataModel.IPresence"/> of the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>.
+            </summary>
+            <param name="uri">The <see cref="T:System.Uri"/> of the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>.</param>
+            <param name="requestSubscription">If true request subscription to the <see cref="T:Footloose.DataModel.IPresence"/> of
+            the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>; otherwise just add the item to the collection.</param>
+        </member>
+        <member name="M:Footloose.DataModel.IEndpointIdentityCollection.Add(System.Uri,System.String)">
+            <summary>
+            Adds a new <see cref="T:Footloose.DataModel.IEndpointIdentity"/> with the specified <see cref="T:System.Uri"/> and name to the collection
+            and request subscription to the <see cref="T:Footloose.DataModel.IPresence"/> of the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>.
+            </summary>
+            <param name="uri">The <see cref="T:System.Uri"/> of the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>.</param>
+            <param name="name">The name of the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>.</param>
+        </member>
+        <member name="M:Footloose.DataModel.IEndpointIdentityCollection.Add(System.Uri,System.String,System.Boolean)">
+            <summary>
+            Adds a new <see cref="T:Footloose.DataModel.IEndpointIdentity"/> with the specified <see cref="T:System.Uri"/> and name to the collection
+            and request subscription to the <see cref="T:Footloose.DataModel.IPresence"/> of the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>.
+            </summary>
+            <param name="uri">The <see cref="T:System.Uri"/> of the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>.</param>
+            <param name="name">The name of the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>.</param>
+            <param name="requestSubscription">If true request subscription to the <see cref="T:Footloose.DataModel.IPresence"/> of
+            the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>; otherwise just add the item to the collection.</param>
+        </member>
+        <member name="M:Footloose.DataModel.IEndpointIdentityCollection.Add(System.Uri,System.String,System.String)">
+            <summary>
+            Adds a new <see cref="T:Footloose.DataModel.IEndpointIdentity"/> with the specified <see cref="T:System.Uri"/> and name
+            and group to the collection
+            and request subscription to the <see cref="T:Footloose.DataModel.IPresence"/> of the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>.
+            </summary>
+            <param name="uri">The <see cref="T:System.Uri"/> of the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>.</param>
+            <param name="name">The name of the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>.</param>
+            <param name="group">The group the <see cref="T:Footloose.DataModel.IEndpointIdentity"/> belongs to.</param>
+        </member>
+        <member name="M:Footloose.DataModel.IEndpointIdentityCollection.Add(System.Uri,System.String,System.String,System.Boolean)">
+            <summary>
+            Adds a new <see cref="T:Footloose.DataModel.IEndpointIdentity"/> with the specified <see cref="T:System.Uri"/> and name
+            and group to the collection
+            and request subscription to the <see cref="T:Footloose.DataModel.IPresence"/> of the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>.
+            </summary>
+            <param name="uri">The <see cref="T:System.Uri"/> of the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>.</param>
+            <param name="name">The name of the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>.</param>
+            <param name="group">The group the <see cref="T:Footloose.DataModel.IEndpointIdentity"/> belongs to.</param>
+            <param name="requestSubscription">If true request subscription to the <see cref="T:Footloose.DataModel.IPresence"/> of
+            the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>; otherwise just add the item to the collection.</param>
+        </member>
+        <member name="M:Footloose.DataModel.IEndpointIdentityCollection.Add(System.Uri,System.String,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Adds a new <see cref="T:Footloose.DataModel.IEndpointIdentity"/> with the specified <see cref="T:System.Uri"/> and name
+            and list of groups to the collection
+            and request subscription to the <see cref="T:Footloose.DataModel.IPresence"/> of the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>.
+            </summary>
+            <param name="uri">The <see cref="T:System.Uri"/> of the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>.</param>
+            <param name="name">The name of the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>.</param>
+            <param name="groups">The list of groups the <see cref="T:Footloose.DataModel.IEndpointIdentity"/> belongs to.</param>
+        </member>
+        <member name="M:Footloose.DataModel.IEndpointIdentityCollection.Add(System.Uri,System.String,System.Collections.Generic.IEnumerable{System.String},System.Boolean)">
+            <summary>
+            Adds a new <see cref="T:Footloose.DataModel.IEndpointIdentity"/> with the specified <see cref="T:System.Uri"/> and name
+            and list of groups to the collection
+            and request subscription to the <see cref="T:Footloose.DataModel.IPresence"/> of the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>.
+            </summary>
+            <param name="uri">The <see cref="T:System.Uri"/> of the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>.</param>
+            <param name="name">The name of the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>.</param>
+            <param name="groups">The list of groups the <see cref="T:Footloose.DataModel.IEndpointIdentity"/> belongs to.</param>
+            <param name="requestSubscription">If true request subscription to the <see cref="T:Footloose.DataModel.IPresence"/> of
+            the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>; otherwise just add the item to the collection.</param>
+        </member>
+        <member name="M:Footloose.DataModel.IEndpointIdentityCollection.Update(System.Uri,System.String)">
+            <summary>
+            Updates the name of the <see cref="T:Footloose.DataModel.IEndpointIdentity"/> with the specified <see cref="T:System.Uri"/>.
+            </summary>
+            <param name="uri">The <see cref="T:System.Uri"/> of the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>.</param>
+            <param name="name">The name of the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>.</param>
+        </member>
+        <member name="M:Footloose.DataModel.IEndpointIdentityCollection.Update(System.Uri,System.String,System.String)">
+            <summary>
+            Updates the name and group of the <see cref="T:Footloose.DataModel.IEndpointIdentity"/> with the specified <see cref="T:System.Uri"/>.
+            </summary>
+            <param name="uri">The <see cref="T:System.Uri"/> of the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>.</param>
+            <param name="name">The name of the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>.</param>
+            <param name="group">The group the <see cref="T:Footloose.DataModel.IEndpointIdentity"/> belongs to.</param>
+        </member>
+        <member name="M:Footloose.DataModel.IEndpointIdentityCollection.Update(System.Uri,System.String,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Updates the name and list of groups of the <see cref="T:Footloose.DataModel.IEndpointIdentity"/> with the specified <see cref="T:System.Uri"/>.
+            </summary>
+            <param name="uri">The <see cref="T:System.Uri"/> of the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>.</param>
+            <param name="name">The name of the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>.</param>
+            <param name="groups">The list of groups the <see cref="T:Footloose.DataModel.IEndpointIdentity"/> belongs to.</param>
+        </member>
+        <member name="M:Footloose.DataModel.IEndpointIdentityCollection.Remove(System.Uri)">
+            <summary>
+            Removes the <see cref="T:Footloose.DataModel.IEndpointIdentity"/> with the specified <see cref="T:System.Uri"/> from the collection
+            and unsubcribe from the <see cref="T:Footloose.DataModel.IPresence"/> of the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>.
+            </summary>
+            <param name="uri">The <see cref="T:System.Uri"/> of the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>.</param>
+        </member>
+        <member name="M:Footloose.DataModel.EndpointIdentityDictionary.#ctor(System.Lazy{Footloose.EndpointIdentityManagerBase})">
             <summary>
             Initializes a new instance of the <see cref="T:Footloose.DataModel.EndpointIdentityDictionary"/> class that is empty.
             </summary>
@@ -1976,6 +2308,114 @@
             A <see cref="T:System.Collections.Generic.IEnumerator`1"/> that can be used to iterate through the collection.
             </returns>
             <filterpriority>1</filterpriority>
+        </member>
+        <member name="M:Footloose.DataModel.EndpointIdentityDictionary.Add(System.Uri)">
+            <summary>
+            Adds a new <see cref="T:Footloose.DataModel.IEndpointIdentity"/> with the specified <see cref="T:System.Uri"/> to the collection
+            and request subscription to the <see cref="T:Footloose.DataModel.IPresence"/> of the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>.
+            </summary>
+            <param name="uri">The <see cref="T:System.Uri"/> of the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>.</param>
+        </member>
+        <member name="M:Footloose.DataModel.EndpointIdentityDictionary.Add(System.Uri,System.Boolean)">
+            <summary>
+            Adds a new <see cref="T:Footloose.DataModel.IEndpointIdentity"/> with the specified <see cref="T:System.Uri"/> to the collection
+            and request subscription to the <see cref="T:Footloose.DataModel.IPresence"/> of the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>.
+            </summary>
+            <param name="uri">The <see cref="T:System.Uri"/> of the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>.</param>
+            <param name="requestSubscription">If true request subscription to the <see cref="T:Footloose.DataModel.IPresence"/> of
+            the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>; otherwise just add the item to the collection.</param>
+        </member>
+        <member name="M:Footloose.DataModel.EndpointIdentityDictionary.Add(System.Uri,System.String)">
+            <summary>
+            Adds a new <see cref="T:Footloose.DataModel.IEndpointIdentity"/> with the specified <see cref="T:System.Uri"/> and name to the collection
+            and request subscription to the <see cref="T:Footloose.DataModel.IPresence"/> of the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>.
+            </summary>
+            <param name="uri">The <see cref="T:System.Uri"/> of the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>.</param>
+            <param name="name">The name of the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>.</param>
+        </member>
+        <member name="M:Footloose.DataModel.EndpointIdentityDictionary.Add(System.Uri,System.String,System.Boolean)">
+            <summary>
+            Adds a new <see cref="T:Footloose.DataModel.IEndpointIdentity"/> with the specified <see cref="T:System.Uri"/> and name to the collection
+            and request subscription to the <see cref="T:Footloose.DataModel.IPresence"/> of the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>.
+            </summary>
+            <param name="uri">The <see cref="T:System.Uri"/> of the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>.</param>
+            <param name="name">The name of the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>.</param>
+            <param name="requestSubscription">If true request subscription to the <see cref="T:Footloose.DataModel.IPresence"/> of
+            the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>; otherwise just add the item to the collection.</param>
+        </member>
+        <member name="M:Footloose.DataModel.EndpointIdentityDictionary.Add(System.Uri,System.String,System.String)">
+            <summary>
+            Adds a new <see cref="T:Footloose.DataModel.IEndpointIdentity"/> with the specified <see cref="T:System.Uri"/> and name
+            and group to the collection
+            and request subscription to the <see cref="T:Footloose.DataModel.IPresence"/> of the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>.
+            </summary>
+            <param name="uri">The <see cref="T:System.Uri"/> of the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>.</param>
+            <param name="name">The name of the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>.</param>
+            <param name="group">The group the <see cref="T:Footloose.DataModel.IEndpointIdentity"/> belongs to.</param>
+        </member>
+        <member name="M:Footloose.DataModel.EndpointIdentityDictionary.Add(System.Uri,System.String,System.String,System.Boolean)">
+            <summary>
+            Adds a new <see cref="T:Footloose.DataModel.IEndpointIdentity"/> with the specified <see cref="T:System.Uri"/> and name
+            and group to the collection
+            and request subscription to the <see cref="T:Footloose.DataModel.IPresence"/> of the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>.
+            </summary>
+            <param name="uri">The <see cref="T:System.Uri"/> of the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>.</param>
+            <param name="name">The name of the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>.</param>
+            <param name="group">The group the <see cref="T:Footloose.DataModel.IEndpointIdentity"/> belongs to.</param>
+            <param name="requestSubscription">If true request subscription to the <see cref="T:Footloose.DataModel.IPresence"/> of
+            the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>; otherwise just add the item to the collection.</param>
+        </member>
+        <member name="M:Footloose.DataModel.EndpointIdentityDictionary.Add(System.Uri,System.String,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Adds a new <see cref="T:Footloose.DataModel.IEndpointIdentity"/> with the specified <see cref="T:System.Uri"/> and name
+            and list of groups to the collection
+            and request subscription to the <see cref="T:Footloose.DataModel.IPresence"/> of the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>.
+            </summary>
+            <param name="uri">The <see cref="T:System.Uri"/> of the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>.</param>
+            <param name="name">The name of the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>.</param>
+            <param name="groups">The list of groups the <see cref="T:Footloose.DataModel.IEndpointIdentity"/> belongs to.</param>
+        </member>
+        <member name="M:Footloose.DataModel.EndpointIdentityDictionary.Add(System.Uri,System.String,System.Collections.Generic.IEnumerable{System.String},System.Boolean)">
+            <summary>
+            Adds a new <see cref="T:Footloose.DataModel.IEndpointIdentity"/> with the specified <see cref="T:System.Uri"/> and name
+            and list of groups to the collection
+            and request subscription to the <see cref="T:Footloose.DataModel.IPresence"/> of the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>.
+            </summary>
+            <param name="uri">The <see cref="T:System.Uri"/> of the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>.</param>
+            <param name="name">The name of the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>.</param>
+            <param name="groups">The list of groups the <see cref="T:Footloose.DataModel.IEndpointIdentity"/> belongs to.</param>
+            <param name="requestSubscription">If true request subscription to the <see cref="T:Footloose.DataModel.IPresence"/> of
+            the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>; otherwise just add the item to the collection.</param>
+        </member>
+        <member name="M:Footloose.DataModel.EndpointIdentityDictionary.Update(System.Uri,System.String)">
+            <summary>
+            Updates the name of the <see cref="T:Footloose.DataModel.IEndpointIdentity"/> with the specified <see cref="T:System.Uri"/>.
+            </summary>
+            <param name="uri">The <see cref="T:System.Uri"/> of the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>.</param>
+            <param name="name">The name of the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>.</param>
+        </member>
+        <member name="M:Footloose.DataModel.EndpointIdentityDictionary.Update(System.Uri,System.String,System.String)">
+            <summary>
+            Updates the name and group of the <see cref="T:Footloose.DataModel.IEndpointIdentity"/> with the specified <see cref="T:System.Uri"/>.
+            </summary>
+            <param name="uri">The <see cref="T:System.Uri"/> of the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>.</param>
+            <param name="name">The name of the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>.</param>
+            <param name="group">The group the <see cref="T:Footloose.DataModel.IEndpointIdentity"/> belongs to.</param>
+        </member>
+        <member name="M:Footloose.DataModel.EndpointIdentityDictionary.Update(System.Uri,System.String,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Updates the name and list of groups of the <see cref="T:Footloose.DataModel.IEndpointIdentity"/> with the specified <see cref="T:System.Uri"/>.
+            </summary>
+            <param name="uri">The <see cref="T:System.Uri"/> of the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>.</param>
+            <param name="name">The name of the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>.</param>
+            <param name="groups">The list of groups the <see cref="T:Footloose.DataModel.IEndpointIdentity"/> belongs to.</param>
+        </member>
+        <member name="M:Footloose.DataModel.EndpointIdentityDictionary.Remove(System.Uri)">
+            <summary>
+            Removes the <see cref="T:Footloose.DataModel.IEndpointIdentity"/> with the specified <see cref="T:System.Uri"/> from the collection
+            and unsubcribe from the <see cref="T:Footloose.DataModel.IPresence"/> of the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>.
+            </summary>
+            <param name="uri">The <see cref="T:System.Uri"/> of the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>.</param>
         </member>
         <member name="T:Footloose.DataModel.IEndpointFeatureFindCriterion">
             <summary>
@@ -2167,6 +2607,18 @@
             Gets a string that contains a hash presentation of the communication endpoint's capabilities.
             </summary>
         </member>
+        <member name="T:Footloose.DataModel.PresenceSubscriptionRequest">
+            <summary>
+            A presence subscription request that is send by the requesting communication endpoint
+            to another <see cref="T:Footloose.DataModel.IEndpointIdentity"/> to receive <see cref="T:Footloose.DataModel.IPresence"/> notifications
+            when approved.
+            </summary>
+        </member>
+        <member name="P:Footloose.DataModel.PresenceSubscriptionRequest.Reason">
+            <summary>
+            Gets or sets a reason that explains the subscription request to the recipient.
+            </summary>
+        </member>
         <member name="T:Footloose.DataModel.ProtocolVersionFeatureFindCriterion">
             <summary>
             A protocol version criterion.
@@ -2187,6 +2639,35 @@
         <member name="T:Footloose.DataModel.SelfEndpointIdentity">
             <summary>
             Represents the self endpoint identity.
+            </summary>
+        </member>
+        <member name="M:Footloose.DataModel.SelfEndpointIdentity.#ctor(System.Lazy{Footloose.EndpointIdentityManagerBase})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Footloose.DataModel.SelfEndpointIdentity"/> class with
+            the specified <see cref="T:Footloose.EndpointIdentityManagerBase"/> instance.
+            </summary>
+            <param name="endpointIdentityManager">The <see cref="T:Footloose.EndpointIdentityManagerBase"/>.</param>
+        </member>
+        <member name="M:Footloose.DataModel.SelfEndpointIdentity.Subscribe">
+            <summary>
+            Sends a subscription request to permanently subscribe to a identity's presence information.
+            </summary>
+        </member>
+        <member name="M:Footloose.DataModel.SelfEndpointIdentity.Subscribe(System.String)">
+            <summary>
+            Sends a subscription request with the specified reason
+            to permanently subscribe to a identity's presence information.
+            </summary>
+            <param name="reason">A reason that explains the subscription request.</param>
+        </member>
+        <member name="M:Footloose.DataModel.SelfEndpointIdentity.Unsubscribe">
+            <summary>
+            Unsubscribe from the identity's presence information.
+            </summary>
+        </member>
+        <member name="M:Footloose.DataModel.SelfEndpointIdentity.RevokeSubscription">
+            <summary>
+            Cancel and revoke the identity's subscription to this instance's presence information.
             </summary>
         </member>
         <member name="M:Footloose.DataModel.SelfEndpointIdentity.UpdatePresence">
@@ -2296,6 +2777,11 @@
             Gets or sets the service discovery information.
             </summary>
         </member>
+        <member name="P:Footloose.DataModel.SelfEndpointIdentity.Uri">
+            <summary>
+            Gets or sets the uri of this endpoint identity.
+            </summary>
+        </member>
         <member name="T:Footloose.DataModel.SerializerFeatureFindCriterion">
             <summary>
             A serializer type criterion.
@@ -2356,6 +2842,16 @@
             Event that occurs when a <see cref="T:Footloose.DataModel.IPresence"/> notification received.
             </summary>
         </member>
+        <member name="E:Footloose.IEndpointIdentityManager.PresenceSubscriptionRequestReceived">
+            <summary>
+            Event that occurs when a new <see cref="T:Footloose.DataModel.IPresence"/> subscription requests received.
+            </summary>
+        </member>
+        <member name="E:Footloose.IEndpointIdentityManager.PresenceSubscriptionResponseReceived">
+            <summary>
+            Event that occurs when a new <see cref="T:Footloose.DataModel.IPresence"/> subscription response received.
+            </summary>
+        </member>
         <member name="P:Footloose.IEndpointIdentityManager.EndpointIdentities">
             <summary>
             Gets a list of <see cref="T:Footloose.DataModel.IEndpointIdentity"/> objects.
@@ -2372,10 +2868,13 @@
             interaction with the endpoint of this service node.
             </summary>
         </member>
-        <member name="M:Footloose.EndpointIdentityManagerBase.#ctor">
+        <member name="M:Footloose.EndpointIdentityManagerBase.#ctor(Footloose.DataModel.EndpointIdentityDictionary,Footloose.DataModel.SelfEndpointIdentity,System.Func{System.Uri,Footloose.DataModel.EndpointIdentity})">
             <summary>
             Initializes a new instance of the <see cref="T:Footloose.EndpointIdentityManagerBase"/> class.
             </summary>
+            <param name="endpointIdentityDictionary">The <see cref="T:Footloose.DataModel.EndpointIdentityDictionary"/>.</param>
+            <param name="selfEndpointIdentity">The <see cref="P:Footloose.EndpointIdentityManagerBase.SelfEndpointIdentity"/>.</param>
+            <param name="endpointIdentityFactory">The <see cref="T:Footloose.DataModel.EndpointIdentity"/> factory.</param>
         </member>
         <member name="M:Footloose.EndpointIdentityManagerBase.Find">
             <summary>
@@ -2400,6 +2899,53 @@
             <param name="to">The service to request the disco information from.</param>
             <param name="capabilities">The provided capabilities of the service.</param>
         </member>
+        <member name="M:Footloose.EndpointIdentityManagerBase.AddEndpointIdentity(System.Uri,System.String,System.Collections.Generic.IEnumerable{System.String},System.Boolean)">
+            <summary>
+            Adds a new <see cref="T:Footloose.DataModel.IEndpointIdentity"/> with the specified <see cref="T:System.Uri"/> and name
+            and list of groups to the collection
+            and request subscription to the <see cref="T:Footloose.DataModel.IPresence"/> of the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>.
+            </summary>
+            <param name="uri">The <see cref="T:System.Uri"/> of the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>.</param>
+            <param name="name">The name of the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>.</param>
+            <param name="groups">The list of groups the <see cref="T:Footloose.DataModel.IEndpointIdentity"/> belongs to.</param>
+            <param name="requestSubscription">If true request subscription to the <see cref="T:Footloose.DataModel.IPresence"/> of
+            the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>; otherwise just add the item to the collection.</param>
+        </member>
+        <member name="M:Footloose.EndpointIdentityManagerBase.UpdateEndpointIdentity(System.Uri,System.String,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Updates the name and list of groups of the <see cref="T:Footloose.DataModel.IEndpointIdentity"/> with the specified <see cref="T:System.Uri"/>.
+            </summary>
+            <param name="uri">The <see cref="T:System.Uri"/> of the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>.</param>
+            <param name="name">The name of the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>.</param>
+            <param name="groups">The list of groups the <see cref="T:Footloose.DataModel.IEndpointIdentity"/> belongs to.</param>
+        </member>
+        <member name="M:Footloose.EndpointIdentityManagerBase.RemoveEndpointIdentity(System.Uri)">
+            <summary>
+            Removes the <see cref="T:Footloose.DataModel.IEndpointIdentity"/> with the specified <see cref="T:System.Uri"/> from the collection
+            and unsubcribe from the <see cref="T:Footloose.DataModel.IPresence"/> of the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>.
+            </summary>
+            <param name="uri">The <see cref="T:System.Uri"/> of the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>.</param>
+        </member>
+        <member name="M:Footloose.EndpointIdentityManagerBase.SendSubscribtionRequest(System.Uri,System.String)">
+            <summary>
+            Sends a subscription request with the specified reason
+            to permanently subscribe to a identity's presence information.
+            </summary>
+            <param name="to">The uri of the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>.</param>
+            <param name="reason">A reason that explains the subscription request.</param>
+        </member>
+        <member name="M:Footloose.EndpointIdentityManagerBase.UnsubscribeFrom(System.Uri)">
+            <summary>
+            Unsubscribe from the identity's presence information.
+            </summary>
+            <param name="to">The uri of the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>.</param>
+        </member>
+        <member name="M:Footloose.EndpointIdentityManagerBase.RevokeSubscriptionFrom(System.Uri)">
+            <summary>
+            Cancel and revoke the identity's subscription to this instance's presence information.
+            </summary>
+            <param name="to">The uri of the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>.</param>
+        </member>
         <member name="M:Footloose.EndpointIdentityManagerBase.NotifyServiceDiscoveryInfoReceived(System.String,Footloose.DataModel.DiscoInfo)">
             <summary>
             
@@ -2416,6 +2962,16 @@
         <member name="E:Footloose.EndpointIdentityManagerBase.PresenceNotificationReceived">
             <summary>
             Event that occurs when a <see cref="T:Footloose.DataModel.IPresence"/> notification received.
+            </summary>
+        </member>
+        <member name="E:Footloose.EndpointIdentityManagerBase.PresenceSubscriptionRequestReceived">
+            <summary>
+            Event that occurs when a new <see cref="T:Footloose.DataModel.IPresence"/> subscription requests received.
+            </summary>
+        </member>
+        <member name="E:Footloose.EndpointIdentityManagerBase.PresenceSubscriptionResponseReceived">
+            <summary>
+            Event that occurs when a new <see cref="T:Footloose.DataModel.IPresence"/> subscription response received.
             </summary>
         </member>
         <member name="P:Footloose.EndpointIdentityManagerBase.Footloose#IEndpointIdentityManager#EndpointIdentities">
@@ -3192,21 +3748,63 @@
             <param name="methodArgs">An array containing the arguments to pass to the method to invoke.</param>
             <returns>An <see cref="T:System.Object"/> representing the return value of the invoked member.</returns>
         </member>
-        <member name="T:Footloose.Messaging.MessageErrorMessageHandler">
+        <member name="T:Footloose.Messaging.PresenceSubscriptionRequestMessageHandler">
             <summary>
-            Process incoming messages of type 'Error' and notify the outgoing message queue.
+            Process incoming <see cref="T:Footloose.DataModel.PresenceSubscriptionRequest"/> messages.
             </summary>
         </member>
-        <member name="T:Footloose.Messaging.IMessageHandler">
-            <summary>
-            A interface that is responsible to process incoming messages that are handled by the <see cref="T:Footloose.TransportChannels.IMessageDispatcher"/>.
-            </summary>
-        </member>
-        <member name="M:Footloose.Messaging.IMessageHandler.ProcessMessage(Footloose.Messaging.Message)">
+        <member name="M:Footloose.Messaging.PresenceSubscriptionRequestMessageHandler.ProcessMessage(Footloose.Messaging.Message)">
             <summary>
             Process the specified incoming message.
             </summary>
             <param name="message">The incoming message to process.</param>
+        </member>
+        <member name="T:Footloose.Messaging.PresenceSubscriptionResponseMessageBuilder">
+            <summary>
+            Builds up messages from <see cref="T:Footloose.DataModel.PresenceSubscriptionResponse"/> objects.
+            </summary>
+        </member>
+        <member name="M:Footloose.Messaging.PresenceSubscriptionResponseMessageBuilder.#ctor(Footloose.Serialization.ISerializer)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Footloose.Messaging.DiscoInfoResponseMessageBuilder"/> class with
+            specified <see cref="T:Footloose.Serialization.ISerializer"/>.
+            </summary>
+            <param name="serializer"></param>
+        </member>
+        <member name="M:Footloose.Messaging.PresenceSubscriptionResponseMessageBuilder.BuildupMessages(System.Uri,Footloose.DataModel.IMessageBodyData)">
+            <summary>
+            Build up a list of messages for the specified transport channel
+            with the provided message data.
+            </summary>
+            <param name="to">The Uri of the recipient for the message.</param>
+            <param name="messageData">The data of the message.</param>
+            <returns>A list of messages.</returns>
+        </member>
+        <member name="T:Footloose.Messaging.PresenceSubscriptionRequestMessageBuilder">
+            <summary>
+            Builds up messages from <see cref="T:Footloose.DataModel.PresenceSubscriptionRequest"/> objects.
+            </summary>
+        </member>
+        <member name="M:Footloose.Messaging.PresenceSubscriptionRequestMessageBuilder.#ctor(Footloose.Serialization.ISerializer)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Footloose.Messaging.DiscoInfoRequestMessageBuilder"/> class with
+            specified <see cref="T:Footloose.Serialization.ISerializer"/>.
+            </summary>
+            <param name="serializer"></param>
+        </member>
+        <member name="M:Footloose.Messaging.PresenceSubscriptionRequestMessageBuilder.BuildupMessages(System.Uri,Footloose.DataModel.IMessageBodyData)">
+            <summary>
+            Build up a list of messages for the specified transport channel
+            with the provided message data.
+            </summary>
+            <param name="to">The Uri of the recipient for the message.</param>
+            <param name="messageData">The data of the message.</param>
+            <returns>A list of messages.</returns>
+        </member>
+        <member name="T:Footloose.Messaging.MessageErrorMessageHandler">
+            <summary>
+            Process incoming messages of type 'Error' and notify the outgoing message queue.
+            </summary>
         </member>
         <member name="M:Footloose.Messaging.MessageErrorMessageHandler.ProcessMessage(Footloose.Messaging.Message)">
             <summary>
@@ -3240,15 +3838,6 @@
             <summary>
             Builds up messages from <see cref="T:Footloose.DataModel.DiscoInfoResponse"/> objects.
             </summary>
-        </member>
-        <member name="M:Footloose.Messaging.IMessageBuilder.BuildupMessages(System.Uri,Footloose.DataModel.IMessageBodyData)">
-            <summary>
-            Build up a list of messages for the specified transport channel
-            with the provided message data.
-            </summary>
-            <param name="to">The Uri of the recipient for the message.</param>
-            <param name="messageData">The data of the message.</param>
-            <returns>A list of messages.</returns>
         </member>
         <member name="M:Footloose.Messaging.DiscoInfoResponseMessageBuilder.#ctor(Footloose.Serialization.ISerializer)">
             <summary>
@@ -4114,12 +4703,69 @@
             Gets the recipient of this message queue.
             </summary>
         </member>
+        <member name="M:Footloose.TransportChannels.Remoting.RemotingEndpointIdentityManager.#ctor(Footloose.DataModel.EndpointIdentityDictionary,Footloose.DataModel.SelfEndpointIdentity,System.Func{System.Uri,Footloose.DataModel.EndpointIdentity},Footloose.TransportChannels.IOriginator,Footloose.Security.Cryptography.IHashAlgorithm)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Footloose.TransportChannels.Remoting.RemotingEndpointIdentityManager"/> class.
+            </summary>
+            <param name="endpointIdentityDictionary">The <see cref="T:Footloose.DataModel.EndpointIdentityDictionary"/>.</param>
+            <param name="selfEndpointIdentity">The <see cref="P:Footloose.EndpointIdentityManagerBase.SelfEndpointIdentity"/>.</param>
+            <param name="endpointIdentityFactory">The <see cref="T:Footloose.DataModel.EndpointIdentity"/> factory.</param>
+            <param name="orginator">The <see cref="T:Footloose.TransportChannels.IOriginator"/>.</param>
+            <param name="hashAlgorithm">The <see cref="T:Footloose.Security.Cryptography.IHashAlgorithm"/>.</param>
+        </member>
         <member name="M:Footloose.TransportChannels.Remoting.RemotingEndpointIdentityManager.RequestDiscoInfo(System.Uri,System.String)">
             <summary>
             Request asynchronously service discovery information from the given service with the specified capabilities.
             </summary>
             <param name="to">The service to request the disco information from.</param>
             <param name="capabilities">The provided capabilities of the service.</param>
+        </member>
+        <member name="M:Footloose.TransportChannels.Remoting.RemotingEndpointIdentityManager.AddEndpointIdentity(System.Uri,System.String,System.Collections.Generic.IEnumerable{System.String},System.Boolean)">
+            <summary>
+            Adds a new <see cref="T:Footloose.DataModel.IEndpointIdentity"/> with the specified <see cref="T:System.Uri"/> and name
+            and list of groups to the collection
+            and request subscription to the <see cref="T:Footloose.DataModel.IPresence"/> of the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>.
+            </summary>
+            <param name="uri">The <see cref="T:System.Uri"/> of the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>.</param>
+            <param name="name">The name of the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>.</param>
+            <param name="groups">The list of groups the <see cref="T:Footloose.DataModel.IEndpointIdentity"/> belongs to.</param>
+            <param name="requestSubscription">If true request subscription to the <see cref="T:Footloose.DataModel.IPresence"/> of
+            the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>; otherwise just add the item to the collection.</param>
+        </member>
+        <member name="M:Footloose.TransportChannels.Remoting.RemotingEndpointIdentityManager.UpdateEndpointIdentity(System.Uri,System.String,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Updates the name and list of groups of the <see cref="T:Footloose.DataModel.IEndpointIdentity"/> with the specified <see cref="T:System.Uri"/>.
+            </summary>
+            <param name="uri">The <see cref="T:System.Uri"/> of the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>.</param>
+            <param name="name">The name of the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>.</param>
+            <param name="groups">The list of groups the <see cref="T:Footloose.DataModel.IEndpointIdentity"/> belongs to.</param>
+        </member>
+        <member name="M:Footloose.TransportChannels.Remoting.RemotingEndpointIdentityManager.RemoveEndpointIdentity(System.Uri)">
+            <summary>
+            Removes the <see cref="T:Footloose.DataModel.IEndpointIdentity"/> with the specified <see cref="T:System.Uri"/> from the collection
+            and unsubcribe from the <see cref="T:Footloose.DataModel.IPresence"/> of the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>.
+            </summary>
+            <param name="uri">The <see cref="T:System.Uri"/> of the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>.</param>
+        </member>
+        <member name="M:Footloose.TransportChannels.Remoting.RemotingEndpointIdentityManager.SendSubscribtionRequest(System.Uri,System.String)">
+            <summary>
+            Sends a subscription request with the specified reason
+            to permanently subscribe to a identity's presence information.
+            </summary>
+            <param name="to">The uri of the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>.</param>
+            <param name="reason">A reason that explains the subscription request.</param>
+        </member>
+        <member name="M:Footloose.TransportChannels.Remoting.RemotingEndpointIdentityManager.UnsubscribeFrom(System.Uri)">
+            <summary>
+            Unsubscribe from the identity's presence information.
+            </summary>
+            <param name="to">The uri of the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>.</param>
+        </member>
+        <member name="M:Footloose.TransportChannels.Remoting.RemotingEndpointIdentityManager.RevokeSubscriptionFrom(System.Uri)">
+            <summary>
+            Cancel and revoke the identity's subscription to this instance's presence information.
+            </summary>
+            <param name="to">The uri of the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>.</param>
         </member>
         <member name="M:Footloose.TransportChannels.Remoting.RemotingEndpointIdentityManager.SetDiscoInfo(Footloose.DataModel.DiscoInfo)">
             <summary>
@@ -4311,6 +4957,14 @@
             Sends the specified message through this transport channel.
             </summary>
             <param name="message">The message to send.</param>
+        </member>
+        <member name="M:Footloose.TransportChannels.Remoting.RemotingTransportChannel.CreateFullEndpointUri(System.Uri)">
+            <summary>
+            Creates a full endpoint uri from a specified base uri.
+            Example: "ipc://FootlooseService-1" to "ipc://FootlooseService-1/FootlooseServiceProxy.rem"
+            </summary>
+            <param name="baseUri">The base <see cref="T:System.Uri"/>.</param>
+            <returns>A full endpoint Uri for the <see cref="T:Footloose.TransportChannels.Remoting.RemotingTransportChannel"/>.</returns>
         </member>
         <member name="P:Footloose.TransportChannels.Remoting.RemotingTransportChannel.IsConnected">
             <summary>

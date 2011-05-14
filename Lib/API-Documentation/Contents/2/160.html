@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>ISerializer.Deserialize&lt;T&gt; Method (string)</title>
+<title>IEndpointIdentityCollection.Add Method (Uri, string, string, bool)</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">ISerializer.Deserialize&lt;T&gt; Method (string)</div>
+<div id="PageTitle">IEndpointIdentityCollection.Add Method (Uri, string, string, bool)</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 </div>
@@ -24,10 +24,12 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Deserializes the specified <span class="PseudoLink">System.String</span> into an object graph.
+Adds a new <a href="../../Contents/1/287.html">IEndpointIdentity</a> with the specified <span class="PseudoLink">System.Uri</span> and name
+            and group to the collection
+            and request subscription to the <a href="../../Contents/1/340.html">IPresence</a> of the <a href="../../Contents/1/287.html">IEndpointIdentity</a>.
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/1/127.html">ISerializer</a><br />
-<b>Namespace:</b> <a href="../../Contents/1/12.html">Footloose.Serialization</a><br />
+<b>Declaring type:</b> <a href="../../Contents/1/485.html">IEndpointIdentityCollection</a><br />
+<b>Namespace:</b> <a href="../../Contents/1/8.html">Footloose.DataModel</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">Footloose</a>
 </div>
 <div id="SectionHeader0" class="SectionHeader">
@@ -40,22 +42,29 @@ Syntax
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public abstract T Deserialize&lt;T&gt; (
-        string <i>data</i>
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public abstract void Add (
+        Uri <i>uri</i>,
+        string <i>name</i>,
+        string <i>group</i>,
+        bool <i>requestSubscription</i>
 ) </pre></td></tr></table>
-<div class="CommentHeader">Type Parameters</div>
-<div class="CommentParameterName">T</div>
-<div class="ParameterCommentContainer">
-Type of the top (root) of the object graph.
-</div>
 <div class="CommentHeader">Parameters</div>
-<div class="CommentParameterName">data</div>
+<div class="CommentParameterName">uri</div>
 <div class="ParameterCommentContainer">
-The <span class="PseudoLink">System.String</span> that contains the object graph to deserialize.
+The <span class="PseudoLink">System.Uri</span> of the <a href="../../Contents/1/287.html">IEndpointIdentity</a>.
 </div>
-<div class="CommentHeader">Return Value</div>
+<div class="CommentParameterName">name</div>
 <div class="ParameterCommentContainer">
-The top (root) of the object graph.
+The name of the <a href="../../Contents/1/287.html">IEndpointIdentity</a>.
+</div>
+<div class="CommentParameterName">group</div>
+<div class="ParameterCommentContainer">
+The group the <a href="../../Contents/1/287.html">IEndpointIdentity</a> belongs to.
+</div>
+<div class="CommentParameterName">requestSubscription</div>
+<div class="ParameterCommentContainer">
+If true request subscription to the <a href="../../Contents/1/340.html">IPresence</a> of
+            the <a href="../../Contents/1/287.html">IEndpointIdentity</a>; otherwise just add the item to the collection.
 </div>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>

@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>DiscoInfoResponse Class Members</title>
+<title>CommunicationEndpoint Class Members</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">DiscoInfoResponse Class Members</div>
+<div id="PageTitle">CommunicationEndpoint Class Members</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader30" onclick="javascript: SetSectionVisibility(30, true); SetExpandCollapseAllToCollapseAll();">Constructors</a>&nbsp;
 <a href="#SectionHeader40" onclick="javascript: SetSectionVisibility(40, true); SetExpandCollapseAllToCollapseAll();">Properties</a>&nbsp;
@@ -25,9 +25,9 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-A service discovery respose to an <a href="../../Contents/1/456.html">DiscoInfoRequest</a>.
+Internal communication endpoint implementation.
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/1/457.html">DiscoInfoResponse</a><br />
+<b>Declaring type:</b> <a href="../../Contents/1/476.html">CommunicationEndpoint</a><br />
 <b>Namespace:</b> <a href="../../Contents/1/8.html">Footloose.DataModel</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">Footloose</a>
 </div>
@@ -53,8 +53,9 @@ Public Constructors
 <tr>
 <td class="IconColumn">
 <img src="../../GFX/PublicMethod.gif" alt="Public Method" /></td>
-<td><a href="../../Contents/2/6.html">DiscoInfoResponse</a></td>
-<td><p>There is no summary.</p></td>
+<td><a href="../../Contents/2/6.html">CommunicationEndpoint</a></td>
+<td>Initializes a new instance of the <a href="../../Contents/1/476.html">CommunicationEndpoint</a> class with
+            specified <a href="../../Contents/1/287.html">IEndpointIdentity</a> and service <span class="PseudoLink">System.Uri</span>.</td>
 </tr>
 </table>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
@@ -81,13 +82,43 @@ Public Properties
 <td class="IconColumn">
 <img src="../../GFX/PublicProperty.gif" alt="Public Property" /></td>
 <td><a href="../../Contents/2/7.html">Capabilities</a></td>
-<td>Gets or sets the capabilities version string.</td>
+<td>Gets a string that contains a hash presentation of the communication endpoint's capabilities.</td>
 </tr>
 <tr>
 <td class="IconColumn">
 <img src="../../GFX/PublicProperty.gif" alt="Public Property" /></td>
-<td><a href="../../Contents/2/8.html">DiscoInfo</a></td>
-<td>Gets or sets the service discovery information.</td>
+<td><a href="../../Contents/2/8.html">Identity</a></td>
+<td>Gets the identity of this communication endpoint.</td>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicProperty.gif" alt="Public Property" /></td>
+<td><a href="../../Contents/2/9.html">IsOnline</a></td>
+<td>Gets a value indication if the communication endpoint is online.</td>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicProperty.gif" alt="Public Property" /></td>
+<td><a href="../../Contents/2/10.html">Priority</a></td>
+<td>Gets the priority of this communication endpoint.</td>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicProperty.gif" alt="Public Property" /></td>
+<td><a href="../../Contents/2/11.html">Status</a></td>
+<td>Gets the availability status of this communication endpoint.</td>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicProperty.gif" alt="Public Property" /></td>
+<td><a href="../../Contents/2/12.html">StatusInformation</a></td>
+<td>Gets a string containing detailed description of a status type.</td>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicProperty.gif" alt="Public Property" /></td>
+<td><a href="../../Contents/2/13.html">Uri</a></td>
+<td>Gets the uri of this communication endpoint.</td>
 </tr>
 </table>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>

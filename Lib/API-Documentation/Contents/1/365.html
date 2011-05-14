@@ -6,14 +6,15 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>MethodResponseEventArgs Constructor (Guid, Uri, object)</title>
+<title>IEndpointFindCriteria Interface</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">MethodResponseEventArgs Constructor (Guid, Uri, object)</div>
+<div id="PageTitle">IEndpointFindCriteria Interface</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
+<a href="#SectionHeader1" onclick="javascript: SetSectionVisibility(1, true); SetExpandCollapseAllToCollapseAll();">Members</a>&nbsp;
 </div>
 <div class="DarkLine"></div>
 <div class="LightLine"></div>
@@ -24,11 +25,10 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Initializes a new instance of the <a href="../../Contents/1/294.html">MethodResponseEventArgs</a> class
-            with the specified correlation identifier, from Uri and return value.
+IEndpointFindCriteria is a simplified API for retrieving <a href="../../Contents/1/104.html">ICommunicationEndpoint</a> objects
+            by using <a href="../../Contents/1/342.html">IEndpointFeatureFindCriterion</a> and Linq.
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/1/294.html">MethodResponseEventArgs</a><br />
-<b>Namespace:</b> <a href="../../Contents/1/3.html">Footloose</a><br />
+<b>Namespace:</b> <a href="../../Contents/1/8.html">Footloose.DataModel</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">Footloose</a>
 </div>
 <div id="SectionHeader0" class="SectionHeader">
@@ -41,24 +41,30 @@ Syntax
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public MethodResponseEventArgs (
-        Guid <i>correlationIdentifier</i>,
-        Uri <i>from</i>,
-        object <i>returnValue</i>
-) </pre></td></tr></table>
-<div class="CommentHeader">Parameters</div>
-<div class="CommentParameterName">correlationIdentifier</div>
-<div class="ParameterCommentContainer">
-The unique correlation identifier for this method call.
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><table style="width: 100%;" class="InsideCodeBlock">
+<col width="0%" />
+<col width="100%" />
+<tr>
+<td class="NoWrapTop">public interface IEndpointFindCriteria :&nbsp;</td>
+<td>
+IEnumerable&lt;ICommunicationEndpoint&gt;,<br />
+IEnumerable
+</td>
+</tr>
+</table>
+</td></tr></table>
+<div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
+<div id="SectionHeader1" class="SectionHeader">
+<img id="SectionExpanderImg1" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(1);" />
+<span class="SectionHeader">
+<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(1);">
+Members
+</span>
+</span>
 </div>
-<div class="CommentParameterName">from</div>
-<div class="ParameterCommentContainer">
-The Uri of the service the method call response was send from.
-</div>
-<div class="CommentParameterName">returnValue</div>
-<div class="ParameterCommentContainer">
-The return value of the method call.
-</div>
+
+<div id="SectionContainerDiv1" class="SectionContainer">
+<p>Click <a href="../../Contents/2/138.html">here</a> to see the list of members.</p>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>
 <div id="Footer">

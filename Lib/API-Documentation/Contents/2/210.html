@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>IMessageDispatcher.Dispatch Method (Message)</title>
+<title>Message Constructor (SerializationInfo, StreamingContext)</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">IMessageDispatcher.Dispatch Method (Message)</div>
+<div id="PageTitle">Message Constructor (SerializationInfo, StreamingContext)</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 </div>
@@ -24,11 +24,10 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Dispatches a incoming message to a registered <a href="../../Contents/2/97.html">IMessageHandler</a> according to the
-            messages's body type.
+Serialization constructor.
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/2/98.html">IMessageDispatcher</a><br />
-<b>Namespace:</b> <a href="../../Contents/1/13.html">Footloose.TransportChannels</a><br />
+<b>Declaring type:</b> <a href="../../Contents/2/183.html">Message</a><br />
+<b>Namespace:</b> <a href="../../Contents/1/9.html">Footloose.Messaging</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">Footloose</a>
 </div>
 <div id="SectionHeader0" class="SectionHeader">
@@ -41,13 +40,18 @@ Syntax
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public abstract void Dispatch (
-        Message <i>message</i>
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public Message (
+        SerializationInfo <i>info</i>,
+        StreamingContext <i>context</i>
 ) </pre></td></tr></table>
 <div class="CommentHeader">Parameters</div>
-<div class="CommentParameterName">message</div>
+<div class="CommentParameterName">info</div>
 <div class="ParameterCommentContainer">
-The incoming <a href="../../Contents/2/92.html">Message</a> object to dispatch.
+The SerializationInfo to get the data from.
+</div>
+<div class="CommentParameterName">context</div>
+<div class="ParameterCommentContainer">
+The context of this serialization.
 </div>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>

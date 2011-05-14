@@ -6,14 +6,14 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>IOriginator Interface Members</title>
+<title>MessageType Class Members</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">IOriginator Interface Members</div>
+<div id="PageTitle">MessageType Class Members</div>
 <div id="HeaderShortcuts">
-<a href="#SectionHeader35" onclick="javascript: SetSectionVisibility(35, true); SetExpandCollapseAllToCollapseAll();">Methods</a>&nbsp;
+<a href="#SectionHeader25" onclick="javascript: SetSectionVisibility(25, true); SetExpandCollapseAllToCollapseAll();">Fields</a>&nbsp;
 </div>
 <div class="DarkLine"></div>
 <div class="LightLine"></div>
@@ -24,22 +24,22 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-<p>There is no summary.</p>
+Defines types of messages.
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/2/166.html">IOriginator</a><br />
-<b>Namespace:</b> <a href="../../Contents/1/13.html">Footloose.TransportChannels</a><br />
+<b>Declaring type:</b> <a href="../../Contents/2/185.html">MessageType</a><br />
+<b>Namespace:</b> <a href="../../Contents/1/9.html">Footloose.Messaging</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">Footloose</a>
 </div>
-<div id="SectionHeader35" class="SectionHeader">
-<img id="SectionExpanderImg35" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(35);" />
+<div id="SectionHeader25" class="SectionHeader">
+<img id="SectionExpanderImg25" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(25);" />
 <span class="SectionHeader">
-<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(35);">
-Public Methods
+<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(25);">
+Public Fields
 </span>
 </span>
 </div>
 
-<div id="SectionContainerDiv35" class="SectionContainer">
+<div id="SectionContainerDiv25" class="SectionContainer">
 <table class="MembersTable">
 <col width="7%" />
 <col width="38%" />
@@ -51,32 +51,64 @@ Public Methods
 </tr>
 <tr>
 <td class="IconColumn">
-<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
-<td><a href="../../Contents/2/212.html">EnqueueDataMessage</a></td>
-<td><p>There is no summary.</p></td>
+<img src="../../GFX/PublicField.gif" alt="Public Field" />&nbsp;<img src="../../GFX/Static.gif" alt="Static" /></td>
+<td><a href="../../Contents/2/212.html">Error</a></td>
+<td>A message that reports an error that has occurred regarding
+            processing or delivery of a previously-sent get or set request.
+            <remarks><p>
+            A communication endpoint hat receives a message of type Result must not response with any further message of type Result or Error.
+            </p></remarks></td>
 </tr>
 <tr>
 <td class="IconColumn">
-<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
-<td><a href="../../Contents/2/213.html">EnqueueMessageResponse</a></td>
-<td>Overloaded. </td>
+<img src="../../GFX/PublicField.gif" alt="Public Field" />&nbsp;<img src="../../GFX/Static.gif" alt="Static" /></td>
+<td><a href="../../Contents/2/213.html">Get</a></td>
+<td>A message that requests information, inquires about
+            what data is needed in order to complete further operations, etc.
+            <remarks><p>
+            A communication endpoint hat receives a message of type Get must reply
+            with a message of type Result or Error.
+            </p><p>
+            The response must preserve the 'id' attribute of the request.
+            </p></remarks></td>
 </tr>
 <tr>
 <td class="IconColumn">
-<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
-<td><a href="../../Contents/2/214.html">EnqueuePrecenseNotification</a></td>
-<td><p>There is no summary.</p></td>
+<img src="../../GFX/PublicField.gif" alt="Public Field" />&nbsp;<img src="../../GFX/Static.gif" alt="Static" /></td>
+<td><a href="../../Contents/2/214.html">Notification</a></td>
+<td>A message that notify other endpoints about certain events.
+            <remarks><p>
+            This is a one-way message. A communication endpoint hat receives a message of type Notification
+            must not response with any further message of type Result or Error.
+            </p></remarks></td>
 </tr>
 <tr>
 <td class="IconColumn">
-<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
-<td><a href="../../Contents/2/215.html">NotifyMessageException</a></td>
-<td><p>There is no summary.</p></td>
+<img src="../../GFX/PublicField.gif" alt="Public Field" />&nbsp;<img src="../../GFX/Static.gif" alt="Static" /></td>
+<td><a href="../../Contents/2/215.html">Result</a></td>
+<td>A message that is a response to a successful get or set request.
+            <remarks><p>
+            A Result message must not include any message body.
+            </p><p>
+            A communication endpoint hat receives a message of type Result must not
+            response with any further message of type Result or Error.
+            </p></remarks></td>
 </tr>
 <tr>
 <td class="IconColumn">
-<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
-<td><a href="../../Contents/2/216.html">NotifyMessageResult</a></td>
+<img src="../../GFX/PublicField.gif" alt="Public Field" />&nbsp;<img src="../../GFX/Static.gif" alt="Static" /></td>
+<td><a href="../../Contents/2/216.html">Set</a></td>
+<td>A message that provides data.
+            <remarks><p>A communication endpoint hat receives a message of type Set must reply
+            with a message of type Result or Error.
+            </p><p>
+            The response must preserve the 'id' attribute of the request.
+            </p></remarks></td>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicField.gif" alt="Public Field" /></td>
+<td><a href="../../Contents/2/217.html">value__</a></td>
 <td><p>There is no summary.</p></td>
 </tr>
 </table>
