@@ -4958,12 +4958,13 @@
             </summary>
             <param name="message">The message to send.</param>
         </member>
-        <member name="M:Footloose.TransportChannels.Remoting.RemotingTransportChannel.CreateFullEndpointUri(System.Uri)">
+        <member name="M:Footloose.TransportChannels.Remoting.RemotingTransportChannel.CreateFullEndpointUri(System.Uri,System.String)">
             <summary>
             Creates a full endpoint uri from a specified base uri.
-            Example: "ipc://FootlooseService-1" to "ipc://FootlooseService-1/FootlooseServiceProxy.rem"
+            Example: "ipc://FootlooseService-1" to "ipc://FootlooseService-1/endpointIdentifier/FootlooseServiceProxy.rem"
             </summary>
             <param name="baseUri">The base <see cref="T:System.Uri"/>.</param>
+            <param name="endpointIdentifier"></param>
             <returns>A full endpoint Uri for the <see cref="T:Footloose.TransportChannels.Remoting.RemotingTransportChannel"/>.</returns>
         </member>
         <member name="P:Footloose.TransportChannels.Remoting.RemotingTransportChannel.IsConnected">
