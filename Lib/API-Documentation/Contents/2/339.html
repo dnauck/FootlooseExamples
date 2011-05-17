@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>RemotingTransportChannel.Connect Method ()</title>
+<title>RemotingTransportChannel Constructor (TransportChannelConfigurationSection, IMessageDispatcher, RemotingEndpointIdentityManager)</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">RemotingTransportChannel.Connect Method ()</div>
+<div id="PageTitle">RemotingTransportChannel Constructor (TransportChannelConfigurationSection, IMessageDispatcher, RemotingEndpointIdentityManager)</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 </div>
@@ -24,7 +24,8 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Brings the transport channel online.
+Initializes a new instance of the <a href="../../Contents/1/62.html">RemotingTransportChannel</a> with the
+            specified <a href="../../Contents/1/102.html">TransportChannelConfigurationSection</a>.
 <div id="ItemLocation">
 <b>Declaring type:</b> <a href="../../Contents/1/62.html">RemotingTransportChannel</a><br />
 <b>Namespace:</b> <a href="../../Contents/1/14.html">Footloose.TransportChannels.Remoting</a><br />
@@ -40,7 +41,24 @@ Syntax
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public override void Connect ()</pre></td></tr></table>
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public RemotingTransportChannel (
+        TransportChannelConfigurationSection <i>configuration</i>,
+        IMessageDispatcher <i>messageDispatcher</i>,
+        RemotingEndpointIdentityManager <i>endpointIdentityManager</i>
+) </pre></td></tr></table>
+<div class="CommentHeader">Parameters</div>
+<div class="CommentParameterName">configuration</div>
+<div class="ParameterCommentContainer">
+The <a href="../../Contents/1/102.html">TransportChannelConfigurationSection</a> for this transport channel.
+</div>
+<div class="CommentParameterName">messageDispatcher</div>
+<div class="ParameterCommentContainer">
+The <a href="../../Contents/2/189.html">IMessageDispatcher</a> for this transport channel to handle incoming messages.
+</div>
+<div class="CommentParameterName">endpointIdentityManager</div>
+<div class="ParameterCommentContainer">
+The <a href="../../Contents/2/324.html">RemotingEndpointIdentityManager</a> for this transport channel.
+</div>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>
 <div id="Footer">

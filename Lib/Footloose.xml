@@ -1636,6 +1636,19 @@
             Interface to mark data model types that are used as message body data.
             </summary>
         </member>
+        <member name="T:Footloose.Messaging.MessageExtensions">
+            <summary>
+            Provide extensions for the <see cref="T:Footloose.Messaging.Message"/> type.
+            </summary>
+        </member>
+        <member name="M:Footloose.Messaging.MessageExtensions.GetPriority(Footloose.Messaging.Message)">
+            <summary>
+            Gets the priority for a outgoing message.
+            This value is used for the outgoing message queue to sort messages based on their priority.
+            </summary>
+            <param name="message">The input message.</param>
+            <returns>The outgoing message queue priority.</returns>
+        </member>
         <member name="T:Footloose.Messaging.PresenceUnsubscribeMessageHandler">
             <summary>
             Process incoming <see cref="T:Footloose.DataModel.PresenceUnsubscribe"/> messages.
@@ -3000,19 +3013,6 @@
             Returns an instance of <see cref="P:Footloose.EndpointIdentityManagerBase.SelfEndpointIdentity"/> for
             internal interaction with the endpoint of this service node.
             </summary>
-        </member>
-        <member name="T:Footloose.Extensions.MessageExtensions">
-            <summary>
-            Provide extensions for the <see cref="T:Footloose.Messaging.Message"/> type.
-            </summary>
-        </member>
-        <member name="M:Footloose.Extensions.MessageExtensions.GetPriority(Footloose.Messaging.Message)">
-            <summary>
-            Gets the priority for a outgoing message.
-            This value is used for the outgoing message queue to sort messages based on their priority.
-            </summary>
-            <param name="message">The input message.</param>
-            <returns>The outgoing message queue priority.</returns>
         </member>
         <member name="T:Footloose.FeatureFindCriterion">
             <summary>
