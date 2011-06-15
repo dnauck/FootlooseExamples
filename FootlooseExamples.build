@@ -117,7 +117,7 @@
         <exclude name="${publish.dir}/**" />
         <exclude name="${src.dir}/*/bin/**"/>
         <exclude name="${src.dir}/*/obj/**"/>
-        <exclude name="${src.dir}/_Resharper*/**"/>
+        <exclude name="${src.dir}/*/_Resharper*/**"/>
         <exclude name="${src.dir}/**/*.user"/>
         <exclude name="${src.dir}/**/*.suo"/>
         <exclude name="${src.dir}/*.sln.cache"/>
