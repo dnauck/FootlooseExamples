@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>IPresence.Status Property </title>
+<title>IEndpointIdentityCollection.Add Method (Uri, string)</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">IPresence.Status Property </div>
+<div id="PageTitle">IEndpointIdentityCollection.Add Method (Uri, string)</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 </div>
@@ -24,9 +24,10 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Gets or sets the status type of the communication endpoint.
+Adds a new <a href="../../Contents/1/287.html">IEndpointIdentity</a> with the specified <span class="PseudoLink">System.Uri</span> and name to the collection
+            and request subscription to the <a href="../../Contents/1/341.html">IPresence</a> of the <a href="../../Contents/1/287.html">IEndpointIdentity</a>.
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/1/340.html">IPresence</a><br />
+<b>Declaring type:</b> <a href="../../Contents/2/5.html">IEndpointIdentityCollection</a><br />
 <b>Namespace:</b> <a href="../../Contents/1/8.html">Footloose.DataModel</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">Footloose</a>
 </div>
@@ -40,10 +41,18 @@ Syntax
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public abstract CommunicationEndpointStatusType Status { get; }</pre></td></tr></table>
-<div class="CommentHeader">Property Value</div>
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public abstract void Add (
+        Uri <i>uri</i>,
+        string <i>name</i>
+) </pre></td></tr></table>
+<div class="CommentHeader">Parameters</div>
+<div class="CommentParameterName">uri</div>
 <div class="ParameterCommentContainer">
-<p>There is no description.</p>
+The <span class="PseudoLink">System.Uri</span> of the <a href="../../Contents/1/287.html">IEndpointIdentity</a>.
+</div>
+<div class="CommentParameterName">name</div>
+<div class="ParameterCommentContainer">
+The name of the <a href="../../Contents/1/287.html">IEndpointIdentity</a>.
 </div>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>

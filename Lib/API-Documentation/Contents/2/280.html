@@ -6,14 +6,15 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>TransportChannelBase Constructor (TransportChannelConfigurationSection, IMessageDispatcher, IEndpointIdentityManager)</title>
+<title>NotAcceptableException Class</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">TransportChannelBase Constructor (TransportChannelConfigurationSection, IMessageDispatcher, IEndpointIdentityManager)</div>
+<div id="PageTitle">NotAcceptableException Class</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
+<a href="#SectionHeader1" onclick="javascript: SetSectionVisibility(1, true); SetExpandCollapseAllToCollapseAll();">Members</a>&nbsp;
 </div>
 <div class="DarkLine"></div>
 <div class="LightLine"></div>
@@ -24,10 +25,9 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Initializes a new instance of the <a href="../../Contents/2/256.html">TransportChannelBase</a> base class
-            with the specified <a href="../../Contents/1/102.html">TransportChannelConfigurationSection</a>.
+Represents errors that occur when the recipient understood the request but was not expecting it at this time
+            or refusing to process it because it does not meet criteria defined by the recipient.
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/2/256.html">TransportChannelBase</a><br />
 <b>Namespace:</b> <a href="../../Contents/1/13.html">Footloose.TransportChannels</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">Footloose</a>
 </div>
@@ -41,24 +41,29 @@ Syntax
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">protected TransportChannelBase (
-        TransportChannelConfigurationSection <i>configuration</i>,
-        IMessageDispatcher <i>messageDispatcher</i>,
-        IEndpointIdentityManager <i>endpointIdentityManager</i>
-) </pre></td></tr></table>
-<div class="CommentHeader">Parameters</div>
-<div class="CommentParameterName">configuration</div>
-<div class="ParameterCommentContainer">
-The <a href="../../Contents/1/102.html">TransportChannelConfigurationSection</a> containing all required configuration parameters.
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><table style="width: 100%;" class="InsideCodeBlock">
+<col width="0%" />
+<col width="100%" />
+<tr>
+<td class="NoWrapTop">public class NotAcceptableException :&nbsp;</td>
+<td>
+FootlooseException<br />
+</td>
+</tr>
+</table>
+</td></tr></table>
+<div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
+<div id="SectionHeader1" class="SectionHeader">
+<img id="SectionExpanderImg1" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(1);" />
+<span class="SectionHeader">
+<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(1);">
+Members
+</span>
+</span>
 </div>
-<div class="CommentParameterName">messageDispatcher</div>
-<div class="ParameterCommentContainer">
-The <a href="../../Contents/2/189.html">IMessageDispatcher</a> for this transport channel to handle incoming messages.
-</div>
-<div class="CommentParameterName">endpointIdentityManager</div>
-<div class="ParameterCommentContainer">
-The <a href="../../Contents/1/303.html">IEndpointIdentityManager</a> for this transport channel.
-</div>
+
+<div id="SectionContainerDiv1" class="SectionContainer">
+<p>Click <a href="../../Contents/2/291.html">here</a> to see the list of members.</p>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>
 <div id="Footer">

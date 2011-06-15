@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>IEndpointIdentityCollection.Add Method (Uri, string, string, bool)</title>
+<title>IEndpointIdentity.Endpoints Property </title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">IEndpointIdentityCollection.Add Method (Uri, string, string, bool)</div>
+<div id="PageTitle">IEndpointIdentity.Endpoints Property </div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 </div>
@@ -24,11 +24,9 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Adds a new <a href="../../Contents/1/287.html">IEndpointIdentity</a> with the specified <span class="PseudoLink">System.Uri</span> and name
-            and group to the collection
-            and request subscription to the <a href="../../Contents/1/340.html">IPresence</a> of the <a href="../../Contents/1/287.html">IEndpointIdentity</a>.
+Gets a list of communication endpoints this identity propagates.
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/1/485.html">IEndpointIdentityCollection</a><br />
+<b>Declaring type:</b> <a href="../../Contents/1/287.html">IEndpointIdentity</a><br />
 <b>Namespace:</b> <a href="../../Contents/1/8.html">Footloose.DataModel</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">Footloose</a>
 </div>
@@ -42,29 +40,10 @@ Syntax
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public abstract void Add (
-        Uri <i>uri</i>,
-        string <i>name</i>,
-        string <i>group</i>,
-        bool <i>requestSubscription</i>
-) </pre></td></tr></table>
-<div class="CommentHeader">Parameters</div>
-<div class="CommentParameterName">uri</div>
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public abstract IEnumerable&lt;ICommunicationEndpoint&gt; Endpoints { get; }</pre></td></tr></table>
+<div class="CommentHeader">Property Value</div>
 <div class="ParameterCommentContainer">
-The <span class="PseudoLink">System.Uri</span> of the <a href="../../Contents/1/287.html">IEndpointIdentity</a>.
-</div>
-<div class="CommentParameterName">name</div>
-<div class="ParameterCommentContainer">
-The name of the <a href="../../Contents/1/287.html">IEndpointIdentity</a>.
-</div>
-<div class="CommentParameterName">group</div>
-<div class="ParameterCommentContainer">
-The group the <a href="../../Contents/1/287.html">IEndpointIdentity</a> belongs to.
-</div>
-<div class="CommentParameterName">requestSubscription</div>
-<div class="ParameterCommentContainer">
-If true request subscription to the <a href="../../Contents/1/340.html">IPresence</a> of
-            the <a href="../../Contents/1/287.html">IEndpointIdentity</a>; otherwise just add the item to the collection.
+<p>There is no description.</p>
 </div>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>

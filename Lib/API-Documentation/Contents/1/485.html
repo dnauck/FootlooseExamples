@@ -6,15 +6,14 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>IEndpointIdentityCollection Interface</title>
+<title>IFootlooseService.CallMethod Method (Type, string, Uri)</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">IEndpointIdentityCollection Interface</div>
+<div id="PageTitle">IFootlooseService.CallMethod Method (Type, string, Uri)</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
-<a href="#SectionHeader1" onclick="javascript: SetSectionVisibility(1, true); SetExpandCollapseAllToCollapseAll();">Members</a>&nbsp;
 </div>
 <div class="DarkLine"></div>
 <div class="LightLine"></div>
@@ -25,11 +24,11 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Public interface for a collection of <a href="../../Contents/1/287.html">IEndpointIdentity</a> objects.
-            Use this interface to enumerate through the list of known <a href="../../Contents/1/287.html">IEndpointIdentity</a> objects and
-            their <a href="../../Contents/1/104.html">ICommunicationEndpoint</a>.
+Invokes asynchronous the specified method of the given <span class="PseudoLink">System.Type</span> on a remote <a href="../../Contents/1/293.html">IFootlooseService</a> with the specified service <span class="PseudoLink">System.Uri</span>.
+            Once the method call returns the <a href="../../Contents/1/295.html">MethodResponseReceived</a> event ist called.
 <div id="ItemLocation">
-<b>Namespace:</b> <a href="../../Contents/1/8.html">Footloose.DataModel</a><br />
+<b>Declaring type:</b> <a href="../../Contents/1/293.html">IFootlooseService</a><br />
+<b>Namespace:</b> <a href="../../Contents/1/3.html">Footloose</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">Footloose</a>
 </div>
 <div id="SectionHeader0" class="SectionHeader">
@@ -42,30 +41,28 @@ Syntax
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><table style="width: 100%;" class="InsideCodeBlock">
-<col width="0%" />
-<col width="100%" />
-<tr>
-<td class="NoWrapTop">public interface IEndpointIdentityCollection :&nbsp;</td>
-<td>
-IEnumerable&lt;IEndpointIdentity&gt;,<br />
-IEnumerable
-</td>
-</tr>
-</table>
-</td></tr></table>
-<div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
-<div id="SectionHeader1" class="SectionHeader">
-<img id="SectionExpanderImg1" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(1);" />
-<span class="SectionHeader">
-<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(1);">
-Members
-</span>
-</span>
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public abstract Guid CallMethod (
+        Type <i>type</i>,
+        string <i>methodName</i>,
+        Uri <i>service</i>
+) </pre></td></tr></table>
+<div class="CommentHeader">Parameters</div>
+<div class="CommentParameterName">type</div>
+<div class="ParameterCommentContainer">
+The <span class="PseudoLink">System.Type</span> the method belongs to.
 </div>
-
-<div id="SectionContainerDiv1" class="SectionContainer">
-<p>Click <a href="../../Contents/2/151.html">here</a> to see the list of members.</p>
+<div class="CommentParameterName">methodName</div>
+<div class="ParameterCommentContainer">
+The name of the method to invoke.
+</div>
+<div class="CommentParameterName">service</div>
+<div class="ParameterCommentContainer">
+The <span class="PseudoLink">System.Uri</span> of the service the method should invoked on.
+</div>
+<div class="CommentHeader">Return Value</div>
+<div class="ParameterCommentContainer">
+A unique correlation identifier for this method call.
+</div>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>
 <div id="Footer">

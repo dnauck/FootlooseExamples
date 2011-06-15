@@ -6,14 +6,14 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>MessageType.Get Field</title>
+<title>MessageExtensions.CreateResponse Method</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">MessageType.Get Field</div>
+<div id="PageTitle">MessageExtensions.CreateResponse Method</div>
 <div id="HeaderShortcuts">
-<a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
+<a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Overload List</a>&nbsp;
 </div>
 <div class="DarkLine"></div>
 <div class="LightLine"></div>
@@ -24,16 +24,9 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-A message that requests information, inquires about
-            what data is needed in order to complete further operations, etc.
-            <remarks><p>
-            A communication endpoint hat receives a message of type Get must reply
-            with a message of type Result or Error.
-            </p><p>
-            The response must preserve the 'id' attribute of the request.
-            </p></remarks>
+Creates a response of type <a href="../../Contents/2/214.html">Result</a> for the provided message.
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/2/185.html">MessageType</a><br />
+<b>Declaring type:</b> <a href="../../Contents/2/203.html">MessageExtensions</a><br />
 <b>Namespace:</b> <a href="../../Contents/1/9.html">Footloose.Messaging</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">Footloose</a>
 </div>
@@ -41,13 +34,34 @@ A message that requests information, inquires about
 <img id="SectionExpanderImg0" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(0);" />
 <span class="SectionHeader">
 <span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(0);">
-Syntax
+Overload List
 </span>
 </span>
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable">public const MessageType Get = 0</td></tr></table>
+<table class="MembersTable">
+<col width="7%" />
+<col width="38%" />
+<col width="55%" />
+<tr>
+<th>&nbsp;</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Static.gif" alt="Static" /></td>
+<td><a href="../../Contents/2/215.html">MessageExtensions.CreateResponse (Message)</a></td>
+<td>Creates a response of type <a href="../../Contents/2/214.html">Result</a> for the provided message.</td>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Static.gif" alt="Static" /></td>
+<td><a href="../../Contents/2/216.html">MessageExtensions.CreateResponse (Message, Exception)</a></td>
+<td>Creates a response of type <a href="../../Contents/2/217.html">Error</a> for the provided message and <span class="PseudoLink">System.Exception</span>.</td>
+</tr>
+</table>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>
 <div id="Footer">

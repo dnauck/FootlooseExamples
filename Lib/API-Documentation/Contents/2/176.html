@@ -6,14 +6,14 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>ISelfEndpointIdentity.UpdatePresence Method</title>
+<title>IEndpointIdentityCollection.Add Method (Uri, string, string, bool)</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">ISelfEndpointIdentity.UpdatePresence Method</div>
+<div id="PageTitle">IEndpointIdentityCollection.Add Method (Uri, string, string, bool)</div>
 <div id="HeaderShortcuts">
-<a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Overload List</a>&nbsp;
+<a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 </div>
 <div class="DarkLine"></div>
 <div class="LightLine"></div>
@@ -24,9 +24,11 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Updates the self presence information with the given priority.
+Adds a new <a href="../../Contents/1/287.html">IEndpointIdentity</a> with the specified <span class="PseudoLink">System.Uri</span> and name
+            and group to the collection
+            and request subscription to the <a href="../../Contents/1/341.html">IPresence</a> of the <a href="../../Contents/1/287.html">IEndpointIdentity</a>.
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/1/413.html">ISelfEndpointIdentity</a><br />
+<b>Declaring type:</b> <a href="../../Contents/2/5.html">IEndpointIdentityCollection</a><br />
 <b>Namespace:</b> <a href="../../Contents/1/8.html">Footloose.DataModel</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">Footloose</a>
 </div>
@@ -34,61 +36,36 @@ Updates the self presence information with the given priority.
 <img id="SectionExpanderImg0" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(0);" />
 <span class="SectionHeader">
 <span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(0);">
-Overload List
+Syntax
 </span>
 </span>
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="MembersTable">
-<col width="7%" />
-<col width="38%" />
-<col width="55%" />
-<tr>
-<th>&nbsp;</th>
-<th>Name</th>
-<th>Description</th>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
-<td><a href="../../Contents/2/177.html">ISelfEndpointIdentity.UpdatePresence ()</a></td>
-<td>Updates the self presence information with the given priority.</td>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
-<td><a href="../../Contents/2/178.html">ISelfEndpointIdentity.UpdatePresence (int)</a></td>
-<td>Updates the self presence information with the given priority.</td>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
-<td><a href="../../Contents/2/179.html">ISelfEndpointIdentity.UpdatePresence (int, CommunicationEndpointStatusType)</a></td>
-<td>Updates the self presence information with the given priority
-            and status.</td>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
-<td><a href="../../Contents/2/180.html">ISelfEndpointIdentity.UpdatePresence (int, CommunicationEndpointStatusType, string)</a></td>
-<td>Updates the self presence information with the given priority,
-            status and status information.</td>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
-<td><a href="../../Contents/2/181.html">ISelfEndpointIdentity.UpdatePresence (CommunicationEndpointStatusType)</a></td>
-<td>Updates the self presence information with the given status.</td>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
-<td><a href="../../Contents/2/182.html">ISelfEndpointIdentity.UpdatePresence (CommunicationEndpointStatusType, string)</a></td>
-<td>Updates the self presence information with the given status
-            and status information.</td>
-</tr>
-</table>
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public abstract void Add (
+        Uri <i>uri</i>,
+        string <i>name</i>,
+        string <i>group</i>,
+        bool <i>requestSubscription</i>
+) </pre></td></tr></table>
+<div class="CommentHeader">Parameters</div>
+<div class="CommentParameterName">uri</div>
+<div class="ParameterCommentContainer">
+The <span class="PseudoLink">System.Uri</span> of the <a href="../../Contents/1/287.html">IEndpointIdentity</a>.
+</div>
+<div class="CommentParameterName">name</div>
+<div class="ParameterCommentContainer">
+The name of the <a href="../../Contents/1/287.html">IEndpointIdentity</a>.
+</div>
+<div class="CommentParameterName">group</div>
+<div class="ParameterCommentContainer">
+The group the <a href="../../Contents/1/287.html">IEndpointIdentity</a> belongs to.
+</div>
+<div class="CommentParameterName">requestSubscription</div>
+<div class="ParameterCommentContainer">
+If true request subscription to the <a href="../../Contents/1/341.html">IPresence</a> of
+            the <a href="../../Contents/1/287.html">IEndpointIdentity</a>; otherwise just add the item to the collection.
+</div>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>
 <div id="Footer">

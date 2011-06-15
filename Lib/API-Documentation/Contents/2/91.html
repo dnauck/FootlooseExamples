@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>SelfEndpointIdentity Constructor (Lazy&lt;EndpointIdentityManagerBase&gt;)</title>
+<title>EndpointIdentityDictionary.Add Method (Uri, string, IEnumerable&lt;string&gt;, bool)</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">SelfEndpointIdentity Constructor (Lazy&lt;EndpointIdentityManagerBase&gt;)</div>
+<div id="PageTitle">EndpointIdentityDictionary.Add Method (Uri, string, IEnumerable&lt;string&gt;, bool)</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 </div>
@@ -24,10 +24,11 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Initializes a new instance of the <a href="../../Contents/1/495.html">SelfEndpointIdentity</a> class with
-            the specified <a href="../../Contents/1/286.html">EndpointIdentityManagerBase</a> instance.
+Adds a new <a href="../../Contents/1/287.html">IEndpointIdentity</a> with the specified <span class="PseudoLink">System.Uri</span> and name
+            and list of groups to the collection
+            and request subscription to the <a href="../../Contents/1/341.html">IPresence</a> of the <a href="../../Contents/1/287.html">IEndpointIdentity</a>.
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/1/495.html">SelfEndpointIdentity</a><br />
+<b>Declaring type:</b> <a href="../../Contents/1/365.html">EndpointIdentityDictionary</a><br />
 <b>Namespace:</b> <a href="../../Contents/1/8.html">Footloose.DataModel</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">Footloose</a>
 </div>
@@ -41,13 +42,29 @@ Syntax
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public SelfEndpointIdentity (
-        Lazy&lt;EndpointIdentityManagerBase&gt; <i>endpointIdentityManager</i>
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public void Add (
+        Uri <i>uri</i>,
+        string <i>name</i>,
+        IEnumerable&lt;string&gt; <i>groups</i>,
+        bool <i>requestSubscription</i>
 ) </pre></td></tr></table>
 <div class="CommentHeader">Parameters</div>
-<div class="CommentParameterName">endpointIdentityManager</div>
+<div class="CommentParameterName">uri</div>
 <div class="ParameterCommentContainer">
-The <a href="../../Contents/1/286.html">EndpointIdentityManagerBase</a>.
+The <span class="PseudoLink">System.Uri</span> of the <a href="../../Contents/1/287.html">IEndpointIdentity</a>.
+</div>
+<div class="CommentParameterName">name</div>
+<div class="ParameterCommentContainer">
+The name of the <a href="../../Contents/1/287.html">IEndpointIdentity</a>.
+</div>
+<div class="CommentParameterName">groups</div>
+<div class="ParameterCommentContainer">
+The list of groups the <a href="../../Contents/1/287.html">IEndpointIdentity</a> belongs to.
+</div>
+<div class="CommentParameterName">requestSubscription</div>
+<div class="ParameterCommentContainer">
+If true request subscription to the <a href="../../Contents/1/341.html">IPresence</a> of
+            the <a href="../../Contents/1/287.html">IEndpointIdentity</a>; otherwise just add the item to the collection.
 </div>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>

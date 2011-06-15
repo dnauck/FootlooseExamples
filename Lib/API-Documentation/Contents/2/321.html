@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>ITransportChannel.ServiceUri Property </title>
+<title>IMessageDispatcher.Dispatch Method (Message)</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">ITransportChannel.ServiceUri Property </div>
+<div id="PageTitle">IMessageDispatcher.Dispatch Method (Message)</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 </div>
@@ -24,9 +24,10 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Gets the Uri of this service node.
+Dispatches a incoming message to a registered <a href="../../Contents/2/206.html">IMessageHandler</a> according to the
+            messages's body type.
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/1/178.html">ITransportChannel</a><br />
+<b>Declaring type:</b> <a href="../../Contents/2/207.html">IMessageDispatcher</a><br />
 <b>Namespace:</b> <a href="../../Contents/1/13.html">Footloose.TransportChannels</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">Footloose</a>
 </div>
@@ -40,10 +41,13 @@ Syntax
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public abstract Uri ServiceUri { get; }</pre></td></tr></table>
-<div class="CommentHeader">Property Value</div>
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public abstract void Dispatch (
+        Message <i>message</i>
+) </pre></td></tr></table>
+<div class="CommentHeader">Parameters</div>
+<div class="CommentParameterName">message</div>
 <div class="ParameterCommentContainer">
-<p>There is no description.</p>
+The incoming <a href="../../Contents/2/199.html">Message</a> object to dispatch.
 </div>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>

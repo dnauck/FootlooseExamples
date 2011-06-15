@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>IMessageBufferRepository.GetBuffer Method (Guid)</title>
+<title>Message.GetObjectData Method (SerializationInfo, StreamingContext)</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">IMessageBufferRepository.GetBuffer Method (Guid)</div>
+<div id="PageTitle">Message.GetObjectData Method (SerializationInfo, StreamingContext)</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 </div>
@@ -24,9 +24,9 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-<p>There is no summary.</p>
+Populates a SerializationInfo with the data needed to serialize the target object.
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/2/186.html">IMessageBufferRepository</a><br />
+<b>Declaring type:</b> <a href="../../Contents/2/199.html">Message</a><br />
 <b>Namespace:</b> <a href="../../Contents/1/9.html">Footloose.Messaging</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">Footloose</a>
 </div>
@@ -40,17 +40,18 @@ Syntax
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public abstract IEnumerable&lt;Message&gt; GetBuffer (
-        Guid <i>correlationIdentifier</i>
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public void GetObjectData (
+        SerializationInfo <i>info</i>,
+        StreamingContext <i>context</i>
 ) </pre></td></tr></table>
 <div class="CommentHeader">Parameters</div>
-<div class="CommentParameterName">correlationIdentifier</div>
+<div class="CommentParameterName">info</div>
 <div class="ParameterCommentContainer">
-<p>There is no description.</p>
+The SerializationInfo to populate with data.
 </div>
-<div class="CommentHeader">Return Value</div>
+<div class="CommentParameterName">context</div>
 <div class="ParameterCommentContainer">
-<p>There is no description.</p>
+The destination for this serialization.
 </div>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>

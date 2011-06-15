@@ -6,16 +6,15 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>TransportChannelBase Class Members</title>
+<title>MessageHandlerNotFoundException Class</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">TransportChannelBase Class Members</div>
+<div id="PageTitle">MessageHandlerNotFoundException Class</div>
 <div id="HeaderShortcuts">
-<a href="#SectionHeader35" onclick="javascript: SetSectionVisibility(35, true); SetExpandCollapseAllToCollapseAll();">Methods</a>&nbsp;
-<a href="#SectionHeader40" onclick="javascript: SetSectionVisibility(40, true); SetExpandCollapseAllToCollapseAll();">Properties</a>&nbsp;
-<a href="#SectionHeader45" onclick="javascript: SetSectionVisibility(45, true); SetExpandCollapseAllToCollapseAll();">Events</a>&nbsp;
+<a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
+<a href="#SectionHeader1" onclick="javascript: SetSectionVisibility(1, true); SetExpandCollapseAllToCollapseAll();">Members</a>&nbsp;
 </div>
 <div class="DarkLine"></div>
 <div class="LightLine"></div>
@@ -26,272 +25,45 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-A abstract base class for <a href="../../Contents/1/178.html">ITransportChannel</a> implementations.
+Represents errors that occur when no proper <a href="../../Contents/2/206.html">IMessageHandler</a>
+            is found while dispatching a incoming <a href="../../Contents/2/199.html">Message</a>.
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/2/256.html">TransportChannelBase</a><br />
 <b>Namespace:</b> <a href="../../Contents/1/13.html">Footloose.TransportChannels</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">Footloose</a>
 </div>
-<div id="SectionHeader32" class="SectionHeader">
-<img id="SectionExpanderImg32" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(32);" />
+<div id="SectionHeader0" class="SectionHeader">
+<img id="SectionExpanderImg0" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(0);" />
 <span class="SectionHeader">
-<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(32);">
-Protected Constructors
+<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(0);">
+Syntax
 </span>
 </span>
 </div>
 
-<div id="SectionContainerDiv32" class="SectionContainer">
-<table class="MembersTable">
-<col width="7%" />
-<col width="38%" />
-<col width="55%" />
+<div id="SectionContainerDiv0" class="SectionContainer">
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><table style="width: 100%;" class="InsideCodeBlock">
+<col width="0%" />
+<col width="100%" />
 <tr>
-<th>&nbsp;</th>
-<th>Name</th>
-<th>Description</th>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/ProtectedMethod.gif" alt="Protected Method" /></td>
-<td><a href="../../Contents/2/280.html">TransportChannelBase</a></td>
-<td>Initializes a new instance of the <a href="../../Contents/2/256.html">TransportChannelBase</a> base class
-            with the specified <a href="../../Contents/1/102.html">TransportChannelConfigurationSection</a>.</td>
+<td class="NoWrapTop">public class MessageHandlerNotFoundException :&nbsp;</td>
+<td>
+FootlooseException<br />
+</td>
 </tr>
 </table>
+</td></tr></table>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
-<div id="SectionHeader35" class="SectionHeader">
-<img id="SectionExpanderImg35" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(35);" />
+<div id="SectionHeader1" class="SectionHeader">
+<img id="SectionExpanderImg1" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(1);" />
 <span class="SectionHeader">
-<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(35);">
-Public Methods</span>
- <span class="SeeAlsoInSectionHeader">(see also: <a href="#SectionHeader37" onclick="javascript: SetSectionVisibility(37, true); SetExpandCollapseAllToCollapseAll();">Protected</a> Methods)</span>
-</span>
-</div>
-
-<div id="SectionContainerDiv35" class="SectionContainer">
-<table class="MembersTable">
-<col width="7%" />
-<col width="38%" />
-<col width="55%" />
-<tr>
-<th>&nbsp;</th>
-<th>Name</th>
-<th>Description</th>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
-<td><a href="../../Contents/2/281.html">Connect</a></td>
-<td>Brings the transport channel online.</td>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
-<td><a href="../../Contents/2/282.html">Disconnect</a></td>
-<td>Disconnects the transport channel.</td>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicMethod.gif" alt="Public Method" /></td>
-<td><a href="../../Contents/2/283.html">Dispose</a></td>
-<td>Performs application-defined tasks associated with freeing,
-            releasing, or resetting unmanaged resources.</td>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
-<td><a href="../../Contents/2/284.html">SendMessage</a></td>
-<td>Sends the specified message through this transport channel.</td>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
-<td><a href="../../Contents/2/285.html">SetDiscoInfo</a></td>
-<td>Sets the service discovery information the transport channel should
-            send on discovery requests.</td>
-</tr>
-</table>
-<div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
-<div id="SectionHeader37" class="SectionHeader">
-<img id="SectionExpanderImg37" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(37);" />
-<span class="SectionHeader">
-<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(37);">
-Protected Methods
+<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(1);">
+Members
 </span>
 </span>
 </div>
 
-<div id="SectionContainerDiv37" class="SectionContainer">
-<table class="MembersTable">
-<col width="7%" />
-<col width="38%" />
-<col width="55%" />
-<tr>
-<th>&nbsp;</th>
-<th>Name</th>
-<th>Description</th>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/ProtectedMethod.gif" alt="Protected Method" />&nbsp;<img src="../../GFX/Virtual.gif" alt="Virtual" /></td>
-<td><a href="../../Contents/2/286.html">Dispose</a></td>
-<td>If disposing equals true, the method has been called directly
-            or indirectly by a user's code. Managed and unmanaged resources
-            can be disposed.
-            If disposing equals false, the method has been called by the 
-            runtime from inside the finalizer and you should not reference 
-            other objects. Only unmanaged resources can be disposed.</td>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/ProtectedMethod.gif" alt="Protected Method" />&nbsp;<img src="../../GFX/Virtual.gif" alt="Virtual" /></td>
-<td><a href="../../Contents/2/287.html">Finalize</a></td>
-<td>This destructor will run only if the Dispose method
-            does not get called.</td>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/ProtectedMethod.gif" alt="Protected Method" />&nbsp;<img src="../../GFX/Virtual.gif" alt="Virtual" /></td>
-<td><a href="../../Contents/2/288.html">OnExceptionOccurred</a></td>
-<td><p>There is no summary.</p></td>
-</tr>
-</table>
-<div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
-<div id="SectionHeader40" class="SectionHeader">
-<img id="SectionExpanderImg40" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(40);" />
-<span class="SectionHeader">
-<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(40);">
-Public Properties</span>
- <span class="SeeAlsoInSectionHeader">(see also: <a href="#SectionHeader42" onclick="javascript: SetSectionVisibility(42, true); SetExpandCollapseAllToCollapseAll();">Protected</a> Properties)</span>
-</span>
-</div>
-
-<div id="SectionContainerDiv40" class="SectionContainer">
-<table class="MembersTable">
-<col width="7%" />
-<col width="38%" />
-<col width="55%" />
-<tr>
-<th>&nbsp;</th>
-<th>Name</th>
-<th>Description</th>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicProperty.gif" alt="Public Property" /></td>
-<td><a href="../../Contents/2/289.html">EndpointIdentifier</a></td>
-<td>Gets the identifier of this service node.</td>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicProperty.gif" alt="Public Property" /></td>
-<td><a href="../../Contents/2/290.html">EndpointIdentityManager</a></td>
-<td>Gets an instance of the <a href="../../Contents/1/303.html">IEndpointIdentityManager</a>.</td>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicProperty.gif" alt="Public Property" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
-<td><a href="../../Contents/2/291.html">IsConnected</a></td>
-<td>Gets the current state of the connection.
-            true if the connection is established; otherwise, false.</td>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicProperty.gif" alt="Public Property" /></td>
-<td><a href="../../Contents/2/292.html">IsDisposed</a></td>
-<td>Gets or sets a value indicating whether the class has been disposed of.
-            true if the class has been disposed of; otherwise, false.</td>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicProperty.gif" alt="Public Property" />&nbsp;<img src="../../GFX/Virtual.gif" alt="Virtual" /></td>
-<td><a href="../../Contents/2/293.html">MaxMessageBodyLength</a></td>
-<td>Gets the maximum length of the message body. The serializised message body must not exceed the
-             specified maximum message body lenght; otherwise it'll be strip down into several smaller chunks
-             and send separately.</td>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicProperty.gif" alt="Public Property" /></td>
-<td><a href="../../Contents/2/294.html">Priority</a></td>
-<td>Gets or sets the priority for this communication endpoint.
-             The value must be an integer between -128 and +127.
-             Default is 10.</td>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicProperty.gif" alt="Public Property" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
-<td><a href="../../Contents/2/295.html">ServiceUri</a></td>
-<td>Gets the Uri of this service node.</td>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicProperty.gif" alt="Public Property" /></td>
-<td><a href="../../Contents/2/296.html">Timeout</a></td>
-<td>Gets or sets the length of time, in milliseconds, before a request times out.</td>
-</tr>
-</table>
-<div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
-<div id="SectionHeader42" class="SectionHeader">
-<img id="SectionExpanderImg42" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(42);" />
-<span class="SectionHeader">
-<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(42);">
-Protected Properties
-</span>
-</span>
-</div>
-
-<div id="SectionContainerDiv42" class="SectionContainer">
-<table class="MembersTable">
-<col width="7%" />
-<col width="38%" />
-<col width="55%" />
-<tr>
-<th>&nbsp;</th>
-<th>Name</th>
-<th>Description</th>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/ProtectedProperty.gif" alt="Protected Property" /></td>
-<td><a href="../../Contents/2/297.html">Configuration</a></td>
-<td>Gets the <a href="../../Contents/1/102.html">TransportChannelConfigurationSection</a>.</td>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/ProtectedProperty.gif" alt="Protected Property" /></td>
-<td><a href="../../Contents/2/298.html">MessageDispatcher</a></td>
-<td>Gets the <a href="../../Contents/2/189.html">IMessageDispatcher</a> for this transport channel to handle incoming messages.</td>
-</tr>
-</table>
-<div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
-<div id="SectionHeader45" class="SectionHeader">
-<img id="SectionExpanderImg45" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(45);" />
-<span class="SectionHeader">
-<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(45);">
-Public Events
-</span>
-</span>
-</div>
-
-<div id="SectionContainerDiv45" class="SectionContainer">
-<table class="MembersTable">
-<col width="7%" />
-<col width="38%" />
-<col width="55%" />
-<tr>
-<th>&nbsp;</th>
-<th>Name</th>
-<th>Description</th>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicEvent.gif" alt="Public Event" /></td>
-<td><a href="../../Contents/2/299.html">ExceptionOccurred</a></td>
-<td><p>There is no summary.</p></td>
-</tr>
-</table>
+<div id="SectionContainerDiv1" class="SectionContainer">
+<p>Click <a href="../../Contents/2/283.html">here</a> to see the list of members.</p>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>
 <div id="Footer">
