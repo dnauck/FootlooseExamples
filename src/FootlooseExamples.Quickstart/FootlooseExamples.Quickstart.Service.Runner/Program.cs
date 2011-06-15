@@ -20,7 +20,7 @@ namespace FootlooseExamples.Quickstart.Service.Runner
             
             // wait for incoming method calls
             Console.WriteLine("Footloose started... [Press Enter to exit]");
-            Console.WriteLine("Uri of this endpoint is: ipc://" + endpointIdentifier + "/FootlooseServiceProxy.rem");
+            Console.WriteLine("Uri of this endpoint is: " + footloose.EndpointIdentityManager.SelfEndpointIdentity.Uri);
             Console.ReadLine();
         }
 

@@ -21,13 +21,13 @@ namespace FootlooseExamples.Quickstart.Client
 
             // wait for incoming method calls
             Console.WriteLine("Footloose started...");
-            Console.WriteLine("Uri of this endpoint is: ipc://" + endpointIdentifier + "/FootlooseServiceProxy.rem");
+            Console.WriteLine("Uri of this endpoint is: " + footloose.EndpointIdentityManager.SelfEndpointIdentity.Uri);
 
             // let try to call a method of ISimpleService on the service with event
             Console.WriteLine("Press Enter to start...");
             Console.ReadLine();
 
-            var serviceUri = new Uri("ipc://footloose-quickstart-service/FootlooseServiceProxy.rem");
+            var serviceUri = new Uri(string.Concat("ipc://footloose-quickstart-service@" + Environment.MachineName + "/footloose-quickstart-service/FootlooseServiceProxy.rem"));
             var methodCallId = footloose.CallMethod(typeof(ISimpleService), "DoIt", serviceUri);
             Console.WriteLine("Called method 'DoIt' of 'ISimpleService' on '" + serviceUri + "'. CorrelationId is '" +
                               methodCallId + "'.");
