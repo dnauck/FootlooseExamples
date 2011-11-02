@@ -12,8 +12,8 @@ namespace FootlooseExamples.Config.Fluent
 
         static void Main(string[] args)
         {
-            // create FootlooseService instance from fluent config API
-            var footloose = Footloose.Fluently.Configure()
+            // create FootlooseConnection instance from fluent config API
+            var footlooseConnection = Footloose.Fluently.Configure()
                 .ServiceLocator(serviceLocator)
                 .SerializerOfType<Footloose.Serialization.TextSerializer>()
                 .ServiceContracts(
@@ -24,13 +24,13 @@ namespace FootlooseExamples.Config.Fluent
                     Footloose.Configuration.Fluent.RemotingTransportChannelConfiguration.Standard
                         .EndpointIdentifier("MyServiceIdentifier")
                         .UseConfigFile("")
-                        .TimeOut(10000)
+                        .TimeOut(5000)
                 )
-                .CreateFootlooseService();
-                
+                .CreateFootlooseConnection();
 
 
-            Console.WriteLine("Footloose is connected: " + footloose.IsConnected);
+            footlooseConnection.Open();
+            Console.WriteLine("Footloose is connected: " + footlooseConnection.IsConnected);
             Console.ReadLine();
         }
     }

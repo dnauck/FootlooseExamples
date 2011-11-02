@@ -57,10 +57,11 @@ namespace FootlooseExamples.Config.ByCode
             footlooseConfig.TransportChannel.EndpointIdentifier = "MyServiceIdentifier";
 
 
-            // create FootlooseService instance from Configuration
+            // create FootlooseConnection instance from Configuration
             ServiceLocator.SetLocatorProvider(() => serviceLocator);
-            var footloose = Footloose.FootlooseServiceFactory.CreateFootlooseService(footlooseConfig);
-            Console.WriteLine("Footloose is connected: " + footloose.IsConnected);
+            var footlooseConnection = Footloose.FootlooseConnectionFactory.CreateFootlooseConnection(footlooseConfig);
+            footlooseConnection.Open();
+            Console.WriteLine("Footloose is connected: " + footlooseConnection.IsConnected);
             Console.ReadLine();
         }
     }

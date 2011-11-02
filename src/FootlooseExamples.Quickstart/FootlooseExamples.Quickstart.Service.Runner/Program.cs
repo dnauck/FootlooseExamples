@@ -13,15 +13,18 @@ namespace FootlooseExamples.Quickstart.Service.Runner
         {
             var serviceLocator = new ServiceLocatorDummy();
             var endpointIdentifier = "footloose-quickstart-service";
-            var footloose = ConfigureFootloose(serviceLocator, endpointIdentifier);
+            var footlooseConnection = ConfigureFootlooseConnection(serviceLocator, endpointIdentifier);
 
             //register events
-            footloose.ExceptionOccurred += new EventHandler<ExceptionEventArgs>(Footloose_ExceptionOccurred);
+            footlooseConnection.ExceptionOccurred += new EventHandler<ExceptionEventArgs>(Footloose_ExceptionOccurred);
             
             // wait for incoming method calls
+            footlooseConnection.Open();
             Console.WriteLine("Footloose started... [Press Enter to exit]");
-            Console.WriteLine("Uri of this endpoint is: " + footloose.EndpointIdentityManager.SelfEndpointIdentity.Uri);
+            Console.WriteLine("Uri of this endpoint is: " + footlooseConnection.EndpointIdentityManager.SelfEndpointIdentity.Uri);
             Console.ReadLine();
+            footlooseConnection.Close();
+            footlooseConnection.Dispose();
         }
 
         static void Footloose_ExceptionOccurred(object sender, ExceptionEventArgs e)
@@ -29,7 +32,7 @@ namespace FootlooseExamples.Quickstart.Service.Runner
             Console.WriteLine("Exception occured: " + e.Exception);
         }
 
-        private static IFootlooseService ConfigureFootloose(ServiceLocatorDummy serviceLocator, string endpointIdentifier)
+        private static IFootlooseConnection ConfigureFootlooseConnection(ServiceLocatorDummy serviceLocator, string endpointIdentifier)
         {
             var footloose = Fluently.Configure()
                 .SerializerOfType<Footloose.Serialization.TextSerializer>()
@@ -51,7 +54,7 @@ namespace FootlooseExamples.Quickstart.Service.Runner
                                       .EndpointIdentifier(endpointIdentifier) // Uri will be "ipc://<endpointIdentifier>/FootlooseServiceProxy.rem"
                                       .TimeOut(5000)
                 )
-                .CreateFootlooseService();
+                .CreateFootlooseConnection();
 
             return footloose;
         }

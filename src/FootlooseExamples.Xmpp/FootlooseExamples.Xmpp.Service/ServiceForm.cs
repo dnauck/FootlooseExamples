@@ -17,7 +17,7 @@ namespace FootlooseExamples.Xmpp.Service
 {
     public partial class ServiceForm : Form
     {
-        private IFootlooseService footloose;
+        private IFootlooseConnection footlooseConnection;
 
         public ServiceForm()
         {
@@ -32,19 +32,19 @@ namespace FootlooseExamples.Xmpp.Service
 
         private void ConnectButton_Click(object sender, EventArgs e)
         {
-            if (footloose == null)
+            if (footlooseConnection == null)
             {
                 var credentials = new NetworkCredential(UserNameTextBox.Text, PasswortTextBox.Text, ServerTextBox.Text);
                 var serverAddress = AutoServerResolveCheckBox.Checked ? null : ServerAddressTextBox.Text;
                 var endpointId = EndpointIdTextBox.Text;
                 var priority = Convert.ToInt32(PriorityNumericUpDown.Value);
-                footloose = SetupFootloose(credentials, serverAddress, priority, endpointId);
+                footlooseConnection = SetupFootlooseConnection(credentials, serverAddress, priority, endpointId);
 
-                EndpointIdentityView.SetEndpointIdentityManager(footloose.EndpointIdentityManager);
+                EndpointIdentityView.SetEndpointIdentityManager(footlooseConnection.EndpointIdentityManager);
             }
             else
             {
-                footloose.Connect();
+                footlooseConnection.Open();
             }
 
             SetControlStatus(true);
@@ -52,7 +52,7 @@ namespace FootlooseExamples.Xmpp.Service
 
         private void DisconnectButton_Click(object sender, EventArgs e)
         {
-            footloose.Disconnect();
+            footlooseConnection.Close();
             SetControlStatus(false);
         }
 
@@ -78,7 +78,7 @@ namespace FootlooseExamples.Xmpp.Service
                 EndpointIdentityView.Clear();
         }
 
-        private static IFootlooseService SetupFootloose(NetworkCredential credentials, string serverAddress, int priority, string endpointIdentifier)
+        private static IFootlooseConnection SetupFootlooseConnection(NetworkCredential credentials, string serverAddress, int priority, string endpointIdentifier)
         {
             var footlooseInstance = Fluently.Configure()
                 .SerializerOfType<Footloose.Serialization.BinarySerializer>()
@@ -96,7 +96,7 @@ namespace FootlooseExamples.Xmpp.Service
                                       }
                 )
                 .TransportChannel(() => SetupFootlooseTransportChannel(credentials, serverAddress, priority, endpointIdentifier))
-                .CreateFootlooseService();
+                .CreateFootlooseConnection();
 
             return footlooseInstance;
         }
@@ -128,13 +128,13 @@ namespace FootlooseExamples.Xmpp.Service
 
         private void SendPresenceButton_Click(object sender, EventArgs e)
         {
-            if(footloose != null && footloose.IsConnected)
+            if(footlooseConnection != null && footlooseConnection.IsConnected)
             {
                 var status = GetStatus();
                 var statusInfo = StatusInfoTextBox.Text;
                 var priority = Convert.ToInt32(PriorityNumericUpDown.Value);
 
-                footloose.EndpointIdentityManager.SelfEndpointIdentity.UpdatePresence(priority, status, statusInfo);
+                footlooseConnection.EndpointIdentityManager.SelfEndpointIdentity.UpdatePresence(priority, status, statusInfo);
             }
         }
 

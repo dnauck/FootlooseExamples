@@ -18,7 +18,7 @@ namespace FootlooseExamples.Xmpp.Client
 {
     public partial class ClientForm : Form
     {
-        private IFootlooseService footloose;
+        private IFootlooseConnection footlooseConnection;
 
         public ClientForm()
         {
@@ -28,19 +28,19 @@ namespace FootlooseExamples.Xmpp.Client
 
         private void ConnectButton_Click(object sender, EventArgs e)
         {
-            if (footloose == null)
+            if (footlooseConnection == null)
             {
                 var credentials = new NetworkCredential(UserNameTextBox.Text, PasswortTextBox.Text, ServerTextBox.Text);
                 var serverAddress = AutoServerResolveCheckBox.Checked ? null : ServerAddressTextBox.Text;
                 var endpointId = EndpointIdTextBox.Text;
                 var priority = Convert.ToInt32(PriorityNumericUpDown.Value);
-                footloose = SetupFootloose(credentials, serverAddress, priority, endpointId);
+                footlooseConnection = SetupFootlooseConnection(credentials, serverAddress, priority, endpointId);
 
-                EndpointIdentityView.SetEndpointIdentityManager(footloose.EndpointIdentityManager);
+                EndpointIdentityView.SetEndpointIdentityManager(footlooseConnection.EndpointIdentityManager);
             }
             else
             {
-                footloose.Connect();
+                footlooseConnection.Open();
             }
 
             SetControlStatus(true);
@@ -48,7 +48,7 @@ namespace FootlooseExamples.Xmpp.Client
 
         private void DisconnectButton_Click(object sender, EventArgs e)
         {
-            footloose.Disconnect();
+            footlooseConnection.Close();
             SetControlStatus(false);
         }
 
@@ -78,13 +78,13 @@ namespace FootlooseExamples.Xmpp.Client
             ServiceUriTextBox.Enabled = (!UseServiceDiscoCheckBox.Checked && connected);
         }
 
-        private static IFootlooseService SetupFootloose(NetworkCredential credentials, string serverAddress, int priority, string endpointIdentifier)
+        private static IFootlooseConnection SetupFootlooseConnection(NetworkCredential credentials, string serverAddress, int priority, string endpointIdentifier)
         {
             var footlooseInstance = Fluently.Configure()
                 .SerializerOfType<Footloose.Serialization.BinarySerializer>()
                 .ServiceLocator(new ServiceLocatorDummy())
                 .TransportChannel(() => SetupFootlooseTransportChannel(credentials, serverAddress, priority, endpointIdentifier))
-                .CreateFootlooseService();
+                .CreateFootlooseConnection();
 
             return footlooseInstance;
         }
@@ -116,13 +116,13 @@ namespace FootlooseExamples.Xmpp.Client
 
         private void SendPresenceButton_Click(object sender, EventArgs e)
         {
-            if (footloose != null && footloose.IsConnected)
+            if (footlooseConnection != null && footlooseConnection.IsConnected)
             {
                 var status = GetStatus();
                 var statusInfo = StatusInfoTextBox.Text;
                 var priority = Convert.ToInt32(PriorityNumericUpDown.Value);
 
-                footloose.EndpointIdentityManager.SelfEndpointIdentity.UpdatePresence(priority, status, statusInfo);
+                footlooseConnection.EndpointIdentityManager.SelfEndpointIdentity.UpdatePresence(priority, status, statusInfo);
             }
         }
 
@@ -161,28 +161,28 @@ namespace FootlooseExamples.Xmpp.Client
 
             if(UseServiceDiscoCheckBox.Checked)
             {
-                footloose.CallMethod<Northwind.CustomersDataTable>(typeof (IDataSetNorthwindRepository), "GetCustomers",
+                footlooseConnection.CallMethod<Northwind.CustomersDataTable>(typeof (IDataSetNorthwindRepository), "GetCustomers",
                                                                    FillDataGrid);
             }
             else
             {
                 var serviceUri = new Uri(ServiceUriTextBox.Text);
 
-                footloose.CallMethod<Northwind.CustomersDataTable>(typeof (IDataSetNorthwindRepository), "GetCustomers",
+                footlooseConnection.CallMethod<Northwind.CustomersDataTable>(typeof (IDataSetNorthwindRepository), "GetCustomers",
                                                                    serviceUri, FillDataGrid);
             }
         }
 
-        private void FillDataGrid(Northwind.CustomersDataTable customersDataTable)
+        private void FillDataGrid(IMethodResponse<Northwind.CustomersDataTable> methodResponse)
         {
             if(CustomersDataGridView.InvokeRequired)
             {
-                CustomersDataGridView.BeginInvoke(new Action<Northwind.CustomersDataTable>(FillDataGrid),
-                                                  customersDataTable);
+                CustomersDataGridView.BeginInvoke(new Action<IMethodResponse<Northwind.CustomersDataTable>>(FillDataGrid),
+                                                  methodResponse);
                 return;
             }
 
-            CustomersDataGridView.DataSource = customersDataTable;
+            CustomersDataGridView.DataSource = methodResponse.ReturnValue;
             CustomersDataGridView.Update();
         }
     }
