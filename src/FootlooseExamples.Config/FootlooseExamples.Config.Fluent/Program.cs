@@ -15,7 +15,7 @@ namespace FootlooseExamples.Config.Fluent
             // create FootlooseService instance from fluent config API
             var footloose = Footloose.Fluently.Configure()
                 .ServiceLocator(serviceLocator)
-                .SerializerOfType<Footloose.Serialization.BinarySerializer>()
+                .SerializerOfType<Footloose.Serialization.TextSerializer>()
                 .ServiceContracts(
                     contracts => contracts.AutoServiceContract.RegisterFromAssemblyOf<FootlooseExamples.Config.Fluent.Program>()
                         .Where(types => types.Namespace.EndsWith("Contracts"))

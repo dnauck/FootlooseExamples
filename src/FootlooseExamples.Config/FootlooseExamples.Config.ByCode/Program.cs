@@ -19,11 +19,11 @@ namespace FootlooseExamples.Config.ByCode
             // configure serializer
             var serializerConfig = new SerializerConfigurationElement()
                                        {
-                                           Name = "MyBinarySerializer",
-                                           Type = typeof (Footloose.Serialization.BinarySerializer).AssemblyQualifiedName
+                                           Name = "MyTextSerializer",
+                                           Type = typeof (Footloose.Serialization.TextSerializer).AssemblyQualifiedName
                                        };
 
-            footlooseConfig.Serializer.DefaultSerializer = "MyBinarySerializer";
+            footlooseConfig.Serializer.DefaultSerializer = "MyTextSerializer";
             footlooseConfig.Serializer.Types.Clear();
             footlooseConfig.Serializer.Types.Add(serializerConfig);
 
