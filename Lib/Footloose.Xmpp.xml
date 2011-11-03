@@ -271,6 +271,12 @@
             <param name="value"></param>
             <returns></returns>
         </member>
+        <member name="T:Footloose.TransportChannels.Xmpp.MessageContainer">
+            <summary>
+            Represents a XML element embedded in a XMPP stanza like an IQ or Message,
+            that acts as container for a <see cref="T:Footloose.Messaging.Message"/>.
+            </summary>
+        </member>
         <member name="T:Footloose.TransportChannels.Xmpp.XmppConnectionManager">
             <summary>
             This class manages automatic reconnects.
@@ -418,6 +424,37 @@
             <param name="iq">Xmpp result iq containg the disco info results.</param>
             <param name="data">Data object hat contains the requested capabilities version string.</param>
         </member>
+        <member name="M:Footloose.TransportChannels.Xmpp.XmppEndpointIdentityManager.CreateDiscoInfo(agsXMPP.protocol.iq.disco.DiscoInfo)">
+            <summary>
+            Creates a <see cref="T:Footloose.DataModel.DataTransferObjects.DiscoInfo"/> from
+            a XMPP service discovery information element.
+            </summary>
+            <param name="discoInfo">The XMPP service discovery information element.</param>
+            <returns>A <see cref="T:Footloose.DataModel.DataTransferObjects.DiscoInfo"/>.</returns>
+        </member>
+        <member name="M:Footloose.TransportChannels.Xmpp.XmppEndpointIdentityManager.CreateEndpointIdentity(agsXMPP.protocol.iq.roster.RosterItem)">
+            <summary>
+            Creates an <see cref="T:Footloose.DataModel.EndpointIdentity"/> from a XMPP roster item.
+            </summary>
+            <param name="item">The XMPP roster item.</param>
+            <returns>An <see cref="T:Footloose.DataModel.EndpointIdentity"/>.</returns>
+        </member>
+        <member name="M:Footloose.TransportChannels.Xmpp.XmppEndpointIdentityManager.CreatePresence(agsXMPP.protocol.client.Presence)">
+            <summary>
+            Creates a <see cref="T:Footloose.DataModel.DataTransferObjects.Presence"/> from
+            a XMPP presence element.
+            </summary>
+            <param name="pres">The XMPP presence element.</param>
+            <returns>A <see cref="T:Footloose.DataModel.DataTransferObjects.Presence"/>.</returns>
+        </member>
+        <member name="M:Footloose.TransportChannels.Xmpp.XmppEndpointIdentityManager.CreatePresenceSubscriptionRequest(agsXMPP.protocol.client.Presence)">
+            <summary>
+            Creates a <see cref="T:Footloose.DataModel.DataTransferObjects.PresenceSubscriptionRequest"/> from
+            a XMPP presence element.
+            </summary>
+            <param name="pres">The XMPP presence element.</param>
+            <returns>A <see cref="T:Footloose.DataModel.DataTransferObjects.PresenceSubscriptionRequest"/>.</returns>
+        </member>
         <member name="M:Footloose.TransportChannels.Xmpp.XmppTransportChannel.RegisterXmppElements">
             <summary>
             Method to register custom Xmpp elements to the
@@ -434,7 +471,7 @@
             Disconnects the transport channel.
             </summary>
         </member>
-        <member name="M:Footloose.TransportChannels.Xmpp.XmppTransportChannel.SetDiscoInfo(Footloose.DataModel.DiscoInfo)">
+        <member name="M:Footloose.TransportChannels.Xmpp.XmppTransportChannel.SetDiscoInfo(Footloose.DataModel.DataTransferObjects.DiscoInfo)">
             <summary>
             Sets the service discovery information the transport channel should
             send on discovery requests.

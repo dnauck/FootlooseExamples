@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>SerializerConfigurationElementCollection.RemoveAt Method (int)</title>
+<title>SerializerConfigurationElementCollection.Insert Method (int, SerializerConfigurationElement)</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">SerializerConfigurationElementCollection.RemoveAt Method (int)</div>
+<div id="PageTitle">SerializerConfigurationElementCollection.Insert Method (int, SerializerConfigurationElement)</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 <a href="#SectionHeader1" onclick="javascript: SetSectionVisibility(1, true); SetExpandCollapseAllToCollapseAll();">Exceptions</a>&nbsp;
@@ -25,9 +25,9 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Removes the <span class="PseudoLink">System.Collections.Generic.IList`1</span> item at the specified index.
+Inserts an item to the <span class="PseudoLink">System.Collections.Generic.IList`1</span> at the specified index.
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/1/128.html">SerializerConfigurationElementCollection</a><br />
+<b>Declaring type:</b> <a href="../../Contents/1/130.html">SerializerConfigurationElementCollection</a><br />
 <b>Namespace:</b> <a href="../../Contents/1/5.html">Footloose.Configuration</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">Footloose</a>
 </div>
@@ -41,13 +41,18 @@ Syntax
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public void RemoveAt (
-        int <i>index</i>
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public void Insert (
+        int <i>index</i>,
+        SerializerConfigurationElement <i>item</i>
 ) </pre></td></tr></table>
 <div class="CommentHeader">Parameters</div>
 <div class="CommentParameterName">index</div>
 <div class="ParameterCommentContainer">
-The zero-based index of the item to remove.
+The zero-based index at which <span class="Code">item</span> should be inserted.
+</div>
+<div class="CommentParameterName">item</div>
+<div class="ParameterCommentContainer">
+The object to insert into the <span class="PseudoLink">System.Collections.Generic.IList`1</span>.
 </div>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 <div id="SectionHeader1" class="SectionHeader">
@@ -69,8 +74,8 @@ Exceptions
 </tr>
 <tr>
 <td><span class="PseudoLink">ArgumentOutOfRangeException</span></td>
-<td><span class="Code">index</span> is not a valid
-            index in the <span class="PseudoLink">System.Collections.Generic.IList`1</span>.</td>
+<td><span class="Code">index</span> is not a valid index in the
+            <span class="PseudoLink">System.Collections.Generic.IList`1</span>.</td>
 </tr>
 <tr>
 <td><span class="PseudoLink">NotSupportedException</span></td>

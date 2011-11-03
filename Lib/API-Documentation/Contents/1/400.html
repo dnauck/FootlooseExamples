@@ -6,15 +6,15 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>PresenceEventArgs Class Members</title>
+<title>ReflectionMethodInvoker Class Members</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">PresenceEventArgs Class Members</div>
+<div id="PageTitle">ReflectionMethodInvoker Class Members</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader30" onclick="javascript: SetSectionVisibility(30, true); SetExpandCollapseAllToCollapseAll();">Constructors</a>&nbsp;
-<a href="#SectionHeader40" onclick="javascript: SetSectionVisibility(40, true); SetExpandCollapseAllToCollapseAll();">Properties</a>&nbsp;
+<a href="#SectionHeader35" onclick="javascript: SetSectionVisibility(35, true); SetExpandCollapseAllToCollapseAll();">Methods</a>&nbsp;
 </div>
 <div class="DarkLine"></div>
 <div class="LightLine"></div>
@@ -25,10 +25,9 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Provides data for the <a href="../../Contents/1/297.html">PresenceNotificationReceived</a>
-            event. When a new presence notification received an instance of this class is passed to the handler.
+Invokes a specified method of a given type.
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/1/296.html">PresenceEventArgs</a><br />
+<b>Declaring type:</b> <a href="../../Contents/1/303.html">ReflectionMethodInvoker</a><br />
 <b>Namespace:</b> <a href="../../Contents/1/3.html">Footloose</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">Footloose</a>
 </div>
@@ -54,21 +53,22 @@ Public Constructors
 <tr>
 <td class="IconColumn">
 <img src="../../GFX/PublicMethod.gif" alt="Public Method" /></td>
-<td><a href="../../Contents/1/401.html">PresenceEventArgs</a></td>
-<td>Overloaded. Initializes a new instance of the <a href="../../Contents/1/296.html">PresenceEventArgs</a> class.</td>
+<td><a href="../../Contents/1/401.html">ReflectionMethodInvoker</a></td>
+<td>Initializes a new instance of the <a href="../../Contents/1/303.html">ReflectionMethodInvoker</a> class
+            with the specified <span class="PseudoLink">Microsoft.Practices.ServiceLocation.IServiceLocator</span>.</td>
 </tr>
 </table>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
-<div id="SectionHeader40" class="SectionHeader">
-<img id="SectionExpanderImg40" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(40);" />
+<div id="SectionHeader35" class="SectionHeader">
+<img id="SectionExpanderImg35" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(35);" />
 <span class="SectionHeader">
-<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(40);">
-Public Properties
+<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(35);">
+Public Methods
 </span>
 </span>
 </div>
 
-<div id="SectionContainerDiv40" class="SectionContainer">
+<div id="SectionContainerDiv35" class="SectionContainer">
 <table class="MembersTable">
 <col width="7%" />
 <col width="38%" />
@@ -80,9 +80,15 @@ Public Properties
 </tr>
 <tr>
 <td class="IconColumn">
-<img src="../../GFX/PublicProperty.gif" alt="Public Property" /></td>
-<td><a href="../../Contents/1/402.html">Presence</a></td>
-<td>Gets or sets the <a href="../../Contents/1/341.html">IPresence</a> notification.</td>
+<img src="../../GFX/PublicMethod.gif" alt="Public Method" /></td>
+<td><a href="../../Contents/1/402.html">InvokeGenericMethod</a></td>
+<td>Overloaded. Invokes the specified generic method on the specified type.</td>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicMethod.gif" alt="Public Method" /></td>
+<td><a href="../../Contents/1/403.html">InvokeMethod</a></td>
+<td>Overloaded. Invokes the specified method on the specified type.</td>
 </tr>
 </table>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>

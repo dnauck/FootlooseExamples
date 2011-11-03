@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>XmppEndpointIdentityManager Constructor (EndpointIdentityDictionary, SelfEndpointIdentity, Func&lt;Uri, EndpointIdentity&gt;)</title>
+<title>RemotingTransportChannel.SetDiscoInfo Method (DiscoInfo)</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">XmppEndpointIdentityManager Constructor (EndpointIdentityDictionary, SelfEndpointIdentity, Func&lt;Uri, EndpointIdentity&gt;)</div>
+<div id="PageTitle">RemotingTransportChannel.SetDiscoInfo Method (DiscoInfo)</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 </div>
@@ -24,11 +24,12 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Initializes a new instance of the <a href="../../Contents/2/399.html">XmppEndpointIdentityManager</a> class.
+Sets the service discovery information the transport channel should
+            send on discovery requests.
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/2/399.html">XmppEndpointIdentityManager</a><br />
-<b>Namespace:</b> <a href="../../Contents/2/365.html">Footloose.TransportChannels.Xmpp</a><br />
-<b>Assembly:</b> <a href="../../Contents/1/2.html">Footloose.Xmpp</a>
+<b>Declaring type:</b> <a href="../../Contents/1/63.html">RemotingTransportChannel</a><br />
+<b>Namespace:</b> <a href="../../Contents/1/15.html">Footloose.TransportChannels.Remoting</a><br />
+<b>Assembly:</b> <a href="../../Contents/1/1.html">Footloose</a>
 </div>
 <div id="SectionHeader0" class="SectionHeader">
 <img id="SectionExpanderImg0" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(0);" />
@@ -40,23 +41,13 @@ Syntax
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public XmppEndpointIdentityManager (
-        EndpointIdentityDictionary <i>endpointIdentityDictionary</i>,
-        SelfEndpointIdentity <i>selfEndpointIdentity</i>,
-        Func&lt;Uri, EndpointIdentity&gt; <i>endpointIdentityFactory</i>
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public override void SetDiscoInfo (
+        DiscoInfo <i>discoInfo</i>
 ) </pre></td></tr></table>
 <div class="CommentHeader">Parameters</div>
-<div class="CommentParameterName">endpointIdentityDictionary</div>
+<div class="CommentParameterName">discoInfo</div>
 <div class="ParameterCommentContainer">
-The <a href="../../Contents/1/365.html">EndpointIdentityDictionary</a>.
-</div>
-<div class="CommentParameterName">selfEndpointIdentity</div>
-<div class="ParameterCommentContainer">
-The <a href="../../Contents/1/367.html">SelfEndpointIdentity</a>.
-</div>
-<div class="CommentParameterName">endpointIdentityFactory</div>
-<div class="ParameterCommentContainer">
-The <a href="../../Contents/1/366.html">EndpointIdentity</a> factory.
+Service discovery information for this service node.
 </div>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>

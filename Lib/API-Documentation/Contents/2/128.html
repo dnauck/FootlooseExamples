@@ -6,15 +6,15 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>MethodCallRequest Class Members</title>
+<title>EndpointIdentityDictionary Class Members</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">MethodCallRequest Class Members</div>
+<div id="PageTitle">EndpointIdentityDictionary Class Members</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader30" onclick="javascript: SetSectionVisibility(30, true); SetExpandCollapseAllToCollapseAll();">Constructors</a>&nbsp;
-<a href="#SectionHeader40" onclick="javascript: SetSectionVisibility(40, true); SetExpandCollapseAllToCollapseAll();">Properties</a>&nbsp;
+<a href="#SectionHeader35" onclick="javascript: SetSectionVisibility(35, true); SetExpandCollapseAllToCollapseAll();">Methods</a>&nbsp;
 </div>
 <div class="DarkLine"></div>
 <div class="LightLine"></div>
@@ -25,9 +25,10 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Defines a methode call request on a service.
+A internal dictionary of known <a href="../../Contents/1/289.html">IEndpointIdentity</a> objects. This implementation
+            is exposed to the public through the <a href="../../Contents/2/83.html">IEndpointIdentityCollection</a> interface.
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/2/7.html">MethodCallRequest</a><br />
+<b>Declaring type:</b> <a href="../../Contents/1/366.html">EndpointIdentityDictionary</a><br />
 <b>Namespace:</b> <a href="../../Contents/1/8.html">Footloose.DataModel</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">Footloose</a>
 </div>
@@ -53,21 +54,21 @@ Public Constructors
 <tr>
 <td class="IconColumn">
 <img src="../../GFX/PublicMethod.gif" alt="Public Method" /></td>
-<td><a href="../../Contents/2/129.html">MethodCallRequest</a></td>
-<td><p>There is no summary.</p></td>
+<td><a href="../../Contents/2/129.html">EndpointIdentityDictionary</a></td>
+<td>Initializes a new instance of the <a href="../../Contents/1/366.html">EndpointIdentityDictionary</a> class that is empty.</td>
 </tr>
 </table>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
-<div id="SectionHeader40" class="SectionHeader">
-<img id="SectionExpanderImg40" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(40);" />
+<div id="SectionHeader35" class="SectionHeader">
+<img id="SectionExpanderImg35" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(35);" />
 <span class="SectionHeader">
-<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(40);">
-Public Properties
+<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(35);">
+Public Methods
 </span>
 </span>
 </div>
 
-<div id="SectionContainerDiv40" class="SectionContainer">
+<div id="SectionContainerDiv35" class="SectionContainer">
 <table class="MembersTable">
 <col width="7%" />
 <col width="38%" />
@@ -79,16 +80,23 @@ Public Properties
 </tr>
 <tr>
 <td class="IconColumn">
-<img src="../../GFX/PublicProperty.gif" alt="Public Property" /></td>
-<td><a href="../../Contents/2/130.html">MethodName</a></td>
-<td>Gets or sets the <span class="PseudoLink">System.String</span> containing the method name.</td>
+<img src="../../GFX/PublicMethod.gif" alt="Public Method" /></td>
+<td><a href="../../Contents/2/130.html">Add</a></td>
+<td>Overloaded. Adds a new <a href="../../Contents/1/289.html">IEndpointIdentity</a> with the specified <span class="PseudoLink">System.Uri</span> to the collection
+            and request subscription to the <a href="../../Contents/1/342.html">IPresence</a> of the <a href="../../Contents/1/289.html">IEndpointIdentity</a>.</td>
 </tr>
 <tr>
 <td class="IconColumn">
-<img src="../../GFX/PublicProperty.gif" alt="Public Property" /></td>
-<td><a href="../../Contents/2/131.html">Type</a></td>
-<td>Gets or sets the <span class="PseudoLink">System.Type</span> containing the name
-            of the <span class="PseudoLink">System.Type</span> the method belongs to.</td>
+<img src="../../GFX/PublicMethod.gif" alt="Public Method" /></td>
+<td><a href="../../Contents/2/131.html">Remove</a></td>
+<td>Removes the <a href="../../Contents/1/289.html">IEndpointIdentity</a> with the specified <span class="PseudoLink">System.Uri</span> from the collection
+            and unsubcribe from the <a href="../../Contents/1/342.html">IPresence</a> of the <a href="../../Contents/1/289.html">IEndpointIdentity</a>.</td>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicMethod.gif" alt="Public Method" /></td>
+<td><a href="../../Contents/2/132.html">Update</a></td>
+<td>Overloaded. Updates the name of the <a href="../../Contents/1/289.html">IEndpointIdentity</a> with the specified <span class="PseudoLink">System.Uri</span>.</td>
 </tr>
 </table>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>

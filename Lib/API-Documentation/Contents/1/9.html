@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>Footloose.Messaging Namespace</title>
+<title>Footloose.DataModel.DataTransferObjects Namespace</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">Footloose.Messaging Namespace</div>
+<div id="PageTitle">Footloose.DataModel.DataTransferObjects Namespace</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Classes</a>&nbsp;
 <a href="#SectionHeader5" onclick="javascript: SetSectionVisibility(5, true); SetExpandCollapseAllToCollapseAll();">Interfaces</a>&nbsp;
@@ -50,33 +50,93 @@ Public Classes
 </tr>
 <tr>
 <td class="IconColumn">
-<img src="../../GFX/PublicClass.gif" alt="Public Class" /></td>
-<td><a href="../../Contents/2/199.html">Message</a></td>
-<td>Class for serializable messaging that contains communication data sent between services.</td>
+<img src="../../GFX/PublicClass.gif" alt="Public Class" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
+<td><a href="../../Contents/2/9.html">CorrelativeDataBase</a></td>
+<td>Base class that contains correlative communication data sent between services.</td>
 </tr>
 <tr>
 <td class="IconColumn">
 <img src="../../GFX/PublicClass.gif" alt="Public Class" /></td>
-<td><a href="../../Contents/2/200.html">MessageBufferStatus</a></td>
-<td><p>There is no summary.</p></td>
+<td><a href="../../Contents/2/10.html">DiscoFeature</a></td>
+<td>Contains a protocol namespace or other feature offered by the communication endpoint.</td>
 </tr>
 <tr>
 <td class="IconColumn">
 <img src="../../GFX/PublicClass.gif" alt="Public Class" /></td>
-<td><a href="../../Contents/2/201.html">MessageBundle</a></td>
-<td>A bundle of <a href="../../Contents/2/199.html">Message</a> objects created by an <a href="../../Contents/2/202.html">IMessageBuilder</a>.</td>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicClass.gif" alt="Public Class" />&nbsp;<img src="../../GFX/Static.gif" alt="Static" /></td>
-<td><a href="../../Contents/2/203.html">MessageExtensions</a></td>
-<td>Provide extensions for the <a href="../../Contents/2/199.html">Message</a> type.</td>
+<td><a href="../../Contents/2/11.html">DiscoIdentity</a></td>
+<td>Containing information about the communication endpoint's identity.</td>
 </tr>
 <tr>
 <td class="IconColumn">
 <img src="../../GFX/PublicClass.gif" alt="Public Class" /></td>
-<td><a href="../../Contents/2/204.html">MessageType</a></td>
-<td>Defines types of messages.</td>
+<td><a href="../../Contents/1/354.html">DiscoInfo</a></td>
+<td>Contains service discovery information such as
+            discovered identities and features of a communication endpoint.</td>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicClass.gif" alt="Public Class" /></td>
+<td><a href="../../Contents/2/12.html">DiscoInfoRequest</a></td>
+<td>A service discovery request that is send by the requesting communication endpoint
+            to discover information about another communication endpoint on the network.</td>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicClass.gif" alt="Public Class" /></td>
+<td><a href="../../Contents/2/13.html">DiscoInfoResponse</a></td>
+<td>A service discovery respose to an <a href="../../Contents/2/12.html">DiscoInfoRequest</a>.</td>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicClass.gif" alt="Public Class" /></td>
+<td><a href="../../Contents/2/14.html">MethodCall</a></td>
+<td>Defines the serializable method call data class sent between services.</td>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicClass.gif" alt="Public Class" /></td>
+<td><a href="../../Contents/2/15.html">MethodCallRequest</a></td>
+<td>Defines a methode call request on a service.</td>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicClass.gif" alt="Public Class" /></td>
+<td><a href="../../Contents/2/16.html">MethodResponse</a></td>
+<td>Defines the method response data class sent between services.</td>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicClass.gif" alt="Public Class" /></td>
+<td><a href="../../Contents/2/17.html">MethodResponseRequest</a></td>
+<td>Defines a methode call request on a service.</td>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicClass.gif" alt="Public Class" /></td>
+<td><a href="../../Contents/1/358.html">Presence</a></td>
+<td>A presence information contains network availability information from a <a href="../../Contents/1/106.html">ICommunicationEndpoint</a>.
+            It'll be send to all subscribed endpoints upon changes, like connect, disconnect or priority/availability changes.</td>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicClass.gif" alt="Public Class" /></td>
+<td><a href="../../Contents/1/348.html">PresenceSubscriptionRequest</a></td>
+<td>A presence subscription request that is send by the requesting communication endpoint
+            to another <a href="../../Contents/1/289.html">IEndpointIdentity</a> to receive <a href="../../Contents/1/342.html">IPresence</a> notifications
+            when approved.</td>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicClass.gif" alt="Public Class" /></td>
+<td><a href="../../Contents/1/350.html">PresenceSubscriptionResponse</a></td>
+<td>A presence subscription response to a <a href="../../Contents/1/348.html">PresenceSubscriptionRequest</a>.</td>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicClass.gif" alt="Public Class" /></td>
+<td><a href="../../Contents/1/352.html">PresenceUnsubscribe</a></td>
+<td>A presence unsubscribe request that is send by the subscribed endpoint
+            to another <a href="../../Contents/1/289.html">IEndpointIdentity</a> to unsubscribe from it's presence notifications.</td>
 </tr>
 </table>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
@@ -102,20 +162,8 @@ Public Interfaces
 <tr>
 <td class="IconColumn">
 <img src="../../GFX/PublicInterface.gif" alt="Public Interface" /></td>
-<td><a href="../../Contents/2/205.html">IMessageBufferRepository</a></td>
-<td><p>There is no summary.</p></td>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicInterface.gif" alt="Public Interface" /></td>
-<td><a href="../../Contents/2/202.html">IMessageBuilder</a></td>
-<td>This interface defines a factory to build up messages from specific <a href="../../Contents/2/12.html">IMessageBodyData</a> objects.</td>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicInterface.gif" alt="Public Interface" /></td>
-<td><a href="../../Contents/2/206.html">IMessageHandler</a></td>
-<td>A interface that is responsible to process incoming messages that are handled by the <a href="../../Contents/2/207.html">IMessageDispatcher</a>.</td>
+<td><a href="../../Contents/2/18.html">IMessageBodyData</a></td>
+<td>Interface to mark data model types that are used as message body data.</td>
 </tr>
 </table>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>

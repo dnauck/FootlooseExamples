@@ -6,14 +6,15 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>MessageExtensions.CreateResponse Method (Message)</title>
+<title>ISelfEndpointIdentity.UpdatePresence Method (int)</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">MessageExtensions.CreateResponse Method (Message)</div>
+<div id="PageTitle">ISelfEndpointIdentity.UpdatePresence Method (int)</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
+<a href="#SectionHeader1" onclick="javascript: SetSectionVisibility(1, true); SetExpandCollapseAllToCollapseAll();">Remarks</a>&nbsp;
 </div>
 <div class="DarkLine"></div>
 <div class="LightLine"></div>
@@ -24,10 +25,10 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Creates a response of type <a href="../../Contents/2/214.html">Result</a> for the provided message.
+Updates the self presence information with the given priority.
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/2/203.html">MessageExtensions</a><br />
-<b>Namespace:</b> <a href="../../Contents/1/9.html">Footloose.Messaging</a><br />
+<b>Declaring type:</b> <a href="../../Contents/1/414.html">ISelfEndpointIdentity</a><br />
+<b>Namespace:</b> <a href="../../Contents/1/8.html">Footloose.DataModel</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">Footloose</a>
 </div>
 <div id="SectionHeader0" class="SectionHeader">
@@ -40,17 +41,34 @@ Syntax
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public static Message CreateResponse (
-        Message <i>message</i>
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public abstract void UpdatePresence (
+        int <i>priority</i>
 ) </pre></td></tr></table>
 <div class="CommentHeader">Parameters</div>
-<div class="CommentParameterName">message</div>
+<div class="CommentParameterName">priority</div>
 <div class="ParameterCommentContainer">
-The original <a href="../../Contents/2/199.html">Message</a>.
+Priority of this service node.
 </div>
-<div class="CommentHeader">Return Value</div>
-<div class="ParameterCommentContainer">
-The response <a href="../../Contents/2/199.html">Message</a> of type <a href="../../Contents/2/214.html">Result</a>.
+<div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
+<div id="SectionHeader1" class="SectionHeader">
+<img id="SectionExpanderImg1" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(1);" />
+<span class="SectionHeader">
+<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(1);">
+Remarks
+</span>
+</span>
+</div>
+
+<div id="SectionContainerDiv1" class="SectionContainer">
+<div class="RemarksContainer">
+<p>
+            This method sends a new presence notification message to all
+            communication endpoints that are subscribed to the presence of
+            this service node.
+            
+            Use this thoughtful, otherwise you could flood your network
+            with senseless presence notifications.
+            </p>
 </div>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>

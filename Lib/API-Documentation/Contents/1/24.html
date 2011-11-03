@@ -6,15 +6,14 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>BinaryHeapBase&lt;TKey, TItem&gt;.CopyTo Method (Array, int)</title>
+<title>BinaryHeapBase&lt;TKey, TItem&gt;.Contains Method (TItem)</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">BinaryHeapBase&lt;TKey, TItem&gt;.CopyTo Method (Array, int)</div>
+<div id="PageTitle">BinaryHeapBase&lt;TKey, TItem&gt;.Contains Method (TItem)</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
-<a href="#SectionHeader1" onclick="javascript: SetSectionVisibility(1, true); SetExpandCollapseAllToCollapseAll();">Exceptions</a>&nbsp;
 </div>
 <div class="DarkLine"></div>
 <div class="LightLine"></div>
@@ -25,9 +24,9 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Copies the elements of the <span class="PseudoLink">System.Collections.ICollection</span> to an <span class="PseudoLink">System.Array</span>, starting at a particular <span class="PseudoLink">System.Array</span> index.
+Determines whether an element is in the <a href="../../Contents/1/16.html">BinaryHeapBase&lt;TKey, TItem&gt;</a>.
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/1/15.html">BinaryHeapBase&lt;TKey, TItem&gt;</a><br />
+<b>Declaring type:</b> <a href="../../Contents/1/16.html">BinaryHeapBase&lt;TKey, TItem&gt;</a><br />
 <b>Namespace:</b> <a href="../../Contents/1/4.html">Footloose.Collections</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">Footloose</a>
 </div>
@@ -41,54 +40,18 @@ Syntax
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public void CopyTo (
-        Array <i>array</i>,
-        int <i>index</i>
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public virtual bool Contains (
+        TItem <i>item</i>
 ) </pre></td></tr></table>
 <div class="CommentHeader">Parameters</div>
-<div class="CommentParameterName">array</div>
+<div class="CommentParameterName">item</div>
 <div class="ParameterCommentContainer">
-The one-dimensional <span class="PseudoLink">System.Array</span> that is the destination of the elements copied from <span class="PseudoLink">System.Collections.ICollection</span>. The <span class="PseudoLink">System.Array</span> must have zero-based indexing. 
+The item to locate in the <a href="../../Contents/1/16.html">BinaryHeapBase&lt;TKey, TItem&gt;</a>.
 </div>
-<div class="CommentParameterName">index</div>
+<div class="CommentHeader">Return Value</div>
 <div class="ParameterCommentContainer">
-The zero-based index in <span class="Code">array</span> at which copying begins. 
+true if item is found in the <a href="../../Contents/1/16.html">BinaryHeapBase&lt;TKey, TItem&gt;</a>; otherwise, false.
 </div>
-<div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
-<div id="SectionHeader1" class="SectionHeader">
-<img id="SectionExpanderImg1" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(1);" />
-<span class="SectionHeader">
-<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(1);">
-Exceptions
-</span>
-</span>
-</div>
-
-<div id="SectionContainerDiv1" class="SectionContainer">
-<table class="MembersTable">
-<col width="25%" />
-<col width="75%" />
-<tr>
-<th>Exception type</th>
-<th>Condition</th>
-</tr>
-<tr>
-<td><span class="PseudoLink">ArgumentNullException</span></td>
-<td><span class="Code">array</span> is null. </td>
-</tr>
-<tr>
-<td><span class="PseudoLink">ArgumentOutOfRangeException</span></td>
-<td><span class="Code">index</span> is less than zero. </td>
-</tr>
-<tr>
-<td><span class="PseudoLink">ArgumentException</span></td>
-<td><span class="Code">array</span> is multidimensional.-or- <span class="Code">index</span> is equal to or greater than the length of <span class="Code">array</span>.-or- The number of elements in the source <span class="PseudoLink">System.Collections.ICollection</span> is greater than the available space from <span class="Code">index</span> to the end of the destination <span class="Code">array</span>. </td>
-</tr>
-<tr>
-<td><span class="PseudoLink">ArgumentException</span></td>
-<td>The type of the source <span class="PseudoLink">System.Collections.ICollection</span> cannot be cast automatically to the type of the destination <span class="Code">array</span>. </td>
-</tr>
-</table>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>
 <div id="Footer">

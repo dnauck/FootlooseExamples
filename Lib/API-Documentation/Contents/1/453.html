@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>IFootlooseService.CallMethod&lt;T1&gt; Method (Type, string, IEnumerable&lt;Type&gt;, T1)</title>
+<title>IFootlooseConnection.CallMethod&lt;T1, TResult&gt; Method (Type, string, CancellationToken, T1)</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">IFootlooseService.CallMethod&lt;T1&gt; Method (Type, string, IEnumerable&lt;Type&gt;, T1)</div>
+<div id="PageTitle">IFootlooseConnection.CallMethod&lt;T1, TResult&gt; Method (Type, string, CancellationToken, T1)</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 </div>
@@ -24,11 +24,10 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Invokes asynchronous the specified generic method of the given <span class="PseudoLink">System.Type</span> on a remote <a href="../../Contents/1/293.html">IFootlooseService</a> with the specified generic type and argument.
+Invokes asynchronous the specified method of the given <span class="PseudoLink">System.Type</span> on a remote <a href="../../Contents/1/81.html">IFootlooseConnection</a> with the specified argument.
             The remote service Uri will be determined with the auto service discovery feature.
-            Once the method call returns the <a href="../../Contents/1/295.html">MethodResponseReceived</a> event ist called.
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/1/293.html">IFootlooseService</a><br />
+<b>Declaring type:</b> <a href="../../Contents/1/81.html">IFootlooseConnection</a><br />
 <b>Namespace:</b> <a href="../../Contents/1/3.html">Footloose</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">Footloose</a>
 </div>
@@ -42,16 +41,20 @@ Syntax
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public abstract Guid CallMethod&lt;T1&gt; (
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public abstract Task&lt;IMethodResponse&lt;TResult&gt;&gt; CallMethod&lt;T1, TResult&gt; (
         Type <i>type</i>,
         string <i>methodName</i>,
-        IEnumerable&lt;Type&gt; <i>genericArguments</i>,
+        CancellationToken <i>cancellationToken</i>,
         T1 <i>arg1</i>
 ) </pre></td></tr></table>
 <div class="CommentHeader">Type Parameters</div>
 <div class="CommentParameterName">T1</div>
 <div class="ParameterCommentContainer">
 The type of the first parameter of the method.
+</div>
+<div class="CommentParameterName">TResult</div>
+<div class="ParameterCommentContainer">
+The type of the return value of the method.
 </div>
 <div class="CommentHeader">Parameters</div>
 <div class="CommentParameterName">type</div>
@@ -62,9 +65,9 @@ The <span class="PseudoLink">System.Type</span> the method belongs to.
 <div class="ParameterCommentContainer">
 The name of the method to invoke.
 </div>
-<div class="CommentParameterName">genericArguments</div>
+<div class="CommentParameterName">cancellationToken</div>
 <div class="ParameterCommentContainer">
-An array of types to be substituted for the type parameters of the current generic method definition.
+The <span class="PseudoLink">System.Threading.CancellationToken</span> that will be assigned to the new <span class="PseudoLink">System.Threading.Tasks.Task</span>.
 </div>
 <div class="CommentParameterName">arg1</div>
 <div class="ParameterCommentContainer">
@@ -72,7 +75,7 @@ The first parameter of the method.
 </div>
 <div class="CommentHeader">Return Value</div>
 <div class="ParameterCommentContainer">
-A unique correlation identifier for this method call.
+The started <span class="PseudoLink">System.Threading.Tasks.Task</span>.
 </div>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>

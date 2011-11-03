@@ -6,14 +6,14 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>IEndpointIdentityManagerInternal.SelfEndpointIdentity Property </title>
+<title>IFootlooseConnection.CallMethod&lt;T1, T2, TResult&gt; Method</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">IEndpointIdentityManagerInternal.SelfEndpointIdentity Property </div>
+<div id="PageTitle">IFootlooseConnection.CallMethod&lt;T1, T2, TResult&gt; Method</div>
 <div id="HeaderShortcuts">
-<a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
+<a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Overload List</a>&nbsp;
 </div>
 <div class="DarkLine"></div>
 <div class="LightLine"></div>
@@ -24,10 +24,10 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Returns an instance of <a href="../../Contents/1/434.html">SelfEndpointIdentity</a> for
-            internal interaction with the endpoint of this service node.
+Invokes asynchronous the specified method of the given <span class="PseudoLink">System.Type</span> on a remote <a href="../../Contents/1/81.html">IFootlooseConnection</a> with the specified arguments.
+            The remote service Uri will be determined with the auto service discovery feature.
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/1/304.html">IEndpointIdentityManagerInternal</a><br />
+<b>Declaring type:</b> <a href="../../Contents/1/81.html">IFootlooseConnection</a><br />
 <b>Namespace:</b> <a href="../../Contents/1/3.html">Footloose</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">Footloose</a>
 </div>
@@ -35,17 +35,108 @@ Returns an instance of <a href="../../Contents/1/434.html">SelfEndpointIdentity<
 <img id="SectionExpanderImg0" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(0);" />
 <span class="SectionHeader">
 <span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(0);">
-Syntax
+Overload List
 </span>
 </span>
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public abstract SelfEndpointIdentity SelfEndpointIdentity { get; }</pre></td></tr></table>
-<div class="CommentHeader">Property Value</div>
-<div class="ParameterCommentContainer">
-<p>There is no description.</p>
-</div>
+<table class="MembersTable">
+<col width="7%" />
+<col width="38%" />
+<col width="55%" />
+<tr>
+<th>&nbsp;</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
+<td><a href="../../Contents/1/465.html">IFootlooseConnection.CallMethod&lt;T1, T2, TResult&gt; (Type, string, CancellationToken, T1, T2)</a></td>
+<td>Invokes asynchronous the specified method of the given <span class="PseudoLink">System.Type</span> on a remote <a href="../../Contents/1/81.html">IFootlooseConnection</a> with the specified arguments.
+            The remote service Uri will be determined with the auto service discovery feature.</td>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
+<td><a href="../../Contents/1/466.html">IFootlooseConnection.CallMethod&lt;T1, T2, TResult&gt; (Type, string, IEnumerable&lt;Type&gt;, CancellationToken, T1, T2)</a></td>
+<td>Invokes asynchronous the specified generic method of the given <span class="PseudoLink">System.Type</span> on a remote <a href="../../Contents/1/81.html">IFootlooseConnection</a> with the specified generic types and arguments.
+            The remote service Uri will be determined with the auto service discovery feature.</td>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
+<td><a href="../../Contents/1/467.html">IFootlooseConnection.CallMethod&lt;T1, T2, TResult&gt; (Type, string, Uri, CancellationToken, T1, T2)</a></td>
+<td>Invokes asynchronous the specified method of the given <span class="PseudoLink">System.Type</span> on a remote <a href="../../Contents/1/81.html">IFootlooseConnection</a> with the specified arguments.</td>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
+<td><a href="../../Contents/1/468.html">IFootlooseConnection.CallMethod&lt;T1, T2, TResult&gt; (Type, string, IEnumerable&lt;Type&gt;, Uri, CancellationToken, T1, T2)</a></td>
+<td>Invokes asynchronous the specified generic method of the given <span class="PseudoLink">System.Type</span> on a remote <a href="../../Contents/1/81.html">IFootlooseConnection</a> with the specified generic types and arguments.</td>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
+<td><a href="../../Contents/1/469.html">IFootlooseConnection.CallMethod&lt;T1, T2, TResult&gt; (Type, string, Action&lt;IMethodResponse&lt;TResult&gt;&gt;, T1, T2)</a></td>
+<td>Invokes asynchronous the specified method of the given <span class="PseudoLink">System.Type</span> on a remote <a href="../../Contents/1/81.html">IFootlooseConnection</a> with the specified arguments.
+            The remote service Uri will be determined with the auto service discovery feature.
+            Once the method call returns the callback action delegate is called.</td>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
+<td><a href="../../Contents/1/470.html">IFootlooseConnection.CallMethod&lt;T1, T2, TResult&gt; (Type, string, IEnumerable&lt;Type&gt;, Action&lt;IMethodResponse&lt;TResult&gt;&gt;, T1, T2)</a></td>
+<td>Invokes asynchronous the specified generic method of the given <span class="PseudoLink">System.Type</span> on a remote <a href="../../Contents/1/81.html">IFootlooseConnection</a> with the specified generic types and arguments.
+            The remote service Uri will be determined with the auto service discovery feature.
+            Once the method call returns the callback action delegate is called.</td>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
+<td><a href="../../Contents/1/471.html">IFootlooseConnection.CallMethod&lt;T1, T2, TResult&gt; (Type, string, Uri, Action&lt;IMethodResponse&lt;TResult&gt;&gt;, T1, T2)</a></td>
+<td>Invokes asynchronous the specified method of the given <span class="PseudoLink">System.Type</span> on a remote <a href="../../Contents/1/81.html">IFootlooseConnection</a> with the specified arguments.
+            Once the method call returns the callback action delegate is called.</td>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
+<td><a href="../../Contents/1/472.html">IFootlooseConnection.CallMethod&lt;T1, T2, TResult&gt; (Type, string, IEnumerable&lt;Type&gt;, Uri, Action&lt;IMethodResponse&lt;TResult&gt;&gt;, T1, T2)</a></td>
+<td>Invokes asynchronous the specified generic method of the given <span class="PseudoLink">System.Type</span> on a remote <a href="../../Contents/1/81.html">IFootlooseConnection</a> with the specified generic types and arguments.
+            Once the method call returns the callback action delegate is called.</td>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
+<td><a href="../../Contents/1/473.html">IFootlooseConnection.CallMethod&lt;T1, T2, T3&gt; (Type, string, T1, T2, T3)</a></td>
+<td>Invokes asynchronous the specified method of the given <span class="PseudoLink">System.Type</span> on a remote <a href="../../Contents/1/81.html">IFootlooseConnection</a> with the specified arguments.
+            The remote service Uri will be determined with the auto service discovery feature.
+            Once the method call returns the <a href="../../Contents/1/296.html">MethodResponseReceived</a> event ist called.</td>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
+<td><a href="../../Contents/1/474.html">IFootlooseConnection.CallMethod&lt;T1, T2, T3&gt; (Type, string, IEnumerable&lt;Type&gt;, T1, T2, T3)</a></td>
+<td>Invokes asynchronous the specified generic method of the given <span class="PseudoLink">System.Type</span> on a remote <a href="../../Contents/1/81.html">IFootlooseConnection</a> with the specified generic types and arguments.
+            The remote service Uri will be determined with the auto service discovery feature.
+            Once the method call returns the <a href="../../Contents/1/296.html">MethodResponseReceived</a> event ist called.</td>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
+<td><a href="../../Contents/1/475.html">IFootlooseConnection.CallMethod&lt;T1, T2, T3&gt; (Type, string, Uri, T1, T2, T3)</a></td>
+<td>Invokes asynchronous the specified method of the given <span class="PseudoLink">System.Type</span> on a remote <a href="../../Contents/1/81.html">IFootlooseConnection</a> with the specified arguments.
+            Once the method call returns the <a href="../../Contents/1/296.html">MethodResponseReceived</a> event ist called.</td>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
+<td><a href="../../Contents/1/476.html">IFootlooseConnection.CallMethod&lt;T1, T2, T3&gt; (Type, string, IEnumerable&lt;Type&gt;, Uri, T1, T2, T3)</a></td>
+<td>Invokes asynchronous the specified generic method of the given <span class="PseudoLink">System.Type</span> on a remote <a href="../../Contents/1/81.html">IFootlooseConnection</a> with the specified generic types and arguments.
+            Once the method call returns the <a href="../../Contents/1/296.html">MethodResponseReceived</a> event ist called.</td>
+</tr>
+</table>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>
 <div id="Footer">

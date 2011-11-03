@@ -6,13 +6,14 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>Footloose.Security Namespace</title>
+<title>Footloose.Messaging Namespace</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">Footloose.Security Namespace</div>
+<div id="PageTitle">Footloose.Messaging Namespace</div>
 <div id="HeaderShortcuts">
+<a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Classes</a>&nbsp;
 <a href="#SectionHeader5" onclick="javascript: SetSectionVisibility(5, true); SetExpandCollapseAllToCollapseAll();">Interfaces</a>&nbsp;
 </div>
 <div class="DarkLine"></div>
@@ -28,6 +29,64 @@
 <div id="ItemLocation">
 <b>Assembly:</b> <a href="../../Contents/1/1.html">Footloose</a>
 </div>
+<div id="SectionHeader0" class="SectionHeader">
+<img id="SectionExpanderImg0" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(0);" />
+<span class="SectionHeader">
+<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(0);">
+Public Classes
+</span>
+</span>
+</div>
+
+<div id="SectionContainerDiv0" class="SectionContainer">
+<table class="MembersTable">
+<col width="7%" />
+<col width="38%" />
+<col width="55%" />
+<tr>
+<th>&nbsp;</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicClass.gif" alt="Public Class" /></td>
+<td><a href="../../Contents/2/220.html">Message</a></td>
+<td>Class for serializable messaging that contains communication data sent between services.</td>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicClass.gif" alt="Public Class" /></td>
+<td><a href="../../Contents/2/221.html">MessageBufferStatus</a></td>
+<td><p>There is no summary.</p></td>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicClass.gif" alt="Public Class" /></td>
+<td><a href="../../Contents/2/222.html">MessageBuilderNotFoundException</a></td>
+<td>Represents errors that occur when no proper <a href="../../Contents/2/223.html">IMessageBuilder</a>
+            is found while enqueue new data with the <a href="../../Contents/2/224.html">IMessageOriginator</a>.</td>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicClass.gif" alt="Public Class" /></td>
+<td><a href="../../Contents/2/225.html">MessageBundle</a></td>
+<td>A bundle of <a href="../../Contents/2/220.html">Message</a> objects created by an <a href="../../Contents/2/223.html">IMessageBuilder</a>.</td>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicClass.gif" alt="Public Class" />&nbsp;<img src="../../GFX/Static.gif" alt="Static" /></td>
+<td><a href="../../Contents/2/226.html">MessageExtensions</a></td>
+<td>Provide extensions for the <a href="../../Contents/2/220.html">Message</a> type.</td>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicClass.gif" alt="Public Class" /></td>
+<td><a href="../../Contents/2/227.html">MessageType</a></td>
+<td>Defines types of messages.</td>
+</tr>
+</table>
+<div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 <div id="SectionHeader5" class="SectionHeader">
 <img id="SectionExpanderImg5" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(5);" />
 <span class="SectionHeader">
@@ -50,8 +109,20 @@ Public Interfaces
 <tr>
 <td class="IconColumn">
 <img src="../../GFX/PublicInterface.gif" alt="Public Interface" /></td>
-<td><a href="../../Contents/2/263.html">IAuthorizationManager</a></td>
+<td><a href="../../Contents/2/228.html">IMessageBufferRepository</a></td>
 <td><p>There is no summary.</p></td>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicInterface.gif" alt="Public Interface" /></td>
+<td><a href="../../Contents/2/223.html">IMessageBuilder</a></td>
+<td>This interface defines a factory to build up messages from specific <a href="../../Contents/2/18.html">IMessageBodyData</a> objects.</td>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicInterface.gif" alt="Public Interface" /></td>
+<td><a href="../../Contents/2/229.html">IMessageHandler</a></td>
+<td>A interface that is responsible to process incoming messages that are handled by the <a href="../../Contents/2/230.html">IMessageDispatcher</a>.</td>
 </tr>
 </table>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>

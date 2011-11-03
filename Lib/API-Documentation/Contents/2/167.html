@@ -6,14 +6,14 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>IEndpointIdentityCollection Interface Members</title>
+<title>IMethodResponse Interface Members</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">IEndpointIdentityCollection Interface Members</div>
+<div id="PageTitle">IMethodResponse Interface Members</div>
 <div id="HeaderShortcuts">
-<a href="#SectionHeader35" onclick="javascript: SetSectionVisibility(35, true); SetExpandCollapseAllToCollapseAll();">Methods</a>&nbsp;
+<a href="#SectionHeader40" onclick="javascript: SetSectionVisibility(40, true); SetExpandCollapseAllToCollapseAll();">Properties</a>&nbsp;
 </div>
 <div class="DarkLine"></div>
 <div class="LightLine"></div>
@@ -24,24 +24,22 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Public interface for a collection of <a href="../../Contents/1/287.html">IEndpointIdentity</a> objects.
-            Use this interface to enumerate through the list of known <a href="../../Contents/1/287.html">IEndpointIdentity</a> objects and
-            their <a href="../../Contents/1/104.html">ICommunicationEndpoint</a>.
+<p>There is no summary.</p>
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/2/5.html">IEndpointIdentityCollection</a><br />
+<b>Declaring type:</b> <a href="../../Contents/2/86.html">IMethodResponse</a><br />
 <b>Namespace:</b> <a href="../../Contents/1/8.html">Footloose.DataModel</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">Footloose</a>
 </div>
-<div id="SectionHeader35" class="SectionHeader">
-<img id="SectionExpanderImg35" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(35);" />
+<div id="SectionHeader40" class="SectionHeader">
+<img id="SectionExpanderImg40" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(40);" />
 <span class="SectionHeader">
-<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(35);">
-Public Methods
+<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(40);">
+Public Properties
 </span>
 </span>
 </div>
 
-<div id="SectionContainerDiv35" class="SectionContainer">
+<div id="SectionContainerDiv40" class="SectionContainer">
 <table class="MembersTable">
 <col width="7%" />
 <col width="38%" />
@@ -53,23 +51,27 @@ Public Methods
 </tr>
 <tr>
 <td class="IconColumn">
-<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
-<td><a href="../../Contents/2/168.html">Add</a></td>
-<td>Overloaded. Adds a new <a href="../../Contents/1/287.html">IEndpointIdentity</a> with the specified <span class="PseudoLink">System.Uri</span> to the collection
-            and request subscription to the <a href="../../Contents/1/341.html">IPresence</a> of the <a href="../../Contents/1/287.html">IEndpointIdentity</a>.</td>
+<img src="../../GFX/PublicProperty.gif" alt="Public Property" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
+<td><a href="../../Contents/2/168.html">CorrelationIdentifier</a></td>
+<td>Gets the unique correlation identifier for a message context.</td>
 </tr>
 <tr>
 <td class="IconColumn">
-<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
-<td><a href="../../Contents/2/169.html">Remove</a></td>
-<td>Removes the <a href="../../Contents/1/287.html">IEndpointIdentity</a> with the specified <span class="PseudoLink">System.Uri</span> from the collection
-            and unsubcribe from the <a href="../../Contents/1/341.html">IPresence</a> of the <a href="../../Contents/1/287.html">IEndpointIdentity</a>.</td>
+<img src="../../GFX/PublicProperty.gif" alt="Public Property" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
+<td><a href="../../Contents/2/169.html">Exception</a></td>
+<td>Gets the <span class="PseudoLink">System.Exception</span> thrown during the method call.</td>
 </tr>
 <tr>
 <td class="IconColumn">
-<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
-<td><a href="../../Contents/2/170.html">Update</a></td>
-<td>Overloaded. Updates the name of the <a href="../../Contents/1/287.html">IEndpointIdentity</a> with the specified <span class="PseudoLink">System.Uri</span>.</td>
+<img src="../../GFX/PublicProperty.gif" alt="Public Property" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
+<td><a href="../../Contents/2/170.html">From</a></td>
+<td>Gets the Uri of the service the method call response was send from.</td>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicProperty.gif" alt="Public Property" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
+<td><a href="../../Contents/2/171.html">ReturnValue</a></td>
+<td>Gets the return value of the method call.</td>
 </tr>
 </table>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>

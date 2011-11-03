@@ -6,14 +6,14 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>RemotingTransportChannel.ServiceUri Property </title>
+<title>IMessageOriginator.EnqueueData Method</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">RemotingTransportChannel.ServiceUri Property </div>
+<div id="PageTitle">IMessageOriginator.EnqueueData Method</div>
 <div id="HeaderShortcuts">
-<a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
+<a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Overload List</a>&nbsp;
 </div>
 <div class="DarkLine"></div>
 <div class="LightLine"></div>
@@ -24,27 +24,47 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Gets the Uri of this service node.
+Enqueues the given <a href="../../Contents/2/18.html">IMessageBodyData</a> for the recipient with the
+            provided <span class="PseudoLink">System.Uri</span>.
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/1/62.html">RemotingTransportChannel</a><br />
-<b>Namespace:</b> <a href="../../Contents/1/14.html">Footloose.TransportChannels.Remoting</a><br />
+<b>Declaring type:</b> <a href="../../Contents/2/224.html">IMessageOriginator</a><br />
+<b>Namespace:</b> <a href="../../Contents/1/14.html">Footloose.TransportChannels</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">Footloose</a>
 </div>
 <div id="SectionHeader0" class="SectionHeader">
 <img id="SectionExpanderImg0" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(0);" />
 <span class="SectionHeader">
 <span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(0);">
-Syntax
+Overload List
 </span>
 </span>
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public override Uri ServiceUri { get; }</pre></td></tr></table>
-<div class="CommentHeader">Property Value</div>
-<div class="ParameterCommentContainer">
-<p>There is no description.</p>
-</div>
+<table class="MembersTable">
+<col width="7%" />
+<col width="38%" />
+<col width="55%" />
+<tr>
+<th>&nbsp;</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
+<td><a href="../../Contents/2/366.html">IMessageOriginator.EnqueueData (Uri, IMessageBodyData)</a></td>
+<td>Enqueues the given <a href="../../Contents/2/18.html">IMessageBodyData</a> for the recipient with the
+            provided <span class="PseudoLink">System.Uri</span>.</td>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
+<td><a href="../../Contents/2/367.html">IMessageOriginator.EnqueueData (Uri, IMessageBodyData, CancellationToken)</a></td>
+<td>Enqueues the given <a href="../../Contents/2/18.html">IMessageBodyData</a> for the recipient with the
+            provided <span class="PseudoLink">System.Uri</span>.</td>
+</tr>
+</table>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>
 <div id="Footer">

@@ -6,15 +6,14 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>BinarySerializer Class Members</title>
+<title>Message Constructor (Uri, string)</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">BinarySerializer Class Members</div>
+<div id="PageTitle">Message Constructor (Uri, string)</div>
 <div id="HeaderShortcuts">
-<a href="#SectionHeader30" onclick="javascript: SetSectionVisibility(30, true); SetExpandCollapseAllToCollapseAll();">Constructors</a>&nbsp;
-<a href="#SectionHeader35" onclick="javascript: SetSectionVisibility(35, true); SetExpandCollapseAllToCollapseAll();">Methods</a>&nbsp;
+<a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 </div>
 <div class="DarkLine"></div>
 <div class="LightLine"></div>
@@ -25,72 +24,36 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Serializes and deserializes an object, or an entire
-            graph of connected objects in Base64 encoded binary format.
+Initializes a new instance of the <a href="../../Contents/2/220.html">Message</a> class
+            with the specified Uri of the recipient for the message and message body.
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/2/266.html">BinarySerializer</a><br />
-<b>Namespace:</b> <a href="../../Contents/1/12.html">Footloose.Serialization</a><br />
+<b>Declaring type:</b> <a href="../../Contents/2/220.html">Message</a><br />
+<b>Namespace:</b> <a href="../../Contents/1/10.html">Footloose.Messaging</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">Footloose</a>
 </div>
-<div id="SectionHeader30" class="SectionHeader">
-<img id="SectionExpanderImg30" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(30);" />
+<div id="SectionHeader0" class="SectionHeader">
+<img id="SectionExpanderImg0" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(0);" />
 <span class="SectionHeader">
-<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(30);">
-Public Constructors
+<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(0);">
+Syntax
 </span>
 </span>
 </div>
 
-<div id="SectionContainerDiv30" class="SectionContainer">
-<table class="MembersTable">
-<col width="7%" />
-<col width="38%" />
-<col width="55%" />
-<tr>
-<th>&nbsp;</th>
-<th>Name</th>
-<th>Description</th>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicMethod.gif" alt="Public Method" /></td>
-<td><a href="../../Contents/2/269.html">BinarySerializer</a></td>
-<td><p>There is no summary.</p></td>
-</tr>
-</table>
-<div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
-<div id="SectionHeader35" class="SectionHeader">
-<img id="SectionExpanderImg35" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(35);" />
-<span class="SectionHeader">
-<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(35);">
-Public Methods
-</span>
-</span>
+<div id="SectionContainerDiv0" class="SectionContainer">
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public Message (
+        Uri <i>to</i>,
+        string <i>messageBody</i>
+) </pre></td></tr></table>
+<div class="CommentHeader">Parameters</div>
+<div class="CommentParameterName">to</div>
+<div class="ParameterCommentContainer">
+The Uri of the recipient for the message.
 </div>
-
-<div id="SectionContainerDiv35" class="SectionContainer">
-<table class="MembersTable">
-<col width="7%" />
-<col width="38%" />
-<col width="55%" />
-<tr>
-<th>&nbsp;</th>
-<th>Name</th>
-<th>Description</th>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicMethod.gif" alt="Public Method" /></td>
-<td><a href="../../Contents/2/270.html">Deserialize&lt;T&gt;</a></td>
-<td>Deserializes the specified <span class="PseudoLink">System.String</span> into an object graph.</td>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicMethod.gif" alt="Public Method" /></td>
-<td><a href="../../Contents/2/271.html">Serialize</a></td>
-<td>Serializes the specified object, or graph of objects.</td>
-</tr>
-</table>
+<div class="CommentParameterName">messageBody</div>
+<div class="ParameterCommentContainer">
+The body of the message.
+</div>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>
 <div id="Footer">

@@ -6,14 +6,14 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>NotAcceptableException Constructor</title>
+<title>IHashAlgorithm.CheckString Method (string, string, string)</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">NotAcceptableException Constructor</div>
+<div id="PageTitle">IHashAlgorithm.CheckString Method (string, string, string)</div>
 <div id="HeaderShortcuts">
-<a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Overload List</a>&nbsp;
+<a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 </div>
 <div class="DarkLine"></div>
 <div class="LightLine"></div>
@@ -24,68 +24,44 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Initializes a new instance of the <a href="../../Contents/2/280.html">NotAcceptableException</a> class.
+Cheks a plaintext string matches a previously hashed one.
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/2/280.html">NotAcceptableException</a><br />
-<b>Namespace:</b> <a href="../../Contents/1/13.html">Footloose.TransportChannels</a><br />
+<b>Declaring type:</b> <a href="../../Contents/2/286.html">IHashAlgorithm</a><br />
+<b>Namespace:</b> <a href="../../Contents/1/12.html">Footloose.Security.Cryptography</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">Footloose</a>
 </div>
 <div id="SectionHeader0" class="SectionHeader">
 <img id="SectionExpanderImg0" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(0);" />
 <span class="SectionHeader">
 <span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(0);">
-Overload List
+Syntax
 </span>
 </span>
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="MembersTable">
-<col width="7%" />
-<col width="38%" />
-<col width="55%" />
-<tr>
-<th>&nbsp;</th>
-<th>Name</th>
-<th>Description</th>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicMethod.gif" alt="Public Method" /></td>
-<td><a href="../../Contents/2/294.html">NotAcceptableException ()</a></td>
-<td>Initializes a new instance of the <a href="../../Contents/2/280.html">NotAcceptableException</a> class.</td>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicMethod.gif" alt="Public Method" /></td>
-<td><a href="../../Contents/2/295.html">NotAcceptableException (string)</a></td>
-<td>Initializes a new instance of the <a href="../../Contents/2/280.html">NotAcceptableException</a> class
-            with a specified error message.</td>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicMethod.gif" alt="Public Method" /></td>
-<td><a href="../../Contents/2/296.html">NotAcceptableException (string, Exception)</a></td>
-<td>Initializes a new instance of the <a href="../../Contents/2/280.html">NotAcceptableException</a> class
-            with a specified error message and a reference to the inner exception that is the cause of
-            this exception.</td>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicMethod.gif" alt="Public Method" /></td>
-<td><a href="../../Contents/2/297.html">NotAcceptableException (string, object[])</a></td>
-<td>Initializes a new instance of the <a href="../../Contents/2/280.html">NotAcceptableException</a> class
-            with a specified error message.</td>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicMethod.gif" alt="Public Method" /></td>
-<td><a href="../../Contents/2/298.html">NotAcceptableException (string, Exception, object[])</a></td>
-<td>Initializes a new instance of the <a href="../../Contents/2/280.html">NotAcceptableException</a> class
-            with a specified error message and a reference to the inner exception that is the cause of
-            this exception.</td>
-</tr>
-</table>
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public abstract bool CheckString (
+        string <i>plaintext</i>,
+        string <i>hashed</i>,
+        string <i>key</i>
+) </pre></td></tr></table>
+<div class="CommentHeader">Parameters</div>
+<div class="CommentParameterName">plaintext</div>
+<div class="ParameterCommentContainer">
+The plaintext string to verify.
+</div>
+<div class="CommentParameterName">hashed</div>
+<div class="ParameterCommentContainer">
+The previously hashed string.
+</div>
+<div class="CommentParameterName">key</div>
+<div class="ParameterCommentContainer">
+The key to use in the hash algorithm.
+</div>
+<div class="CommentHeader">Return Value</div>
+<div class="ParameterCommentContainer">
+true if the string matches; otherwise false.
+</div>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>
 <div id="Footer">

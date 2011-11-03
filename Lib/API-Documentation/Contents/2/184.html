@@ -6,13 +6,14 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>IPresence Interface Members</title>
+<title>IEndpointIdentity Interface Members</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">IPresence Interface Members</div>
+<div id="PageTitle">IEndpointIdentity Interface Members</div>
 <div id="HeaderShortcuts">
+<a href="#SectionHeader35" onclick="javascript: SetSectionVisibility(35, true); SetExpandCollapseAllToCollapseAll();">Methods</a>&nbsp;
 <a href="#SectionHeader40" onclick="javascript: SetSectionVisibility(40, true); SetExpandCollapseAllToCollapseAll();">Properties</a>&nbsp;
 </div>
 <div class="DarkLine"></div>
@@ -24,13 +25,51 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-A presence information contains network availability information from a <a href="../../Contents/1/104.html">ICommunicationEndpoint</a>.
-            It'll be send to all subscribed endpoints upon changes, like connect, disconnect or priority/availability changes.
+Interface for a identity of a <a href="../../Contents/1/106.html">ICommunicationEndpoint</a>.
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/1/341.html">IPresence</a><br />
+<b>Declaring type:</b> <a href="../../Contents/1/289.html">IEndpointIdentity</a><br />
 <b>Namespace:</b> <a href="../../Contents/1/8.html">Footloose.DataModel</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">Footloose</a>
 </div>
+<div id="SectionHeader35" class="SectionHeader">
+<img id="SectionExpanderImg35" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(35);" />
+<span class="SectionHeader">
+<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(35);">
+Public Methods
+</span>
+</span>
+</div>
+
+<div id="SectionContainerDiv35" class="SectionContainer">
+<table class="MembersTable">
+<col width="7%" />
+<col width="38%" />
+<col width="55%" />
+<tr>
+<th>&nbsp;</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
+<td><a href="../../Contents/2/185.html">RevokeSubscription</a></td>
+<td>Cancel and revoke the identity's subscription to this instance's presence information.</td>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
+<td><a href="../../Contents/2/186.html">Subscribe</a></td>
+<td>Overloaded. Sends a subscription request to permanently subscribe to a identity's presence information.</td>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
+<td><a href="../../Contents/2/187.html">Unsubscribe</a></td>
+<td>Unsubscribe from the identity's presence information.</td>
+</tr>
+</table>
+<div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 <div id="SectionHeader40" class="SectionHeader">
 <img id="SectionExpanderImg40" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(40);" />
 <span class="SectionHeader">
@@ -53,38 +92,32 @@ Public Properties
 <tr>
 <td class="IconColumn">
 <img src="../../GFX/PublicProperty.gif" alt="Public Property" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
-<td><a href="../../Contents/2/185.html">Capabilities</a></td>
-<td>Gets a string that contains a hash presentation of the communication endpoint's capabilities.</td>
+<td><a href="../../Contents/2/188.html">Endpoints</a></td>
+<td>Gets a list of communication endpoints this identity propagates.</td>
 </tr>
 <tr>
 <td class="IconColumn">
 <img src="../../GFX/PublicProperty.gif" alt="Public Property" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
-<td><a href="../../Contents/2/186.html">From</a></td>
-<td>Gets or sets the uri if the communication endpoint.</td>
+<td><a href="../../Contents/2/189.html">Groups</a></td>
+<td>Gets a list of groups the endpoint identity belongs to.</td>
 </tr>
 <tr>
 <td class="IconColumn">
 <img src="../../GFX/PublicProperty.gif" alt="Public Property" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
-<td><a href="../../Contents/2/187.html">IsOnline</a></td>
-<td>Gets a value indication if the communication endpoint is online.</td>
+<td><a href="../../Contents/2/190.html">Name</a></td>
+<td>Gets the name of this endpoint identity.</td>
 </tr>
 <tr>
 <td class="IconColumn">
 <img src="../../GFX/PublicProperty.gif" alt="Public Property" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
-<td><a href="../../Contents/2/188.html">Priority</a></td>
-<td>Gets or sets the priority of the communication endpoint.</td>
+<td><a href="../../Contents/2/191.html">PresenceSubscriptionType</a></td>
+<td>Gets the state of the subscription to the <a href="../../Contents/1/342.html">IPresence</a> of this endpoint identity.</td>
 </tr>
 <tr>
 <td class="IconColumn">
 <img src="../../GFX/PublicProperty.gif" alt="Public Property" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
-<td><a href="../../Contents/2/189.html">Status</a></td>
-<td>Gets or sets the status type of the communication endpoint.</td>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicProperty.gif" alt="Public Property" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
-<td><a href="../../Contents/2/190.html">StatusInformation</a></td>
-<td>Gets a string containing detailed description of a status type.</td>
+<td><a href="../../Contents/2/192.html">Uri</a></td>
+<td>Gets the uri of this endpoint identity.</td>
 </tr>
 </table>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>

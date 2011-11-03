@@ -51,135 +51,45 @@ Public Classes
 <tr>
 <td class="IconColumn">
 <img src="../../GFX/PublicClass.gif" alt="Public Class" /></td>
-<td><a href="../../Contents/1/497.html">CommunicationEndpoint</a></td>
+<td><a href="../../Contents/2/80.html">CommunicationEndpoint</a></td>
 <td>Internal communication endpoint implementation.</td>
 </tr>
 <tr>
 <td class="IconColumn">
 <img src="../../GFX/PublicClass.gif" alt="Public Class" /></td>
-<td><a href="../../Contents/1/498.html">CommunicationEndpointStatusType</a></td>
-<td>Represents the availability status of a communication endpoint send via <a href="../../Contents/1/341.html">IPresence</a> notifications.</td>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicClass.gif" alt="Public Class" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
-<td><a href="../../Contents/1/499.html">CorrelativeDataBase</a></td>
-<td>Base class that contains correlative communication data sent between services.</td>
+<td><a href="../../Contents/2/81.html">CommunicationEndpointStatusType</a></td>
+<td>Represents the availability status of a communication endpoint send via <a href="../../Contents/1/342.html">IPresence</a> notifications.</td>
 </tr>
 <tr>
 <td class="IconColumn">
 <img src="../../GFX/PublicClass.gif" alt="Public Class" /></td>
-<td><a href="../../Contents/1/500.html">DiscoFeature</a></td>
-<td>Contains a protocol namespace or other feature offered by the communication endpoint.</td>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicClass.gif" alt="Public Class" /></td>
-<td><a href="../../Contents/2/1.html">DiscoFeatureComparer</a></td>
+<td><a href="../../Contents/2/82.html">DiscoFeatureComparer</a></td>
 <td>Provide a simple comparer for DiscoFeature objects.</td>
 </tr>
 <tr>
 <td class="IconColumn">
 <img src="../../GFX/PublicClass.gif" alt="Public Class" /></td>
-<td><a href="../../Contents/2/2.html">DiscoIdentity</a></td>
-<td>Containing information about the communication endpoint's identity.</td>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicClass.gif" alt="Public Class" /></td>
-<td><a href="../../Contents/1/353.html">DiscoInfo</a></td>
-<td>Contains service discovery information such as
-            discovered identities and features of a communication endpoint.</td>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicClass.gif" alt="Public Class" /></td>
-<td><a href="../../Contents/2/3.html">DiscoInfoRequest</a></td>
-<td>A service discovery request that is send by the requesting communication endpoint
-            to discover information about another communication endpoint on the network.</td>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicClass.gif" alt="Public Class" /></td>
-<td><a href="../../Contents/2/4.html">DiscoInfoResponse</a></td>
-<td>A service discovery respose to an <a href="../../Contents/2/3.html">DiscoInfoRequest</a>.</td>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicClass.gif" alt="Public Class" /></td>
-<td><a href="../../Contents/1/366.html">EndpointIdentity</a></td>
+<td><a href="../../Contents/1/367.html">EndpointIdentity</a></td>
 <td>Represents a endpoint identity.</td>
 </tr>
 <tr>
 <td class="IconColumn">
 <img src="../../GFX/PublicClass.gif" alt="Public Class" /></td>
-<td><a href="../../Contents/1/365.html">EndpointIdentityDictionary</a></td>
-<td>A internal dictionary of known <a href="../../Contents/1/287.html">IEndpointIdentity</a> objects. This implementation
-            is exposed to the public through the <a href="../../Contents/2/5.html">IEndpointIdentityCollection</a> interface.</td>
+<td><a href="../../Contents/1/366.html">EndpointIdentityDictionary</a></td>
+<td>A internal dictionary of known <a href="../../Contents/1/289.html">IEndpointIdentity</a> objects. This implementation
+            is exposed to the public through the <a href="../../Contents/2/83.html">IEndpointIdentityCollection</a> interface.</td>
 </tr>
 <tr>
 <td class="IconColumn">
 <img src="../../GFX/PublicClass.gif" alt="Public Class" /></td>
-<td><a href="../../Contents/2/6.html">MethodCall</a></td>
-<td>Defines the serializable method call data class sent between services.</td>
+<td><a href="../../Contents/2/84.html">PresenceSubscriptionType</a></td>
+<td>Represents the state of the subscription to the <a href="../../Contents/1/342.html">IPresence</a>
+            of a <a href="../../Contents/1/289.html">IEndpointIdentity</a>.</td>
 </tr>
 <tr>
 <td class="IconColumn">
 <img src="../../GFX/PublicClass.gif" alt="Public Class" /></td>
-<td><a href="../../Contents/2/7.html">MethodCallRequest</a></td>
-<td>Defines a methode call request on a service.</td>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicClass.gif" alt="Public Class" /></td>
-<td><a href="../../Contents/2/8.html">MethodResponse</a></td>
-<td>Defines the method response data class sent between services.</td>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicClass.gif" alt="Public Class" /></td>
-<td><a href="../../Contents/2/9.html">MethodResponseRequest</a></td>
-<td>Defines a methode call request on a service.</td>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicClass.gif" alt="Public Class" /></td>
-<td><a href="../../Contents/1/357.html">Presence</a></td>
-<td>A presence information contains network availability information from a <a href="../../Contents/1/104.html">ICommunicationEndpoint</a>.
-            It'll be send to all subscribed endpoints upon changes, like connect, disconnect or priority/availability changes.</td>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicClass.gif" alt="Public Class" /></td>
-<td><a href="../../Contents/1/347.html">PresenceSubscriptionRequest</a></td>
-<td>A presence subscription request that is send by the requesting communication endpoint
-            to another <a href="../../Contents/1/287.html">IEndpointIdentity</a> to receive <a href="../../Contents/1/341.html">IPresence</a> notifications
-            when approved.</td>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicClass.gif" alt="Public Class" /></td>
-<td><a href="../../Contents/1/349.html">PresenceSubscriptionResponse</a></td>
-<td>A presence subscription response to a <a href="../../Contents/1/347.html">PresenceSubscriptionRequest</a>.</td>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicClass.gif" alt="Public Class" /></td>
-<td><a href="../../Contents/2/10.html">PresenceSubscriptionType</a></td>
-<td>Represents the state of the subscription to the <a href="../../Contents/1/341.html">IPresence</a>
-            of a <a href="../../Contents/1/287.html">IEndpointIdentity</a>.</td>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicClass.gif" alt="Public Class" /></td>
-<td><a href="../../Contents/1/351.html">PresenceUnsubscribe</a></td>
-<td>A presence unsubscribe request that is send by the subscribed endpoint
-            to another <a href="../../Contents/1/287.html">IEndpointIdentity</a> to unsubscribe from it's presence notifications.</td>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicClass.gif" alt="Public Class" /></td>
-<td><a href="../../Contents/2/11.html">SelfEndpointIdentity</a></td>
+<td><a href="../../Contents/2/85.html">SelfEndpointIdentity</a></td>
 <td>Represents the self endpoint identity.</td>
 </tr>
 </table>
@@ -206,54 +116,60 @@ Public Interfaces
 <tr>
 <td class="IconColumn">
 <img src="../../GFX/PublicInterface.gif" alt="Public Interface" /></td>
-<td><a href="../../Contents/1/104.html">ICommunicationEndpoint</a></td>
+<td><a href="../../Contents/1/106.html">ICommunicationEndpoint</a></td>
 <td>Interface for a communication end point.</td>
 </tr>
 <tr>
 <td class="IconColumn">
 <img src="../../GFX/PublicInterface.gif" alt="Public Interface" /></td>
-<td><a href="../../Contents/1/343.html">IEndpointFeatureFindCriterion</a></td>
+<td><a href="../../Contents/1/344.html">IEndpointFeatureFindCriterion</a></td>
 <td>Criterion for a service discovery feature that could be used as constraint
-            in a <a href="../../Contents/1/371.html">IEndpointFindCriteria</a> query.</td>
+            in a <a href="../../Contents/1/372.html">IEndpointFindCriteria</a> query.</td>
 </tr>
 <tr>
 <td class="IconColumn">
 <img src="../../GFX/PublicInterface.gif" alt="Public Interface" /></td>
-<td><a href="../../Contents/1/371.html">IEndpointFindCriteria</a></td>
-<td>IEndpointFindCriteria is a simplified API for retrieving <a href="../../Contents/1/104.html">ICommunicationEndpoint</a> objects
-            by using <a href="../../Contents/1/343.html">IEndpointFeatureFindCriterion</a> and Linq.</td>
+<td><a href="../../Contents/1/372.html">IEndpointFindCriteria</a></td>
+<td>IEndpointFindCriteria is a simplified API for retrieving <a href="../../Contents/1/106.html">ICommunicationEndpoint</a> objects
+            by using <a href="../../Contents/1/344.html">IEndpointFeatureFindCriterion</a> and Linq.</td>
 </tr>
 <tr>
 <td class="IconColumn">
 <img src="../../GFX/PublicInterface.gif" alt="Public Interface" /></td>
-<td><a href="../../Contents/1/287.html">IEndpointIdentity</a></td>
-<td>Interface for a identity of a <a href="../../Contents/1/104.html">ICommunicationEndpoint</a>.</td>
+<td><a href="../../Contents/1/289.html">IEndpointIdentity</a></td>
+<td>Interface for a identity of a <a href="../../Contents/1/106.html">ICommunicationEndpoint</a>.</td>
 </tr>
 <tr>
 <td class="IconColumn">
 <img src="../../GFX/PublicInterface.gif" alt="Public Interface" /></td>
-<td><a href="../../Contents/2/5.html">IEndpointIdentityCollection</a></td>
-<td>Public interface for a collection of <a href="../../Contents/1/287.html">IEndpointIdentity</a> objects.
-            Use this interface to enumerate through the list of known <a href="../../Contents/1/287.html">IEndpointIdentity</a> objects and
-            their <a href="../../Contents/1/104.html">ICommunicationEndpoint</a>.</td>
+<td><a href="../../Contents/2/83.html">IEndpointIdentityCollection</a></td>
+<td>Public interface for a collection of <a href="../../Contents/1/289.html">IEndpointIdentity</a> objects.
+            Use this interface to enumerate through the list of known <a href="../../Contents/1/289.html">IEndpointIdentity</a> objects and
+            their <a href="../../Contents/1/106.html">ICommunicationEndpoint</a>.</td>
 </tr>
 <tr>
 <td class="IconColumn">
 <img src="../../GFX/PublicInterface.gif" alt="Public Interface" /></td>
-<td><a href="../../Contents/2/12.html">IMessageBodyData</a></td>
-<td>Interface to mark data model types that are used as message body data.</td>
+<td><a href="../../Contents/2/86.html">IMethodResponse</a></td>
+<td><p>There is no summary.</p></td>
 </tr>
 <tr>
 <td class="IconColumn">
 <img src="../../GFX/PublicInterface.gif" alt="Public Interface" /></td>
-<td><a href="../../Contents/1/341.html">IPresence</a></td>
-<td>A presence information contains network availability information from a <a href="../../Contents/1/104.html">ICommunicationEndpoint</a>.
+<td><a href="../../Contents/2/87.html">IMethodResponse&lt;T&gt;</a></td>
+<td><p>There is no summary.</p></td>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicInterface.gif" alt="Public Interface" /></td>
+<td><a href="../../Contents/1/342.html">IPresence</a></td>
+<td>A presence information contains network availability information from a <a href="../../Contents/1/106.html">ICommunicationEndpoint</a>.
             It'll be send to all subscribed endpoints upon changes, like connect, disconnect or priority/availability changes.</td>
 </tr>
 <tr>
 <td class="IconColumn">
 <img src="../../GFX/PublicInterface.gif" alt="Public Interface" /></td>
-<td><a href="../../Contents/1/419.html">ISelfEndpointIdentity</a></td>
+<td><a href="../../Contents/1/414.html">ISelfEndpointIdentity</a></td>
 <td>Interface to interact with the self identity of this service node.</td>
 </tr>
 </table>
