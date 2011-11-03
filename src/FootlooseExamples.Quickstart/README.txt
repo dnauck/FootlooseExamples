@@ -2,7 +2,7 @@ Footloose Quickstart Example
 
 1.) Description
 
-This example shows how to confgure and create a very simple client and service
+This example shows how to configure and create a very simple client and service
 using the .NET remoting IPC transport channel with the Footloose fluent configuration API.
 
 
@@ -10,8 +10,8 @@ using the .NET remoting IPC transport channel with the Footloose fluent configur
 2.) How to build?
 
 Use the provided "build-all.bat" in the Examples root directory or open the
-"FootlooseExamples.Quickstart.sln" solution file with VS2008 and run
-Build -> Build Solution in the VS2008 menu.
+"FootlooseExamples.Quickstart.sln" solution file with VS2010 and run
+Build -> Build Solution in the VS2010 menu.
 
 
 
