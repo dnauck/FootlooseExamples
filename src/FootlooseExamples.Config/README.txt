@@ -10,8 +10,8 @@ with the .NET Configuration, e.g. the App.Config or by Code, and the Footloose f
 2.) How to build?
 
 Use the provided "build-all.bat" in the Examples root directory or open the
-"FootlooseExamples.Config.sln" solution file with VS2008 and run
-Build -> Build Solution in the VS2008 menu.
+"FootlooseExamples.Config.sln" solution file with VS2010 and run
+Build -> Build Solution in the VS2010 menu.
 
 
 
