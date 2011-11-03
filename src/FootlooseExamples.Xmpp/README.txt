@@ -2,7 +2,7 @@ Footloose XMPP Example
 
 1.) Description
 
-This example shows how to confgure and create a client and service
+This example shows how to configure and create a client and service
 using the XMPP(Jabber) transport channel with the Footloose fluent configuration API.
 It also shows how to get information, such as the presence, about known service endpoints
 and uses automatic service discovery to determine the correct uri of the service to call a method on.
@@ -13,8 +13,8 @@ Required: 2 XMPP accounts that have presence subscriptions to each other.
 2.) How to build?
 
 Use the provided "build-all.bat" in the Examples root directory or open the
-"FootlooseExamples.Xmpp.sln" solution file with VS2008 and run
-Build -> Build Solution in the VS2008 menu.
+"FootlooseExamples.Xmpp.sln" solution file with VS2010 and run
+Build -> Build Solution in the VS2010 menu.
 
 
 
