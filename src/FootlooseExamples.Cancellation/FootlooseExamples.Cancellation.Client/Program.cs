@@ -35,8 +35,9 @@ namespace FootlooseExamples.Cancellation.Client
 
             var cts = new CancellationTokenSource();
 
-            var methodCallTask = footlooseConnection.CallMethod<string>(typeof (ISimpleService), "DoIt", serviceUri,
-                                                                        cts.Token);
+            var methodCallTask = footlooseConnection.CallMethod<string, ISimpleService>(s => s.DoIt(), cts.Token,
+                                                                                        serviceUri);
+
             Console.WriteLine("Called method 'DoIt' of 'ISimpleService' on '" + serviceUri + "'. CorrelationId is '" +
                               methodCallTask.AsyncState + "'.");
 
