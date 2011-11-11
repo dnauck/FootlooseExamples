@@ -29,7 +29,8 @@ namespace FootlooseExamples.Quickstart.Client
             Console.ReadLine();
 
             var serviceUri = new Uri(string.Concat("ipc://footloose-quickstart-service@" + Environment.MachineName + "/footloose-quickstart-service/FootlooseServiceProxy.rem"));
-            var methodCallId = footlooseConnection.CallMethod(typeof(ISimpleService), "DoIt", serviceUri);
+            
+            var methodCallId = footlooseConnection.CallMethod<ISimpleService>(service => service.DoIt(), serviceUri);
             Console.WriteLine("Called method 'DoIt' of 'ISimpleService' on '" + serviceUri + "'. CorrelationId is '" +
                               methodCallId + "'.");
 
@@ -41,13 +42,16 @@ namespace FootlooseExamples.Quickstart.Client
             Console.WriteLine("Press Enter to start second run...");
             Console.ReadLine();
 
-            methodCallId = footlooseConnection.CallMethod<string, string, string>(typeof(ISimpleService), "DoIt", serviceUri,
-                                                         response => Console.WriteLine("=======" +
-                                                                                       Environment.NewLine +
-                                                                                       "Incoming method respose: " + response.ReturnValue +
-                                                                                       Environment.NewLine +
-                                                                                       "======="),
-                                                         "Argument 1", "Argument 2");
+            methodCallId = footlooseConnection.CallMethod<string, ISimpleService>(
+                            serice => serice.DoIt("Argument 1", "Argument 2"),
+                            response => Console.WriteLine("=======" +
+                                                        Environment.NewLine +
+                                                        "Incoming method respose: " + response.ReturnValue +
+                                                        Environment.NewLine +
+                                                        "======="),
+                            serviceUri
+                            );
+
             Console.WriteLine("Called method 'DoIt' of 'ISimpleService' on '" + serviceUri + "'. CorrelationId is '" +
                               methodCallId + "'.");
 
