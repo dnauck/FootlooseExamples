@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>RemotingEndpointIdentityManager.SendSubscribtionRequest Method (Uri, string)</title>
+<title>XmppEndpointIdentityManager Constructor (EndpointIdentityDictionary, SelfEndpointIdentity, Func&lt;Uri, EndpointIdentity&gt;)</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">RemotingEndpointIdentityManager.SendSubscribtionRequest Method (Uri, string)</div>
+<div id="PageTitle">XmppEndpointIdentityManager Constructor (EndpointIdentityDictionary, SelfEndpointIdentity, Func&lt;Uri, EndpointIdentity&gt;)</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 </div>
@@ -24,12 +24,11 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Sends a subscription request with the specified reason
-            to permanently subscribe to a identity's presence information.
+Initializes a new instance of the <a href="../../Contents/2/388.html">XmppEndpointIdentityManager</a> class.
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/2/382.html">RemotingEndpointIdentityManager</a><br />
-<b>Namespace:</b> <a href="../../Contents/1/15.html">Footloose.TransportChannels.Remoting</a><br />
-<b>Assembly:</b> <a href="../../Contents/1/1.html">Footloose</a>
+<b>Declaring type:</b> <a href="../../Contents/2/388.html">XmppEndpointIdentityManager</a><br />
+<b>Namespace:</b> <a href="../../Contents/2/354.html">Footloose.TransportChannels.Xmpp</a><br />
+<b>Assembly:</b> <a href="../../Contents/1/2.html">Footloose.Xmpp</a>
 </div>
 <div id="SectionHeader0" class="SectionHeader">
 <img id="SectionExpanderImg0" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(0);" />
@@ -41,18 +40,23 @@ Syntax
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public override void SendSubscribtionRequest (
-        Uri <i>to</i>,
-        string <i>reason</i>
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public XmppEndpointIdentityManager (
+        EndpointIdentityDictionary <i>endpointIdentityDictionary</i>,
+        SelfEndpointIdentity <i>selfEndpointIdentity</i>,
+        Func&lt;Uri, EndpointIdentity&gt; <i>endpointIdentityFactory</i>
 ) </pre></td></tr></table>
 <div class="CommentHeader">Parameters</div>
-<div class="CommentParameterName">to</div>
+<div class="CommentParameterName">endpointIdentityDictionary</div>
 <div class="ParameterCommentContainer">
-The uri of the <a href="../../Contents/1/289.html">IEndpointIdentity</a>.
+The <a href="../../Contents/1/366.html">EndpointIdentityDictionary</a>.
 </div>
-<div class="CommentParameterName">reason</div>
+<div class="CommentParameterName">selfEndpointIdentity</div>
 <div class="ParameterCommentContainer">
-A reason that explains the subscription request.
+The <a href="../../Contents/1/368.html">SelfEndpointIdentity</a>.
+</div>
+<div class="CommentParameterName">endpointIdentityFactory</div>
+<div class="ParameterCommentContainer">
+The <a href="../../Contents/1/367.html">EndpointIdentity</a> factory.
 </div>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>

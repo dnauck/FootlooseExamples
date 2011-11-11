@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>IMessageBufferRepository.RemoveBuffer Method (Guid)</title>
+<title>NotAcceptableException Constructor (string, object[])</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">IMessageBufferRepository.RemoveBuffer Method (Guid)</div>
+<div id="PageTitle">NotAcceptableException Constructor (string, object[])</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 </div>
@@ -24,10 +24,11 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-<p>There is no summary.</p>
+Initializes a new instance of the <a href="../../Contents/2/260.html">NotAcceptableException</a> class
+            with a specified error message.
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/2/228.html">IMessageBufferRepository</a><br />
-<b>Namespace:</b> <a href="../../Contents/1/10.html">Footloose.Messaging</a><br />
+<b>Declaring type:</b> <a href="../../Contents/2/260.html">NotAcceptableException</a><br />
+<b>Namespace:</b> <a href="../../Contents/1/14.html">Footloose.TransportChannels</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">Footloose</a>
 </div>
 <div id="SectionHeader0" class="SectionHeader">
@@ -40,13 +41,18 @@ Syntax
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public abstract void RemoveBuffer (
-        Guid <i>correlationIdentifier</i>
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public NotAcceptableException (
+        string <i>message</i>,
+        params object[] <i>args</i>
 ) </pre></td></tr></table>
 <div class="CommentHeader">Parameters</div>
-<div class="CommentParameterName">correlationIdentifier</div>
+<div class="CommentParameterName">message</div>
 <div class="ParameterCommentContainer">
-<p>There is no description.</p>
+The message that describes the error.
+</div>
+<div class="CommentParameterName">args</div>
+<div class="ParameterCommentContainer">
+An Object array containing zero or more objects to format.
 </div>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>

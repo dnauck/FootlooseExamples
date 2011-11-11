@@ -6,14 +6,15 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>RemotingEndpointIdentityManager.AddEndpointIdentity Method (Uri, string, IEnumerable&lt;string&gt;, bool)</title>
+<title>XmppTransportChannelConfigurationElement.UseTls Property </title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">RemotingEndpointIdentityManager.AddEndpointIdentity Method (Uri, string, IEnumerable&lt;string&gt;, bool)</div>
+<div id="PageTitle">XmppTransportChannelConfigurationElement.UseTls Property </div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
+<a href="#SectionHeader1" onclick="javascript: SetSectionVisibility(1, true); SetExpandCollapseAllToCollapseAll();">Remarks</a>&nbsp;
 </div>
 <div class="DarkLine"></div>
 <div class="LightLine"></div>
@@ -24,13 +25,11 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Adds a new <a href="../../Contents/1/289.html">IEndpointIdentity</a> with the specified <span class="PseudoLink">System.Uri</span> and name
-            and list of groups to the collection
-            and request subscription to the <a href="../../Contents/1/342.html">IPresence</a> of the <a href="../../Contents/1/289.html">IEndpointIdentity</a>.
+Enables the use of Start-TLS for TLS XMPP stream encryption and compression. Default is on.
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/2/382.html">RemotingEndpointIdentityManager</a><br />
-<b>Namespace:</b> <a href="../../Contents/1/15.html">Footloose.TransportChannels.Remoting</a><br />
-<b>Assembly:</b> <a href="../../Contents/1/1.html">Footloose</a>
+<b>Declaring type:</b> <a href="../../Contents/2/370.html">XmppTransportChannelConfigurationElement</a><br />
+<b>Namespace:</b> <a href="../../Contents/2/352.html">Footloose.Configuration</a><br />
+<b>Assembly:</b> <a href="../../Contents/1/2.html">Footloose.Xmpp</a>
 </div>
 <div id="SectionHeader0" class="SectionHeader">
 <img id="SectionExpanderImg0" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(0);" />
@@ -42,29 +41,24 @@ Syntax
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public override void AddEndpointIdentity (
-        Uri <i>uri</i>,
-        string <i>name</i>,
-        IEnumerable&lt;string&gt; <i>groups</i>,
-        bool <i>requestSubscription</i>
-) </pre></td></tr></table>
-<div class="CommentHeader">Parameters</div>
-<div class="CommentParameterName">uri</div>
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public bool UseTls { get; set; }</pre></td></tr></table>
+<div class="CommentHeader">Property Value</div>
 <div class="ParameterCommentContainer">
-The <span class="PseudoLink">System.Uri</span> of the <a href="../../Contents/1/289.html">IEndpointIdentity</a>.
+<p>There is no description.</p>
 </div>
-<div class="CommentParameterName">name</div>
-<div class="ParameterCommentContainer">
-The name of the <a href="../../Contents/1/289.html">IEndpointIdentity</a>.
+<div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
+<div id="SectionHeader1" class="SectionHeader">
+<img id="SectionExpanderImg1" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(1);" />
+<span class="SectionHeader">
+<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(1);">
+Remarks
+</span>
+</span>
 </div>
-<div class="CommentParameterName">groups</div>
-<div class="ParameterCommentContainer">
-The list of groups the <a href="../../Contents/1/289.html">IEndpointIdentity</a> belongs to.
-</div>
-<div class="CommentParameterName">requestSubscription</div>
-<div class="ParameterCommentContainer">
-If true request subscription to the <a href="../../Contents/1/342.html">IPresence</a> of
-            the <a href="../../Contents/1/289.html">IEndpointIdentity</a>; otherwise just add the item to the collection.
+
+<div id="SectionContainerDiv1" class="SectionContainer">
+<div class="RemarksContainer">
+See RFC 2246 for further details: http://www.ietf.org/rfc/rfc2246.txt
 </div>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>

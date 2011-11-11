@@ -6,14 +6,15 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>MessageResponseException Constructor</title>
+<title>IMessageOriginator.EnqueueData Method (Uri, IMessageBodyData, CancellationToken)</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">MessageResponseException Constructor</div>
+<div id="PageTitle">IMessageOriginator.EnqueueData Method (Uri, IMessageBodyData, CancellationToken)</div>
 <div id="HeaderShortcuts">
-<a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Overload List</a>&nbsp;
+<a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
+<a href="#SectionHeader1" onclick="javascript: SetSectionVisibility(1, true); SetExpandCollapseAllToCollapseAll();">Exceptions</a>&nbsp;
 </div>
 <div class="DarkLine"></div>
 <div class="LightLine"></div>
@@ -24,9 +25,10 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Initializes a new instance of the <a href="../../Contents/2/311.html">MessageResponseException</a> class.
+Enqueues the given <a href="../../Contents/1/466.html">IMessageBodyData</a> for the recipient with the
+            provided <span class="PseudoLink">System.Uri</span>.
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/2/311.html">MessageResponseException</a><br />
+<b>Declaring type:</b> <a href="../../Contents/2/172.html">IMessageOriginator</a><br />
 <b>Namespace:</b> <a href="../../Contents/1/14.html">Footloose.TransportChannels</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">Footloose</a>
 </div>
@@ -34,56 +36,58 @@ Initializes a new instance of the <a href="../../Contents/2/311.html">MessageRes
 <img id="SectionExpanderImg0" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(0);" />
 <span class="SectionHeader">
 <span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(0);">
-Overload List
+Syntax
 </span>
 </span>
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public abstract Task EnqueueData (
+        Uri <i>to</i>,
+        IMessageBodyData <i>data</i>,
+        CancellationToken <i>cancellationToken</i>
+) </pre></td></tr></table>
+<div class="CommentHeader">Parameters</div>
+<div class="CommentParameterName">to</div>
+<div class="ParameterCommentContainer">
+The <span class="PseudoLink">System.Uri</span> of the recipient.
+</div>
+<div class="CommentParameterName">data</div>
+<div class="ParameterCommentContainer">
+The <a href="../../Contents/1/466.html">IMessageBodyData</a> for the recipient.
+</div>
+<div class="CommentParameterName">cancellationToken</div>
+<div class="ParameterCommentContainer">
+The <span class="PseudoLink">System.Threading.CancellationToken</span> that will be assigned to the new <span class="PseudoLink">System.Threading.Tasks.Task</span>.
+</div>
+<div class="CommentHeader">Return Value</div>
+<div class="ParameterCommentContainer">
+The started <span class="PseudoLink">System.Threading.Tasks.Task</span>.
+</div>
+<div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
+<div id="SectionHeader1" class="SectionHeader">
+<img id="SectionExpanderImg1" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(1);" />
+<span class="SectionHeader">
+<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(1);">
+Exceptions
+</span>
+</span>
+</div>
+
+<div id="SectionContainerDiv1" class="SectionContainer">
 <table class="MembersTable">
-<col width="7%" />
-<col width="38%" />
-<col width="55%" />
+<col width="25%" />
+<col width="75%" />
 <tr>
-<th>&nbsp;</th>
-<th>Name</th>
-<th>Description</th>
+<th>Exception type</th>
+<th>Condition</th>
 </tr>
 <tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicMethod.gif" alt="Public Method" /></td>
-<td><a href="../../Contents/2/317.html">MessageResponseException ()</a></td>
-<td>Initializes a new instance of the <a href="../../Contents/2/311.html">MessageResponseException</a> class.</td>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicMethod.gif" alt="Public Method" /></td>
-<td><a href="../../Contents/2/318.html">MessageResponseException (string)</a></td>
-<td>Initializes a new instance of the <a href="../../Contents/2/311.html">MessageResponseException</a> class
-            with a specified error message.</td>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicMethod.gif" alt="Public Method" /></td>
-<td><a href="../../Contents/2/319.html">MessageResponseException (string, Exception)</a></td>
-<td>Initializes a new instance of the <a href="../../Contents/2/311.html">MessageResponseException</a> class
-            with a specified error message and a reference to the inner exception that is the cause of
-            this exception.</td>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicMethod.gif" alt="Public Method" /></td>
-<td><a href="../../Contents/2/320.html">MessageResponseException (string, object[])</a></td>
-<td>Initializes a new instance of the <a href="../../Contents/2/311.html">MessageResponseException</a> class
-            with a specified error message.</td>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicMethod.gif" alt="Public Method" /></td>
-<td><a href="../../Contents/2/321.html">MessageResponseException (string, Exception, object[])</a></td>
-<td>Initializes a new instance of the <a href="../../Contents/2/311.html">MessageResponseException</a> class
-            with a specified error message and a reference to the inner exception that is the cause of
-            this exception.</td>
+<td><span class="PseudoLink">ArgumentNullException</span></td>
+<td><p>
+  <span class="Code">to</span> is null.</p> 
+            -or-
+            <p><span class="Code">data</span> is null.</p></td>
 </tr>
 </table>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>

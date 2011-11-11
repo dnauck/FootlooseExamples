@@ -6,14 +6,14 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>MessageType Class Members</title>
+<title>MessageHandlerNotFoundException Class Members</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">MessageType Class Members</div>
+<div id="PageTitle">MessageHandlerNotFoundException Class Members</div>
 <div id="HeaderShortcuts">
-<a href="#SectionHeader25" onclick="javascript: SetSectionVisibility(25, true); SetExpandCollapseAllToCollapseAll();">Fields</a>&nbsp;
+<a href="#SectionHeader30" onclick="javascript: SetSectionVisibility(30, true); SetExpandCollapseAllToCollapseAll();">Constructors</a>&nbsp;
 </div>
 <div class="DarkLine"></div>
 <div class="LightLine"></div>
@@ -24,22 +24,23 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Defines types of messages.
+Represents errors that occur when no proper <a href="../../Contents/2/177.html">IMessageHandler</a>
+            is found while dispatching a incoming <a href="../../Contents/2/168.html">Message</a>.
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/2/227.html">MessageType</a><br />
-<b>Namespace:</b> <a href="../../Contents/1/10.html">Footloose.Messaging</a><br />
+<b>Declaring type:</b> <a href="../../Contents/2/258.html">MessageHandlerNotFoundException</a><br />
+<b>Namespace:</b> <a href="../../Contents/1/14.html">Footloose.TransportChannels</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">Footloose</a>
 </div>
-<div id="SectionHeader25" class="SectionHeader">
-<img id="SectionExpanderImg25" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(25);" />
+<div id="SectionHeader30" class="SectionHeader">
+<img id="SectionExpanderImg30" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(30);" />
 <span class="SectionHeader">
-<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(25);">
-Public Fields
-</span>
+<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(30);">
+Public Constructors</span>
+ <span class="SeeAlsoInSectionHeader">(see also: <a href="#SectionHeader32" onclick="javascript: SetSectionVisibility(32, true); SetExpandCollapseAllToCollapseAll();">Protected</a> Constructors)</span>
 </span>
 </div>
 
-<div id="SectionContainerDiv25" class="SectionContainer">
+<div id="SectionContainerDiv30" class="SectionContainer">
 <table class="MembersTable">
 <col width="7%" />
 <col width="38%" />
@@ -51,65 +52,36 @@ Public Fields
 </tr>
 <tr>
 <td class="IconColumn">
-<img src="../../GFX/PublicField.gif" alt="Public Field" />&nbsp;<img src="../../GFX/Static.gif" alt="Static" /></td>
-<td><a href="../../Contents/2/248.html">Error</a></td>
-<td>A message that reports an error that has occurred regarding
-            processing or delivery of a previously-sent get or set request.
-            <remarks><p>
-            A communication endpoint hat receives a message of type Result must not response with any further message of type Result or Error.
-            </p></remarks></td>
+<img src="../../GFX/PublicMethod.gif" alt="Public Method" /></td>
+<td><a href="../../Contents/2/271.html">MessageHandlerNotFoundException</a></td>
+<td>Overloaded. Initializes a new instance of the <a href="../../Contents/2/260.html">NotAcceptableException</a> class.</td>
+</tr>
+</table>
+<div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
+<div id="SectionHeader32" class="SectionHeader">
+<img id="SectionExpanderImg32" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(32);" />
+<span class="SectionHeader">
+<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(32);">
+Protected Constructors
+</span>
+</span>
+</div>
+
+<div id="SectionContainerDiv32" class="SectionContainer">
+<table class="MembersTable">
+<col width="7%" />
+<col width="38%" />
+<col width="55%" />
+<tr>
+<th>&nbsp;</th>
+<th>Name</th>
+<th>Description</th>
 </tr>
 <tr>
 <td class="IconColumn">
-<img src="../../GFX/PublicField.gif" alt="Public Field" />&nbsp;<img src="../../GFX/Static.gif" alt="Static" /></td>
-<td><a href="../../Contents/2/271.html">Get</a></td>
-<td>A message that requests information, inquires about
-            what data is needed in order to complete further operations, etc.
-            <remarks><p>
-            A communication endpoint hat receives a message of type Get must reply
-            with a message of type Result or Error.
-            </p><p>
-            The response must preserve the 'id' attribute of the request.
-            </p></remarks></td>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicField.gif" alt="Public Field" />&nbsp;<img src="../../GFX/Static.gif" alt="Static" /></td>
-<td><a href="../../Contents/2/272.html">Notification</a></td>
-<td>A message that notify other endpoints about certain events.
-            <remarks><p>
-            This is a one-way message. A communication endpoint hat receives a message of type Notification
-            must not response with any further message of type Result or Error.
-            </p></remarks></td>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicField.gif" alt="Public Field" />&nbsp;<img src="../../GFX/Static.gif" alt="Static" /></td>
-<td><a href="../../Contents/2/245.html">Result</a></td>
-<td>A message that is a response to a successful get or set request.
-            <remarks><p>
-            A Result message must not include any message body.
-            </p><p>
-            A communication endpoint hat receives a message of type Result must not
-            response with any further message of type Result or Error.
-            </p></remarks></td>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicField.gif" alt="Public Field" />&nbsp;<img src="../../GFX/Static.gif" alt="Static" /></td>
-<td><a href="../../Contents/2/273.html">Set</a></td>
-<td>A message that provides data.
-            <remarks><p>A communication endpoint hat receives a message of type Set must reply
-            with a message of type Result or Error.
-            </p><p>
-            The response must preserve the 'id' attribute of the request.
-            </p></remarks></td>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicField.gif" alt="Public Field" /></td>
-<td><a href="../../Contents/2/274.html">value__</a></td>
-<td><p>There is no summary.</p></td>
+<img src="../../GFX/ProtectedMethod.gif" alt="Protected Method" /></td>
+<td><a href="../../Contents/2/272.html">MessageHandlerNotFoundException</a></td>
+<td>Sets the <span class="PseudoLink">System.Runtime.Serialization.SerializationInfo</span> with information about the exception.</td>
 </tr>
 </table>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>

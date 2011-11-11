@@ -6,13 +6,14 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>CorrelativeDataBase Class Members</title>
+<title>PresenceSubscriptionRequest Class Members</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">CorrelativeDataBase Class Members</div>
+<div id="PageTitle">PresenceSubscriptionRequest Class Members</div>
 <div id="HeaderShortcuts">
+<a href="#SectionHeader30" onclick="javascript: SetSectionVisibility(30, true); SetExpandCollapseAllToCollapseAll();">Constructors</a>&nbsp;
 <a href="#SectionHeader40" onclick="javascript: SetSectionVisibility(40, true); SetExpandCollapseAllToCollapseAll();">Properties</a>&nbsp;
 </div>
 <div class="DarkLine"></div>
@@ -24,22 +25,24 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Base class that contains correlative communication data sent between services.
+A presence subscription request that is send by the requesting communication endpoint
+            to another <a href="../../Contents/1/289.html">IEndpointIdentity</a> to receive <a href="../../Contents/1/342.html">IPresence</a> notifications
+            when approved.
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/2/9.html">CorrelativeDataBase</a><br />
+<b>Declaring type:</b> <a href="../../Contents/1/348.html">PresenceSubscriptionRequest</a><br />
 <b>Namespace:</b> <a href="../../Contents/1/9.html">Footloose.DataModel.DataTransferObjects</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">Footloose</a>
 </div>
-<div id="SectionHeader32" class="SectionHeader">
-<img id="SectionExpanderImg32" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(32);" />
+<div id="SectionHeader30" class="SectionHeader">
+<img id="SectionExpanderImg30" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(30);" />
 <span class="SectionHeader">
-<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(32);">
-Protected Constructors
+<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(30);">
+Public Constructors
 </span>
 </span>
 </div>
 
-<div id="SectionContainerDiv32" class="SectionContainer">
+<div id="SectionContainerDiv30" class="SectionContainer">
 <table class="MembersTable">
 <col width="7%" />
 <col width="38%" />
@@ -51,36 +54,9 @@ Protected Constructors
 </tr>
 <tr>
 <td class="IconColumn">
-<img src="../../GFX/ProtectedMethod.gif" alt="Protected Method" /></td>
-<td><a href="../../Contents/2/20.html">CorrelativeDataBase</a></td>
+<img src="../../GFX/PublicMethod.gif" alt="Public Method" /></td>
+<td><a href="../../Contents/2/20.html">PresenceSubscriptionRequest</a></td>
 <td><p>There is no summary.</p></td>
-</tr>
-</table>
-<div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
-<div id="SectionHeader37" class="SectionHeader">
-<img id="SectionExpanderImg37" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(37);" />
-<span class="SectionHeader">
-<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(37);">
-Protected Methods
-</span>
-</span>
-</div>
-
-<div id="SectionContainerDiv37" class="SectionContainer">
-<table class="MembersTable">
-<col width="7%" />
-<col width="38%" />
-<col width="55%" />
-<tr>
-<th>&nbsp;</th>
-<th>Name</th>
-<th>Description</th>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/ProtectedMethod.gif" alt="Protected Method" />&nbsp;<img src="../../GFX/Static.gif" alt="Static" /></td>
-<td><a href="../../Contents/2/21.html">GetNextId</a></td>
-<td>Generates a new unique correlation id.</td>
 </tr>
 </table>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
@@ -106,8 +82,8 @@ Public Properties
 <tr>
 <td class="IconColumn">
 <img src="../../GFX/PublicProperty.gif" alt="Public Property" /></td>
-<td><a href="../../Contents/2/22.html">CorrelationIdentifier</a></td>
-<td>Gets or sets the unique correlation identifier for a message context.</td>
+<td><a href="../../Contents/2/21.html">Reason</a></td>
+<td>Gets or sets a reason that explains the subscription request to the recipient.</td>
 </tr>
 </table>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>

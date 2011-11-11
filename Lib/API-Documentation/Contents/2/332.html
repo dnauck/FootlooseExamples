@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>NotAcceptableException Constructor (SerializationInfo, StreamingContext)</title>
+<title>RemotingEndpointIdentityManager Constructor (EndpointIdentityDictionary, SelfEndpointIdentity, Func&lt;Uri, EndpointIdentity&gt;, Lazy&lt;IMessageOriginator&gt;, IHashAlgorithm)</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">NotAcceptableException Constructor (SerializationInfo, StreamingContext)</div>
+<div id="PageTitle">RemotingEndpointIdentityManager Constructor (EndpointIdentityDictionary, SelfEndpointIdentity, Func&lt;Uri, EndpointIdentity&gt;, Lazy&lt;IMessageOriginator&gt;, IHashAlgorithm)</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 </div>
@@ -24,10 +24,10 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Sets the <span class="PseudoLink">System.Runtime.Serialization.SerializationInfo</span> with information about the exception.
+Initializes a new instance of the <a href="../../Contents/2/330.html">RemotingEndpointIdentityManager</a> class.
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/2/312.html">NotAcceptableException</a><br />
-<b>Namespace:</b> <a href="../../Contents/1/14.html">Footloose.TransportChannels</a><br />
+<b>Declaring type:</b> <a href="../../Contents/2/330.html">RemotingEndpointIdentityManager</a><br />
+<b>Namespace:</b> <a href="../../Contents/1/15.html">Footloose.TransportChannels.Remoting</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">Footloose</a>
 </div>
 <div id="SectionHeader0" class="SectionHeader">
@@ -40,20 +40,33 @@ Syntax
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">protected NotAcceptableException (
-        SerializationInfo <i>info</i>,
-        StreamingContext <i>context</i>
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public RemotingEndpointIdentityManager (
+        EndpointIdentityDictionary <i>endpointIdentityDictionary</i>,
+        SelfEndpointIdentity <i>selfEndpointIdentity</i>,
+        Func&lt;Uri, EndpointIdentity&gt; <i>endpointIdentityFactory</i>,
+        Lazy&lt;IMessageOriginator&gt; <i>orginator</i>,
+        IHashAlgorithm <i>hashAlgorithm</i>
 ) </pre></td></tr></table>
 <div class="CommentHeader">Parameters</div>
-<div class="CommentParameterName">info</div>
+<div class="CommentParameterName">endpointIdentityDictionary</div>
 <div class="ParameterCommentContainer">
-The <span class="PseudoLink">System.Runtime.Serialization.SerializationInfo</span> that holds the
-            serialized object data about the exception being thrown.
+The <a href="../../Contents/1/366.html">EndpointIdentityDictionary</a>.
 </div>
-<div class="CommentParameterName">context</div>
+<div class="CommentParameterName">selfEndpointIdentity</div>
 <div class="ParameterCommentContainer">
-The <span class="PseudoLink">System.Runtime.Serialization.StreamingContext</span> that contains
-            contextual information about the source or destination.
+The <a href="../../Contents/1/368.html">SelfEndpointIdentity</a>.
+</div>
+<div class="CommentParameterName">endpointIdentityFactory</div>
+<div class="ParameterCommentContainer">
+The <a href="../../Contents/1/367.html">EndpointIdentity</a> factory.
+</div>
+<div class="CommentParameterName">orginator</div>
+<div class="ParameterCommentContainer">
+The <a href="../../Contents/2/172.html">IMessageOriginator</a>.
+</div>
+<div class="CommentParameterName">hashAlgorithm</div>
+<div class="ParameterCommentContainer">
+The <a href="../../Contents/2/234.html">IHashAlgorithm</a>.
 </div>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>
