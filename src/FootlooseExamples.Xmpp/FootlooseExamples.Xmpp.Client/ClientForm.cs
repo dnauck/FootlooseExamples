@@ -38,10 +38,8 @@ namespace FootlooseExamples.Xmpp.Client
 
                 EndpointIdentityView.SetEndpointIdentityManager(footlooseConnection.EndpointIdentityManager);
             }
-            else
-            {
-                footlooseConnection.Open();
-            }
+            
+            footlooseConnection.Open();
 
             SetControlStatus(true);
         }
