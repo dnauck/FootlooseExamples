@@ -159,15 +159,15 @@ namespace FootlooseExamples.Xmpp.Client
 
             if(UseServiceDiscoCheckBox.Checked)
             {
-                footlooseConnection.CallMethod<Northwind.CustomersDataTable>(typeof (IDataSetNorthwindRepository), "GetCustomers",
-                                                                   FillDataGrid);
+                footlooseConnection.CallMethod<Northwind.CustomersDataTable, IDataSetNorthwindRepository>(
+                    s => s.GetCustomers(), FillDataGrid);
             }
             else
             {
                 var serviceUri = new Uri(ServiceUriTextBox.Text);
 
-                footlooseConnection.CallMethod<Northwind.CustomersDataTable>(typeof (IDataSetNorthwindRepository), "GetCustomers",
-                                                                   serviceUri, FillDataGrid);
+                footlooseConnection.CallMethod<Northwind.CustomersDataTable, IDataSetNorthwindRepository>(
+                    s => s.GetCustomers(), FillDataGrid, serviceUri);
             }
         }
 
