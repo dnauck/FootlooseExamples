@@ -244,6 +244,73 @@
     </xs:attribute>
   </xs:complexType>
 
+  <!-- Footloose.Configuration.SecurityConfigurationSection -->
+  <xs:complexType name="Footloose.Configuration.SecurityConfigurationSection">
+    <xs:sequence>
+      <xs:element minOccurs="1" name="authorizationProvider" type="tns:Footloose.Configuration.AuthorizationProviderConfigurationElementCollection">
+        <xs:annotation>
+          <xs:documentation>The list of authorization provider.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="defaultAuthorizationProvider" use="optional" type="xs:string">
+      <xs:annotation>
+        <xs:documentation>The name of the default authorization provider.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+
+  <xs:complexType name="Footloose.Configuration.AuthorizationProviderConfigurationElementCollection">
+    <xs:sequence>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="add" minOccurs="1" maxOccurs="unbounded" type="tns:Footloose.Configuration.AuthorizationProviderConfigurationElementBase">
+          <xs:annotation>
+            <xs:documentation>The authorization provider configuration element.</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+
+        <xs:element name="remove">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:documentation>Removes the item from the configuration element list.</xs:documentation>
+            </xs:annotation>
+            <xs:attribute name="name" use="required" type="xs:string">
+              <xs:annotation>
+                <xs:documentation>The unique name of the configuration element.</xs:documentation>
+              </xs:annotation>
+            </xs:attribute>
+          </xs:complexType>
+        </xs:element>
+
+        <xs:element name="clear">
+          <xs:complexType>
+            <!--tag is empty-->
+            <xs:annotation>
+              <xs:documentation>Clears the configuration element list.</xs:documentation>
+            </xs:annotation>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Footloose.Configuration.AuthorizationProviderConfigurationElementBase">
+    <xs:sequence>
+      <xs:any minOccurs="0" processContents="lax" />
+    </xs:sequence>
+    <xs:attribute name="name" use="required" type="xs:string">
+      <xs:annotation>
+        <xs:documentation>The unique name of the configuration element.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="type" use="required" type="xs:string">
+      <xs:annotation>
+        <xs:documentation>The type of the authorization provider.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:anyAttribute processContents="skip" />
+  </xs:complexType>
+
   <!-- Footloose.Configuration.ServiceContractConfigurationSection -->
   <xs:complexType name="Footloose.Configuration.ServiceContractConfigurationSection">
     <xs:sequence>

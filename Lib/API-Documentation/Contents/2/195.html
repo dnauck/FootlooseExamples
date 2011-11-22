@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>MessageExtensions.CreateResponse Method (Message, Exception)</title>
+<title>IMethodResponse&lt;T&gt;.ReturnValue Property </title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">MessageExtensions.CreateResponse Method (Message, Exception)</div>
+<div id="PageTitle">IMethodResponse&lt;T&gt;.ReturnValue Property </div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 </div>
@@ -24,10 +24,10 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Creates a response of type <a href="../../Contents/2/196.html">Error</a> for the provided message and <span class="PseudoLink">System.Exception</span>.
+Gets the return value of the method call.
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/2/174.html">MessageExtensions</a><br />
-<b>Namespace:</b> <a href="../../Contents/1/10.html">Footloose.Messaging</a><br />
+<b>Declaring type:</b> <a href="../../Contents/2/102.html">IMethodResponse&lt;T&gt;</a><br />
+<b>Namespace:</b> <a href="../../Contents/1/8.html">Footloose.DataModel</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">Footloose</a>
 </div>
 <div id="SectionHeader0" class="SectionHeader">
@@ -40,22 +40,10 @@ Syntax
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public static Message CreateResponse (
-        Message <i>message</i>,
-        Exception <i>exception</i>
-) </pre></td></tr></table>
-<div class="CommentHeader">Parameters</div>
-<div class="CommentParameterName">message</div>
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public abstract T ReturnValue { get; }</pre></td></tr></table>
+<div class="CommentHeader">Property Value</div>
 <div class="ParameterCommentContainer">
-The original <a href="../../Contents/2/168.html">Message</a>.
-</div>
-<div class="CommentParameterName">exception</div>
-<div class="ParameterCommentContainer">
-The <span class="PseudoLink">System.Exception</span>.
-</div>
-<div class="CommentHeader">Return Value</div>
-<div class="ParameterCommentContainer">
-The response <a href="../../Contents/2/168.html">Message</a> of type <a href="../../Contents/2/196.html">Error</a>.
+<p>There is no description.</p>
 </div>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>

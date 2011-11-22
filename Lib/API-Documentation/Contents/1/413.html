@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>IEndpointIdentityManager.SelfEndpointIdentity Property </title>
+<title>EndpointIdentityManagerBase.NotifyPresenceSubscriptionResponseReceived Method (Uri, PresenceSubscriptionResponse)</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">IEndpointIdentityManager.SelfEndpointIdentity Property </div>
+<div id="PageTitle">EndpointIdentityManagerBase.NotifyPresenceSubscriptionResponseReceived Method (Uri, PresenceSubscriptionResponse)</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 </div>
@@ -24,10 +24,10 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Returns an instance of <a href="../../Contents/1/414.html">ISelfEndpointIdentity</a> for
-            interaction with the endpoint of this service node.
+Notify this <a href="../../Contents/1/368.html">IEndpointIdentityManager</a> when a new <a href="../../Contents/1/414.html">PresenceSubscriptionResponse</a>
+            from another endpoint received.
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/1/304.html">IEndpointIdentityManager</a><br />
+<b>Declaring type:</b> <a href="../../Contents/1/352.html">EndpointIdentityManagerBase</a><br />
 <b>Namespace:</b> <a href="../../Contents/1/3.html">Footloose</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">Footloose</a>
 </div>
@@ -41,10 +41,18 @@ Syntax
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public abstract ISelfEndpointIdentity SelfEndpointIdentity { get; }</pre></td></tr></table>
-<div class="CommentHeader">Property Value</div>
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public void NotifyPresenceSubscriptionResponseReceived (
+        Uri <i>from</i>,
+        PresenceSubscriptionResponse <i>presenceSubscriptionResponse</i>
+) </pre></td></tr></table>
+<div class="CommentHeader">Parameters</div>
+<div class="CommentParameterName">from</div>
 <div class="ParameterCommentContainer">
-<p>There is no description.</p>
+The <span class="PseudoLink">System.Uri</span> of the sender.
+</div>
+<div class="CommentParameterName">presenceSubscriptionResponse</div>
+<div class="ParameterCommentContainer">
+The <a href="../../Contents/1/414.html">PresenceSubscriptionResponse</a>.
 </div>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>

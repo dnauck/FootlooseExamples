@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>ITransportChannel.SetDiscoInfo Method (DiscoInfo)</title>
+<title>NotAuthorizedException Constructor (SerializationInfo, StreamingContext)</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">ITransportChannel.SetDiscoInfo Method (DiscoInfo)</div>
+<div id="PageTitle">NotAuthorizedException Constructor (SerializationInfo, StreamingContext)</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 </div>
@@ -24,11 +24,10 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Sets the service discovery information the transport channel should
-            send on discovery requests.
+Sets the <span class="PseudoLink">System.Runtime.Serialization.SerializationInfo</span> with information about the exception.
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/1/180.html">ITransportChannel</a><br />
-<b>Namespace:</b> <a href="../../Contents/1/14.html">Footloose.TransportChannels</a><br />
+<b>Declaring type:</b> <a href="../../Contents/2/308.html">NotAuthorizedException</a><br />
+<b>Namespace:</b> <a href="../../Contents/1/11.html">Footloose.Security</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">Footloose</a>
 </div>
 <div id="SectionHeader0" class="SectionHeader">
@@ -41,13 +40,20 @@ Syntax
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public abstract void SetDiscoInfo (
-        DiscoInfo <i>discoInfo</i>
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">protected NotAuthorizedException (
+        SerializationInfo <i>info</i>,
+        StreamingContext <i>context</i>
 ) </pre></td></tr></table>
 <div class="CommentHeader">Parameters</div>
-<div class="CommentParameterName">discoInfo</div>
+<div class="CommentParameterName">info</div>
 <div class="ParameterCommentContainer">
-Service discovery information for this service node.
+The <span class="PseudoLink">System.Runtime.Serialization.SerializationInfo</span> that holds the
+            serialized object data about the exception being thrown.
+</div>
+<div class="CommentParameterName">context</div>
+<div class="ParameterCommentContainer">
+The <span class="PseudoLink">System.Runtime.Serialization.StreamingContext</span> that contains
+            contextual information about the source or destination.
 </div>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>

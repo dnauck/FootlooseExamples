@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>EndpointIdentityManagerBase.GetIdentityUriFromEndpointUri Method (Uri)</title>
+<title>IEndpointIdentityManager.PresenceNotificationReceived Field</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">EndpointIdentityManagerBase.GetIdentityUriFromEndpointUri Method (Uri)</div>
+<div id="PageTitle">IEndpointIdentityManager.PresenceNotificationReceived Field</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 </div>
@@ -24,10 +24,9 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Gets the <span class="PseudoLink">System.Uri</span> from the <a href="../../Contents/1/289.html">IEndpointIdentity</a>
-            of this <span class="PseudoLink">System.Uri</span>.
+Event that occurs when a <a href="../../Contents/1/406.html">IPresence</a> notification received.
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/1/288.html">EndpointIdentityManagerBase</a><br />
+<b>Declaring type:</b> <a href="../../Contents/1/368.html">IEndpointIdentityManager</a><br />
 <b>Namespace:</b> <a href="../../Contents/1/3.html">Footloose</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">Footloose</a>
 </div>
@@ -41,18 +40,7 @@ Syntax
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">protected abstract Uri GetIdentityUriFromEndpointUri (
-        Uri <i>uri</i>
-) </pre></td></tr></table>
-<div class="CommentHeader">Parameters</div>
-<div class="CommentParameterName">uri</div>
-<div class="ParameterCommentContainer">
-The <span class="PseudoLink">System.Uri</span>.
-</div>
-<div class="CommentHeader">Return Value</div>
-<div class="ParameterCommentContainer">
-The <span class="PseudoLink">System.Uri</span> of the <a href="../../Contents/1/289.html">IEndpointIdentity</a>.
-</div>
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable">public abstract event EventHandler&lt;PresenceEventArgs&gt; PresenceNotificationReceived</td></tr></table>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>
 <div id="Footer">

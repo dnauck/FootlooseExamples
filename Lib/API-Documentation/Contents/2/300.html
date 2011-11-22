@@ -6,14 +6,14 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>TransportChannelBase.MaxMessageBodyLength Property </title>
+<title>IMessageHandler Interface Members</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">TransportChannelBase.MaxMessageBodyLength Property </div>
+<div id="PageTitle">IMessageHandler Interface Members</div>
 <div id="HeaderShortcuts">
-<a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
+<a href="#SectionHeader35" onclick="javascript: SetSectionVisibility(35, true); SetExpandCollapseAllToCollapseAll();">Methods</a>&nbsp;
 </div>
 <div class="DarkLine"></div>
 <div class="LightLine"></div>
@@ -24,29 +24,38 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Gets the maximum length of the message body. The serializised message body must not exceed the
-             specified maximum message body lenght; otherwise it'll be strip down into several smaller chunks
-             and send separately.
+A interface that is responsible to process incoming messages that are handled by the <a href="../../Contents/2/253.html">IMessageDispatcher</a>.
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/2/261.html">TransportChannelBase</a><br />
-<b>Namespace:</b> <a href="../../Contents/1/14.html">Footloose.TransportChannels</a><br />
+<b>Declaring type:</b> <a href="../../Contents/2/252.html">IMessageHandler</a><br />
+<b>Namespace:</b> <a href="../../Contents/1/10.html">Footloose.Messaging</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">Footloose</a>
 </div>
-<div id="SectionHeader0" class="SectionHeader">
-<img id="SectionExpanderImg0" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(0);" />
+<div id="SectionHeader35" class="SectionHeader">
+<img id="SectionExpanderImg35" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(35);" />
 <span class="SectionHeader">
-<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(0);">
-Syntax
+<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(35);">
+Public Methods
 </span>
 </span>
 </div>
 
-<div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public virtual int MaxMessageBodyLength { get; set; }</pre></td></tr></table>
-<div class="CommentHeader">Property Value</div>
-<div class="ParameterCommentContainer">
-<p>There is no description.</p>
-</div>
+<div id="SectionContainerDiv35" class="SectionContainer">
+<table class="MembersTable">
+<col width="7%" />
+<col width="38%" />
+<col width="55%" />
+<tr>
+<th>&nbsp;</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
+<td><a href="../../Contents/2/301.html">ProcessMessage</a></td>
+<td>Process the specified incoming message.</td>
+</tr>
+</table>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>
 <div id="Footer">

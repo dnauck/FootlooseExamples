@@ -6,14 +6,15 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>SHA512HashAlgorithm.ComputeHash Method (string, string)</title>
+<title>ISelfEndpointIdentity.UpdatePresence Method (int)</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">SHA512HashAlgorithm.ComputeHash Method (string, string)</div>
+<div id="PageTitle">ISelfEndpointIdentity.UpdatePresence Method (int)</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
+<a href="#SectionHeader1" onclick="javascript: SetSectionVisibility(1, true); SetExpandCollapseAllToCollapseAll();">Remarks</a>&nbsp;
 </div>
 <div class="DarkLine"></div>
 <div class="LightLine"></div>
@@ -24,10 +25,10 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Computes the hash value for the specified string.
+Updates the self presence information with the given priority.
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/2/233.html">SHA512HashAlgorithm</a><br />
-<b>Namespace:</b> <a href="../../Contents/1/12.html">Footloose.Security.Cryptography</a><br />
+<b>Declaring type:</b> <a href="../../Contents/1/478.html">ISelfEndpointIdentity</a><br />
+<b>Namespace:</b> <a href="../../Contents/1/8.html">Footloose.DataModel</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">Footloose</a>
 </div>
 <div id="SectionHeader0" class="SectionHeader">
@@ -40,22 +41,34 @@ Syntax
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public string ComputeHash (
-        string <i>value</i>,
-        string <i>key</i>
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public abstract void UpdatePresence (
+        int <i>priority</i>
 ) </pre></td></tr></table>
 <div class="CommentHeader">Parameters</div>
-<div class="CommentParameterName">value</div>
+<div class="CommentParameterName">priority</div>
 <div class="ParameterCommentContainer">
-The string to compute the hash code for.
+Priority of this service node.
 </div>
-<div class="CommentParameterName">key</div>
-<div class="ParameterCommentContainer">
-The key to use in the hash algorithm.
+<div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
+<div id="SectionHeader1" class="SectionHeader">
+<img id="SectionExpanderImg1" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(1);" />
+<span class="SectionHeader">
+<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(1);">
+Remarks
+</span>
+</span>
 </div>
-<div class="CommentHeader">Return Value</div>
-<div class="ParameterCommentContainer">
-The computed hash code as unicode string.
+
+<div id="SectionContainerDiv1" class="SectionContainer">
+<div class="RemarksContainer">
+<p>
+            This method sends a new presence notification message to all
+            communication endpoints that are subscribed to the presence of
+            this service node.
+            
+            Use this thoughtful, otherwise you could flood your network
+            with senseless presence notifications.
+            </p>
 </div>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>

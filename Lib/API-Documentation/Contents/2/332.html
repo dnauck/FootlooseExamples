@@ -6,14 +6,15 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>RemotingEndpointIdentityManager Constructor (EndpointIdentityDictionary, SelfEndpointIdentity, Func&lt;Uri, EndpointIdentity&gt;, Lazy&lt;IMessageOriginator&gt;, IHashAlgorithm)</title>
+<title>SHA512HashAlgorithm Class</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">RemotingEndpointIdentityManager Constructor (EndpointIdentityDictionary, SelfEndpointIdentity, Func&lt;Uri, EndpointIdentity&gt;, Lazy&lt;IMessageOriginator&gt;, IHashAlgorithm)</div>
+<div id="PageTitle">SHA512HashAlgorithm Class</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
+<a href="#SectionHeader1" onclick="javascript: SetSectionVisibility(1, true); SetExpandCollapseAllToCollapseAll();">Members</a>&nbsp;
 </div>
 <div class="DarkLine"></div>
 <div class="LightLine"></div>
@@ -24,10 +25,9 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Initializes a new instance of the <a href="../../Contents/2/330.html">RemotingEndpointIdentityManager</a> class.
+Computes a Hash-based Message Authentication Code (HMAC) using the SHA256 hash function.
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/2/330.html">RemotingEndpointIdentityManager</a><br />
-<b>Namespace:</b> <a href="../../Contents/1/15.html">Footloose.TransportChannels.Remoting</a><br />
+<b>Namespace:</b> <a href="../../Contents/1/12.html">Footloose.Security.Cryptography</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">Footloose</a>
 </div>
 <div id="SectionHeader0" class="SectionHeader">
@@ -40,34 +40,29 @@ Syntax
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public RemotingEndpointIdentityManager (
-        EndpointIdentityDictionary <i>endpointIdentityDictionary</i>,
-        SelfEndpointIdentity <i>selfEndpointIdentity</i>,
-        Func&lt;Uri, EndpointIdentity&gt; <i>endpointIdentityFactory</i>,
-        Lazy&lt;IMessageOriginator&gt; <i>orginator</i>,
-        IHashAlgorithm <i>hashAlgorithm</i>
-) </pre></td></tr></table>
-<div class="CommentHeader">Parameters</div>
-<div class="CommentParameterName">endpointIdentityDictionary</div>
-<div class="ParameterCommentContainer">
-The <a href="../../Contents/1/366.html">EndpointIdentityDictionary</a>.
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><table style="width: 100%;" class="InsideCodeBlock">
+<col width="0%" />
+<col width="100%" />
+<tr>
+<td class="NoWrapTop">public class SHA512HashAlgorithm :&nbsp;</td>
+<td>
+IHashAlgorithm
+</td>
+</tr>
+</table>
+</td></tr></table>
+<div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
+<div id="SectionHeader1" class="SectionHeader">
+<img id="SectionExpanderImg1" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(1);" />
+<span class="SectionHeader">
+<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(1);">
+Members
+</span>
+</span>
 </div>
-<div class="CommentParameterName">selfEndpointIdentity</div>
-<div class="ParameterCommentContainer">
-The <a href="../../Contents/1/368.html">SelfEndpointIdentity</a>.
-</div>
-<div class="CommentParameterName">endpointIdentityFactory</div>
-<div class="ParameterCommentContainer">
-The <a href="../../Contents/1/367.html">EndpointIdentity</a> factory.
-</div>
-<div class="CommentParameterName">orginator</div>
-<div class="ParameterCommentContainer">
-The <a href="../../Contents/2/172.html">IMessageOriginator</a>.
-</div>
-<div class="CommentParameterName">hashAlgorithm</div>
-<div class="ParameterCommentContainer">
-The <a href="../../Contents/2/234.html">IHashAlgorithm</a>.
-</div>
+
+<div id="SectionContainerDiv1" class="SectionContainer">
+<p>Click <a href="../../Contents/2/334.html">here</a> to see the list of members.</p>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>
 <div id="Footer">

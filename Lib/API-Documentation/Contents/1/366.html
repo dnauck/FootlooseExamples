@@ -6,15 +6,14 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>EndpointIdentityDictionary Class</title>
+<title>IEndpointIdentityManager.PresenceSubscriptionResponseReceived Field</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">EndpointIdentityDictionary Class</div>
+<div id="PageTitle">IEndpointIdentityManager.PresenceSubscriptionResponseReceived Field</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
-<a href="#SectionHeader1" onclick="javascript: SetSectionVisibility(1, true); SetExpandCollapseAllToCollapseAll();">Members</a>&nbsp;
 </div>
 <div class="DarkLine"></div>
 <div class="LightLine"></div>
@@ -25,10 +24,10 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-A internal dictionary of known <a href="../../Contents/1/289.html">IEndpointIdentity</a> objects. This implementation
-            is exposed to the public through the <a href="../../Contents/2/31.html">IEndpointIdentityCollection</a> interface.
+Event that occurs when a new <a href="../../Contents/1/406.html">IPresence</a> subscription response received.
 <div id="ItemLocation">
-<b>Namespace:</b> <a href="../../Contents/1/8.html">Footloose.DataModel</a><br />
+<b>Declaring type:</b> <a href="../../Contents/1/368.html">IEndpointIdentityManager</a><br />
+<b>Namespace:</b> <a href="../../Contents/1/3.html">Footloose</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">Footloose</a>
 </div>
 <div id="SectionHeader0" class="SectionHeader">
@@ -41,31 +40,7 @@ Syntax
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><table style="width: 100%;" class="InsideCodeBlock">
-<col width="0%" />
-<col width="100%" />
-<tr>
-<td class="NoWrapTop">public sealed class EndpointIdentityDictionary :&nbsp;</td>
-<td>
-ConcurrentDictionary&lt;Uri, EndpointIdentity&gt;,<br />IEndpointIdentityCollection,<br />
-IEnumerable&lt;IEndpointIdentity&gt;,<br />
-IEnumerable
-</td>
-</tr>
-</table>
-</td></tr></table>
-<div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
-<div id="SectionHeader1" class="SectionHeader">
-<img id="SectionExpanderImg1" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(1);" />
-<span class="SectionHeader">
-<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(1);">
-Members
-</span>
-</span>
-</div>
-
-<div id="SectionContainerDiv1" class="SectionContainer">
-<p>Click <a href="../../Contents/2/76.html">here</a> to see the list of members.</p>
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable">public abstract event EventHandler&lt;PresenceSubscriptionResponseEventArgs&gt; PresenceSubscriptionResponseReceived</td></tr></table>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>
 <div id="Footer">

@@ -6,14 +6,16 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>FluentConfiguration.ServiceLocator Method (IServiceLocator)</title>
+<title>IAuthorizationProvider Interface</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">FluentConfiguration.ServiceLocator Method (IServiceLocator)</div>
+<div id="PageTitle">IAuthorizationProvider Interface</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
+<a href="#SectionHeader1" onclick="javascript: SetSectionVisibility(1, true); SetExpandCollapseAllToCollapseAll();">Remarks</a>&nbsp;
+<a href="#SectionHeader2" onclick="javascript: SetSectionVisibility(2, true); SetExpandCollapseAllToCollapseAll();">Members</a>&nbsp;
 </div>
 <div class="DarkLine"></div>
 <div class="LightLine"></div>
@@ -24,10 +26,12 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Specify the <span class="PseudoLink">Microsoft.Practices.ServiceLocation.IServiceLocator</span> implementation.
+Defines the contract that Footlooses implements to provide authorization services
+            using custom authorization providers. 
+            The implementing class validates requests of method calls
+            and method responses.
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/1/59.html">FluentConfiguration</a><br />
-<b>Namespace:</b> <a href="../../Contents/1/6.html">Footloose.Configuration.Fluent</a><br />
+<b>Namespace:</b> <a href="../../Contents/1/11.html">Footloose.Security</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">Footloose</a>
 </div>
 <div id="SectionHeader0" class="SectionHeader">
@@ -40,18 +44,42 @@ Syntax
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public FluentConfiguration ServiceLocator (
-        IServiceLocator <i>serviceLocator</i>
-) </pre></td></tr></table>
-<div class="CommentHeader">Parameters</div>
-<div class="CommentParameterName">serviceLocator</div>
-<div class="ParameterCommentContainer">
-<span class="PseudoLink">Microsoft.Practices.ServiceLocation.IServiceLocator</span> implementation.
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><table style="width: 100%;" class="InsideCodeBlock">
+<col width="0%" />
+<col width="100%" />
+<tr>
+<td class="NoWrapTop">public interface IAuthorizationProvider </td>
+<td>&nbsp;</td>
+</tr>
+</table>
+</td></tr></table>
+<div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
+<div id="SectionHeader1" class="SectionHeader">
+<img id="SectionExpanderImg1" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(1);" />
+<span class="SectionHeader">
+<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(1);">
+Remarks
+</span>
+</span>
 </div>
-<div class="CommentHeader">Return Value</div>
-<div class="ParameterCommentContainer">
-<a href="../../Contents/1/59.html">FluentConfiguration</a>
+
+<div id="SectionContainerDiv1" class="SectionContainer">
+<div class="RemarksContainer">
+The <a href="../../Contents/1/87.html">IAuthorizationProvider</a> can be configured in the
+            <a href="../../Contents/1/69.html">SecurityConfigurationSection</a> with the <a href="../../Contents/1/60.html">AuthorizationProviderConfigurationElementBase</a>.
 </div>
+<div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
+<div id="SectionHeader2" class="SectionHeader">
+<img id="SectionExpanderImg2" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(2);" />
+<span class="SectionHeader">
+<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(2);">
+Members
+</span>
+</span>
+</div>
+
+<div id="SectionContainerDiv2" class="SectionContainer">
+<p>Click <a href="../../Contents/2/326.html">here</a> to see the list of members.</p>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>
 <div id="Footer">

@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>IMessageHandler.ProcessMessage Method (Message)</title>
+<title>IEndpointIdentityCollection.Add Method (Uri, string, string)</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">IMessageHandler.ProcessMessage Method (Message)</div>
+<div id="PageTitle">IEndpointIdentityCollection.Add Method (Uri, string, string)</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 </div>
@@ -24,10 +24,12 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Process the specified incoming message.
+Adds a new <a href="../../Contents/1/353.html">IEndpointIdentity</a> with the specified <span class="PseudoLink">System.Uri</span> and name
+            and group to the collection
+            and request subscription to the <a href="../../Contents/1/406.html">IPresence</a> of the <a href="../../Contents/1/353.html">IEndpointIdentity</a>.
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/2/177.html">IMessageHandler</a><br />
-<b>Namespace:</b> <a href="../../Contents/1/10.html">Footloose.Messaging</a><br />
+<b>Declaring type:</b> <a href="../../Contents/2/96.html">IEndpointIdentityCollection</a><br />
+<b>Namespace:</b> <a href="../../Contents/1/8.html">Footloose.DataModel</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">Footloose</a>
 </div>
 <div id="SectionHeader0" class="SectionHeader">
@@ -40,13 +42,23 @@ Syntax
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public abstract void ProcessMessage (
-        Message <i>message</i>
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public abstract void Add (
+        Uri <i>uri</i>,
+        string <i>name</i>,
+        string <i>group</i>
 ) </pre></td></tr></table>
 <div class="CommentHeader">Parameters</div>
-<div class="CommentParameterName">message</div>
+<div class="CommentParameterName">uri</div>
 <div class="ParameterCommentContainer">
-The incoming message to process.
+The <span class="PseudoLink">System.Uri</span> of the <a href="../../Contents/1/353.html">IEndpointIdentity</a>.
+</div>
+<div class="CommentParameterName">name</div>
+<div class="ParameterCommentContainer">
+The name of the <a href="../../Contents/1/353.html">IEndpointIdentity</a>.
+</div>
+<div class="CommentParameterName">group</div>
+<div class="ParameterCommentContainer">
+The group the <a href="../../Contents/1/353.html">IEndpointIdentity</a> belongs to.
 </div>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>

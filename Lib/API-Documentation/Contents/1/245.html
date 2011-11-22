@@ -6,14 +6,14 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>FootlooseConfigurationSectionGroup.GetConfiguration Method</title>
+<title>TransportChannelConfigurationElementCollection.GetElementKey Method (ConfigurationElement)</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">FootlooseConfigurationSectionGroup.GetConfiguration Method</div>
+<div id="PageTitle">TransportChannelConfigurationElementCollection.GetElementKey Method (ConfigurationElement)</div>
 <div id="HeaderShortcuts">
-<a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Overload List</a>&nbsp;
+<a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 </div>
 <div class="DarkLine"></div>
 <div class="LightLine"></div>
@@ -24,10 +24,9 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Creates a new <a href="../../Contents/1/83.html">FootlooseConfigurationSectionGroup</a> from the
-            application configuration.
+Gets the element key for a specified configuration element when overridden in a derived class.
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/1/83.html">FootlooseConfigurationSectionGroup</a><br />
+<b>Declaring type:</b> <a href="../../Contents/1/78.html">TransportChannelConfigurationElementCollection</a><br />
 <b>Namespace:</b> <a href="../../Contents/1/5.html">Footloose.Configuration</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">Footloose</a>
 </div>
@@ -35,43 +34,24 @@ Creates a new <a href="../../Contents/1/83.html">FootlooseConfigurationSectionGr
 <img id="SectionExpanderImg0" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(0);" />
 <span class="SectionHeader">
 <span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(0);">
-Overload List
+Syntax
 </span>
 </span>
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="MembersTable">
-<col width="7%" />
-<col width="38%" />
-<col width="55%" />
-<tr>
-<th>&nbsp;</th>
-<th>Name</th>
-<th>Description</th>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Static.gif" alt="Static" /></td>
-<td><a href="../../Contents/1/249.html">FootlooseConfigurationSectionGroup.GetConfiguration ()</a></td>
-<td>Creates a new <a href="../../Contents/1/83.html">FootlooseConfigurationSectionGroup</a> from the
-            application configuration.</td>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Static.gif" alt="Static" /></td>
-<td><a href="../../Contents/1/250.html">FootlooseConfigurationSectionGroup.GetConfiguration (ConfigurationUserLevel)</a></td>
-<td>Creates a new <a href="../../Contents/1/83.html">FootlooseConfigurationSectionGroup</a> from the
-            application configuration with the specified <span class="PseudoLink">System.Configuration.ConfigurationUserLevel</span>.</td>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Static.gif" alt="Static" /></td>
-<td><a href="../../Contents/1/251.html">FootlooseConfigurationSectionGroup.GetConfiguration (Configuration)</a></td>
-<td>Creates a new <a href="../../Contents/1/83.html">FootlooseConfigurationSectionGroup</a> from the
-            provided <span class="PseudoLink">System.Configuration.Configuration</span> object.</td>
-</tr>
-</table>
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">protected override object GetElementKey (
+        ConfigurationElement <i>element</i>
+) </pre></td></tr></table>
+<div class="CommentHeader">Parameters</div>
+<div class="CommentParameterName">element</div>
+<div class="ParameterCommentContainer">
+The <span class="PseudoLink">System.Configuration.ConfigurationElement</span> to return the key for. 
+</div>
+<div class="CommentHeader">Return Value</div>
+<div class="ParameterCommentContainer">
+An <span class="PseudoLink">System.Object</span> that acts as the key for the specified <span class="PseudoLink">System.Configuration.ConfigurationElement</span>.
+</div>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>
 <div id="Footer">

@@ -6,14 +6,14 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>MethodResponseRequest Class Members</title>
+<title>IFootlooseConnection.CallMethod&lt;TService&gt; Method (Expression&lt;Action&lt;TService&gt;&gt;)</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">MethodResponseRequest Class Members</div>
+<div id="PageTitle">IFootlooseConnection.CallMethod&lt;TService&gt; Method (Expression&lt;Action&lt;TService&gt;&gt;)</div>
 <div id="HeaderShortcuts">
-<a href="#SectionHeader30" onclick="javascript: SetSectionVisibility(30, true); SetExpandCollapseAllToCollapseAll();">Constructors</a>&nbsp;
+<a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 </div>
 <div class="DarkLine"></div>
 <div class="LightLine"></div>
@@ -24,38 +24,41 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Defines a methode call request on a service.
+Invokes asynchronous the specified method of the given <span class="PseudoLink">System.Type</span> on a remote <a href="../../Contents/1/258.html">ICommunicationEndpoint</a>.
+            The remote endpoint <span class="PseudoLink">System.Uri</span> will be determined with the auto service discovery feature.
+            Once the method call returns the <a href="../../Contents/1/360.html">MethodResponseReceived</a> event ist called.
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/1/465.html">MethodResponseRequest</a><br />
-<b>Namespace:</b> <a href="../../Contents/1/9.html">Footloose.DataModel.DataTransferObjects</a><br />
+<b>Declaring type:</b> <a href="../../Contents/1/303.html">IFootlooseConnection</a><br />
+<b>Namespace:</b> <a href="../../Contents/1/3.html">Footloose</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">Footloose</a>
 </div>
-<div id="SectionHeader30" class="SectionHeader">
-<img id="SectionExpanderImg30" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(30);" />
+<div id="SectionHeader0" class="SectionHeader">
+<img id="SectionExpanderImg0" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(0);" />
 <span class="SectionHeader">
-<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(30);">
-Public Constructors
+<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(0);">
+Syntax
 </span>
 </span>
 </div>
 
-<div id="SectionContainerDiv30" class="SectionContainer">
-<table class="MembersTable">
-<col width="7%" />
-<col width="38%" />
-<col width="55%" />
-<tr>
-<th>&nbsp;</th>
-<th>Name</th>
-<th>Description</th>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicMethod.gif" alt="Public Method" /></td>
-<td><a href="../../Contents/2/10.html">MethodResponseRequest</a></td>
-<td><p>There is no summary.</p></td>
-</tr>
-</table>
+<div id="SectionContainerDiv0" class="SectionContainer">
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public abstract Guid CallMethod&lt;TService&gt; (
+        Expression&lt;Action&lt;TService&gt;&gt; <i>methodExpression</i>
+) </pre></td></tr></table>
+<div class="CommentHeader">Type Parameters</div>
+<div class="CommentParameterName">TService</div>
+<div class="ParameterCommentContainer">
+The type of the service.
+</div>
+<div class="CommentHeader">Parameters</div>
+<div class="CommentParameterName">methodExpression</div>
+<div class="ParameterCommentContainer">
+The lambda expression of the method that should be called on the <span class="Code">TService</span> type.
+</div>
+<div class="CommentHeader">Return Value</div>
+<div class="ParameterCommentContainer">
+A unique correlation identifier for this method call.
+</div>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>
 <div id="Footer">

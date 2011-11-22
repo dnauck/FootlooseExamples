@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>ReflectionMethodInvoker.InvokeMethod Method (Type, string, object[])</title>
+<title>EndpointIdentityManagerBase Constructor (EndpointIdentityDictionary, SelfEndpointIdentity, Func&lt;Uri, EndpointIdentity&gt;)</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">ReflectionMethodInvoker.InvokeMethod Method (Type, string, object[])</div>
+<div id="PageTitle">EndpointIdentityManagerBase Constructor (EndpointIdentityDictionary, SelfEndpointIdentity, Func&lt;Uri, EndpointIdentity&gt;)</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 </div>
@@ -24,9 +24,9 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Invokes the specified method on the specified type.
+Initializes a new instance of the <a href="../../Contents/1/352.html">EndpointIdentityManagerBase</a> class.
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/1/303.html">ReflectionMethodInvoker</a><br />
+<b>Declaring type:</b> <a href="../../Contents/1/352.html">EndpointIdentityManagerBase</a><br />
 <b>Namespace:</b> <a href="../../Contents/1/3.html">Footloose</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">Footloose</a>
 </div>
@@ -40,27 +40,23 @@ Syntax
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public object InvokeMethod (
-        Type <i>type</i>,
-        string <i>methodName</i>,
-        params object[] <i>methodArgs</i>
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">protected EndpointIdentityManagerBase (
+        EndpointIdentityDictionary <i>endpointIdentityDictionary</i>,
+        SelfEndpointIdentity <i>selfEndpointIdentity</i>,
+        Func&lt;Uri, EndpointIdentity&gt; <i>endpointIdentityFactory</i>
 ) </pre></td></tr></table>
 <div class="CommentHeader">Parameters</div>
-<div class="CommentParameterName">type</div>
+<div class="CommentParameterName">endpointIdentityDictionary</div>
 <div class="ParameterCommentContainer">
-The <span class="PseudoLink">System.Type</span> the method belongs to.
+The <a href="../../Contents/1/430.html">EndpointIdentityDictionary</a>.
 </div>
-<div class="CommentParameterName">methodName</div>
+<div class="CommentParameterName">selfEndpointIdentity</div>
 <div class="ParameterCommentContainer">
-The <span class="PseudoLink">System.String</span> containing the method name.
+The <a href="../../Contents/1/432.html">SelfEndpointIdentity</a>.
 </div>
-<div class="CommentParameterName">methodArgs</div>
+<div class="CommentParameterName">endpointIdentityFactory</div>
 <div class="ParameterCommentContainer">
-An array containing the arguments to pass to the method to invoke.
-</div>
-<div class="CommentHeader">Return Value</div>
-<div class="ParameterCommentContainer">
-An <span class="PseudoLink">System.Object</span> representing the return value of the invoked member.
+The <a href="../../Contents/1/431.html">EndpointIdentity</a> factory.
 </div>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>

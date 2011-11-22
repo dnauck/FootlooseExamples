@@ -6,14 +6,15 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>IEndpointIdentityManagerInternal.AddEndpointIdentity Method (Uri, string, IEnumerable&lt;string&gt;, bool)</title>
+<title>PresenceUnsubscribe Class</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">IEndpointIdentityManagerInternal.AddEndpointIdentity Method (Uri, string, IEnumerable&lt;string&gt;, bool)</div>
+<div id="PageTitle">PresenceUnsubscribe Class</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
+<a href="#SectionHeader1" onclick="javascript: SetSectionVisibility(1, true); SetExpandCollapseAllToCollapseAll();">Members</a>&nbsp;
 </div>
 <div class="DarkLine"></div>
 <div class="LightLine"></div>
@@ -24,12 +25,10 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Adds a new <a href="../../Contents/1/289.html">IEndpointIdentity</a> with the specified <span class="PseudoLink">System.Uri</span> and name
-            and list of groups to the collection
-            and request subscription to the <a href="../../Contents/1/342.html">IPresence</a> of the <a href="../../Contents/1/289.html">IEndpointIdentity</a>.
+A presence unsubscribe request that is send by the subscribed endpoint
+            to another <a href="../../Contents/1/353.html">IEndpointIdentity</a> to unsubscribe from it's presence notifications.
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/1/305.html">IEndpointIdentityManagerInternal</a><br />
-<b>Namespace:</b> <a href="../../Contents/1/3.html">Footloose</a><br />
+<b>Namespace:</b> <a href="../../Contents/1/9.html">Footloose.DataModel.DataTransferObjects</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">Footloose</a>
 </div>
 <div id="SectionHeader0" class="SectionHeader">
@@ -42,30 +41,29 @@ Syntax
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public abstract void AddEndpointIdentity (
-        Uri <i>uri</i>,
-        string <i>name</i>,
-        IEnumerable&lt;string&gt; <i>groups</i>,
-        bool <i>requestSubscription</i>
-) </pre></td></tr></table>
-<div class="CommentHeader">Parameters</div>
-<div class="CommentParameterName">uri</div>
-<div class="ParameterCommentContainer">
-The <span class="PseudoLink">System.Uri</span> of the <a href="../../Contents/1/289.html">IEndpointIdentity</a>.
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><table style="width: 100%;" class="InsideCodeBlock">
+<col width="0%" />
+<col width="100%" />
+<tr>
+<td class="NoWrapTop">public sealed class PresenceUnsubscribe :&nbsp;</td>
+<td>
+IMessageBodyData
+</td>
+</tr>
+</table>
+</td></tr></table>
+<div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
+<div id="SectionHeader1" class="SectionHeader">
+<img id="SectionExpanderImg1" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(1);" />
+<span class="SectionHeader">
+<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(1);">
+Members
+</span>
+</span>
 </div>
-<div class="CommentParameterName">name</div>
-<div class="ParameterCommentContainer">
-The name of the <a href="../../Contents/1/289.html">IEndpointIdentity</a>.
-</div>
-<div class="CommentParameterName">groups</div>
-<div class="ParameterCommentContainer">
-The list of groups the <a href="../../Contents/1/289.html">IEndpointIdentity</a> belongs to.
-</div>
-<div class="CommentParameterName">requestSubscription</div>
-<div class="ParameterCommentContainer">
-If true request subscription to the <a href="../../Contents/1/342.html">IPresence</a> of
-            the <a href="../../Contents/1/289.html">IEndpointIdentity</a>; otherwise just add the item to the collection.
-</div>
+
+<div id="SectionContainerDiv1" class="SectionContainer">
+<p>Click <a href="../../Contents/2/90.html">here</a> to see the list of members.</p>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>
 <div id="Footer">
