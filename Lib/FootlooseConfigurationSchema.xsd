@@ -9,6 +9,7 @@
         <xs:element minOccurs="1" maxOccurs="1" name="TransportChannel" type="tns:Footloose.Configuration.TransportChannelConfigurationSection" />
         <xs:element minOccurs="0" maxOccurs="1" name="ServiceContracts" type="tns:Footloose.Configuration.ServiceContractConfigurationSection" />
         <xs:element minOccurs="1" maxOccurs="1" name="Serializer" type="tns:Footloose.Configuration.SerializerConfigurationSection" />
+        <xs:element minOccurs="0" maxOccurs="1" name="Security" type="tns:Footloose.Configuration.SecurityConfigurationSection" />
       </xs:choice>
     </xs:sequence>
   </xs:complexType>
