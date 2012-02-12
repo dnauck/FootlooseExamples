@@ -6,14 +6,14 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>PresenceSubscriptionType Class Members</title>
+<title>EndpointIdentityDictionary.Add Method (Uri, string, bool)</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">PresenceSubscriptionType Class Members</div>
+<div id="PageTitle">EndpointIdentityDictionary.Add Method (Uri, string, bool)</div>
 <div id="HeaderShortcuts">
-<a href="#SectionHeader25" onclick="javascript: SetSectionVisibility(25, true); SetExpandCollapseAllToCollapseAll();">Fields</a>&nbsp;
+<a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 </div>
 <div class="DarkLine"></div>
 <div class="LightLine"></div>
@@ -24,67 +24,42 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Represents the state of the subscription to the <a href="../../Contents/1/406.html">IPresence</a>
-            of a <a href="../../Contents/1/353.html">IEndpointIdentity</a>.
+Adds a new <a href="../../Contents/1/357.html">IEndpointIdentity</a> with the specified <span class="PseudoLink">System.Uri</span> and name to the collection
+            and request subscription to the <a href="../../Contents/1/420.html">IPresence</a> of the <a href="../../Contents/1/357.html">IEndpointIdentity</a>.
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/2/97.html">PresenceSubscriptionType</a><br />
-<b>Namespace:</b> <a href="../../Contents/1/8.html">Footloose.DataModel</a><br />
+<b>Declaring type:</b> <a href="../../Contents/1/445.html">EndpointIdentityDictionary</a><br />
+<b>Namespace:</b> <a href="../../Contents/1/9.html">Footloose.DataModel</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">Footloose</a>
 </div>
-<div id="SectionHeader25" class="SectionHeader">
-<img id="SectionExpanderImg25" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(25);" />
+<div id="SectionHeader0" class="SectionHeader">
+<img id="SectionExpanderImg0" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(0);" />
 <span class="SectionHeader">
-<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(25);">
-Public Fields
+<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(0);">
+Syntax
 </span>
 </span>
 </div>
 
-<div id="SectionContainerDiv25" class="SectionContainer">
-<table class="MembersTable">
-<col width="7%" />
-<col width="38%" />
-<col width="55%" />
-<tr>
-<th>&nbsp;</th>
-<th>Name</th>
-<th>Description</th>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicField.gif" alt="Public Field" />&nbsp;<img src="../../GFX/Static.gif" alt="Static" /></td>
-<td><a href="../../Contents/2/105.html">Both</a></td>
-<td>This instance and the other <a href="../../Contents/1/353.html">IEndpointIdentity</a> have subscriptions to each other's <a href="../../Contents/1/406.html">IPresence</a>.</td>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicField.gif" alt="Public Field" />&nbsp;<img src="../../GFX/Static.gif" alt="Static" /></td>
-<td><a href="../../Contents/2/106.html">From</a></td>
-<td>The other <a href="../../Contents/1/353.html">IEndpointIdentity</a> has a subscription to the <a href="../../Contents/1/406.html">IPresence</a>
-            of this instance, but this instance doesn't have a subscription to the other's <a href="../../Contents/1/406.html">IPresence</a>.</td>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicField.gif" alt="Public Field" />&nbsp;<img src="../../GFX/Static.gif" alt="Static" /></td>
-<td><a href="../../Contents/2/107.html">None</a></td>
-<td>Neither this instance nor the other <a href="../../Contents/1/353.html">IEndpointIdentity</a> have a
-            subscription to the <a href="../../Contents/1/406.html">IPresence</a> notification from each other.</td>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicField.gif" alt="Public Field" />&nbsp;<img src="../../GFX/Static.gif" alt="Static" /></td>
-<td><a href="../../Contents/2/108.html">To</a></td>
-<td>This instance has a subscription to the <a href="../../Contents/1/406.html">IPresence</a> of the
-            other <a href="../../Contents/1/353.html">IEndpointIdentity</a>, but the other <a href="../../Contents/1/353.html">IEndpointIdentity</a>
-            doesn't have a subscription to this instance.</td>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicField.gif" alt="Public Field" /></td>
-<td><a href="../../Contents/2/109.html">value__</a></td>
-<td><p>There is no summary.</p></td>
-</tr>
-</table>
+<div id="SectionContainerDiv0" class="SectionContainer">
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public void Add (
+        Uri <i>uri</i>,
+        string <i>name</i>,
+        bool <i>requestSubscription</i>
+) </pre></td></tr></table>
+<div class="CommentHeader">Parameters</div>
+<div class="CommentParameterName">uri</div>
+<div class="ParameterCommentContainer">
+The <span class="PseudoLink">System.Uri</span> of the <a href="../../Contents/1/357.html">IEndpointIdentity</a>.
+</div>
+<div class="CommentParameterName">name</div>
+<div class="ParameterCommentContainer">
+The name of the <a href="../../Contents/1/357.html">IEndpointIdentity</a>.
+</div>
+<div class="CommentParameterName">requestSubscription</div>
+<div class="ParameterCommentContainer">
+If true request subscription to the <a href="../../Contents/1/420.html">IPresence</a> of
+            the <a href="../../Contents/1/357.html">IEndpointIdentity</a>; otherwise just add the item to the collection.
+</div>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>
 <div id="Footer">

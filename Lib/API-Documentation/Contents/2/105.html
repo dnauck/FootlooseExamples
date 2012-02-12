@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>PresenceSubscriptionType.Both Field</title>
+<title>EndpointIdentityDictionary.Add Method (Uri, string, string)</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">PresenceSubscriptionType.Both Field</div>
+<div id="PageTitle">EndpointIdentityDictionary.Add Method (Uri, string, string)</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 </div>
@@ -24,10 +24,12 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-This instance and the other <a href="../../Contents/1/353.html">IEndpointIdentity</a> have subscriptions to each other's <a href="../../Contents/1/406.html">IPresence</a>.
+Adds a new <a href="../../Contents/1/357.html">IEndpointIdentity</a> with the specified <span class="PseudoLink">System.Uri</span> and name
+            and group to the collection
+            and request subscription to the <a href="../../Contents/1/420.html">IPresence</a> of the <a href="../../Contents/1/357.html">IEndpointIdentity</a>.
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/2/97.html">PresenceSubscriptionType</a><br />
-<b>Namespace:</b> <a href="../../Contents/1/8.html">Footloose.DataModel</a><br />
+<b>Declaring type:</b> <a href="../../Contents/1/445.html">EndpointIdentityDictionary</a><br />
+<b>Namespace:</b> <a href="../../Contents/1/9.html">Footloose.DataModel</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">Footloose</a>
 </div>
 <div id="SectionHeader0" class="SectionHeader">
@@ -40,7 +42,24 @@ Syntax
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable">public const PresenceSubscriptionType Both = 3</td></tr></table>
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public void Add (
+        Uri <i>uri</i>,
+        string <i>name</i>,
+        string <i>group</i>
+) </pre></td></tr></table>
+<div class="CommentHeader">Parameters</div>
+<div class="CommentParameterName">uri</div>
+<div class="ParameterCommentContainer">
+The <span class="PseudoLink">System.Uri</span> of the <a href="../../Contents/1/357.html">IEndpointIdentity</a>.
+</div>
+<div class="CommentParameterName">name</div>
+<div class="ParameterCommentContainer">
+The name of the <a href="../../Contents/1/357.html">IEndpointIdentity</a>.
+</div>
+<div class="CommentParameterName">group</div>
+<div class="ParameterCommentContainer">
+The group the <a href="../../Contents/1/357.html">IEndpointIdentity</a> belongs to.
+</div>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>
 <div id="Footer">

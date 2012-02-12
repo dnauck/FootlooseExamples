@@ -6,14 +6,15 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>IMessageHandler Interface Members</title>
+<title>Message Class Members</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">IMessageHandler Interface Members</div>
+<div id="PageTitle">Message Class Members</div>
 <div id="HeaderShortcuts">
-<a href="#SectionHeader35" onclick="javascript: SetSectionVisibility(35, true); SetExpandCollapseAllToCollapseAll();">Methods</a>&nbsp;
+<a href="#SectionHeader30" onclick="javascript: SetSectionVisibility(30, true); SetExpandCollapseAllToCollapseAll();">Constructors</a>&nbsp;
+<a href="#SectionHeader40" onclick="javascript: SetSectionVisibility(40, true); SetExpandCollapseAllToCollapseAll();">Properties</a>&nbsp;
 </div>
 <div class="DarkLine"></div>
 <div class="LightLine"></div>
@@ -24,22 +25,22 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-A interface that is responsible to process incoming messages that are handled by the <a href="../../Contents/2/253.html">IMessageDispatcher</a>.
+Class for serializable messaging that contains communication data sent between services.
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/2/252.html">IMessageHandler</a><br />
-<b>Namespace:</b> <a href="../../Contents/1/10.html">Footloose.Messaging</a><br />
+<b>Declaring type:</b> <a href="../../Contents/2/266.html">Message</a><br />
+<b>Namespace:</b> <a href="../../Contents/1/11.html">Footloose.Messaging</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">Footloose</a>
 </div>
-<div id="SectionHeader35" class="SectionHeader">
-<img id="SectionExpanderImg35" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(35);" />
+<div id="SectionHeader30" class="SectionHeader">
+<img id="SectionExpanderImg30" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(30);" />
 <span class="SectionHeader">
-<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(35);">
-Public Methods
+<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(30);">
+Public Constructors
 </span>
 </span>
 </div>
 
-<div id="SectionContainerDiv35" class="SectionContainer">
+<div id="SectionContainerDiv30" class="SectionContainer">
 <table class="MembersTable">
 <col width="7%" />
 <col width="38%" />
@@ -51,9 +52,95 @@ Public Methods
 </tr>
 <tr>
 <td class="IconColumn">
-<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
-<td><a href="../../Contents/2/301.html">ProcessMessage</a></td>
-<td>Process the specified incoming message.</td>
+<img src="../../GFX/PublicMethod.gif" alt="Public Method" /></td>
+<td><a href="../../Contents/2/301.html">Message</a></td>
+<td>Overloaded. Initializes a new instance of the <a href="../../Contents/2/266.html">Message</a> class.</td>
+</tr>
+</table>
+<div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
+<div id="SectionHeader40" class="SectionHeader">
+<img id="SectionExpanderImg40" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(40);" />
+<span class="SectionHeader">
+<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(40);">
+Public Properties
+</span>
+</span>
+</div>
+
+<div id="SectionContainerDiv40" class="SectionContainer">
+<table class="MembersTable">
+<col width="7%" />
+<col width="38%" />
+<col width="55%" />
+<tr>
+<th>&nbsp;</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicProperty.gif" alt="Public Property" /></td>
+<td><a href="../../Contents/2/302.html">Body</a></td>
+<td>Gets or sets the Body of the message.</td>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicProperty.gif" alt="Public Property" /></td>
+<td><a href="../../Contents/2/303.html">BodyChunkCount</a></td>
+<td>Gets or sets the number of chunks.</td>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicProperty.gif" alt="Public Property" /></td>
+<td><a href="../../Contents/2/304.html">BodyChunkIndex</a></td>
+<td>Gets or sets the unique index of this chunk.
+            This index acts as a counter for data chunks sent within this
+            correlation identifier.</td>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicProperty.gif" alt="Public Property" /></td>
+<td><a href="../../Contents/2/305.html">BodyType</a></td>
+<td>Gets or sets the <span class="PseudoLink">System.Type</span> of
+            the message body.</td>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicProperty.gif" alt="Public Property" /></td>
+<td><a href="../../Contents/2/306.html">CorrelationIdentifier</a></td>
+<td>Gets or sets the unique correlation identifier for a message context.</td>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicProperty.gif" alt="Public Property" /></td>
+<td><a href="../../Contents/2/307.html">From</a></td>
+<td>Gets or sets the Uri of the sender of this message.</td>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicProperty.gif" alt="Public Property" /></td>
+<td><a href="../../Contents/2/308.html">Headers</a></td>
+<td>Gets the headers of the message.</td>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicProperty.gif" alt="Public Property" /></td>
+<td><a href="../../Contents/2/309.html">Id</a></td>
+<td>Gets or sets the unique transport channel identifier of this message
+            for internal tracking of the request-response interaction.</td>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicProperty.gif" alt="Public Property" /></td>
+<td><a href="../../Contents/2/310.html">To</a></td>
+<td>Gets or sets the Uri of the recipient for the message.</td>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicProperty.gif" alt="Public Property" /></td>
+<td><a href="../../Contents/2/311.html">Type</a></td>
+<td>Gets or sets the <a href="../../Contents/2/273.html">MessageType</a> of
+            this message.</td>
 </tr>
 </table>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>

@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>FluentTransportChannelConfigurationBase&lt;TThisConfiguration&gt;.TimeOut Method (int)</title>
+<title>FluentTransportChannelConfigurationBase&lt;TThisConfiguration&gt;.Priority Method (int)</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">FluentTransportChannelConfigurationBase&lt;TThisConfiguration&gt;.TimeOut Method (int)</div>
+<div id="PageTitle">FluentTransportChannelConfigurationBase&lt;TThisConfiguration&gt;.Priority Method (int)</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 </div>
@@ -24,10 +24,12 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Specify the length of time, in milliseconds, before a request times out.
+Specify the priority for this communication endpoint.
+            The value must be an integer between -128 and +127.
+            Default is 10.
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/1/266.html">FluentTransportChannelConfigurationBase&lt;TThisConfiguration&gt;</a><br />
-<b>Namespace:</b> <a href="../../Contents/1/6.html">Footloose.Configuration.Fluent</a><br />
+<b>Declaring type:</b> <a href="../../Contents/1/267.html">FluentTransportChannelConfigurationBase&lt;TThisConfiguration&gt;</a><br />
+<b>Namespace:</b> <a href="../../Contents/1/7.html">Footloose.Configuration.Fluent</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">Footloose</a>
 </div>
 <div id="SectionHeader0" class="SectionHeader">
@@ -40,17 +42,17 @@ Syntax
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public TThisConfiguration TimeOut (
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public TThisConfiguration Priority (
         int <i>value</i>
 ) </pre></td></tr></table>
 <div class="CommentHeader">Parameters</div>
 <div class="CommentParameterName">value</div>
 <div class="ParameterCommentContainer">
-The timeout in milliseconds.
+A value between -128 and +127.
 </div>
 <div class="CommentHeader">Return Value</div>
 <div class="ParameterCommentContainer">
-<a href="../../Contents/1/266.html">FluentTransportChannelConfigurationBase&lt;TThisConfiguration&gt;</a>
+<a href="../../Contents/1/267.html">FluentTransportChannelConfigurationBase&lt;TThisConfiguration&gt;</a>
 </div>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>

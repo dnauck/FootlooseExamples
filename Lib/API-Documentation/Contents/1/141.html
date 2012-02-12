@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>CredentialConfigurationElementCollection.Remove Method (CredentialConfigurationElement)</title>
+<title>CredentialConfigurationElementCollection.Insert Method (int, CredentialConfigurationElement)</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">CredentialConfigurationElementCollection.Remove Method (CredentialConfigurationElement)</div>
+<div id="PageTitle">CredentialConfigurationElementCollection.Insert Method (int, CredentialConfigurationElement)</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 <a href="#SectionHeader1" onclick="javascript: SetSectionVisibility(1, true); SetExpandCollapseAllToCollapseAll();">Exceptions</a>&nbsp;
@@ -25,10 +25,10 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Removes the first occurrence of a specific object from the <span class="PseudoLink">System.Collections.Generic.ICollection`1</span>.
+Inserts an item to the <span class="PseudoLink">System.Collections.Generic.IList`1</span> at the specified index.
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/1/64.html">CredentialConfigurationElementCollection</a><br />
-<b>Namespace:</b> <a href="../../Contents/1/5.html">Footloose.Configuration</a><br />
+<b>Declaring type:</b> <a href="../../Contents/1/65.html">CredentialConfigurationElementCollection</a><br />
+<b>Namespace:</b> <a href="../../Contents/1/6.html">Footloose.Configuration</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">Footloose</a>
 </div>
 <div id="SectionHeader0" class="SectionHeader">
@@ -41,18 +41,18 @@ Syntax
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public bool Remove (
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public void Insert (
+        int <i>index</i>,
         CredentialConfigurationElement <i>item</i>
 ) </pre></td></tr></table>
 <div class="CommentHeader">Parameters</div>
+<div class="CommentParameterName">index</div>
+<div class="ParameterCommentContainer">
+The zero-based index at which <span class="Code">item</span> should be inserted.
+</div>
 <div class="CommentParameterName">item</div>
 <div class="ParameterCommentContainer">
-The object to remove from the <span class="PseudoLink">System.Collections.Generic.ICollection`1</span>.
-</div>
-<div class="CommentHeader">Return Value</div>
-<div class="ParameterCommentContainer">
-true if <span class="Code">item</span> was successfully removed from the <span class="PseudoLink">System.Collections.Generic.ICollection`1</span>; otherwise, false.
-            This method also returns false if <span class="Code">item</span> is not found in the original <span class="PseudoLink">System.Collections.Generic.ICollection`1</span>.
+The object to insert into the <span class="PseudoLink">System.Collections.Generic.IList`1</span>.
 </div>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 <div id="SectionHeader1" class="SectionHeader">
@@ -73,8 +73,13 @@ Exceptions
 <th>Condition</th>
 </tr>
 <tr>
+<td><span class="PseudoLink">ArgumentOutOfRangeException</span></td>
+<td><span class="Code">index</span> is not a valid index in the
+            <span class="PseudoLink">System.Collections.Generic.IList`1</span>.</td>
+</tr>
+<tr>
 <td><span class="PseudoLink">NotSupportedException</span></td>
-<td>The <span class="PseudoLink">System.Collections.Generic.ICollection`1</span> is read-only.</td>
+<td>The <span class="PseudoLink">System.Collections.Generic.IList`1</span> is read-only.</td>
 </tr>
 </table>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>

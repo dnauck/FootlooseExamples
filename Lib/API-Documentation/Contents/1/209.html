@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>ServiceContractConfigurationElementCollection.RemoveAt Method (int)</title>
+<title>ServiceContractConfigurationElementCollection.Remove Method (ServiceContractConfigurationElement)</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">ServiceContractConfigurationElementCollection.RemoveAt Method (int)</div>
+<div id="PageTitle">ServiceContractConfigurationElementCollection.Remove Method (ServiceContractConfigurationElement)</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 <a href="#SectionHeader1" onclick="javascript: SetSectionVisibility(1, true); SetExpandCollapseAllToCollapseAll();">Exceptions</a>&nbsp;
@@ -25,10 +25,10 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Removes the <span class="PseudoLink">System.Collections.Generic.IList`1</span> item at the specified index.
+Removes the first occurrence of a specific object from the <span class="PseudoLink">System.Collections.Generic.ICollection`1</span>.
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/1/75.html">ServiceContractConfigurationElementCollection</a><br />
-<b>Namespace:</b> <a href="../../Contents/1/5.html">Footloose.Configuration</a><br />
+<b>Declaring type:</b> <a href="../../Contents/1/76.html">ServiceContractConfigurationElementCollection</a><br />
+<b>Namespace:</b> <a href="../../Contents/1/6.html">Footloose.Configuration</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">Footloose</a>
 </div>
 <div id="SectionHeader0" class="SectionHeader">
@@ -41,13 +41,18 @@ Syntax
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public void RemoveAt (
-        int <i>index</i>
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public bool Remove (
+        ServiceContractConfigurationElement <i>item</i>
 ) </pre></td></tr></table>
 <div class="CommentHeader">Parameters</div>
-<div class="CommentParameterName">index</div>
+<div class="CommentParameterName">item</div>
 <div class="ParameterCommentContainer">
-The zero-based index of the item to remove.
+The object to remove from the <span class="PseudoLink">System.Collections.Generic.ICollection`1</span>.
+</div>
+<div class="CommentHeader">Return Value</div>
+<div class="ParameterCommentContainer">
+true if <span class="Code">item</span> was successfully removed from the <span class="PseudoLink">System.Collections.Generic.ICollection`1</span>; otherwise, false.
+            This method also returns false if <span class="Code">item</span> is not found in the original <span class="PseudoLink">System.Collections.Generic.ICollection`1</span>.
 </div>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 <div id="SectionHeader1" class="SectionHeader">
@@ -68,13 +73,8 @@ Exceptions
 <th>Condition</th>
 </tr>
 <tr>
-<td><span class="PseudoLink">ArgumentOutOfRangeException</span></td>
-<td><span class="Code">index</span> is not a valid
-            index in the <span class="PseudoLink">System.Collections.Generic.IList`1</span>.</td>
-</tr>
-<tr>
 <td><span class="PseudoLink">NotSupportedException</span></td>
-<td>The <span class="PseudoLink">System.Collections.Generic.IList`1</span> is read-only.</td>
+<td>The <span class="PseudoLink">System.Collections.Generic.ICollection`1</span> is read-only.</td>
 </tr>
 </table>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>

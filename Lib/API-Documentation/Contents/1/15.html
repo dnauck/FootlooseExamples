@@ -6,14 +6,15 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>Footloose.TransportChannels.Remoting Namespace</title>
+<title>Footloose.TransportChannels Namespace</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">Footloose.TransportChannels.Remoting Namespace</div>
+<div id="PageTitle">Footloose.TransportChannels Namespace</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Classes</a>&nbsp;
+<a href="#SectionHeader5" onclick="javascript: SetSectionVisibility(5, true); SetExpandCollapseAllToCollapseAll();">Interfaces</a>&nbsp;
 </div>
 <div class="DarkLine"></div>
 <div class="LightLine"></div>
@@ -50,14 +51,69 @@ Public Classes
 <tr>
 <td class="IconColumn">
 <img src="../../GFX/PublicClass.gif" alt="Public Class" /></td>
-<td><a href="../../Contents/2/426.html">RemotingEndpointIdentityManager</a></td>
-<td><p>There is no summary.</p></td>
+<td><a href="../../Contents/2/396.html">MessageHandlerNotFoundException</a></td>
+<td>Represents errors that occur when no proper <a href="../../Contents/2/275.html">IMessageHandler</a>
+            is found while dispatching a incoming <a href="../../Contents/2/266.html">Message</a>.</td>
 </tr>
 <tr>
 <td class="IconColumn">
 <img src="../../GFX/PublicClass.gif" alt="Public Class" /></td>
-<td><a href="../../Contents/1/268.html">RemotingTransportChannel</a></td>
-<td>Footloose transport channel that uses .NET Remoting for message transport</td>
+<td><a href="../../Contents/2/397.html">MessageResponseException</a></td>
+<td>Represents errors that occur when a remote <a href="../../Contents/1/259.html">ICommunicationEndpoint</a> respond with a
+            <a href="../../Contents/2/294.html">Error</a> to a send <a href="../../Contents/2/266.html">Message</a>.</td>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicClass.gif" alt="Public Class" /></td>
+<td><a href="../../Contents/2/398.html">NotAcceptableException</a></td>
+<td>Represents errors that occur when the recipient understood the request but was not expecting it at this time
+            or refusing to process it because it does not meet criteria defined by the recipient.</td>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicClass.gif" alt="Public Class" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
+<td><a href="../../Contents/2/399.html">TransportChannelBase</a></td>
+<td>A abstract base class for <a href="../../Contents/1/161.html">ITransportChannel</a> implementations.</td>
+</tr>
+</table>
+<div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
+<div id="SectionHeader5" class="SectionHeader">
+<img id="SectionExpanderImg5" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(5);" />
+<span class="SectionHeader">
+<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(5);">
+Public Interfaces
+</span>
+</span>
+</div>
+
+<div id="SectionContainerDiv5" class="SectionContainer">
+<table class="MembersTable">
+<col width="7%" />
+<col width="38%" />
+<col width="55%" />
+<tr>
+<th>&nbsp;</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicInterface.gif" alt="Public Interface" /></td>
+<td><a href="../../Contents/2/276.html">IMessageDispatcher</a></td>
+<td>This interface defines a central dispatcher for incoming <a href="../../Contents/2/266.html">Message</a> objects, dispatching them to
+            registered <a href="../../Contents/2/275.html">IMessageHandler</a>.</td>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicInterface.gif" alt="Public Interface" /></td>
+<td><a href="../../Contents/2/270.html">IMessageOriginator</a></td>
+<td>This interface defines a central dispatcher for outgoing messages with provided <a href="../../Contents/2/204.html">IMessageBodyData</a> objects.</td>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicInterface.gif" alt="Public Interface" /></td>
+<td><a href="../../Contents/1/161.html">ITransportChannel</a></td>
+<td><p>There is no summary.</p></td>
 </tr>
 </table>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>

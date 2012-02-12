@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>FluentConfiguration.ServiceContracts Method (Action&lt;ServiceContractConfiguration&gt;)</title>
+<title>FluentConfiguration.SerializerOfType&lt;T&gt; Method ()</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">FluentConfiguration.ServiceContracts Method (Action&lt;ServiceContractConfiguration&gt;)</div>
+<div id="PageTitle">FluentConfiguration.SerializerOfType&lt;T&gt; Method ()</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 </div>
@@ -24,10 +24,10 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Specify which types should be exposed as service contracts.
+Specify the Serializer.
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/1/264.html">FluentConfiguration</a><br />
-<b>Namespace:</b> <a href="../../Contents/1/6.html">Footloose.Configuration.Fluent</a><br />
+<b>Declaring type:</b> <a href="../../Contents/1/265.html">FluentConfiguration</a><br />
+<b>Namespace:</b> <a href="../../Contents/1/7.html">Footloose.Configuration.Fluent</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">Footloose</a>
 </div>
 <div id="SectionHeader0" class="SectionHeader">
@@ -40,17 +40,27 @@ Syntax
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public FluentConfiguration ServiceContracts (
-        Action&lt;ServiceContractConfiguration&gt; <i>serviceContracts</i>
-) </pre></td></tr></table>
-<div class="CommentHeader">Parameters</div>
-<div class="CommentParameterName">serviceContracts</div>
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public FluentConfiguration SerializerOfType&lt;T&gt; ()</pre>
+<div style="padding-left: 30px; margin-top: 0px;">
+<table class="InsideCodeBlock">
+<col />
+<col width="100%" />
+<tr>
+<td class="NoWrapTop">where T</td>
+<td>&nbsp;: ISerializer</td>
+</td>
+</tr>
+</table>
+</div>
+</td></tr></table>
+<div class="CommentHeader">Type Parameters</div>
+<div class="CommentParameterName">T</div>
 <div class="ParameterCommentContainer">
-The lambda expression to alter the configuration.
+Serializer type.
 </div>
 <div class="CommentHeader">Return Value</div>
 <div class="ParameterCommentContainer">
-<a href="../../Contents/1/264.html">FluentConfiguration</a>
+<a href="../../Contents/1/265.html">FluentConfiguration</a>
 </div>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>

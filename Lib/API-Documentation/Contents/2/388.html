@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>TransportChannelBase.SetDiscoInfo Method (DiscoInfo)</title>
+<title>SharedTypeDataContractResolver.TryResolveType Method (Type, Type, DataContractResolver, out XmlDictionaryString, out XmlDictionaryString)</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">TransportChannelBase.SetDiscoInfo Method (DiscoInfo)</div>
+<div id="PageTitle">SharedTypeDataContractResolver.TryResolveType Method (Type, Type, DataContractResolver, out XmlDictionaryString, out XmlDictionaryString)</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 </div>
@@ -24,11 +24,10 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Sets the service discovery information the transport channel should
-            send on discovery requests.
+Override this method to map a data contract type to an xsi:type name and namespace during serialization.
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/2/357.html">TransportChannelBase</a><br />
-<b>Namespace:</b> <a href="../../Contents/1/14.html">Footloose.TransportChannels</a><br />
+<b>Declaring type:</b> <a href="../../Contents/2/367.html">SharedTypeDataContractResolver</a><br />
+<b>Namespace:</b> <a href="../../Contents/1/14.html">Footloose.Serialization</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">Footloose</a>
 </div>
 <div id="SectionHeader0" class="SectionHeader">
@@ -41,13 +40,37 @@ Syntax
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public abstract void SetDiscoInfo (
-        DiscoInfo <i>discoInfo</i>
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public override bool TryResolveType (
+        Type <i>type</i>,
+        Type <i>declaredType</i>,
+        DataContractResolver <i>knownTypeResolver</i>,
+        out XmlDictionaryString <i>typeName</i>,
+        out XmlDictionaryString <i>typeNamespace</i>
 ) </pre></td></tr></table>
 <div class="CommentHeader">Parameters</div>
-<div class="CommentParameterName">discoInfo</div>
+<div class="CommentParameterName">type</div>
 <div class="ParameterCommentContainer">
-Service discovery information for this service node.
+The type to map.
+</div>
+<div class="CommentParameterName">declaredType</div>
+<div class="ParameterCommentContainer">
+The type declared in the data contract.
+</div>
+<div class="CommentParameterName">knownTypeResolver</div>
+<div class="ParameterCommentContainer">
+The known type resolver.
+</div>
+<div class="CommentParameterName">typeName</div>
+<div class="ParameterCommentContainer">
+The xsi:type name.
+</div>
+<div class="CommentParameterName">typeNamespace</div>
+<div class="ParameterCommentContainer">
+The xsi:type namespace.
+</div>
+<div class="CommentHeader">Return Value</div>
+<div class="ParameterCommentContainer">
+true if mapping succeeded; otherwise, false.
 </div>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>

@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>TransportChannelBase.SendMessage Method (Message)</title>
+<title>SharedTypeDataContractResolver.ResolveName Method (string, string, Type, DataContractResolver)</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">TransportChannelBase.SendMessage Method (Message)</div>
+<div id="PageTitle">SharedTypeDataContractResolver.ResolveName Method (string, string, Type, DataContractResolver)</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 </div>
@@ -24,10 +24,10 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Sends the specified message through this transport channel.
+Override this method to map the specified xsi:type name and namespace to a data contract type during deserialization.
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/2/357.html">TransportChannelBase</a><br />
-<b>Namespace:</b> <a href="../../Contents/1/14.html">Footloose.TransportChannels</a><br />
+<b>Declaring type:</b> <a href="../../Contents/2/367.html">SharedTypeDataContractResolver</a><br />
+<b>Namespace:</b> <a href="../../Contents/1/14.html">Footloose.Serialization</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">Footloose</a>
 </div>
 <div id="SectionHeader0" class="SectionHeader">
@@ -40,13 +40,32 @@ Syntax
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public abstract void SendMessage (
-        Message <i>message</i>
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public override Type ResolveName (
+        string <i>typeName</i>,
+        string <i>typeNamespace</i>,
+        Type <i>declaredType</i>,
+        DataContractResolver <i>knownTypeResolver</i>
 ) </pre></td></tr></table>
 <div class="CommentHeader">Parameters</div>
-<div class="CommentParameterName">message</div>
+<div class="CommentParameterName">typeName</div>
 <div class="ParameterCommentContainer">
-The message to send.
+The xsi:type name to map.
+</div>
+<div class="CommentParameterName">typeNamespace</div>
+<div class="ParameterCommentContainer">
+The xsi:type namespace to map.
+</div>
+<div class="CommentParameterName">declaredType</div>
+<div class="ParameterCommentContainer">
+The type declared in the data contract.
+</div>
+<div class="CommentParameterName">knownTypeResolver</div>
+<div class="ParameterCommentContainer">
+The known type resolver.
+</div>
+<div class="CommentHeader">Return Value</div>
+<div class="ParameterCommentContainer">
+The type the xsi:type name and namespace is mapped to.
 </div>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>

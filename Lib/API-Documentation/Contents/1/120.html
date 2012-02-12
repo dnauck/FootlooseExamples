@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>ConfigurationElementEnumerator&lt;T&gt;.Reset Method ()</title>
+<title>ConfigurationElementEnumerator&lt;T&gt;.MoveNext Method ()</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">ConfigurationElementEnumerator&lt;T&gt;.Reset Method ()</div>
+<div id="PageTitle">ConfigurationElementEnumerator&lt;T&gt;.MoveNext Method ()</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 <a href="#SectionHeader1" onclick="javascript: SetSectionVisibility(1, true); SetExpandCollapseAllToCollapseAll();">Exceptions</a>&nbsp;
@@ -25,10 +25,10 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Sets the enumerator to its initial position, which is before the first element in the collection.
+Advances the enumerator to the next element of the collection.
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/1/62.html">ConfigurationElementEnumerator&lt;T&gt;</a><br />
-<b>Namespace:</b> <a href="../../Contents/1/5.html">Footloose.Configuration</a><br />
+<b>Declaring type:</b> <a href="../../Contents/1/63.html">ConfigurationElementEnumerator&lt;T&gt;</a><br />
+<b>Namespace:</b> <a href="../../Contents/1/6.html">Footloose.Configuration</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">Footloose</a>
 </div>
 <div id="SectionHeader0" class="SectionHeader">
@@ -41,7 +41,11 @@ Syntax
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public void Reset ()</pre></td></tr></table>
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public bool MoveNext ()</pre></td></tr></table>
+<div class="CommentHeader">Return Value</div>
+<div class="ParameterCommentContainer">
+true if the enumerator was successfully advanced to the next element; false if the enumerator has passed the end of the collection.
+</div>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 <div id="SectionHeader1" class="SectionHeader">
 <img id="SectionExpanderImg1" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(1);" />

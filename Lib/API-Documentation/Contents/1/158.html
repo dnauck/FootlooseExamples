@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>TransportChannelConfigurationElementBase.Timeout Property </title>
+<title>TransportChannelConfigurationElementBase.Priority Property </title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">TransportChannelConfigurationElementBase.Timeout Property </div>
+<div id="PageTitle">TransportChannelConfigurationElementBase.Priority Property </div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 </div>
@@ -24,10 +24,12 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Gets or sets the length of time, in milliseconds, before a request times out.
+Gets or sets the priority for this communication endpoint.
+             The value must be an integer between -128 and +127.
+             Default is 10.
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/1/77.html">TransportChannelConfigurationElementBase</a><br />
-<b>Namespace:</b> <a href="../../Contents/1/5.html">Footloose.Configuration</a><br />
+<b>Declaring type:</b> <a href="../../Contents/1/78.html">TransportChannelConfigurationElementBase</a><br />
+<b>Namespace:</b> <a href="../../Contents/1/6.html">Footloose.Configuration</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">Footloose</a>
 </div>
 <div id="SectionHeader0" class="SectionHeader">
@@ -40,7 +42,7 @@ Syntax
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public int Timeout { get; set; }</pre></td></tr></table>
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public int Priority { get; set; }</pre></td></tr></table>
 <div class="CommentHeader">Property Value</div>
 <div class="ParameterCommentContainer">
 <p>There is no description.</p>

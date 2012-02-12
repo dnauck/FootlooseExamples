@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>ISerializer Interface Members</title>
+<title>IAuthorizationManager Interface Members</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">ISerializer Interface Members</div>
+<div id="PageTitle">IAuthorizationManager Interface Members</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader35" onclick="javascript: SetSectionVisibility(35, true); SetExpandCollapseAllToCollapseAll();">Methods</a>&nbsp;
 </div>
@@ -24,10 +24,11 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Serializes and deserializes an object, or an entire graph of connected objects.
+Represents a interface for a class that validates requests for method calls
+            and method responses.
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/1/71.html">ISerializer</a><br />
-<b>Namespace:</b> <a href="../../Contents/1/13.html">Footloose.Serialization</a><br />
+<b>Declaring type:</b> <a href="../../Contents/2/331.html">IAuthorizationManager</a><br />
+<b>Namespace:</b> <a href="../../Contents/1/12.html">Footloose.Security</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">Footloose</a>
 </div>
 <div id="SectionHeader35" class="SectionHeader">
@@ -52,14 +53,16 @@ Public Methods
 <tr>
 <td class="IconColumn">
 <img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
-<td><a href="../../Contents/2/352.html">Deserialize&lt;T&gt;</a></td>
-<td>Deserializes the specified <span class="PseudoLink">System.String</span> into an object graph.</td>
+<td><a href="../../Contents/2/352.html">ValidateMethodCallRequest</a></td>
+<td>Validates if the <a href="../../Contents/2/49.html">IMethodCallRequest</a> from the specified sender
+            is authorized.</td>
 </tr>
 <tr>
 <td class="IconColumn">
 <img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
-<td><a href="../../Contents/2/353.html">Serialize</a></td>
-<td>Serializes the specified object, or graph of objects.</td>
+<td><a href="../../Contents/2/353.html">ValidateMethodResponseRequest</a></td>
+<td>Validates if the <a href="../../Contents/2/51.html">IMethodResponseRequest</a> from the specified sender
+            is authorized.</td>
 </tr>
 </table>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>

@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>Footloose.TransportChannels Namespace</title>
+<title>Footloose.Serialization Namespace</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">Footloose.TransportChannels Namespace</div>
+<div id="PageTitle">Footloose.Serialization Namespace</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Classes</a>&nbsp;
 <a href="#SectionHeader5" onclick="javascript: SetSectionVisibility(5, true); SetExpandCollapseAllToCollapseAll();">Interfaces</a>&nbsp;
@@ -51,29 +51,51 @@ Public Classes
 <tr>
 <td class="IconColumn">
 <img src="../../GFX/PublicClass.gif" alt="Public Class" /></td>
-<td><a href="../../Contents/2/354.html">MessageHandlerNotFoundException</a></td>
-<td>Represents errors that occur when no proper <a href="../../Contents/2/252.html">IMessageHandler</a>
-            is found while dispatching a incoming <a href="../../Contents/2/243.html">Message</a>.</td>
+<td><a href="../../Contents/2/363.html">BinarySerializer</a></td>
+<td>Serializes and deserializes an object, or an entire
+            graph of connected objects in Base64 encoded binary format.</td>
 </tr>
 <tr>
 <td class="IconColumn">
 <img src="../../GFX/PublicClass.gif" alt="Public Class" /></td>
-<td><a href="../../Contents/2/355.html">MessageResponseException</a></td>
-<td>Represents errors that occur when a remote <a href="../../Contents/1/258.html">ICommunicationEndpoint</a> respond with a
-            <a href="../../Contents/2/271.html">Error</a> to a send <a href="../../Contents/2/243.html">Message</a>.</td>
+<td><a href="../../Contents/2/364.html">DataContractSerializer</a></td>
+<td>Serializes and deserializes an object, or an entire
+            graph of connected objects in XML format using the
+            <span class="PseudoLink">System.Runtime.Serialization.DataContractSerializer</span>.</td>
 </tr>
 <tr>
 <td class="IconColumn">
 <img src="../../GFX/PublicClass.gif" alt="Public Class" /></td>
-<td><a href="../../Contents/2/356.html">NotAcceptableException</a></td>
-<td>Represents errors that occur when the recipient understood the request but was not expecting it at this time
-            or refusing to process it because it does not meet criteria defined by the recipient.</td>
+<td><a href="../../Contents/2/365.html">NetDataContractSerializer</a></td>
+<td>Serializes and deserializes an object, or an entire
+            graph of connected objects in XML format using the
+            <span class="PseudoLink">System.Runtime.Serialization.NetDataContractSerializer</span>.</td>
 </tr>
 <tr>
 <td class="IconColumn">
-<img src="../../GFX/PublicClass.gif" alt="Public Class" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
-<td><a href="../../Contents/2/357.html">TransportChannelBase</a></td>
-<td>A abstract base class for <a href="../../Contents/1/160.html">ITransportChannel</a> implementations.</td>
+<img src="../../GFX/PublicClass.gif" alt="Public Class" /></td>
+<td><a href="../../Contents/2/366.html">ProtocolBuffersSerializer</a></td>
+<td>Serializes and deserializes an object, or an entire
+            graph of connected objects in Base64 encoded protocol buffers format.</td>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicClass.gif" alt="Public Class" /></td>
+<td><a href="../../Contents/2/367.html">SharedTypeDataContractResolver</a></td>
+<td>This resolver gives the knownTypeResolver a chance to resolve a type or a name statically, 
+            and if that fails it uses the type and assembly name of the type on the wire instead. 
+            Note that this would only work on the .NET framework for tightly coupled scenarios. 
+            You’re basically getting DataContractSerializer behavior most of the type,
+            and NetDataContractSerializer behavior for known types without ever having to specify a known type yourself.
+            From: http://blogs.msdn.com/b/youssefm/archive/2009/06/05/introducing-a-new-datacontractserializer-feature-the-datacontractresolver.aspx</td>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicClass.gif" alt="Public Class" /></td>
+<td><a href="../../Contents/2/368.html">TextSerializer</a></td>
+<td>Serializes and deserializes an object, or an entire
+            graph of connected objects in a json like text format.
+            This very fast serializer is only suitable for .NET POCO types.</td>
 </tr>
 </table>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
@@ -99,21 +121,8 @@ Public Interfaces
 <tr>
 <td class="IconColumn">
 <img src="../../GFX/PublicInterface.gif" alt="Public Interface" /></td>
-<td><a href="../../Contents/2/253.html">IMessageDispatcher</a></td>
-<td>This interface defines a central dispatcher for incoming <a href="../../Contents/2/243.html">Message</a> objects, dispatching them to
-            registered <a href="../../Contents/2/252.html">IMessageHandler</a>.</td>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicInterface.gif" alt="Public Interface" /></td>
-<td><a href="../../Contents/2/247.html">IMessageOriginator</a></td>
-<td>This interface defines a central dispatcher for outgoing messages with provided <a href="../../Contents/2/31.html">IMessageBodyData</a> objects.</td>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicInterface.gif" alt="Public Interface" /></td>
-<td><a href="../../Contents/1/160.html">ITransportChannel</a></td>
-<td><p>There is no summary.</p></td>
+<td><a href="../../Contents/1/72.html">ISerializer</a></td>
+<td>Serializes and deserializes an object, or an entire graph of connected objects.</td>
 </tr>
 </table>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>

@@ -6,15 +6,14 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>SelfEndpointIdentity.UpdatePresence Method ()</title>
+<title>IEndpointIdentityCollection Interface Members</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">SelfEndpointIdentity.UpdatePresence Method ()</div>
+<div id="PageTitle">IEndpointIdentityCollection Interface Members</div>
 <div id="HeaderShortcuts">
-<a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
-<a href="#SectionHeader1" onclick="javascript: SetSectionVisibility(1, true); SetExpandCollapseAllToCollapseAll();">Remarks</a>&nbsp;
+<a href="#SectionHeader35" onclick="javascript: SetSectionVisibility(35, true); SetExpandCollapseAllToCollapseAll();">Methods</a>&nbsp;
 </div>
 <div class="DarkLine"></div>
 <div class="LightLine"></div>
@@ -25,44 +24,54 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Updates the self presence information with the given priority.
+Public interface for a collection of <a href="../../Contents/1/357.html">IEndpointIdentity</a> objects.
+            Use this interface to enumerate through the list of known <a href="../../Contents/1/357.html">IEndpointIdentity</a> objects and
+            their <a href="../../Contents/1/259.html">ICommunicationEndpoint</a>.
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/2/98.html">SelfEndpointIdentity</a><br />
-<b>Namespace:</b> <a href="../../Contents/1/8.html">Footloose.DataModel</a><br />
+<b>Declaring type:</b> <a href="../../Contents/2/45.html">IEndpointIdentityCollection</a><br />
+<b>Namespace:</b> <a href="../../Contents/1/9.html">Footloose.DataModel</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">Footloose</a>
 </div>
-<div id="SectionHeader0" class="SectionHeader">
-<img id="SectionExpanderImg0" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(0);" />
+<div id="SectionHeader35" class="SectionHeader">
+<img id="SectionExpanderImg35" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(35);" />
 <span class="SectionHeader">
-<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(0);">
-Syntax
+<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(35);">
+Public Methods
 </span>
 </span>
 </div>
 
-<div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public void UpdatePresence ()</pre></td></tr></table>
-<div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
-<div id="SectionHeader1" class="SectionHeader">
-<img id="SectionExpanderImg1" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(1);" />
-<span class="SectionHeader">
-<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(1);">
-Remarks
-</span>
-</span>
-</div>
-
-<div id="SectionContainerDiv1" class="SectionContainer">
-<div class="RemarksContainer">
-<p>
-            This method sends a new presence notification message to all
-            communication endpoints that are subscribed to the presence of
-            this service node.
-            
-            Use this thoughtful, otherwise you could flood your network
-            with senseless presence notifications.
-            </p>
-</div>
+<div id="SectionContainerDiv35" class="SectionContainer">
+<table class="MembersTable">
+<col width="7%" />
+<col width="38%" />
+<col width="55%" />
+<tr>
+<th>&nbsp;</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
+<td><a href="../../Contents/2/171.html">Add</a></td>
+<td>Overloaded. Adds a new <a href="../../Contents/1/357.html">IEndpointIdentity</a> with the specified <span class="PseudoLink">System.Uri</span> to the collection
+            and request subscription to the <a href="../../Contents/1/420.html">IPresence</a> of the <a href="../../Contents/1/357.html">IEndpointIdentity</a>.</td>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
+<td><a href="../../Contents/2/172.html">Remove</a></td>
+<td>Removes the <a href="../../Contents/1/357.html">IEndpointIdentity</a> with the specified <span class="PseudoLink">System.Uri</span> from the collection
+            and unsubcribe from the <a href="../../Contents/1/420.html">IPresence</a> of the <a href="../../Contents/1/357.html">IEndpointIdentity</a>.</td>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
+<td><a href="../../Contents/2/173.html">Update</a></td>
+<td>Overloaded. Updates the name of the <a href="../../Contents/1/357.html">IEndpointIdentity</a> with the specified <span class="PseudoLink">System.Uri</span>.</td>
+</tr>
+</table>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>
 <div id="Footer">

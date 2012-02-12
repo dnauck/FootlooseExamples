@@ -6,14 +6,14 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>Footloose.Configuration.Fluent Namespace</title>
+<title>IMessageOriginator Interface Members</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">Footloose.Configuration.Fluent Namespace</div>
+<div id="PageTitle">IMessageOriginator Interface Members</div>
 <div id="HeaderShortcuts">
-<a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Classes</a>&nbsp;
+<a href="#SectionHeader35" onclick="javascript: SetSectionVisibility(35, true); SetExpandCollapseAllToCollapseAll();">Methods</a>&nbsp;
 </div>
 <div class="DarkLine"></div>
 <div class="LightLine"></div>
@@ -24,20 +24,22 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-<p>There is no summary.</p>
+This interface defines a central dispatcher for outgoing messages with provided <a href="../../Contents/2/204.html">IMessageBodyData</a> objects.
 <div id="ItemLocation">
-<b>Assembly:</b> <a href="../../Contents/1/2.html">Footloose.Xmpp</a>
+<b>Declaring type:</b> <a href="../../Contents/2/270.html">IMessageOriginator</a><br />
+<b>Namespace:</b> <a href="../../Contents/1/15.html">Footloose.TransportChannels</a><br />
+<b>Assembly:</b> <a href="../../Contents/1/1.html">Footloose</a>
 </div>
-<div id="SectionHeader0" class="SectionHeader">
-<img id="SectionExpanderImg0" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(0);" />
+<div id="SectionHeader35" class="SectionHeader">
+<img id="SectionExpanderImg35" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(35);" />
 <span class="SectionHeader">
-<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(0);">
-Public Classes
+<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(35);">
+Public Methods
 </span>
 </span>
 </div>
 
-<div id="SectionContainerDiv0" class="SectionContainer">
+<div id="SectionContainerDiv35" class="SectionContainer">
 <table class="MembersTable">
 <col width="7%" />
 <col width="38%" />
@@ -49,9 +51,30 @@ Public Classes
 </tr>
 <tr>
 <td class="IconColumn">
-<img src="../../GFX/PublicClass.gif" alt="Public Class" /></td>
-<td><a href="../../Contents/2/451.html">XmppTransportChannelConfiguration</a></td>
-<td>Configuration class for the <a href="../../Contents/2/452.html">XmppTransportChannel</a>.</td>
+<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
+<td><a href="../../Contents/2/450.html">EnqueueData</a></td>
+<td>Overloaded. Enqueues the given <a href="../../Contents/2/204.html">IMessageBodyData</a> for the recipient with the
+            provided <span class="PseudoLink">System.Uri</span>.</td>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
+<td><a href="../../Contents/2/451.html">EnqueueResponse</a></td>
+<td>Enqueues a response <a href="../../Contents/2/266.html">Message</a> of type <a href="../../Contents/2/291.html">Result</a> or <a href="../../Contents/2/294.html">Error</a>.</td>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
+<td><a href="../../Contents/2/452.html">NotifyMessageException</a></td>
+<td>Notifies the <a href="../../Contents/2/270.html">IMessageOriginator</a> that a <a href="../../Contents/2/266.html">Message</a> of type <a href="../../Contents/2/294.html">Error</a>
+            with the provided message id and <span class="PseudoLink">System.Exception</span> received.</td>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
+<td><a href="../../Contents/2/453.html">NotifyMessageResult</a></td>
+<td>Notifies the <a href="../../Contents/2/270.html">IMessageOriginator</a> that a <a href="../../Contents/2/266.html">Message</a> of type <a href="../../Contents/2/291.html">Result</a>
+            with the provided message id received.</td>
 </tr>
 </table>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>

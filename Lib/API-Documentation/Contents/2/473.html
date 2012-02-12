@@ -6,14 +6,14 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>XmppTransportChannelConfigurationElement Constructor</title>
+<title>RemotingEndpointIdentityManager Constructor (EndpointIdentityDictionary, SelfEndpointIdentity, Func&lt;Uri, EndpointIdentity&gt;, Lazy&lt;IMessageOriginator&gt;, IHashAlgorithm)</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">XmppTransportChannelConfigurationElement Constructor</div>
+<div id="PageTitle">RemotingEndpointIdentityManager Constructor (EndpointIdentityDictionary, SelfEndpointIdentity, Func&lt;Uri, EndpointIdentity&gt;, Lazy&lt;IMessageOriginator&gt;, IHashAlgorithm)</div>
 <div id="HeaderShortcuts">
-<a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Overload List</a>&nbsp;
+<a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 </div>
 <div class="DarkLine"></div>
 <div class="LightLine"></div>
@@ -24,45 +24,50 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Initializes a new instance of the <a href="../../Contents/2/466.html">XmppTransportChannelConfigurationElement</a> class.
+Initializes a new instance of the <a href="../../Contents/2/471.html">RemotingEndpointIdentityManager</a> class.
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/2/466.html">XmppTransportChannelConfigurationElement</a><br />
-<b>Namespace:</b> <a href="../../Contents/2/448.html">Footloose.Configuration</a><br />
-<b>Assembly:</b> <a href="../../Contents/1/2.html">Footloose.Xmpp</a>
+<b>Declaring type:</b> <a href="../../Contents/2/471.html">RemotingEndpointIdentityManager</a><br />
+<b>Namespace:</b> <a href="../../Contents/1/16.html">Footloose.TransportChannels.Remoting</a><br />
+<b>Assembly:</b> <a href="../../Contents/1/1.html">Footloose</a>
 </div>
 <div id="SectionHeader0" class="SectionHeader">
 <img id="SectionExpanderImg0" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(0);" />
 <span class="SectionHeader">
 <span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(0);">
-Overload List
+Syntax
 </span>
 </span>
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="MembersTable">
-<col width="7%" />
-<col width="38%" />
-<col width="55%" />
-<tr>
-<th>&nbsp;</th>
-<th>Name</th>
-<th>Description</th>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicMethod.gif" alt="Public Method" /></td>
-<td><a href="../../Contents/2/482.html">XmppTransportChannelConfigurationElement ()</a></td>
-<td>Initializes a new instance of the <a href="../../Contents/2/466.html">XmppTransportChannelConfigurationElement</a> class.</td>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicMethod.gif" alt="Public Method" /></td>
-<td><a href="../../Contents/2/483.html">XmppTransportChannelConfigurationElement (TransportChannelConfigurationElementBase)</a></td>
-<td>Initializes a new instance of the <a href="../../Contents/2/466.html">XmppTransportChannelConfigurationElement</a> class
-            using values from the provided <a href="../../Contents/1/77.html">TransportChannelConfigurationElementBase</a>.</td>
-</tr>
-</table>
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public RemotingEndpointIdentityManager (
+        EndpointIdentityDictionary <i>endpointIdentityDictionary</i>,
+        SelfEndpointIdentity <i>selfEndpointIdentity</i>,
+        Func&lt;Uri, EndpointIdentity&gt; <i>endpointIdentityFactory</i>,
+        Lazy&lt;IMessageOriginator&gt; <i>orginator</i>,
+        IHashAlgorithm <i>hashAlgorithm</i>
+) </pre></td></tr></table>
+<div class="CommentHeader">Parameters</div>
+<div class="CommentParameterName">endpointIdentityDictionary</div>
+<div class="ParameterCommentContainer">
+The <a href="../../Contents/1/445.html">EndpointIdentityDictionary</a>.
+</div>
+<div class="CommentParameterName">selfEndpointIdentity</div>
+<div class="ParameterCommentContainer">
+The <a href="../../Contents/1/447.html">SelfEndpointIdentity</a>.
+</div>
+<div class="CommentParameterName">endpointIdentityFactory</div>
+<div class="ParameterCommentContainer">
+The <a href="../../Contents/1/446.html">EndpointIdentity</a> factory.
+</div>
+<div class="CommentParameterName">orginator</div>
+<div class="ParameterCommentContainer">
+The <a href="../../Contents/2/270.html">IMessageOriginator</a>.
+</div>
+<div class="CommentParameterName">hashAlgorithm</div>
+<div class="ParameterCommentContainer">
+The <a href="../../Contents/2/355.html">IHashAlgorithm</a>.
+</div>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>
 <div id="Footer">

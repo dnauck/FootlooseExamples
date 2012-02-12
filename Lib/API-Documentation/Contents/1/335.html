@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>ServiceContractConfiguration.GetServiceContracts Method ()</title>
+<title>ServiceContractConfiguration.Apply Method (ServiceContractConfigurationSection)</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">ServiceContractConfiguration.GetServiceContracts Method ()</div>
+<div id="PageTitle">ServiceContractConfiguration.Apply Method (ServiceContractConfigurationSection)</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 </div>
@@ -24,10 +24,10 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Gets a list auf all registered service contracts.
+Applies any service contract to the <a href="../../Contents/1/77.html">ServiceContractConfigurationSection</a>.
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/1/269.html">ServiceContractConfiguration</a><br />
-<b>Namespace:</b> <a href="../../Contents/1/6.html">Footloose.Configuration.Fluent</a><br />
+<b>Declaring type:</b> <a href="../../Contents/1/270.html">ServiceContractConfiguration</a><br />
+<b>Namespace:</b> <a href="../../Contents/1/7.html">Footloose.Configuration.Fluent</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">Footloose</a>
 </div>
 <div id="SectionHeader0" class="SectionHeader">
@@ -40,11 +40,13 @@ Syntax
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public IList&lt;Type&gt; GetServiceContracts ()</pre></td></tr></table>
-<div class="CommentHeader">Return Value</div>
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public void Apply (
+        ServiceContractConfigurationSection <i>configuration</i>
+) </pre></td></tr></table>
+<div class="CommentHeader">Parameters</div>
+<div class="CommentParameterName">configuration</div>
 <div class="ParameterCommentContainer">
-A list of <span class="PseudoLink">System.Type</span> that
-            contains the registered service contracts.
+The <a href="../../Contents/1/77.html">ServiceContractConfigurationSection</a> configuration.
 </div>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>

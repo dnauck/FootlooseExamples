@@ -6,14 +6,14 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>IFootlooseConnection.CallMethod&lt;TService&gt; Method</title>
+<title>IEndpointIdentityManagerInternal.AddEndpointIdentity Method (Uri, string, IEnumerable&lt;string&gt;, bool)</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">IFootlooseConnection.CallMethod&lt;TService&gt; Method</div>
+<div id="PageTitle">IEndpointIdentityManagerInternal.AddEndpointIdentity Method (Uri, string, IEnumerable&lt;string&gt;, bool)</div>
 <div id="HeaderShortcuts">
-<a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Overload List</a>&nbsp;
+<a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 </div>
 <div class="DarkLine"></div>
 <div class="LightLine"></div>
@@ -24,50 +24,48 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Invokes asynchronous the specified method of the given <span class="PseudoLink">System.Type</span> on a remote <a href="../../Contents/1/258.html">ICommunicationEndpoint</a>.
-            The remote endpoint <span class="PseudoLink">System.Uri</span> will be determined with the auto service discovery feature.
-            Once the method call returns the <a href="../../Contents/1/360.html">MethodResponseReceived</a> event ist called.
+Adds a new <a href="../../Contents/1/357.html">IEndpointIdentity</a> with the specified <span class="PseudoLink">System.Uri</span> and name
+            and list of groups to the collection
+            and request subscription to the <a href="../../Contents/1/420.html">IPresence</a> of the <a href="../../Contents/1/357.html">IEndpointIdentity</a>.
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/1/303.html">IFootlooseConnection</a><br />
-<b>Namespace:</b> <a href="../../Contents/1/3.html">Footloose</a><br />
+<b>Declaring type:</b> <a href="../../Contents/1/373.html">IEndpointIdentityManagerInternal</a><br />
+<b>Namespace:</b> <a href="../../Contents/1/4.html">Footloose</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">Footloose</a>
 </div>
 <div id="SectionHeader0" class="SectionHeader">
 <img id="SectionExpanderImg0" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(0);" />
 <span class="SectionHeader">
 <span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(0);">
-Overload List
+Syntax
 </span>
 </span>
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="MembersTable">
-<col width="7%" />
-<col width="38%" />
-<col width="55%" />
-<tr>
-<th>&nbsp;</th>
-<th>Name</th>
-<th>Description</th>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
-<td><a href="../../Contents/2/9.html">IFootlooseConnection.CallMethod&lt;TService&gt; (Expression&lt;Action&lt;TService&gt;&gt;)</a></td>
-<td>Invokes asynchronous the specified method of the given <span class="PseudoLink">System.Type</span> on a remote <a href="../../Contents/1/258.html">ICommunicationEndpoint</a>.
-            The remote endpoint <span class="PseudoLink">System.Uri</span> will be determined with the auto service discovery feature.
-            Once the method call returns the <a href="../../Contents/1/360.html">MethodResponseReceived</a> event ist called.</td>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
-<td><a href="../../Contents/2/10.html">IFootlooseConnection.CallMethod&lt;TService&gt; (Expression&lt;Action&lt;TService&gt;&gt;, Uri)</a></td>
-<td>Invokes asynchronous the specified method of the given <span class="PseudoLink">System.Type</span> on a remote <a href="../../Contents/1/258.html">ICommunicationEndpoint</a>
-            with the specified endpoint <span class="PseudoLink">System.Uri</span>.
-            Once the method call returns the <a href="../../Contents/1/360.html">MethodResponseReceived</a> event ist called.</td>
-</tr>
-</table>
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public abstract void AddEndpointIdentity (
+        Uri <i>uri</i>,
+        string <i>name</i>,
+        IEnumerable&lt;string&gt; <i>groups</i>,
+        bool <i>requestSubscription</i>
+) </pre></td></tr></table>
+<div class="CommentHeader">Parameters</div>
+<div class="CommentParameterName">uri</div>
+<div class="ParameterCommentContainer">
+The <span class="PseudoLink">System.Uri</span> of the <a href="../../Contents/1/357.html">IEndpointIdentity</a>.
+</div>
+<div class="CommentParameterName">name</div>
+<div class="ParameterCommentContainer">
+The name of the <a href="../../Contents/1/357.html">IEndpointIdentity</a>.
+</div>
+<div class="CommentParameterName">groups</div>
+<div class="ParameterCommentContainer">
+The list of groups the <a href="../../Contents/1/357.html">IEndpointIdentity</a> belongs to.
+</div>
+<div class="CommentParameterName">requestSubscription</div>
+<div class="ParameterCommentContainer">
+If true request subscription to the <a href="../../Contents/1/420.html">IPresence</a> of
+            the <a href="../../Contents/1/357.html">IEndpointIdentity</a>; otherwise just add the item to the collection.
+</div>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>
 <div id="Footer">

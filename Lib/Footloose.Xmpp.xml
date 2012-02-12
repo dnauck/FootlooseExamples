@@ -11,7 +11,7 @@
         </member>
         <member name="M:Footloose.Configuration.Fluent.XmppTransportChannelConfiguration.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:Footloose.Configuration.Fluent.RemotingTransportChannelConfiguration"/> class
+            Initializes a new instance of the <see cref="T:Footloose.Configuration.Fluent.XmppTransportChannelConfiguration"/> class
             with default settings.
             </summary>
         </member>
@@ -342,10 +342,14 @@
             </summary>
             <param name="disposing">Indicator that the method as been called by user's code.</param>
         </member>
-        <member name="P:Footloose.TransportChannels.Xmpp.XmppConnectionManager.IsConnected">
+        <member name="E:Footloose.TransportChannels.Xmpp.XmppConnectionManager.ConnectionStateChanged">
+            <summary>
+            Occurs when the <see cref="P:Footloose.TransportChannels.Xmpp.XmppConnectionManager.ConnectionState"/> is changed.
+            </summary>
+        </member>
+        <member name="P:Footloose.TransportChannels.Xmpp.XmppConnectionManager.ConnectionState">
             <summary>
             Gets the current state of the connection.
-            true if the connection is established; otherwise, false.
             </summary>
         </member>
         <member name="P:Footloose.TransportChannels.Xmpp.XmppConnectionManager.IsDisposed">
@@ -361,6 +365,24 @@
             <param name="endpointIdentityDictionary">The <see cref="T:Footloose.DataModel.EndpointIdentityDictionary"/>.</param>
             <param name="selfEndpointIdentity">The <see cref="P:Footloose.EndpointIdentityManagerBase.SelfEndpointIdentity"/>.</param>
             <param name="endpointIdentityFactory">The <see cref="T:Footloose.DataModel.EndpointIdentity"/> factory.</param>
+        </member>
+        <member name="M:Footloose.TransportChannels.Xmpp.XmppEndpointIdentityManager.GetIdentityUri(System.Uri)">
+            <summary>
+            Gets the <see cref="T:System.Uri"/> from the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>
+            of this <see cref="T:System.Uri"/>.
+            </summary>
+            <param name="uri">The <see cref="T:System.Uri"/>.</param>
+            <returns>The <see cref="T:System.Uri"/> of the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>.</returns>
+        </member>
+        <member name="M:Footloose.TransportChannels.Xmpp.XmppEndpointIdentityManager.GetEndpointUri(System.Uri,System.String)">
+            <summary>
+            Gets the <see cref="T:System.Uri"/> from the <see cref="T:Footloose.DataModel.ICommunicationEndpoint"/>
+            with the specified <see cref="T:System.Uri"/> of it's <see cref="T:Footloose.DataModel.IEndpointIdentity"/>
+            and the endpoint identifier.
+            </summary>
+            <param name="identityUri">The <see cref="T:System.Uri"/> of the endpoint's <see cref="T:Footloose.DataModel.IEndpointIdentity"/></param>
+            <param name="endpointIdentifier">The endpoint identifier.</param>
+            <returns>The <see cref="T:System.Uri"/> of the <see cref="T:Footloose.DataModel.ICommunicationEndpoint"/>.</returns>
         </member>
         <member name="M:Footloose.TransportChannels.Xmpp.XmppEndpointIdentityManager.RequestDiscoInfo(System.Uri,System.String)">
             <summary>
@@ -561,12 +583,6 @@
             <summary>
             Gets or sets the callback that verifies the remote
             Secure Sockets Layer (SSL) certificate used for authentication.
-            </summary>
-        </member>
-        <member name="P:Footloose.TransportChannels.Xmpp.XmppTransportChannel.IsConnected">
-            <summary>
-            Gets the current state of the connection.
-            true if the connection is established; otherwise, false.
             </summary>
         </member>
         <member name="P:Footloose.TransportChannels.Xmpp.XmppTransportChannel.ServiceUri">

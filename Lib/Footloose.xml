@@ -1903,6 +1903,54 @@
             <param name="context">The <see cref="T:System.Runtime.Serialization.StreamingContext"/> that contains
             contextual information about the source or destination.</param>
         </member>
+        <member name="T:Footloose.ConnectionState">
+            <summary>
+            Represents the <see cref="T:Footloose.IFootlooseConnection"/> state.
+            </summary>
+        </member>
+        <member name="F:Footloose.ConnectionState.Disconnected">
+            <summary>
+            Connection is closed.
+            </summary>
+        </member>
+        <member name="F:Footloose.ConnectionState.Connecting">
+            <summary>
+            Footloose is trying to establish a connection to the server.
+            </summary>
+        </member>
+        <member name="F:Footloose.ConnectionState.Connected">
+            <summary>
+            Connection is open.
+            </summary>
+        </member>
+        <member name="T:Footloose.ConnectionStateEventArgs">
+            <summary>
+            Provides data for the <see cref="E:Footloose.IFootlooseConnection.ConnectionStateChanged" /> event.
+            </summary>
+        </member>
+        <member name="M:Footloose.ConnectionStateEventArgs.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Footloose.ConnectionStateEventArgs" /> class.
+            </summary>
+        </member>
+        <member name="M:Footloose.ConnectionStateEventArgs.#ctor(Footloose.ConnectionState)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Footloose.ConnectionStateEventArgs"/> class
+            with the specified <see cref="P:Footloose.ConnectionStateEventArgs.ConnectionState"/>.
+            </summary>
+            <param name="connectionState">The <see cref="P:Footloose.ConnectionStateEventArgs.ConnectionState"/>.</param>
+        </member>
+        <member name="P:Footloose.ConnectionStateEventArgs.ConnectionState">
+            <summary>
+            Gets or sets the <see cref="P:Footloose.ConnectionStateEventArgs.ConnectionState"/>.
+            </summary>
+        </member>
+        <member name="T:Footloose.DataModel.DiscoIdentityComparer">
+            <summary>
+            Provide a simple comparer for <see cref="T:Footloose.DataModel.DataTransferObjects.DiscoIdentity"/> objects.
+            </summary>
+        </member>
+        <!-- Ungültiger XML-Kommentar wurde für den Member "M:Footloose.DataModel.DiscoIdentityComparer.GetHashCode(Footloose.DataModel.DataTransferObjects.DiscoIdentity)" ignoriert -->
         <member name="T:Footloose.DataModel.DataTransferObjects.CorrelativeDataBase">
             <summary>
             Base class that contains correlative communication data sent between services.
@@ -1934,6 +1982,12 @@
             Contains a protocol namespace or other feature offered by the communication endpoint.
             </summary>
         </member>
+        <member name="M:Footloose.DataModel.DataTransferObjects.DiscoFeature.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Footloose.DataModel.DataTransferObjects.DiscoFeature"/> class.
+            Required for some serializers.
+            </summary>
+        </member>
         <member name="M:Footloose.DataModel.DataTransferObjects.DiscoFeature.#ctor(System.String)">
             <summary>
             Initializes a new instance of the <see cref="T:Footloose.DataModel.DataTransferObjects.DiscoFeature"/> class with
@@ -1950,6 +2004,12 @@
         <member name="T:Footloose.DataModel.DataTransferObjects.DiscoIdentity">
             <summary>
             Containing information about the communication endpoint's identity.
+            </summary>
+        </member>
+        <member name="M:Footloose.DataModel.DataTransferObjects.DiscoIdentity.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Footloose.DataModel.DataTransferObjects.DiscoIdentity"/> class.
+            Required for some serializers.
             </summary>
         </member>
         <member name="M:Footloose.DataModel.DataTransferObjects.DiscoIdentity.#ctor(System.String,System.String,System.String)">
@@ -1980,6 +2040,12 @@
             <summary>
             Contains service discovery information such as
             discovered identities and features of a communication endpoint.
+            </summary>
+        </member>
+        <member name="M:Footloose.DataModel.DataTransferObjects.DiscoInfo.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Footloose.DataModel.DataTransferObjects.DiscoInfo"/> class.
+            Required for some serializers.
             </summary>
         </member>
         <member name="M:Footloose.DataModel.DataTransferObjects.DiscoInfo.#ctor(System.Collections.Generic.IEnumerable{Footloose.DataModel.DataTransferObjects.DiscoIdentity},System.Collections.Generic.IEnumerable{Footloose.DataModel.DataTransferObjects.DiscoFeature})">
@@ -2506,6 +2572,24 @@
             Cancel and revoke the identity's subscription to this instance's presence information.
             </summary>
             <param name="to">The uri of the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>.</param>
+        </member>
+        <member name="M:Footloose.IEndpointIdentityManagerInternal.GetIdentityUri(System.Uri)">
+            <summary>
+            Gets the <see cref="T:System.Uri"/> from the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>
+            of this <see cref="T:System.Uri"/>.
+            </summary>
+            <param name="uri">The <see cref="T:System.Uri"/>.</param>
+            <returns>The <see cref="T:System.Uri"/> of the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>.</returns>
+        </member>
+        <member name="M:Footloose.IEndpointIdentityManagerInternal.GetEndpointUri(System.Uri,System.String)">
+            <summary>
+            Gets the <see cref="T:System.Uri"/> from the <see cref="T:Footloose.DataModel.ICommunicationEndpoint"/>
+            with the specified <see cref="T:System.Uri"/> of it's <see cref="T:Footloose.DataModel.IEndpointIdentity"/>
+            and the endpoint identifier.
+            </summary>
+            <param name="identityUri">The <see cref="T:System.Uri"/> of the endpoint's <see cref="T:Footloose.DataModel.IEndpointIdentity"/></param>
+            <param name="endpointIdentifier">The endpoint identifier.</param>
+            <returns>The <see cref="T:System.Uri"/> of the <see cref="T:Footloose.DataModel.ICommunicationEndpoint"/>.</returns>
         </member>
         <member name="P:Footloose.IEndpointIdentityManagerInternal.EndpointIdentities">
             <summary>
@@ -3354,6 +3438,15 @@
             Interface to interact with the self identity of this service node.
             </summary>
         </member>
+        <member name="M:Footloose.DataModel.ISelfEndpointIdentity.Initialize(System.Uri,System.String)">
+            <summary>
+            Initializes the self endpoint identity with the specified
+            service uri and endpoint identifier.
+            </summary>
+            <remarks>This method should be called on every connet or reconnect.</remarks>
+            <param name="serviceUri">The <see cref="T:System.Uri"/> of this endpoint.</param>
+            <param name="endpointIdentifier">The identifier of this endpoint.</param>
+        </member>
         <member name="M:Footloose.DataModel.ISelfEndpointIdentity.UpdatePresence">
             <summary>
             Updates the self presence information with the given priority.
@@ -3507,6 +3600,15 @@
             Cancel and revoke the identity's subscription to this instance's presence information.
             </summary>
         </member>
+        <member name="M:Footloose.DataModel.SelfEndpointIdentity.Initialize(System.Uri,System.String)">
+            <summary>
+            Initializes the self endpoint identity with the specified
+            service uri and endpoint identifier.
+            </summary>
+            <remarks>This method should be called on every connet or reconnect.</remarks>
+            <param name="serviceUri">The <see cref="T:System.Uri"/> of this endpoint.</param>
+            <param name="endpointIdentifier">The identifier of this endpoint.</param>
+        </member>
         <member name="M:Footloose.DataModel.SelfEndpointIdentity.UpdatePresence">
             <summary>
             Updates the self presence information with the given priority.
@@ -3612,11 +3714,6 @@
         <member name="P:Footloose.DataModel.SelfEndpointIdentity.DiscoInfo">
             <summary>
             Gets or sets the service discovery information.
-            </summary>
-        </member>
-        <member name="P:Footloose.DataModel.SelfEndpointIdentity.Uri">
-            <summary>
-            Gets or sets the uri of this endpoint identity.
             </summary>
         </member>
         <member name="T:Footloose.DataModel.SerializerFeatureFindCriterion">
@@ -3780,13 +3877,23 @@
             </summary>
             <param name="presence">The <see cref="T:Footloose.DataModel.IPresence"/> notification to handle.</param>
         </member>
-        <member name="M:Footloose.EndpointIdentityManagerBase.GetIdentityUriFromEndpointUri(System.Uri)">
+        <member name="M:Footloose.EndpointIdentityManagerBase.GetIdentityUri(System.Uri)">
             <summary>
             Gets the <see cref="T:System.Uri"/> from the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>
             of this <see cref="T:System.Uri"/>.
             </summary>
             <param name="uri">The <see cref="T:System.Uri"/>.</param>
             <returns>The <see cref="T:System.Uri"/> of the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>.</returns>
+        </member>
+        <member name="M:Footloose.EndpointIdentityManagerBase.GetEndpointUri(System.Uri,System.String)">
+            <summary>
+            Gets the <see cref="T:System.Uri"/> from the <see cref="T:Footloose.DataModel.ICommunicationEndpoint"/>
+            with the specified <see cref="T:System.Uri"/> of it's <see cref="T:Footloose.DataModel.IEndpointIdentity"/>
+            and the endpoint identifier.
+            </summary>
+            <param name="identityUri">The <see cref="T:System.Uri"/> of the endpoint's <see cref="T:Footloose.DataModel.IEndpointIdentity"/></param>
+            <param name="endpointIdentifier">The endpoint identifier.</param>
+            <returns>The <see cref="T:System.Uri"/> of the <see cref="T:Footloose.DataModel.ICommunicationEndpoint"/>.</returns>
         </member>
         <member name="M:Footloose.EndpointIdentityManagerBase.RequestDiscoInfo(System.Uri,System.String)">
             <summary>
@@ -3997,6 +4104,21 @@
             Closes the connection.
             </summary>
         </member>
+        <member name="E:Footloose.IFootlooseConnection.MethodResponseReceived">
+            <summary>
+            Occurs when a <see cref="T:Footloose.DataModel.IMethodResponse"/> received.
+            </summary>
+        </member>
+        <member name="E:Footloose.IFootlooseConnection.ConnectionStateChanged">
+            <summary>
+            Occurs when the <see cref="P:Footloose.IFootlooseConnection.ConnectionState"/> is changed.
+            </summary>
+        </member>
+        <member name="E:Footloose.IFootlooseConnection.ExceptionOccurred">
+            <summary>
+            Occurs when a <see cref="T:System.Exception"/> is thrown.
+            </summary>
+        </member>
         <member name="P:Footloose.IFootlooseConnection.EndpointIdentityManager">
             <summary>
             Gets an instance of the <see cref="T:Footloose.IEndpointIdentityManager"/>.
@@ -4012,10 +4134,9 @@
             Gets the version of the Footloose communication protocol.
             </summary>
         </member>
-        <member name="P:Footloose.IFootlooseConnection.IsConnected">
+        <member name="P:Footloose.IFootlooseConnection.ConnectionState">
             <summary>
             Gets the current state of the connection.
-            true if the connection is open and established; otherwise, false.
             </summary>
         </member>
         <member name="P:Footloose.IFootlooseConnection.IsDisposed">
@@ -4378,6 +4499,21 @@
             </summary>
             <returns>An instance of a <see cref="T:Footloose.DataModel.DataTransferObjects.DiscoInfo"/>.</returns>
         </member>
+        <member name="E:Footloose.FootlooseConnection.MethodResponseReceived">
+            <summary>
+            Occurs when a <see cref="T:Footloose.DataModel.IMethodResponse"/> received.
+            </summary>
+        </member>
+        <member name="E:Footloose.FootlooseConnection.ConnectionStateChanged">
+            <summary>
+            Occurs when the <see cref="P:Footloose.FootlooseConnection.ConnectionState"/> is changed.
+            </summary>
+        </member>
+        <member name="E:Footloose.FootlooseConnection.ExceptionOccurred">
+            <summary>
+            Occurs when a <see cref="T:System.Exception"/> is thrown.
+            </summary>
+        </member>
         <member name="P:Footloose.FootlooseConnection.EndpointIdentityManager">
             <summary>
             Gets an instance of the <see cref="T:Footloose.IEndpointIdentityManager"/>.
@@ -4393,10 +4529,9 @@
             Gets the version of the Footloose communication protocol.
             </summary>
         </member>
-        <member name="P:Footloose.FootlooseConnection.IsConnected">
+        <member name="P:Footloose.FootlooseConnection.ConnectionState">
             <summary>
             Gets the current state of the connection.
-            true if the connection is established; otherwise, false.
             </summary>
         </member>
         <member name="P:Footloose.FootlooseConnection.IsDisposed">
@@ -4435,13 +4570,6 @@
             Generates a new unique message id.
             </summary>
             <returns>A new message id.</returns>
-        </member>
-        <member name="M:Footloose.Messaging.Message.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
-            <summary>
-            Populates a SerializationInfo with the data needed to serialize the target object.
-            </summary>
-            <param name="info">The SerializationInfo to populate with data.</param>
-            <param name="context">The destination for this serialization.</param>
         </member>
         <member name="P:Footloose.Messaging.Message.Id">
             <summary>
@@ -4788,12 +4916,6 @@
             Defines a <see cref="T:Footloose.Security.IAuthorizationProvider"/> that validate every endpoint.
             </summary>
         </member>
-        <member name="M:Footloose.Security.DefaultAuthorizationProvider.#ctor">
-            <summary>
-            Initializes a new instance of the <see cref="T:Footloose.Security.DefaultAuthorizationProvider"/> class
-            with the specified <see cref="T:Footloose.IEndpointIdentityManager"/>.
-            </summary>
-        </member>
         <member name="M:Footloose.Security.DefaultAuthorizationProvider.ValidateMethodCallRequest(System.Uri,Footloose.DataModel.IMethodCallRequest)">
             <summary>
             Validates if the <see cref="T:Footloose.DataModel.IMethodCallRequest"/> from the specified sender
@@ -4923,10 +5045,11 @@
             Serializes and deserializes an object, or an entire graph of connected objects.
             </summary>
         </member>
-        <member name="M:Footloose.Serialization.ISerializer.Serialize(System.Object)">
+        <member name="M:Footloose.Serialization.ISerializer.Serialize``1(``0)">
             <summary>
             Serializes the specified object, or graph of objects.
             </summary>
+            <typeparam name="T">Type of the top (root) of the object graph.</typeparam>
             <param name="obj">The <see cref="T:System.Object"/> at the root of the graph to serialize.</param>
             <returns>The <see cref="T:System.String"/> to which the graph is to be serialized.</returns>
         </member>
@@ -4938,10 +5061,11 @@
             <param name="data">The <see cref="T:System.String"/> that contains the object graph to deserialize.</param>
             <returns>The top (root) of the object graph.</returns>
         </member>
-        <member name="M:Footloose.Serialization.BinarySerializer.Serialize(System.Object)">
+        <member name="M:Footloose.Serialization.BinarySerializer.Serialize``1(``0)">
             <summary>
             Serializes the specified object, or graph of objects.
             </summary>
+            <typeparam name="T">Type of the top (root) of the object graph.</typeparam>
             <param name="obj">The <see cref="T:System.Object"/> at the root of the graph to serialize.</param>
             <returns>The <see cref="T:System.String"/> to which the graph is to be serialized.</returns>
         </member>
@@ -4952,6 +5076,118 @@
             <typeparam name="T">Type of the top (root) of the object graph.</typeparam>
             <param name="data">The <see cref="T:System.String"/> that contains the object graph to deserialize.</param>
             <returns>The top (root) of the object graph.</returns>
+        </member>
+        <member name="T:Footloose.Serialization.NetDataContractSerializer">
+            <summary>
+            Serializes and deserializes an object, or an entire
+            graph of connected objects in XML format using the
+            <see cref="T:System.Runtime.Serialization.NetDataContractSerializer"/>.
+            </summary>
+        </member>
+        <member name="M:Footloose.Serialization.NetDataContractSerializer.Serialize``1(``0)">
+            <summary>
+            Serializes the specified object, or graph of objects.
+            </summary>
+            <typeparam name="T">Type of the top (root) of the object graph.</typeparam>
+            <param name="obj">The <see cref="T:System.Object"/> at the root of the graph to serialize.</param>
+            <returns>The <see cref="T:System.String"/> to which the graph is to be serialized.</returns>
+        </member>
+        <member name="M:Footloose.Serialization.NetDataContractSerializer.Deserialize``1(System.String)">
+            <summary>
+            Deserializes the specified <see cref="T:System.String"/> into an object graph.
+            </summary>
+            <typeparam name="T">Type of the top (root) of the object graph.</typeparam>
+            <param name="data">The <see cref="T:System.String"/> that contains the object graph to deserialize.</param>
+            <returns>The top (root) of the object graph.</returns>
+        </member>
+        <member name="T:Footloose.Serialization.DataContractSerializer">
+            <summary>
+            Serializes and deserializes an object, or an entire
+            graph of connected objects in XML format using the
+            <see cref="T:System.Runtime.Serialization.DataContractSerializer"/>.
+            </summary>
+        </member>
+        <member name="M:Footloose.Serialization.DataContractSerializer.Serialize``1(``0)">
+            <summary>
+            Serializes the specified object, or graph of objects.
+            </summary>
+            <typeparam name="T">Type of the top (root) of the object graph.</typeparam>
+            <param name="obj">The <see cref="T:System.Object"/> at the root of the graph to serialize.</param>
+            <returns>The <see cref="T:System.String"/> to which the graph is to be serialized.</returns>
+        </member>
+        <member name="M:Footloose.Serialization.DataContractSerializer.Deserialize``1(System.String)">
+            <summary>
+            Deserializes the specified <see cref="T:System.String"/> into an object graph.
+            </summary>
+            <typeparam name="T">Type of the top (root) of the object graph.</typeparam>
+            <param name="data">The <see cref="T:System.String"/> that contains the object graph to deserialize.</param>
+            <returns>The top (root) of the object graph.</returns>
+        </member>
+        <member name="T:Footloose.Serialization.ProtocolBuffersSerializer">
+            <summary>
+            Serializes and deserializes an object, or an entire
+            graph of connected objects in Base64 encoded protocol buffers format.
+            </summary>
+            <remarks>
+            For further information check out the documentation
+            at http://code.google.com/p/protobuf-net/.
+            </remarks>
+        </member>
+        <member name="M:Footloose.Serialization.ProtocolBuffersSerializer.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Footloose.Serialization.ProtocolBuffersSerializer"/> class.
+            </summary>
+        </member>
+        <member name="M:Footloose.Serialization.ProtocolBuffersSerializer.Serialize``1(``0)">
+            <summary>
+            Serializes the specified object, or graph of objects.
+            </summary>
+            <typeparam name="T">Type of the top (root) of the object graph.</typeparam>
+            <param name="obj">The <see cref="T:System.Object"/> at the root of the graph to serialize.</param>
+            <returns>The <see cref="T:System.String"/> to which the graph is to be serialized.</returns>
+        </member>
+        <member name="M:Footloose.Serialization.ProtocolBuffersSerializer.Deserialize``1(System.String)">
+            <summary>
+            Deserializes the specified <see cref="T:System.String"/> into an object graph.
+            </summary>
+            <typeparam name="T">Type of the top (root) of the object graph.</typeparam>
+            <param name="data">The <see cref="T:System.String"/> that contains the object graph to deserialize.</param>
+            <returns>The top (root) of the object graph.</returns>
+        </member>
+        <member name="T:Footloose.Serialization.SharedTypeDataContractResolver">
+            <summary>
+            This resolver gives the knownTypeResolver a chance to resolve a type or a name statically, 
+            and if that fails it uses the type and assembly name of the type on the wire instead. 
+            Note that this would only work on the .NET framework for tightly coupled scenarios. 
+            You’re basically getting DataContractSerializer behavior most of the type,
+            and NetDataContractSerializer behavior for known types without ever having to specify a known type yourself.
+            From: http://blogs.msdn.com/b/youssefm/archive/2009/06/05/introducing-a-new-datacontractserializer-feature-the-datacontractresolver.aspx
+            </summary>
+        </member>
+        <member name="M:Footloose.Serialization.SharedTypeDataContractResolver.TryResolveType(System.Type,System.Type,System.Runtime.Serialization.DataContractResolver,System.Xml.XmlDictionaryString@,System.Xml.XmlDictionaryString@)">
+            <summary>
+            Override this method to map a data contract type to an xsi:type name and namespace during serialization.
+            </summary>
+            <returns>
+            true if mapping succeeded; otherwise, false.
+            </returns>
+            <param name="type">The type to map.</param>
+            <param name="declaredType">The type declared in the data contract.</param>
+            <param name="knownTypeResolver">The known type resolver.</param>
+            <param name="typeName">The xsi:type name.</param>
+            <param name="typeNamespace">The xsi:type namespace.</param>
+        </member>
+        <member name="M:Footloose.Serialization.SharedTypeDataContractResolver.ResolveName(System.String,System.String,System.Type,System.Runtime.Serialization.DataContractResolver)">
+            <summary>
+            Override this method to map the specified xsi:type name and namespace to a data contract type during deserialization.
+            </summary>
+            <returns>
+            The type the xsi:type name and namespace is mapped to. 
+            </returns>
+            <param name="typeName">The xsi:type name to map.</param>
+            <param name="typeNamespace">The xsi:type namespace to map.</param>
+            <param name="declaredType">The type declared in the data contract.</param>
+            <param name="knownTypeResolver">The known type resolver.</param>
         </member>
         <member name="T:Footloose.Serialization.TextSerializer">
             <summary>
@@ -4965,10 +5201,11 @@
             and http://www.servicestack.net/mythz_blog/?p=314.
             </remarks>
         </member>
-        <member name="M:Footloose.Serialization.TextSerializer.Serialize(System.Object)">
+        <member name="M:Footloose.Serialization.TextSerializer.Serialize``1(``0)">
             <summary>
             Serializes the specified object, or graph of objects.
             </summary>
+            <typeparam name="T">Type of the top (root) of the object graph.</typeparam>
             <param name="obj">The <see cref="T:System.Object"/> at the root of the graph to serialize.</param>
             <returns>The <see cref="T:System.String"/> to which the graph is to be serialized.</returns>
         </member>
@@ -5141,10 +5378,19 @@
             </summary>
             <param name="message">The message to send.</param>
         </member>
-        <member name="P:Footloose.TransportChannels.ITransportChannel.IsConnected">
+        <member name="E:Footloose.TransportChannels.ITransportChannel.ConnectionStateChanged">
+            <summary>
+            Occurs when the <see cref="P:Footloose.TransportChannels.ITransportChannel.ConnectionState"/> is changed.
+            </summary>
+        </member>
+        <member name="E:Footloose.TransportChannels.ITransportChannel.ExceptionOccurred">
+            <summary>
+            Occurs when a <see cref="T:System.Exception"/> is thrown.
+            </summary>
+        </member>
+        <member name="P:Footloose.TransportChannels.ITransportChannel.ConnectionState">
             <summary>
             Gets the current state of the connection.
-            true if the connection is established; otherwise, false.
             </summary>
         </member>
         <member name="P:Footloose.TransportChannels.ITransportChannel.EndpointIdentifier">
@@ -5415,6 +5661,28 @@
             <param name="orginator">The <see cref="T:Footloose.TransportChannels.IMessageOriginator"/>.</param>
             <param name="hashAlgorithm">The <see cref="T:Footloose.Security.Cryptography.IHashAlgorithm"/>.</param>
         </member>
+        <member name="M:Footloose.TransportChannels.Remoting.RemotingEndpointIdentityManager.GetIdentityUri(System.Uri)">
+            <summary>
+            Gets the <see cref="T:System.Uri"/> from the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>
+            of this <see cref="T:System.Uri"/>.
+            </summary>
+            <param name="uri">The <see cref="T:System.Uri"/>.</param>
+            <returns>The <see cref="T:System.Uri"/> of the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>.</returns>
+        </member>
+        <member name="M:Footloose.TransportChannels.Remoting.RemotingEndpointIdentityManager.GetEndpointUri(System.Uri,System.String)">
+            <summary>
+            Gets the <see cref="T:System.Uri"/> from the <see cref="T:Footloose.DataModel.ICommunicationEndpoint"/>
+            with the specified <see cref="T:System.Uri"/> of it's <see cref="T:Footloose.DataModel.IEndpointIdentity"/>
+            and the endpoint identifier.
+            </summary>
+            <remarks>
+            Creates a full endpoint uri from a specified base uri.
+            Example: "ipc://FootlooseService-1" to "ipc://FootlooseService-1/endpointIdentifier/FootlooseServiceProxy.rem"
+            </remarks>
+            <param name="identityUri">The <see cref="T:System.Uri"/> of the endpoint's <see cref="T:Footloose.DataModel.IEndpointIdentity"/></param>
+            <param name="endpointIdentifier">The endpoint identifier.</param>
+            <returns>The <see cref="T:System.Uri"/> of the <see cref="T:Footloose.DataModel.ICommunicationEndpoint"/>.</returns>
+        </member>
         <member name="M:Footloose.TransportChannels.Remoting.RemotingEndpointIdentityManager.RequestDiscoInfo(System.Uri,System.String)">
             <summary>
             Request asynchronously service discovery information from the given service with the specified capabilities.
@@ -5582,10 +5850,19 @@
             Gets the <see cref="T:Footloose.TransportChannels.IMessageDispatcher"/> for this transport channel to handle incoming messages.
             </summary>
         </member>
-        <member name="P:Footloose.TransportChannels.TransportChannelBase.IsConnected">
+        <member name="E:Footloose.TransportChannels.TransportChannelBase.ConnectionStateChanged">
+            <summary>
+            Occurs when the <see cref="P:Footloose.TransportChannels.TransportChannelBase.ConnectionState"/> is changed.
+            </summary>
+        </member>
+        <member name="E:Footloose.TransportChannels.TransportChannelBase.ExceptionOccurred">
+            <summary>
+            Occurs when a <see cref="T:System.Exception"/> is thrown.
+            </summary>
+        </member>
+        <member name="P:Footloose.TransportChannels.TransportChannelBase.ConnectionState">
             <summary>
             Gets the current state of the connection.
-            true if the connection is established; otherwise, false.
             </summary>
         </member>
         <member name="P:Footloose.TransportChannels.TransportChannelBase.EndpointIdentifier">
@@ -5659,21 +5936,6 @@
             Sends the specified message through this transport channel.
             </summary>
             <param name="message">The message to send.</param>
-        </member>
-        <member name="M:Footloose.TransportChannels.Remoting.RemotingTransportChannel.CreateFullEndpointUri(System.Uri,System.String)">
-            <summary>
-            Creates a full endpoint uri from a specified base uri.
-            Example: "ipc://FootlooseService-1" to "ipc://FootlooseService-1/endpointIdentifier/FootlooseServiceProxy.rem"
-            </summary>
-            <param name="baseUri">The base <see cref="T:System.Uri"/>.</param>
-            <param name="endpointIdentifier"></param>
-            <returns>A full endpoint Uri for the <see cref="T:Footloose.TransportChannels.Remoting.RemotingTransportChannel"/>.</returns>
-        </member>
-        <member name="P:Footloose.TransportChannels.Remoting.RemotingTransportChannel.IsConnected">
-            <summary>
-            Gets the current state of the connection.
-            true if the connection is established; otherwise, false.
-            </summary>
         </member>
         <member name="P:Footloose.TransportChannels.Remoting.RemotingTransportChannel.ServiceUri">
             <summary>

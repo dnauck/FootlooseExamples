@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>SerializerConfigurationSection Class</title>
+<title>SerializerConfigurationElementCollection Class</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">SerializerConfigurationSection Class</div>
+<div id="PageTitle">SerializerConfigurationElementCollection Class</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 <a href="#SectionHeader1" onclick="javascript: SetSectionVisibility(1, true); SetExpandCollapseAllToCollapseAll();">Members</a>&nbsp;
@@ -25,9 +25,9 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Represents a serializer configuration section within a configuration file.
+Represents a configuration element containing a collection <a href="../../Contents/1/71.html">SerializerConfigurationElement</a> elements.
 <div id="ItemLocation">
-<b>Namespace:</b> <a href="../../Contents/1/5.html">Footloose.Configuration</a><br />
+<b>Namespace:</b> <a href="../../Contents/1/6.html">Footloose.Configuration</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">Footloose</a>
 </div>
 <div id="SectionHeader0" class="SectionHeader">
@@ -44,9 +44,12 @@ Syntax
 <col width="0%" />
 <col width="100%" />
 <tr>
-<td class="NoWrapTop">public class SerializerConfigurationSection :&nbsp;</td>
+<td class="NoWrapTop">public class SerializerConfigurationElementCollection :&nbsp;</td>
 <td>
-ConfigurationSection<br />
+ConfigurationElementCollection,<br />IList&lt;SerializerConfigurationElement&gt;,<br />
+ICollection&lt;SerializerConfigurationElement&gt;,<br />
+IEnumerable&lt;SerializerConfigurationElement&gt;,<br />
+IEnumerable
 </td>
 </tr>
 </table>
@@ -62,7 +65,7 @@ Members
 </div>
 
 <div id="SectionContainerDiv1" class="SectionContainer">
-<p>Click <a href="../../Contents/1/188.html">here</a> to see the list of members.</p>
+<p>Click <a href="../../Contents/1/171.html">here</a> to see the list of members.</p>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>
 <div id="Footer">

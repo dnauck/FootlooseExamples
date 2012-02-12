@@ -6,14 +6,13 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>Footloose.DataModel Namespace</title>
+<title>Footloose.Configuration.Wiring Namespace</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">Footloose.DataModel Namespace</div>
+<div id="PageTitle">Footloose.Configuration.Wiring Namespace</div>
 <div id="HeaderShortcuts">
-<a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Classes</a>&nbsp;
 <a href="#SectionHeader5" onclick="javascript: SetSectionVisibility(5, true); SetExpandCollapseAllToCollapseAll();">Interfaces</a>&nbsp;
 </div>
 <div class="DarkLine"></div>
@@ -29,71 +28,6 @@
 <div id="ItemLocation">
 <b>Assembly:</b> <a href="../../Contents/1/1.html">Footloose</a>
 </div>
-<div id="SectionHeader0" class="SectionHeader">
-<img id="SectionExpanderImg0" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(0);" />
-<span class="SectionHeader">
-<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(0);">
-Public Classes
-</span>
-</span>
-</div>
-
-<div id="SectionContainerDiv0" class="SectionContainer">
-<table class="MembersTable">
-<col width="7%" />
-<col width="38%" />
-<col width="55%" />
-<tr>
-<th>&nbsp;</th>
-<th>Name</th>
-<th>Description</th>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicClass.gif" alt="Public Class" /></td>
-<td><a href="../../Contents/2/93.html">CommunicationEndpoint</a></td>
-<td>Internal communication endpoint implementation.</td>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicClass.gif" alt="Public Class" /></td>
-<td><a href="../../Contents/2/94.html">CommunicationEndpointStatusType</a></td>
-<td>Represents the availability status of a communication endpoint send via <a href="../../Contents/1/406.html">IPresence</a> notifications.</td>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicClass.gif" alt="Public Class" /></td>
-<td><a href="../../Contents/2/95.html">DiscoFeatureComparer</a></td>
-<td>Provide a simple comparer for DiscoFeature objects.</td>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicClass.gif" alt="Public Class" /></td>
-<td><a href="../../Contents/1/431.html">EndpointIdentity</a></td>
-<td>Represents a endpoint identity.</td>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicClass.gif" alt="Public Class" /></td>
-<td><a href="../../Contents/1/430.html">EndpointIdentityDictionary</a></td>
-<td>A internal dictionary of known <a href="../../Contents/1/353.html">IEndpointIdentity</a> objects. This implementation
-            is exposed to the public through the <a href="../../Contents/2/96.html">IEndpointIdentityCollection</a> interface.</td>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicClass.gif" alt="Public Class" /></td>
-<td><a href="../../Contents/2/97.html">PresenceSubscriptionType</a></td>
-<td>Represents the state of the subscription to the <a href="../../Contents/1/406.html">IPresence</a>
-            of a <a href="../../Contents/1/353.html">IEndpointIdentity</a>.</td>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicClass.gif" alt="Public Class" /></td>
-<td><a href="../../Contents/2/98.html">SelfEndpointIdentity</a></td>
-<td>Represents the self endpoint identity.</td>
-</tr>
-</table>
-<div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 <div id="SectionHeader5" class="SectionHeader">
 <img id="SectionExpanderImg5" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(5);" />
 <span class="SectionHeader">
@@ -116,79 +50,15 @@ Public Interfaces
 <tr>
 <td class="IconColumn">
 <img src="../../GFX/PublicInterface.gif" alt="Public Interface" /></td>
-<td><a href="../../Contents/1/258.html">ICommunicationEndpoint</a></td>
-<td>Interface for a communication end point.</td>
+<td><a href="../../Contents/1/343.html">IApplicationBinder</a></td>
+<td>Interface for a class that is responsible to wire the Footloose application.</td>
 </tr>
 <tr>
 <td class="IconColumn">
 <img src="../../GFX/PublicInterface.gif" alt="Public Interface" /></td>
-<td><a href="../../Contents/2/99.html">ICorrelativeDataBase</a></td>
-<td><p>There is no summary.</p></td>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicInterface.gif" alt="Public Interface" /></td>
-<td><a href="../../Contents/1/408.html">IEndpointFeatureFindCriterion</a></td>
-<td>Criterion for a service discovery feature that could be used as constraint
-            in a <a href="../../Contents/1/436.html">IEndpointFindCriteria</a> query.</td>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicInterface.gif" alt="Public Interface" /></td>
-<td><a href="../../Contents/1/436.html">IEndpointFindCriteria</a></td>
-<td>IEndpointFindCriteria is a simplified API for retrieving <a href="../../Contents/1/258.html">ICommunicationEndpoint</a> objects
-            by using <a href="../../Contents/1/408.html">IEndpointFeatureFindCriterion</a> and Linq.</td>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicInterface.gif" alt="Public Interface" /></td>
-<td><a href="../../Contents/1/353.html">IEndpointIdentity</a></td>
-<td>Interface for a identity of a <a href="../../Contents/1/258.html">ICommunicationEndpoint</a>.</td>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicInterface.gif" alt="Public Interface" /></td>
-<td><a href="../../Contents/2/96.html">IEndpointIdentityCollection</a></td>
-<td>Public interface for a collection of <a href="../../Contents/1/353.html">IEndpointIdentity</a> objects.
-            Use this interface to enumerate through the list of known <a href="../../Contents/1/353.html">IEndpointIdentity</a> objects and
-            their <a href="../../Contents/1/258.html">ICommunicationEndpoint</a>.</td>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicInterface.gif" alt="Public Interface" /></td>
-<td><a href="../../Contents/2/100.html">IMethodCallRequest</a></td>
-<td><p>There is no summary.</p></td>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicInterface.gif" alt="Public Interface" /></td>
-<td><a href="../../Contents/2/101.html">IMethodResponse</a></td>
-<td><p>There is no summary.</p></td>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicInterface.gif" alt="Public Interface" /></td>
-<td><a href="../../Contents/2/102.html">IMethodResponse&lt;T&gt;</a></td>
-<td><p>There is no summary.</p></td>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicInterface.gif" alt="Public Interface" /></td>
-<td><a href="../../Contents/2/103.html">IMethodResponseRequest</a></td>
-<td><p>There is no summary.</p></td>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicInterface.gif" alt="Public Interface" /></td>
-<td><a href="../../Contents/1/406.html">IPresence</a></td>
-<td>A presence information contains network availability information from a <a href="../../Contents/1/258.html">ICommunicationEndpoint</a>.
-            It'll be send to all subscribed endpoints upon changes, like connect, disconnect or priority/availability changes.</td>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicInterface.gif" alt="Public Interface" /></td>
-<td><a href="../../Contents/1/478.html">ISelfEndpointIdentity</a></td>
-<td>Interface to interact with the self identity of this service node.</td>
+<td><a href="../../Contents/1/344.html">ITypeMetadata</a></td>
+<td>Interface with strongly typed metadata for Autofac configuration,
+            add a <span class="PseudoLink">System.Type</span> information for registered components.</td>
 </tr>
 </table>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>

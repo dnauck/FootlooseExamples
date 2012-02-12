@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>EndpointIdentityManagerBase.UnsubscribeFrom Method (Uri)</title>
+<title>EndpointIdentityManagerBase.GetEndpointUri Method (Uri, string)</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">EndpointIdentityManagerBase.UnsubscribeFrom Method (Uri)</div>
+<div id="PageTitle">EndpointIdentityManagerBase.GetEndpointUri Method (Uri, string)</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 </div>
@@ -24,10 +24,12 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Unsubscribe from the identity's presence information.
+Gets the <span class="PseudoLink">System.Uri</span> from the <a href="../../Contents/1/259.html">ICommunicationEndpoint</a>
+            with the specified <span class="PseudoLink">System.Uri</span> of it's <a href="../../Contents/1/357.html">IEndpointIdentity</a>
+            and the endpoint identifier.
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/1/352.html">EndpointIdentityManagerBase</a><br />
-<b>Namespace:</b> <a href="../../Contents/1/3.html">Footloose</a><br />
+<b>Declaring type:</b> <a href="../../Contents/1/356.html">EndpointIdentityManagerBase</a><br />
+<b>Namespace:</b> <a href="../../Contents/1/4.html">Footloose</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">Footloose</a>
 </div>
 <div id="SectionHeader0" class="SectionHeader">
@@ -40,13 +42,22 @@ Syntax
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public abstract void UnsubscribeFrom (
-        Uri <i>to</i>
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public abstract Uri GetEndpointUri (
+        Uri <i>identityUri</i>,
+        string <i>endpointIdentifier</i>
 ) </pre></td></tr></table>
 <div class="CommentHeader">Parameters</div>
-<div class="CommentParameterName">to</div>
+<div class="CommentParameterName">identityUri</div>
 <div class="ParameterCommentContainer">
-The uri of the <a href="../../Contents/1/353.html">IEndpointIdentity</a>.
+The <span class="PseudoLink">System.Uri</span> of the endpoint's <a href="../../Contents/1/357.html">IEndpointIdentity</a>
+</div>
+<div class="CommentParameterName">endpointIdentifier</div>
+<div class="ParameterCommentContainer">
+The endpoint identifier.
+</div>
+<div class="CommentHeader">Return Value</div>
+<div class="ParameterCommentContainer">
+The <span class="PseudoLink">System.Uri</span> of the <a href="../../Contents/1/259.html">ICommunicationEndpoint</a>.
 </div>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>
