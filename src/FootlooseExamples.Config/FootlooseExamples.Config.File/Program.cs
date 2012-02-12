@@ -15,8 +15,10 @@ namespace FootlooseExamples.Config.File
             // create FootlooseConnection instance from App.config settings
             ServiceLocator.SetLocatorProvider(() => serviceLocator);
             var footlooseConnection = Footloose.FootlooseConnectionFactory.CreateFootlooseConnection();
+            footlooseConnection.ConnectionStateChanged +=
+                (sender, eventArgs) =>
+                Console.WriteLine("Footloose connection state changed to: " + eventArgs.ConnectionState);
             footlooseConnection.Open();
-            Console.WriteLine("Footloose is connected: " + footlooseConnection.IsConnected);
             Console.ReadLine();
         }
     }

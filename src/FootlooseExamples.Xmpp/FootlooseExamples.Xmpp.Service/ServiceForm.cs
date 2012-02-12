@@ -12,6 +12,7 @@ using Footloose.Configuration;
 using Footloose.Configuration.Fluent;
 using Footloose.DataModel;
 using FootlooseExamples.Xmpp.Contracts;
+using ConnectionState = Footloose.ConnectionState;
 
 namespace FootlooseExamples.Xmpp.Service
 {
@@ -39,19 +40,23 @@ namespace FootlooseExamples.Xmpp.Service
                 var endpointId = EndpointIdTextBox.Text;
                 var priority = Convert.ToInt32(PriorityNumericUpDown.Value);
                 footlooseConnection = SetupFootlooseConnection(credentials, serverAddress, priority, endpointId);
+                footlooseConnection.ConnectionStateChanged += FootlooseConnection_ConnectionStateChanged;
 
                 EndpointIdentityView.SetEndpointIdentityManager(footlooseConnection.EndpointIdentityManager);
             }
 
             footlooseConnection.Open();
+        }
 
-            SetControlStatus(true);
+        void FootlooseConnection_ConnectionStateChanged(object sender, ConnectionStateEventArgs e)
+        {
+            SetControlStatus(e.ConnectionState == ConnectionState.Connected);
+            Text = "Footloose Service - Connection Status is " + e.ConnectionState;
         }
 
         private void DisconnectButton_Click(object sender, EventArgs e)
         {
             footlooseConnection.Close();
-            SetControlStatus(false);
         }
 
         private void SetControlStatus(bool connected)
@@ -126,7 +131,7 @@ namespace FootlooseExamples.Xmpp.Service
 
         private void SendPresenceButton_Click(object sender, EventArgs e)
         {
-            if(footlooseConnection != null && footlooseConnection.IsConnected)
+            if(footlooseConnection != null && footlooseConnection.ConnectionState == ConnectionState.Connected)
             {
                 var status = GetStatus();
                 var statusInfo = StatusInfoTextBox.Text;
