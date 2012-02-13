@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>IEndpointIdentityManagerInternal.SendSelfPresence Method (Presence)</title>
+<title>IEndpointIdentityManagerInternal.NotifyServiceDiscoveryInfoReceived Method (string, DiscoInfo)</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">IEndpointIdentityManagerInternal.SendSelfPresence Method (Presence)</div>
+<div id="PageTitle">IEndpointIdentityManagerInternal.NotifyServiceDiscoveryInfoReceived Method (string, DiscoInfo)</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 </div>
@@ -24,7 +24,8 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Send the <a href="../../Contents/1/438.html">Presence</a> of this instance to all subscribed endpoints.
+Notify this <a href="../../Contents/1/372.html">IEndpointIdentityManager</a> when a new <a href="../../Contents/1/434.html">DiscoInfo</a>
+            from another endpoint received.
 <div id="ItemLocation">
 <b>Declaring type:</b> <a href="../../Contents/1/373.html">IEndpointIdentityManagerInternal</a><br />
 <b>Namespace:</b> <a href="../../Contents/1/4.html">Footloose</a><br />
@@ -40,13 +41,18 @@ Syntax
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public abstract void SendSelfPresence (
-        Presence <i>presence</i>
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public abstract void NotifyServiceDiscoveryInfoReceived (
+        string <i>caps</i>,
+        DiscoInfo <i>discoInfo</i>
 ) </pre></td></tr></table>
 <div class="CommentHeader">Parameters</div>
-<div class="CommentParameterName">presence</div>
+<div class="CommentParameterName">caps</div>
 <div class="ParameterCommentContainer">
-The <a href="../../Contents/1/438.html">Presence</a> of this instance.
+The capabilities version the disco info belongs to.
+</div>
+<div class="CommentParameterName">discoInfo</div>
+<div class="ParameterCommentContainer">
+The requested disco information.
 </div>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>

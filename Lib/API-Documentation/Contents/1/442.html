@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>EndpointIdentityManagerBase.RequestDiscoInfo Method (Uri, string)</title>
+<title>EndpointIdentityManagerBase.UpdateEndpointIdentity Method (Uri, string, IEnumerable&lt;string&gt;)</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">EndpointIdentityManagerBase.RequestDiscoInfo Method (Uri, string)</div>
+<div id="PageTitle">EndpointIdentityManagerBase.UpdateEndpointIdentity Method (Uri, string, IEnumerable&lt;string&gt;)</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 </div>
@@ -24,7 +24,7 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Request asynchronously service discovery information from the given service with the specified capabilities.
+Updates the name and list of groups of the <a href="../../Contents/1/357.html">IEndpointIdentity</a> with the specified <span class="PseudoLink">System.Uri</span>.
 <div id="ItemLocation">
 <b>Declaring type:</b> <a href="../../Contents/1/356.html">EndpointIdentityManagerBase</a><br />
 <b>Namespace:</b> <a href="../../Contents/1/4.html">Footloose</a><br />
@@ -40,18 +40,23 @@ Syntax
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">protected abstract void RequestDiscoInfo (
-        Uri <i>to</i>,
-        string <i>capabilities</i>
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public virtual void UpdateEndpointIdentity (
+        Uri <i>uri</i>,
+        string <i>name</i>,
+        IEnumerable&lt;string&gt; <i>groups</i>
 ) </pre></td></tr></table>
 <div class="CommentHeader">Parameters</div>
-<div class="CommentParameterName">to</div>
+<div class="CommentParameterName">uri</div>
 <div class="ParameterCommentContainer">
-The service to request the disco information from.
+The <span class="PseudoLink">System.Uri</span> of the <a href="../../Contents/1/357.html">IEndpointIdentity</a>.
 </div>
-<div class="CommentParameterName">capabilities</div>
+<div class="CommentParameterName">name</div>
 <div class="ParameterCommentContainer">
-The provided capabilities of the service.
+The name of the <a href="../../Contents/1/357.html">IEndpointIdentity</a>.
+</div>
+<div class="CommentParameterName">groups</div>
+<div class="ParameterCommentContainer">
+The list of groups the <a href="../../Contents/1/357.html">IEndpointIdentity</a> belongs to.
 </div>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>

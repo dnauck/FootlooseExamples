@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>IEndpointIdentityManagerInternal.NotifyPresenceUnsubscribeReceived Method (Uri)</title>
+<title>IEndpointIdentityManagerInternal.NotifyPresenceNotificationReceived Method (IPresence)</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">IEndpointIdentityManagerInternal.NotifyPresenceUnsubscribeReceived Method (Uri)</div>
+<div id="PageTitle">IEndpointIdentityManagerInternal.NotifyPresenceNotificationReceived Method (IPresence)</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 </div>
@@ -24,7 +24,7 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Notify this <a href="../../Contents/1/372.html">IEndpointIdentityManager</a> when a new <a href="../../Contents/1/432.html">PresenceUnsubscribe</a> message
+Notify this <a href="../../Contents/1/372.html">IEndpointIdentityManager</a> when a new <a href="../../Contents/1/420.html">IPresence</a>
             from another endpoint received.
 <div id="ItemLocation">
 <b>Declaring type:</b> <a href="../../Contents/1/373.html">IEndpointIdentityManagerInternal</a><br />
@@ -41,13 +41,13 @@ Syntax
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public abstract void NotifyPresenceUnsubscribeReceived (
-        Uri <i>from</i>
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public abstract void NotifyPresenceNotificationReceived (
+        IPresence <i>presence</i>
 ) </pre></td></tr></table>
 <div class="CommentHeader">Parameters</div>
-<div class="CommentParameterName">from</div>
+<div class="CommentParameterName">presence</div>
 <div class="ParameterCommentContainer">
-The <span class="PseudoLink">System.Uri</span> of the sender.
+The <a href="../../Contents/1/420.html">IPresence</a> notification from another endpoint.
 </div>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>

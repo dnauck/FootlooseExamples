@@ -6,14 +6,14 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>IAuthorizationManager Interface Members</title>
+<title>IAuthorizationProvider.ValidateMethodCallRequest Method (Uri, IMethodCallRequest)</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">IAuthorizationManager Interface Members</div>
+<div id="PageTitle">IAuthorizationProvider.ValidateMethodCallRequest Method (Uri, IMethodCallRequest)</div>
 <div id="HeaderShortcuts">
-<a href="#SectionHeader35" onclick="javascript: SetSectionVisibility(35, true); SetExpandCollapseAllToCollapseAll();">Methods</a>&nbsp;
+<a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 </div>
 <div class="DarkLine"></div>
 <div class="LightLine"></div>
@@ -24,47 +24,40 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Represents a interface for a class that validates requests for method calls
-            and method responses.
+Validates if the <a href="../../Contents/2/52.html">IMethodCallRequest</a> from the specified sender
+            is authorized.
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/2/331.html">IAuthorizationManager</a><br />
+<b>Declaring type:</b> <a href="../../Contents/1/88.html">IAuthorizationProvider</a><br />
 <b>Namespace:</b> <a href="../../Contents/1/12.html">Footloose.Security</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">Footloose</a>
 </div>
-<div id="SectionHeader35" class="SectionHeader">
-<img id="SectionExpanderImg35" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(35);" />
+<div id="SectionHeader0" class="SectionHeader">
+<img id="SectionExpanderImg0" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(0);" />
 <span class="SectionHeader">
-<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(35);">
-Public Methods
+<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(0);">
+Syntax
 </span>
 </span>
 </div>
 
-<div id="SectionContainerDiv35" class="SectionContainer">
-<table class="MembersTable">
-<col width="7%" />
-<col width="38%" />
-<col width="55%" />
-<tr>
-<th>&nbsp;</th>
-<th>Name</th>
-<th>Description</th>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
-<td><a href="../../Contents/2/352.html">ValidateMethodCallRequest</a></td>
-<td>Validates if the <a href="../../Contents/2/49.html">IMethodCallRequest</a> from the specified sender
-            is authorized.</td>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
-<td><a href="../../Contents/2/353.html">ValidateMethodResponseRequest</a></td>
-<td>Validates if the <a href="../../Contents/2/51.html">IMethodResponseRequest</a> from the specified sender
-            is authorized.</td>
-</tr>
-</table>
+<div id="SectionContainerDiv0" class="SectionContainer">
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public abstract bool ValidateMethodCallRequest (
+        Uri <i>from</i>,
+        IMethodCallRequest <i>methodCallRequest</i>
+) </pre></td></tr></table>
+<div class="CommentHeader">Parameters</div>
+<div class="CommentParameterName">from</div>
+<div class="ParameterCommentContainer">
+The <span class="PseudoLink">System.Uri</span> of the sender.
+</div>
+<div class="CommentParameterName">methodCallRequest</div>
+<div class="ParameterCommentContainer">
+The <a href="../../Contents/2/52.html">IMethodCallRequest</a>.
+</div>
+<div class="CommentHeader">Return Value</div>
+<div class="ParameterCommentContainer">
+True if the <a href="../../Contents/2/52.html">IMethodCallRequest</a> is authorized; otherwise false.
+</div>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>
 <div id="Footer">

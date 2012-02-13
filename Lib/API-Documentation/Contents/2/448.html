@@ -6,15 +6,14 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>IMessageDispatcher.Dispatch Method (Message)</title>
+<title>IMessageDispatcher Interface Members</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">IMessageDispatcher.Dispatch Method (Message)</div>
+<div id="PageTitle">IMessageDispatcher Interface Members</div>
 <div id="HeaderShortcuts">
-<a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
-<a href="#SectionHeader1" onclick="javascript: SetSectionVisibility(1, true); SetExpandCollapseAllToCollapseAll();">Exceptions</a>&nbsp;
+<a href="#SectionHeader35" onclick="javascript: SetSectionVisibility(35, true); SetExpandCollapseAllToCollapseAll();">Methods</a>&nbsp;
 </div>
 <div class="DarkLine"></div>
 <div class="LightLine"></div>
@@ -25,52 +24,38 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Dispatches a incoming message to a registered <a href="../../Contents/2/275.html">IMessageHandler</a> according to the
-            messages's body type.
+This interface defines a central dispatcher for incoming <a href="../../Contents/2/269.html">Message</a> objects, dispatching them to
+            registered <a href="../../Contents/2/277.html">IMessageHandler</a>.
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/2/276.html">IMessageDispatcher</a><br />
+<b>Declaring type:</b> <a href="../../Contents/2/278.html">IMessageDispatcher</a><br />
 <b>Namespace:</b> <a href="../../Contents/1/15.html">Footloose.TransportChannels</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">Footloose</a>
 </div>
-<div id="SectionHeader0" class="SectionHeader">
-<img id="SectionExpanderImg0" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(0);" />
+<div id="SectionHeader35" class="SectionHeader">
+<img id="SectionExpanderImg35" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(35);" />
 <span class="SectionHeader">
-<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(0);">
-Syntax
+<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(35);">
+Public Methods
 </span>
 </span>
 </div>
 
-<div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public abstract void Dispatch (
-        Message <i>message</i>
-) </pre></td></tr></table>
-<div class="CommentHeader">Parameters</div>
-<div class="CommentParameterName">message</div>
-<div class="ParameterCommentContainer">
-The incoming <a href="../../Contents/2/266.html">Message</a> object to dispatch.
-</div>
-<div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
-<div id="SectionHeader1" class="SectionHeader">
-<img id="SectionExpanderImg1" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(1);" />
-<span class="SectionHeader">
-<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(1);">
-Exceptions
-</span>
-</span>
-</div>
-
-<div id="SectionContainerDiv1" class="SectionContainer">
+<div id="SectionContainerDiv35" class="SectionContainer">
 <table class="MembersTable">
-<col width="25%" />
-<col width="75%" />
+<col width="7%" />
+<col width="38%" />
+<col width="55%" />
 <tr>
-<th>Exception type</th>
-<th>Condition</th>
+<th>&nbsp;</th>
+<th>Name</th>
+<th>Description</th>
 </tr>
 <tr>
-<td><a href="../../Contents/2/396.html">MessageHandlerNotFoundException</a></td>
-<td><a href="../../Contents/2/275.html">IMessageHandler</a> for specific <a href="../../Contents/2/266.html">Message</a> is not found.</td>
+<td class="IconColumn">
+<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
+<td><a href="../../Contents/2/449.html">Dispatch</a></td>
+<td>Dispatches a incoming message to a registered <a href="../../Contents/2/277.html">IMessageHandler</a> according to the
+            messages's body type.</td>
 </tr>
 </table>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>

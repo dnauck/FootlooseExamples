@@ -6,14 +6,14 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>NotAuthorizedException Class Members</title>
+<title>DefaultAuthorizationProvider.ValidateMethodCallRequest Method (Uri, IMethodCallRequest)</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">NotAuthorizedException Class Members</div>
+<div id="PageTitle">DefaultAuthorizationProvider.ValidateMethodCallRequest Method (Uri, IMethodCallRequest)</div>
 <div id="HeaderShortcuts">
-<a href="#SectionHeader30" onclick="javascript: SetSectionVisibility(30, true); SetExpandCollapseAllToCollapseAll();">Constructors</a>&nbsp;
+<a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 </div>
 <div class="DarkLine"></div>
 <div class="LightLine"></div>
@@ -24,66 +24,40 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Represents errors that occur when a <a href="../../Contents/2/49.html">IMethodCallRequest</a> or
-            <a href="../../Contents/2/51.html">IMethodResponseRequest</a> was not authorized.
+Validates if the <a href="../../Contents/2/52.html">IMethodCallRequest</a> from the specified sender
+            is authorized.
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/2/330.html">NotAuthorizedException</a><br />
+<b>Declaring type:</b> <a href="../../Contents/1/67.html">DefaultAuthorizationProvider</a><br />
 <b>Namespace:</b> <a href="../../Contents/1/12.html">Footloose.Security</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">Footloose</a>
 </div>
-<div id="SectionHeader30" class="SectionHeader">
-<img id="SectionExpanderImg30" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(30);" />
+<div id="SectionHeader0" class="SectionHeader">
+<img id="SectionExpanderImg0" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(0);" />
 <span class="SectionHeader">
-<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(30);">
-Public Constructors</span>
- <span class="SeeAlsoInSectionHeader">(see also: <a href="#SectionHeader32" onclick="javascript: SetSectionVisibility(32, true); SetExpandCollapseAllToCollapseAll();">Protected</a> Constructors)</span>
-</span>
-</div>
-
-<div id="SectionContainerDiv30" class="SectionContainer">
-<table class="MembersTable">
-<col width="7%" />
-<col width="38%" />
-<col width="55%" />
-<tr>
-<th>&nbsp;</th>
-<th>Name</th>
-<th>Description</th>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicMethod.gif" alt="Public Method" /></td>
-<td><a href="../../Contents/2/341.html">NotAuthorizedException</a></td>
-<td>Overloaded. Initializes a new instance of the <a href="../../Contents/2/330.html">NotAuthorizedException</a> class.</td>
-</tr>
-</table>
-<div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
-<div id="SectionHeader32" class="SectionHeader">
-<img id="SectionExpanderImg32" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(32);" />
-<span class="SectionHeader">
-<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(32);">
-Protected Constructors
+<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(0);">
+Syntax
 </span>
 </span>
 </div>
 
-<div id="SectionContainerDiv32" class="SectionContainer">
-<table class="MembersTable">
-<col width="7%" />
-<col width="38%" />
-<col width="55%" />
-<tr>
-<th>&nbsp;</th>
-<th>Name</th>
-<th>Description</th>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/ProtectedMethod.gif" alt="Protected Method" /></td>
-<td><a href="../../Contents/2/342.html">NotAuthorizedException</a></td>
-<td>Sets the <span class="PseudoLink">System.Runtime.Serialization.SerializationInfo</span> with information about the exception.</td>
-</tr>
-</table>
+<div id="SectionContainerDiv0" class="SectionContainer">
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public bool ValidateMethodCallRequest (
+        Uri <i>from</i>,
+        IMethodCallRequest <i>methodCallRequest</i>
+) </pre></td></tr></table>
+<div class="CommentHeader">Parameters</div>
+<div class="CommentParameterName">from</div>
+<div class="ParameterCommentContainer">
+The <span class="PseudoLink">System.Uri</span> of the sender.
+</div>
+<div class="CommentParameterName">methodCallRequest</div>
+<div class="ParameterCommentContainer">
+The <a href="../../Contents/2/52.html">IMethodCallRequest</a>.
+</div>
+<div class="CommentHeader">Return Value</div>
+<div class="ParameterCommentContainer">
+True if the <a href="../../Contents/2/52.html">IMethodCallRequest</a> is authorized; otherwise false.
+</div>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>
 <div id="Footer">

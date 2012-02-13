@@ -358,13 +358,21 @@
             true if the class has been disposed of; otherwise, false. 
             </summary>
         </member>
-        <member name="M:Footloose.TransportChannels.Xmpp.XmppEndpointIdentityManager.#ctor(Footloose.DataModel.EndpointIdentityDictionary,Footloose.DataModel.SelfEndpointIdentity,System.Func{System.Uri,Footloose.DataModel.EndpointIdentity})">
+        <member name="M:Footloose.TransportChannels.Xmpp.XmppEndpointIdentityManager.#ctor(Footloose.DataModel.EndpointIdentityDictionary,Footloose.DataModel.SelfEndpointIdentity,System.Func{System.Uri,Footloose.DataModel.EndpointIdentity},System.Lazy{Footloose.TransportChannels.IMessageOriginator},Footloose.Security.Cryptography.IHashAlgorithm)">
             <summary>
             Initializes a new instance of the <see cref="T:Footloose.TransportChannels.Xmpp.XmppEndpointIdentityManager"/> class.
             </summary>
             <param name="endpointIdentityDictionary">The <see cref="T:Footloose.DataModel.EndpointIdentityDictionary"/>.</param>
             <param name="selfEndpointIdentity">The <see cref="P:Footloose.EndpointIdentityManagerBase.SelfEndpointIdentity"/>.</param>
             <param name="endpointIdentityFactory">The <see cref="T:Footloose.DataModel.EndpointIdentity"/> factory.</param>
+            <param name="orginator">The <see cref="T:Footloose.TransportChannels.IMessageOriginator"/>.</param>
+            <param name="hashAlgorithm">The <see cref="T:Footloose.Security.Cryptography.IHashAlgorithm"/>.</param>
+        </member>
+        <member name="M:Footloose.TransportChannels.Xmpp.XmppEndpointIdentityManager.SendSelfPresence(Footloose.DataModel.DataTransferObjects.Presence)">
+            <summary>
+            Send the <see cref="T:Footloose.DataModel.DataTransferObjects.Presence"/> of this instance to all subscribed endpoints.
+            </summary>
+            <param name="presence">The <see cref="T:Footloose.DataModel.DataTransferObjects.Presence"/> of this instance.</param>
         </member>
         <member name="M:Footloose.TransportChannels.Xmpp.XmppEndpointIdentityManager.GetIdentityUri(System.Uri)">
             <summary>

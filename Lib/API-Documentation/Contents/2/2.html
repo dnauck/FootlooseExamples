@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>IEndpointIdentityManagerInternal.NotifyServiceDiscoveryInfoReceived Method (string, DiscoInfo)</title>
+<title>IEndpointIdentityManagerInternal.NotifyPresenceSubscriptionRequestReceived Method (Uri, PresenceSubscriptionRequest, out bool)</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">IEndpointIdentityManagerInternal.NotifyServiceDiscoveryInfoReceived Method (string, DiscoInfo)</div>
+<div id="PageTitle">IEndpointIdentityManagerInternal.NotifyPresenceSubscriptionRequestReceived Method (Uri, PresenceSubscriptionRequest, out bool)</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 </div>
@@ -24,7 +24,7 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Notify this <a href="../../Contents/1/372.html">IEndpointIdentityManager</a> when a new <a href="../../Contents/1/434.html">DiscoInfo</a>
+Notify this <a href="../../Contents/1/372.html">IEndpointIdentityManager</a> when a new <a href="../../Contents/1/428.html">PresenceSubscriptionRequest</a>
             from another endpoint received.
 <div id="ItemLocation">
 <b>Declaring type:</b> <a href="../../Contents/1/373.html">IEndpointIdentityManagerInternal</a><br />
@@ -41,18 +41,23 @@ Syntax
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public abstract void NotifyServiceDiscoveryInfoReceived (
-        string <i>caps</i>,
-        DiscoInfo <i>discoInfo</i>
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public abstract void NotifyPresenceSubscriptionRequestReceived (
+        Uri <i>from</i>,
+        PresenceSubscriptionRequest <i>presenceSubscriptionRequest</i>,
+        out bool <i>approved</i>
 ) </pre></td></tr></table>
 <div class="CommentHeader">Parameters</div>
-<div class="CommentParameterName">caps</div>
+<div class="CommentParameterName">from</div>
 <div class="ParameterCommentContainer">
-The capabilities version the disco info belongs to.
+The <span class="PseudoLink">System.Uri</span> of the sender.
 </div>
-<div class="CommentParameterName">discoInfo</div>
+<div class="CommentParameterName">presenceSubscriptionRequest</div>
 <div class="ParameterCommentContainer">
-The requested disco information.
+The <a href="../../Contents/1/428.html">PresenceSubscriptionRequest</a>.
+</div>
+<div class="CommentParameterName">approved</div>
+<div class="ParameterCommentContainer">
+A value indicating if the subscription request was approved.
 </div>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>

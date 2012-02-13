@@ -107,7 +107,7 @@ Public Methods</span>
 </tr>
 <tr>
 <td class="IconColumn">
-<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
+<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Virtual.gif" alt="Virtual" /></td>
 <td><a href="../../Contents/1/419.html">AddEndpointIdentity</a></td>
 <td>Adds a new <a href="../../Contents/1/357.html">IEndpointIdentity</a> with the specified <span class="PseudoLink">System.Uri</span> and name
             and list of groups to the collection
@@ -180,40 +180,47 @@ Public Methods</span>
 </tr>
 <tr>
 <td class="IconColumn">
-<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
+<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Virtual.gif" alt="Virtual" /></td>
 <td><a href="../../Contents/1/435.html">RemoveEndpointIdentity</a></td>
 <td>Removes the <a href="../../Contents/1/357.html">IEndpointIdentity</a> with the specified <span class="PseudoLink">System.Uri</span> from the collection
             and unsubcribe from the <a href="../../Contents/1/420.html">IPresence</a> of the <a href="../../Contents/1/357.html">IEndpointIdentity</a>.</td>
 </tr>
 <tr>
 <td class="IconColumn">
-<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
+<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Virtual.gif" alt="Virtual" /></td>
 <td><a href="../../Contents/1/436.html">RevokeSubscriptionFrom</a></td>
 <td>Cancel and revoke the identity's subscription to this instance's presence information.</td>
 </tr>
 <tr>
 <td class="IconColumn">
-<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
+<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Virtual.gif" alt="Virtual" /></td>
 <td><a href="../../Contents/1/437.html">SendSelfPresence</a></td>
 <td>Send the <a href="../../Contents/1/438.html">Presence</a> of this instance to all subscribed endpoints.</td>
 </tr>
 <tr>
 <td class="IconColumn">
-<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
+<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Virtual.gif" alt="Virtual" /></td>
 <td><a href="../../Contents/1/439.html">SendSubscribtionRequest</a></td>
 <td>Sends a subscription request with the specified reason
             to permanently subscribe to a identity's presence information.</td>
 </tr>
 <tr>
 <td class="IconColumn">
-<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
-<td><a href="../../Contents/1/440.html">UnsubscribeFrom</a></td>
+<img src="../../GFX/PublicMethod.gif" alt="Public Method" /></td>
+<td><a href="../../Contents/1/440.html">SetDiscoInfo</a></td>
+<td>Sets the service discovery information the transport channel should
+            send on discovery requests.</td>
+</tr>
+<tr>
+<td class="IconColumn">
+<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Virtual.gif" alt="Virtual" /></td>
+<td><a href="../../Contents/1/441.html">UnsubscribeFrom</a></td>
 <td>Unsubscribe from the identity's presence information.</td>
 </tr>
 <tr>
 <td class="IconColumn">
-<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
-<td><a href="../../Contents/1/441.html">UpdateEndpointIdentity</a></td>
+<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Virtual.gif" alt="Virtual" /></td>
+<td><a href="../../Contents/1/442.html">UpdateEndpointIdentity</a></td>
 <td>Updates the name and list of groups of the <a href="../../Contents/1/357.html">IEndpointIdentity</a> with the specified <span class="PseudoLink">System.Uri</span>.</td>
 </tr>
 </table>
@@ -239,8 +246,8 @@ Protected Methods
 </tr>
 <tr>
 <td class="IconColumn">
-<img src="../../GFX/ProtectedMethod.gif" alt="Protected Method" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
-<td><a href="../../Contents/1/442.html">RequestDiscoInfo</a></td>
+<img src="../../GFX/ProtectedMethod.gif" alt="Protected Method" />&nbsp;<img src="../../GFX/Virtual.gif" alt="Virtual" /></td>
+<td><a href="../../Contents/1/443.html">RequestDiscoInfo</a></td>
 <td>Request asynchronously service discovery information from the given service with the specified capabilities.</td>
 </tr>
 </table>
@@ -267,21 +274,21 @@ Public Properties
 <tr>
 <td class="IconColumn">
 <img src="../../GFX/PublicProperty.gif" alt="Public Property" /></td>
-<td><a href="../../Contents/1/443.html">Capabilities</a></td>
+<td><a href="../../Contents/1/444.html">Capabilities</a></td>
 <td>Gets a list of discovered service capabilities.</td>
 </tr>
 <tr>
 <td class="IconColumn">
 <img src="../../GFX/PublicProperty.gif" alt="Public Property" /></td>
-<td><a href="../../Contents/1/444.html">EndpointIdentities</a></td>
-<td>Gets a <a href="../../Contents/1/445.html">EndpointIdentityDictionary</a> of <a href="../../Contents/1/446.html">EndpointIdentity</a> objects
+<td><a href="../../Contents/1/445.html">EndpointIdentities</a></td>
+<td>Gets a <a href="../../Contents/1/446.html">EndpointIdentityDictionary</a> of <a href="../../Contents/1/447.html">EndpointIdentity</a> objects
             for internal interaction.</td>
 </tr>
 <tr>
 <td class="IconColumn">
 <img src="../../GFX/PublicProperty.gif" alt="Public Property" /></td>
-<td><a href="../../Contents/1/447.html">SelfEndpointIdentity</a></td>
-<td>Returns an instance of <a href="../../Contents/1/447.html">SelfEndpointIdentity</a> for
+<td><a href="../../Contents/1/448.html">SelfEndpointIdentity</a></td>
+<td>Returns an instance of <a href="../../Contents/1/448.html">SelfEndpointIdentity</a> for
             internal interaction with the endpoint of this service node.</td>
 </tr>
 </table>
@@ -308,19 +315,19 @@ Public Events
 <tr>
 <td class="IconColumn">
 <img src="../../GFX/PublicEvent.gif" alt="Public Event" /></td>
-<td><a href="../../Contents/1/448.html">PresenceNotificationReceived</a></td>
+<td><a href="../../Contents/1/449.html">PresenceNotificationReceived</a></td>
 <td>Event that occurs when a <a href="../../Contents/1/420.html">IPresence</a> notification received.</td>
 </tr>
 <tr>
 <td class="IconColumn">
 <img src="../../GFX/PublicEvent.gif" alt="Public Event" /></td>
-<td><a href="../../Contents/1/449.html">PresenceSubscriptionRequestReceived</a></td>
+<td><a href="../../Contents/1/450.html">PresenceSubscriptionRequestReceived</a></td>
 <td>Event that occurs when a new <a href="../../Contents/1/420.html">IPresence</a> subscription requests received.</td>
 </tr>
 <tr>
 <td class="IconColumn">
 <img src="../../GFX/PublicEvent.gif" alt="Public Event" /></td>
-<td><a href="../../Contents/1/450.html">PresenceSubscriptionResponseReceived</a></td>
+<td><a href="../../Contents/1/451.html">PresenceSubscriptionResponseReceived</a></td>
 <td>Event that occurs when a new <a href="../../Contents/1/420.html">IPresence</a> subscription response received.</td>
 </tr>
 </table>

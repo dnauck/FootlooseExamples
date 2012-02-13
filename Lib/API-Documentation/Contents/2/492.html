@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>RemotingTransportChannel.ServiceUri Property </title>
+<title>AmqpTransportChannelConfigurationElement.Port Property </title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">RemotingTransportChannel.ServiceUri Property </div>
+<div id="PageTitle">AmqpTransportChannelConfigurationElement.Port Property </div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 </div>
@@ -24,11 +24,11 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Gets the Uri of this service node.
+Gets or sets the AMQP broker port to connect. Default is 5672.
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/1/269.html">RemotingTransportChannel</a><br />
-<b>Namespace:</b> <a href="../../Contents/1/16.html">Footloose.TransportChannels.Remoting</a><br />
-<b>Assembly:</b> <a href="../../Contents/1/1.html">Footloose</a>
+<b>Declaring type:</b> <a href="../../Contents/2/488.html">AmqpTransportChannelConfigurationElement</a><br />
+<b>Namespace:</b> <a href="../../Contents/2/485.html">Footloose.Configuration</a><br />
+<b>Assembly:</b> <a href="../../Contents/1/2.html">Footloose.Amqp</a>
 </div>
 <div id="SectionHeader0" class="SectionHeader">
 <img id="SectionExpanderImg0" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(0);" />
@@ -40,7 +40,7 @@ Syntax
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public override Uri ServiceUri { get; }</pre></td></tr></table>
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public int Port { get; set; }</pre></td></tr></table>
 <div class="CommentHeader">Property Value</div>
 <div class="ParameterCommentContainer">
 <p>There is no description.</p>

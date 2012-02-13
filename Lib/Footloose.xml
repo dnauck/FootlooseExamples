@@ -3755,13 +3755,15 @@
             Abstract base class that manages <see cref="T:Footloose.DataModel.IEndpointIdentity"/> objects.
             </summary>
         </member>
-        <member name="M:Footloose.EndpointIdentityManagerBase.#ctor(Footloose.DataModel.EndpointIdentityDictionary,Footloose.DataModel.SelfEndpointIdentity,System.Func{System.Uri,Footloose.DataModel.EndpointIdentity})">
+        <member name="M:Footloose.EndpointIdentityManagerBase.#ctor(Footloose.DataModel.EndpointIdentityDictionary,Footloose.DataModel.SelfEndpointIdentity,System.Func{System.Uri,Footloose.DataModel.EndpointIdentity},System.Lazy{Footloose.TransportChannels.IMessageOriginator},Footloose.Security.Cryptography.IHashAlgorithm)">
             <summary>
             Initializes a new instance of the <see cref="T:Footloose.EndpointIdentityManagerBase"/> class.
             </summary>
             <param name="endpointIdentityDictionary">The <see cref="T:Footloose.DataModel.EndpointIdentityDictionary"/>.</param>
             <param name="selfEndpointIdentity">The <see cref="P:Footloose.EndpointIdentityManagerBase.SelfEndpointIdentity"/>.</param>
             <param name="endpointIdentityFactory">The <see cref="T:Footloose.DataModel.EndpointIdentity"/> factory.</param>
+            <param name="orginator">The <see cref="T:Footloose.TransportChannels.IMessageOriginator"/>.</param>
+            <param name="hashAlgorithm">The <see cref="T:Footloose.Security.Cryptography.IHashAlgorithm"/>.</param>
         </member>
         <member name="M:Footloose.EndpointIdentityManagerBase.Find">
             <summary>
@@ -3901,6 +3903,13 @@
             </summary>
             <param name="to">The service to request the disco information from.</param>
             <param name="capabilities">The provided capabilities of the service.</param>
+        </member>
+        <member name="M:Footloose.EndpointIdentityManagerBase.SetDiscoInfo(Footloose.DataModel.DataTransferObjects.DiscoInfo)">
+            <summary>
+            Sets the service discovery information the transport channel should
+            send on discovery requests.
+            </summary>
+            <param name="discoInfo">Service discovery information for this service node.</param>
         </member>
         <member name="E:Footloose.EndpointIdentityManagerBase.PresenceNotificationReceived">
             <summary>
@@ -5682,67 +5691,6 @@
             <param name="identityUri">The <see cref="T:System.Uri"/> of the endpoint's <see cref="T:Footloose.DataModel.IEndpointIdentity"/></param>
             <param name="endpointIdentifier">The endpoint identifier.</param>
             <returns>The <see cref="T:System.Uri"/> of the <see cref="T:Footloose.DataModel.ICommunicationEndpoint"/>.</returns>
-        </member>
-        <member name="M:Footloose.TransportChannels.Remoting.RemotingEndpointIdentityManager.RequestDiscoInfo(System.Uri,System.String)">
-            <summary>
-            Request asynchronously service discovery information from the given service with the specified capabilities.
-            </summary>
-            <param name="to">The service to request the disco information from.</param>
-            <param name="capabilities">The provided capabilities of the service.</param>
-        </member>
-        <member name="M:Footloose.TransportChannels.Remoting.RemotingEndpointIdentityManager.AddEndpointIdentity(System.Uri,System.String,System.Collections.Generic.IEnumerable{System.String},System.Boolean)">
-            <summary>
-            Adds a new <see cref="T:Footloose.DataModel.IEndpointIdentity"/> with the specified <see cref="T:System.Uri"/> and name
-            and list of groups to the collection
-            and request subscription to the <see cref="T:Footloose.DataModel.IPresence"/> of the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>.
-            </summary>
-            <param name="uri">The <see cref="T:System.Uri"/> of the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>.</param>
-            <param name="name">The name of the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>.</param>
-            <param name="groups">The list of groups the <see cref="T:Footloose.DataModel.IEndpointIdentity"/> belongs to.</param>
-            <param name="requestSubscription">If true request subscription to the <see cref="T:Footloose.DataModel.IPresence"/> of
-            the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>; otherwise just add the item to the collection.</param>
-        </member>
-        <member name="M:Footloose.TransportChannels.Remoting.RemotingEndpointIdentityManager.UpdateEndpointIdentity(System.Uri,System.String,System.Collections.Generic.IEnumerable{System.String})">
-            <summary>
-            Updates the name and list of groups of the <see cref="T:Footloose.DataModel.IEndpointIdentity"/> with the specified <see cref="T:System.Uri"/>.
-            </summary>
-            <param name="uri">The <see cref="T:System.Uri"/> of the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>.</param>
-            <param name="name">The name of the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>.</param>
-            <param name="groups">The list of groups the <see cref="T:Footloose.DataModel.IEndpointIdentity"/> belongs to.</param>
-        </member>
-        <member name="M:Footloose.TransportChannels.Remoting.RemotingEndpointIdentityManager.RemoveEndpointIdentity(System.Uri)">
-            <summary>
-            Removes the <see cref="T:Footloose.DataModel.IEndpointIdentity"/> with the specified <see cref="T:System.Uri"/> from the collection
-            and unsubcribe from the <see cref="T:Footloose.DataModel.IPresence"/> of the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>.
-            </summary>
-            <param name="uri">The <see cref="T:System.Uri"/> of the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>.</param>
-        </member>
-        <member name="M:Footloose.TransportChannels.Remoting.RemotingEndpointIdentityManager.SendSubscribtionRequest(System.Uri,System.String)">
-            <summary>
-            Sends a subscription request with the specified reason
-            to permanently subscribe to a identity's presence information.
-            </summary>
-            <param name="to">The uri of the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>.</param>
-            <param name="reason">A reason that explains the subscription request.</param>
-        </member>
-        <member name="M:Footloose.TransportChannels.Remoting.RemotingEndpointIdentityManager.UnsubscribeFrom(System.Uri)">
-            <summary>
-            Unsubscribe from the identity's presence information.
-            </summary>
-            <param name="to">The uri of the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>.</param>
-        </member>
-        <member name="M:Footloose.TransportChannels.Remoting.RemotingEndpointIdentityManager.RevokeSubscriptionFrom(System.Uri)">
-            <summary>
-            Cancel and revoke the identity's subscription to this instance's presence information.
-            </summary>
-            <param name="to">The uri of the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>.</param>
-        </member>
-        <member name="M:Footloose.TransportChannels.Remoting.RemotingEndpointIdentityManager.SetDiscoInfo(Footloose.DataModel.DataTransferObjects.DiscoInfo)">
-            <summary>
-            Sets the service discovery information the transport channel should
-            send on discovery requests.
-            </summary>
-            <param name="discoInfo">Service discovery information for this service node.</param>
         </member>
         <member name="T:Footloose.TransportChannels.Remoting.ServiceProxy">
             <summary>
