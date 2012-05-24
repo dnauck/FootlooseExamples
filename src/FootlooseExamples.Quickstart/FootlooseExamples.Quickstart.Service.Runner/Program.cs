@@ -51,7 +51,7 @@ namespace FootlooseExamples.Quickstart.Service.Runner
                             type.Namespace.EndsWith("Contracts"));
                 })
                 .TransportChannel(Footloose.Configuration.Fluent.RemotingTransportChannelConfiguration.Standard
-                                      .EndpointIdentifier(endpointIdentifier) // Uri will be "ipc://<endpointIdentifier>/FootlooseServiceProxy.rem"
+                                      .EndpointIdentifier(endpointIdentifier) // Uri will be "ipc://user@host/<endpointIdentifier>"
                                       .TimeOut(5000)
                 )
                 .CreateFootlooseConnection();

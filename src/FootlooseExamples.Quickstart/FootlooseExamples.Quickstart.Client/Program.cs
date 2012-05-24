@@ -28,8 +28,12 @@ namespace FootlooseExamples.Quickstart.Client
             Console.WriteLine("Press Enter to start...");
             Console.ReadLine();
 
-            var serviceUri = new Uri(string.Concat("ipc://footloose-quickstart-service@" + Environment.MachineName + "/footloose-quickstart-service/FootlooseServiceProxy.rem"));
-            
+            var userName = Environment.UserName;
+            var mashineName = Environment.MachineName;
+            var serviceEndpointIdentifier = "footloose-quickstart-service";
+            var serviceUri = footlooseConnection.UriBuilder.BuildCommunicationEndpointUri(userName, mashineName,
+                                                                                          serviceEndpointIdentifier);
+
             var methodCallId = footlooseConnection.CallMethod<ISimpleService>(service => service.DoIt(), serviceUri);
             Console.WriteLine("Called method 'DoIt' of 'ISimpleService' on '" + serviceUri + "'. CorrelationId is '" +
                               methodCallId + "'.");
@@ -83,7 +87,7 @@ namespace FootlooseExamples.Quickstart.Client
                 .SerializerOfType<Footloose.Serialization.TextSerializer>()
                 .ServiceLocator(serviceLocator)
                 .TransportChannel(Footloose.Configuration.Fluent.RemotingTransportChannelConfiguration.Standard
-                                      .EndpointIdentifier(endpointIdentifier) // Uri will be "ipc://<endpointIdentifier>/FootlooseServiceProxy.rem"
+                                      .EndpointIdentifier(endpointIdentifier) // Uri will be "ipc://user@host/<endpointIdentifier>"
                                       .TimeOut(5000)
                 )
                 .CreateFootlooseConnection();

@@ -28,11 +28,11 @@ namespace FootlooseExamples.Cancellation.Client
             Console.WriteLine("Press Enter to start...");
             Console.ReadLine();
 
-            var serviceUri =
-                new Uri(
-                    string.Concat("ipc://footloose-cancellation-service@" + Environment.MachineName +
-                                  "/footloose-cancellation-service/FootlooseServiceProxy.rem"));
-
+            var userName = Environment.UserName;
+            var mashineName = Environment.MachineName;
+            var serviceEndpointIdentifier = "footloose-cancellation-service";
+            var serviceUri = footlooseConnection.UriBuilder.BuildCommunicationEndpointUri(userName, mashineName,
+                                                                                          serviceEndpointIdentifier);
             var cts = new CancellationTokenSource();
 
             var methodCallTask = footlooseConnection.CallMethod<string, ISimpleService>(s => s.DoIt(), cts.Token,
@@ -75,7 +75,7 @@ namespace FootlooseExamples.Cancellation.Client
             var footloose = Fluently.Configure()
                 .SerializerOfType<Footloose.Serialization.TextSerializer>()
                 .TransportChannel(Footloose.Configuration.Fluent.RemotingTransportChannelConfiguration.Standard
-                                      .EndpointIdentifier(endpointIdentifier) // Uri will be "ipc://<endpointIdentifier>/FootlooseServiceProxy.rem"
+                                      .EndpointIdentifier(endpointIdentifier) // Uri will be "ipc://user@mashineName/<EndpointIdentifier>"
                                       .TimeOut(5000)
                 )
                 .CreateFootlooseConnection();

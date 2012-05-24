@@ -39,7 +39,7 @@ namespace FootlooseExamples.Cancellation.Service
                 .ServiceLocator(serviceLocator)
                 .ServiceContracts(contracts => contracts.ServiceContract.RegisterOfType<ISimpleService>())
                 .TransportChannel(Footloose.Configuration.Fluent.RemotingTransportChannelConfiguration.Standard
-                                      .EndpointIdentifier(endpointIdentifier) // Uri will be "ipc://<endpointIdentifier>/FootlooseServiceProxy.rem"
+                                      .EndpointIdentifier(endpointIdentifier) // Uri will be "ipc://user@mashineName/<EndpointIdentifier>"
                                       .TimeOut(5000)
                 )
                 .CreateFootlooseConnection();
