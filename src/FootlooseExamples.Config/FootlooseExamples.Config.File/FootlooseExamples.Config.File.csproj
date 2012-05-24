@@ -89,11 +89,12 @@
     <None Include="..\..\..\Lib\FootlooseConfigurationSchema.xsd">
       <Link>FootlooseConfigurationSchema.xsd</Link>
     </None>
+    <None Include="..\..\..\Lib\NLog.config">
+      <Link>NLog.config</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="App.config">
       <SubType>Designer</SubType>
-    </None>
-    <None Include="NLog.config">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
   <ItemGroup>
