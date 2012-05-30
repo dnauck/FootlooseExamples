@@ -6,15 +6,14 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>IEndpointIdentityManagerInternal Interface Members</title>
+<title>IEndpointIdentityManager.Find Method ()</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">IEndpointIdentityManagerInternal Interface Members</div>
+<div id="PageTitle">IEndpointIdentityManager.Find Method ()</div>
 <div id="HeaderShortcuts">
-<a href="#SectionHeader35" onclick="javascript: SetSectionVisibility(35, true); SetExpandCollapseAllToCollapseAll();">Methods</a>&nbsp;
-<a href="#SectionHeader40" onclick="javascript: SetSectionVisibility(40, true); SetExpandCollapseAllToCollapseAll();">Properties</a>&nbsp;
+<a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 </div>
 <div class="DarkLine"></div>
 <div class="LightLine"></div>
@@ -25,163 +24,28 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Internal version of the <a href="../../Contents/1/372.html">IEndpointIdentityManager</a>.
+Find <a href="../../Contents/1/259.html">ICommunicationEndpoint</a> objects with a simplified search API
+            by using <a href="../../Contents/1/424.html">IEndpointFeatureFindCriterion</a> and Linq.
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/1/373.html">IEndpointIdentityManagerInternal</a><br />
+<b>Declaring type:</b> <a href="../../Contents/1/373.html">IEndpointIdentityManager</a><br />
 <b>Namespace:</b> <a href="../../Contents/1/4.html">Footloose</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">Footloose</a>
 </div>
-<div id="SectionHeader35" class="SectionHeader">
-<img id="SectionExpanderImg35" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(35);" />
+<div id="SectionHeader0" class="SectionHeader">
+<img id="SectionExpanderImg0" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(0);" />
 <span class="SectionHeader">
-<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(35);">
-Public Methods
+<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(0);">
+Syntax
 </span>
 </span>
 </div>
 
-<div id="SectionContainerDiv35" class="SectionContainer">
-<table class="MembersTable">
-<col width="7%" />
-<col width="38%" />
-<col width="55%" />
-<tr>
-<th>&nbsp;</th>
-<th>Name</th>
-<th>Description</th>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
-<td><a href="../../Contents/1/498.html">AddEndpointIdentity</a></td>
-<td>Adds a new <a href="../../Contents/1/357.html">IEndpointIdentity</a> with the specified <span class="PseudoLink">System.Uri</span> and name
-            and list of groups to the collection
-            and request subscription to the <a href="../../Contents/1/420.html">IPresence</a> of the <a href="../../Contents/1/357.html">IEndpointIdentity</a>.</td>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
-<td><a href="../../Contents/1/499.html">GetEndpointUri</a></td>
-<td>Gets the <span class="PseudoLink">System.Uri</span> from the <a href="../../Contents/1/259.html">ICommunicationEndpoint</a>
-            with the specified <span class="PseudoLink">System.Uri</span> of it's <a href="../../Contents/1/357.html">IEndpointIdentity</a>
-            and the endpoint identifier.</td>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
-<td><a href="../../Contents/1/500.html">GetIdentityUri</a></td>
-<td>Gets the <span class="PseudoLink">System.Uri</span> from the <a href="../../Contents/1/357.html">IEndpointIdentity</a>
-            of this <span class="PseudoLink">System.Uri</span>.</td>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
-<td><a href="../../Contents/2/1.html">NotifyPresenceNotificationReceived</a></td>
-<td>Notify this <a href="../../Contents/1/372.html">IEndpointIdentityManager</a> when a new <a href="../../Contents/1/420.html">IPresence</a>
-            from another endpoint received.</td>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
-<td><a href="../../Contents/2/2.html">NotifyPresenceSubscriptionRequestReceived</a></td>
-<td>Notify this <a href="../../Contents/1/372.html">IEndpointIdentityManager</a> when a new <a href="../../Contents/1/428.html">PresenceSubscriptionRequest</a>
-            from another endpoint received.</td>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
-<td><a href="../../Contents/2/3.html">NotifyPresenceSubscriptionResponseReceived</a></td>
-<td>Notify this <a href="../../Contents/1/372.html">IEndpointIdentityManager</a> when a new <a href="../../Contents/1/430.html">PresenceSubscriptionResponse</a>
-            from another endpoint received.</td>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
-<td><a href="../../Contents/2/4.html">NotifyPresenceUnsubscribeReceived</a></td>
-<td>Notify this <a href="../../Contents/1/372.html">IEndpointIdentityManager</a> when a new <a href="../../Contents/1/432.html">PresenceUnsubscribe</a> message
-            from another endpoint received.</td>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
-<td><a href="../../Contents/2/5.html">NotifyServiceDiscoveryInfoReceived</a></td>
-<td>Notify this <a href="../../Contents/1/372.html">IEndpointIdentityManager</a> when a new <a href="../../Contents/1/434.html">DiscoInfo</a>
-            from another endpoint received.</td>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
-<td><a href="../../Contents/2/6.html">RemoveEndpointIdentity</a></td>
-<td>Removes the <a href="../../Contents/1/357.html">IEndpointIdentity</a> with the specified <span class="PseudoLink">System.Uri</span> from the collection
-            and unsubcribe from the <a href="../../Contents/1/420.html">IPresence</a> of the <a href="../../Contents/1/357.html">IEndpointIdentity</a>.</td>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
-<td><a href="../../Contents/2/7.html">RevokeSubscriptionFrom</a></td>
-<td>Cancel and revoke the identity's subscription to this instance's presence information.</td>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
-<td><a href="../../Contents/2/8.html">SendSelfPresence</a></td>
-<td>Send the <a href="../../Contents/1/438.html">Presence</a> of this instance to all subscribed endpoints.</td>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
-<td><a href="../../Contents/2/9.html">SendSubscribtionRequest</a></td>
-<td>Sends a subscription request with the specified reason
-            to permanently subscribe to a identity's presence information.</td>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
-<td><a href="../../Contents/2/10.html">UnsubscribeFrom</a></td>
-<td>Unsubscribe from the identity's presence information.</td>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
-<td><a href="../../Contents/2/11.html">UpdateEndpointIdentity</a></td>
-<td>Updates the name and list of groups of the <a href="../../Contents/1/357.html">IEndpointIdentity</a> with the specified <span class="PseudoLink">System.Uri</span>.</td>
-</tr>
-</table>
-<div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
-<div id="SectionHeader40" class="SectionHeader">
-<img id="SectionExpanderImg40" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(40);" />
-<span class="SectionHeader">
-<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(40);">
-Public Properties
-</span>
-</span>
+<div id="SectionContainerDiv0" class="SectionContainer">
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public abstract IEndpointFindCriteria Find ()</pre></td></tr></table>
+<div class="CommentHeader">Return Value</div>
+<div class="ParameterCommentContainer">
+A instance of a <a href="../../Contents/1/455.html">IEndpointFindCriteria</a>.
 </div>
-
-<div id="SectionContainerDiv40" class="SectionContainer">
-<table class="MembersTable">
-<col width="7%" />
-<col width="38%" />
-<col width="55%" />
-<tr>
-<th>&nbsp;</th>
-<th>Name</th>
-<th>Description</th>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicProperty.gif" alt="Public Property" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
-<td><a href="../../Contents/2/12.html">EndpointIdentities</a></td>
-<td>Gets a <a href="../../Contents/1/446.html">EndpointIdentityDictionary</a> of <a href="../../Contents/1/447.html">EndpointIdentity</a> objects
-            for internal interaction.</td>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicProperty.gif" alt="Public Property" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
-<td><a href="../../Contents/2/13.html">SelfEndpointIdentity</a></td>
-<td>Returns an instance of <a href="../../Contents/2/13.html">SelfEndpointIdentity</a> for
-            internal interaction with the endpoint of this service node.</td>
-</tr>
-</table>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>
 <div id="Footer">

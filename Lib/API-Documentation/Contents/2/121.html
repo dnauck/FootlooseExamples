@@ -6,14 +6,14 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>SelfEndpointIdentity.UpdatePresence Method</title>
+<title>SelfEndpointIdentity Constructor (Lazy&lt;IEndpointIdentityManagerInternal&gt;, IUriBuilder)</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">SelfEndpointIdentity.UpdatePresence Method</div>
+<div id="PageTitle">SelfEndpointIdentity Constructor (Lazy&lt;IEndpointIdentityManagerInternal&gt;, IUriBuilder)</div>
 <div id="HeaderShortcuts">
-<a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Overload List</a>&nbsp;
+<a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 </div>
 <div class="DarkLine"></div>
 <div class="LightLine"></div>
@@ -24,9 +24,10 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Updates the self presence information with the given priority.
+Initializes a new instance of the <a href="../../Contents/2/55.html">SelfEndpointIdentity</a> class with
+            the specified <a href="../../Contents/1/356.html">EndpointIdentityManagerBase</a> instance.
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/2/50.html">SelfEndpointIdentity</a><br />
+<b>Declaring type:</b> <a href="../../Contents/2/55.html">SelfEndpointIdentity</a><br />
 <b>Namespace:</b> <a href="../../Contents/1/9.html">Footloose.DataModel</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">Footloose</a>
 </div>
@@ -34,61 +35,25 @@ Updates the self presence information with the given priority.
 <img id="SectionExpanderImg0" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(0);" />
 <span class="SectionHeader">
 <span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(0);">
-Overload List
+Syntax
 </span>
 </span>
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="MembersTable">
-<col width="7%" />
-<col width="38%" />
-<col width="55%" />
-<tr>
-<th>&nbsp;</th>
-<th>Name</th>
-<th>Description</th>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicMethod.gif" alt="Public Method" /></td>
-<td><a href="../../Contents/2/125.html">SelfEndpointIdentity.UpdatePresence ()</a></td>
-<td>Updates the self presence information with the given priority.</td>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicMethod.gif" alt="Public Method" /></td>
-<td><a href="../../Contents/2/126.html">SelfEndpointIdentity.UpdatePresence (int)</a></td>
-<td>Updates the self presence information with the given priority.</td>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicMethod.gif" alt="Public Method" /></td>
-<td><a href="../../Contents/2/127.html">SelfEndpointIdentity.UpdatePresence (int, CommunicationEndpointStatusType)</a></td>
-<td>Updates the self presence information with the given priority
-            and status.</td>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicMethod.gif" alt="Public Method" /></td>
-<td><a href="../../Contents/2/128.html">SelfEndpointIdentity.UpdatePresence (int, CommunicationEndpointStatusType, string)</a></td>
-<td>Updates the self presence information with the given priority,
-            status and status information.</td>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicMethod.gif" alt="Public Method" /></td>
-<td><a href="../../Contents/2/129.html">SelfEndpointIdentity.UpdatePresence (CommunicationEndpointStatusType)</a></td>
-<td>Updates the self presence information with the given status.</td>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicMethod.gif" alt="Public Method" /></td>
-<td><a href="../../Contents/2/130.html">SelfEndpointIdentity.UpdatePresence (CommunicationEndpointStatusType, string)</a></td>
-<td>Updates the self presence information with the given status
-            and status information.</td>
-</tr>
-</table>
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public SelfEndpointIdentity (
+        Lazy&lt;IEndpointIdentityManagerInternal&gt; <i>endpointIdentityManager</i>,
+        IUriBuilder <i>uriBuilder</i>
+) </pre></td></tr></table>
+<div class="CommentHeader">Parameters</div>
+<div class="CommentParameterName">endpointIdentityManager</div>
+<div class="ParameterCommentContainer">
+The <a href="../../Contents/1/356.html">EndpointIdentityManagerBase</a>.
+</div>
+<div class="CommentParameterName">uriBuilder</div>
+<div class="ParameterCommentContainer">
+The <a href="../../Contents/1/454.html">IUriBuilder</a>.
+</div>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>
 <div id="Footer">

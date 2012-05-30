@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>RemotingTransportChannel.SetDiscoInfo Method (DiscoInfo)</title>
+<title>RemotingEndpointIdentityManager Constructor (EndpointIdentityDictionary, SelfEndpointIdentity, Func&lt;Uri, EndpointIdentity&gt;, Lazy&lt;IMessageOriginator&gt;, IHashAlgorithm, IUriBuilder)</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">RemotingTransportChannel.SetDiscoInfo Method (DiscoInfo)</div>
+<div id="PageTitle">RemotingEndpointIdentityManager Constructor (EndpointIdentityDictionary, SelfEndpointIdentity, Func&lt;Uri, EndpointIdentity&gt;, Lazy&lt;IMessageOriginator&gt;, IHashAlgorithm, IUriBuilder)</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 </div>
@@ -24,10 +24,9 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Sets the service discovery information the transport channel should
-            send on discovery requests.
+Initializes a new instance of the <a href="../../Contents/2/481.html">RemotingEndpointIdentityManager</a> class.
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/1/269.html">RemotingTransportChannel</a><br />
+<b>Declaring type:</b> <a href="../../Contents/2/481.html">RemotingEndpointIdentityManager</a><br />
 <b>Namespace:</b> <a href="../../Contents/1/16.html">Footloose.TransportChannels.Remoting</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">Footloose</a>
 </div>
@@ -41,13 +40,38 @@ Syntax
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public override void SetDiscoInfo (
-        DiscoInfo <i>discoInfo</i>
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public RemotingEndpointIdentityManager (
+        EndpointIdentityDictionary <i>endpointIdentityDictionary</i>,
+        SelfEndpointIdentity <i>selfEndpointIdentity</i>,
+        Func&lt;Uri, EndpointIdentity&gt; <i>endpointIdentityFactory</i>,
+        Lazy&lt;IMessageOriginator&gt; <i>orginator</i>,
+        IHashAlgorithm <i>hashAlgorithm</i>,
+        IUriBuilder <i>uriBuilder</i>
 ) </pre></td></tr></table>
 <div class="CommentHeader">Parameters</div>
-<div class="CommentParameterName">discoInfo</div>
+<div class="CommentParameterName">endpointIdentityDictionary</div>
 <div class="ParameterCommentContainer">
-Service discovery information for this service node.
+The <a href="../../Contents/1/446.html">EndpointIdentityDictionary</a>.
+</div>
+<div class="CommentParameterName">selfEndpointIdentity</div>
+<div class="ParameterCommentContainer">
+The <a href="../../Contents/1/448.html">SelfEndpointIdentity</a>.
+</div>
+<div class="CommentParameterName">endpointIdentityFactory</div>
+<div class="ParameterCommentContainer">
+The <a href="../../Contents/1/447.html">EndpointIdentity</a> factory.
+</div>
+<div class="CommentParameterName">orginator</div>
+<div class="ParameterCommentContainer">
+The <a href="../../Contents/1/452.html">IMessageOriginator</a>.
+</div>
+<div class="CommentParameterName">hashAlgorithm</div>
+<div class="ParameterCommentContainer">
+The <a href="../../Contents/1/453.html">IHashAlgorithm</a>.
+</div>
+<div class="CommentParameterName">uriBuilder</div>
+<div class="ParameterCommentContainer">
+The <a href="../../Contents/1/454.html">IUriBuilder</a>.
 </div>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>

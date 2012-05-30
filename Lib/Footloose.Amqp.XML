@@ -103,6 +103,29 @@
             with default settings.
             </summary>
         </member>
+        <member name="T:Footloose.TransportChannels.Amqp.IAmqpConnection">
+            <summary>
+            Represents an interface for a wrapper around the RabbitMQ connection
+            that can handle reconnects and is listening to incoming messages on a different thread.
+            </summary>
+        </member>
+        <member name="P:Footloose.TransportChannels.Amqp.IAmqpConnection.IsConnected">
+            <summary>
+            Gets the current state of the connection.
+            true if the connection is established; otherwise, false.
+            </summary>
+        </member>
+        <member name="P:Footloose.TransportChannels.Amqp.IAmqpConnection.ServiceUri">
+            <summary>
+            Gets the Uri of this service node.
+            </summary>
+        </member>
+        <member name="P:Footloose.TransportChannels.Amqp.IAmqpConnection.IsDisposed">
+            <summary>
+            Gets or sets a value indicating whether the class has been disposed of.
+            true if the class has been disposed of; otherwise, false. 
+            </summary>
+        </member>
         <member name="M:Footloose.TransportChannels.Amqp.AmqpConnection.Finalize">
             <summary>
             This destructor will run only if the Dispose method
@@ -209,7 +232,7 @@
             EndpointIdentityManager specific implementation of the AmqpTransportChannel.
             </summary>
         </member>
-        <member name="M:Footloose.TransportChannels.Amqp.AmqpEndpointIdentityManager.#ctor(Footloose.DataModel.EndpointIdentityDictionary,Footloose.DataModel.SelfEndpointIdentity,System.Func{System.Uri,Footloose.DataModel.EndpointIdentity},System.Lazy{Footloose.TransportChannels.IMessageOriginator},Footloose.Security.Cryptography.IHashAlgorithm)">
+        <member name="M:Footloose.TransportChannels.Amqp.AmqpEndpointIdentityManager.#ctor(Footloose.DataModel.EndpointIdentityDictionary,Footloose.DataModel.SelfEndpointIdentity,System.Func{System.Uri,Footloose.DataModel.EndpointIdentity},System.Lazy{Footloose.TransportChannels.IMessageOriginator},Footloose.Security.Cryptography.IHashAlgorithm,Footloose.TransportChannels.IUriBuilder)">
             <summary>
             Initializes a new instance of the <see cref="T:Footloose.TransportChannels.Amqp.AmqpEndpointIdentityManager"/> class.
             </summary>
@@ -218,24 +241,6 @@
             <param name="endpointIdentityFactory">The <see cref="T:Footloose.DataModel.EndpointIdentity"/> factory.</param>
             <param name="orginator">The <see cref="T:Footloose.TransportChannels.IMessageOriginator"/>.</param>
             <param name="hashAlgorithm">The <see cref="T:Footloose.Security.Cryptography.IHashAlgorithm"/>.</param>
-        </member>
-        <member name="M:Footloose.TransportChannels.Amqp.AmqpEndpointIdentityManager.GetIdentityUri(System.Uri)">
-            <summary>
-            Gets the <see cref="T:System.Uri"/> from the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>
-            of this <see cref="T:System.Uri"/>.
-            </summary>
-            <param name="uri">The <see cref="T:System.Uri"/>.</param>
-            <returns>The <see cref="T:System.Uri"/> of the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>.</returns>
-        </member>
-        <member name="M:Footloose.TransportChannels.Amqp.AmqpEndpointIdentityManager.GetEndpointUri(System.Uri,System.String)">
-            <summary>
-            Gets the <see cref="T:System.Uri"/> from the <see cref="T:Footloose.DataModel.ICommunicationEndpoint"/>
-            with the specified <see cref="T:System.Uri"/> of it's <see cref="T:Footloose.DataModel.IEndpointIdentity"/>
-            and the endpoint identifier.
-            </summary>
-            <param name="identityUri">The <see cref="T:System.Uri"/> of the endpoint's <see cref="T:Footloose.DataModel.IEndpointIdentity"/></param>
-            <param name="endpointIdentifier">The endpoint identifier.</param>
-            <returns>The <see cref="T:System.Uri"/> of the <see cref="T:Footloose.DataModel.ICommunicationEndpoint"/>.</returns>
         </member>
         <member name="M:Footloose.TransportChannels.Amqp.AmqpTransportChannel.Connect">
             <summary>
@@ -264,6 +269,62 @@
             <summary>
             Gets the Uri of this service node.
             </summary>
+        </member>
+        <member name="M:Footloose.TransportChannels.Amqp.AmqpUriBuilder.#ctor(System.Func{System.Collections.Generic.IEqualityComparer{System.Uri}})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Footloose.TransportChannels.Amqp.AmqpUriBuilder"/>
+            with the provided uri comparer factory.
+            </summary>
+            <param name="uriComparerFactory">The factory method for <see cref="T:System.Collections.Generic.IEqualityComparer`1"/> instances.</param>
+        </member>
+        <member name="M:Footloose.TransportChannels.Amqp.AmqpUriBuilder.BuildEndpointIdentityUri(System.String,System.String)">
+            <summary>
+            Builds a new <see cref="T:System.Uri"/> for an <see cref="T:Footloose.DataModel.IEndpointIdentity"/>
+            with the specified user name and host.
+            </summary>
+            <param name="user">The user name.</param>
+            <param name="host">The host.</param>
+            <returns>A <see cref="T:System.Uri"/> for the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>
+            with the specified user name and host.</returns>
+        </member>
+        <member name="M:Footloose.TransportChannels.Amqp.AmqpUriBuilder.GetEndpointIdentityUriFrom(System.Uri)">
+            <summary>
+            Returns the <see cref="T:Footloose.DataModel.IEndpointIdentity"/> part of an <see cref="T:System.Uri"/>
+            from a <see cref="T:Footloose.DataModel.ICommunicationEndpoint"/>.
+            </summary>
+            <param name="endpointUri">The <see cref="T:System.Uri"/> of a
+            <see cref="T:Footloose.DataModel.ICommunicationEndpoint"/>.</param>
+            <returns>A <see cref="T:System.Uri"/> from the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>
+            from the provided <see cref="T:Footloose.DataModel.ICommunicationEndpoint"/> Uri.</returns>
+        </member>
+        <member name="M:Footloose.TransportChannels.Amqp.AmqpUriBuilder.BuildCommunicationEndpointUri(System.String,System.String,System.String)">
+            <summary>
+            Builds a new <see cref="T:System.Uri"/> for a <see cref="T:Footloose.DataModel.ICommunicationEndpoint"/>
+            with the specified user name, host and endpoint identifier.
+            </summary>
+            <param name="user">The user name.</param>
+            <param name="host">The host.</param>
+            <param name="endpointIdentifier">The endpoint identifier.</param>
+            <returns>A <see cref="T:System.Uri"/> for the <see cref="T:Footloose.DataModel.ICommunicationEndpoint"/>
+            with the specified user name, host and endpoint identifier.</returns>
+        </member>
+        <member name="M:Footloose.TransportChannels.Amqp.AmqpUriBuilder.GetCommunicationEndpointUri(System.Uri,System.String)">
+            <summary>
+            Returns the <see cref="T:System.Uri"/> of a <see cref="T:Footloose.DataModel.ICommunicationEndpoint"/>
+            with the specified <see cref="T:System.Uri"/> from an <see cref="T:Footloose.DataModel.IEndpointIdentity"/>
+            and it's endpoint identifier.
+            </summary>
+            <param name="identitiyUri">The <see cref="T:System.Uri"/> of the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>.</param>
+            <param name="endpointIdentifier">The endpoint identifier.</param>
+            <returns>A <see cref="T:System.Uri"/> for the <see cref="T:Footloose.DataModel.ICommunicationEndpoint"/>
+            with the specified <see cref="T:System.Uri"/> from an <see cref="T:Footloose.DataModel.IEndpointIdentity"/>
+            and it's endpoint identifier.</returns>
+        </member>
+        <member name="M:Footloose.TransportChannels.Amqp.AmqpUriBuilder.GetEqualityComparer">
+            <summary>
+            Gets a instance of a <see cref="T:System.Collections.Generic.IEqualityComparer`1"/>.
+            </summary>
+            <returns>A instance of <see cref="T:System.Collections.Generic.IEqualityComparer`1"/>.</returns>
         </member>
     </members>
 </doc>

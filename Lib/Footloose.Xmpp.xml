@@ -271,6 +271,62 @@
             <param name="value"></param>
             <returns></returns>
         </member>
+        <member name="M:Footloose.TransportChannels.Xmpp.XmppUriBuilder.#ctor(System.Func{System.Collections.Generic.IEqualityComparer{System.Uri}})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Footloose.TransportChannels.Xmpp.XmppUriBuilder"/>
+            with the provided uri comparer factory.
+            </summary>
+            <param name="uriComparerFactory">The factory method for <see cref="T:System.Collections.Generic.IEqualityComparer`1"/> instances.</param>
+        </member>
+        <member name="M:Footloose.TransportChannels.Xmpp.XmppUriBuilder.BuildEndpointIdentityUri(System.String,System.String)">
+            <summary>
+            Builds a new <see cref="T:System.Uri"/> for an <see cref="T:Footloose.DataModel.IEndpointIdentity"/>
+            with the specified user name and host.
+            </summary>
+            <param name="user">The user name.</param>
+            <param name="host">The host.</param>
+            <returns>A <see cref="T:System.Uri"/> for the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>
+            with the specified user name and host.</returns>
+        </member>
+        <member name="M:Footloose.TransportChannels.Xmpp.XmppUriBuilder.GetEndpointIdentityUriFrom(System.Uri)">
+            <summary>
+            Returns the <see cref="T:Footloose.DataModel.IEndpointIdentity"/> part of an <see cref="T:System.Uri"/>
+            from a <see cref="T:Footloose.DataModel.ICommunicationEndpoint"/>.
+            </summary>
+            <param name="endpointUri">The <see cref="T:System.Uri"/> of a
+            <see cref="T:Footloose.DataModel.ICommunicationEndpoint"/>.</param>
+            <returns>A <see cref="T:System.Uri"/> from the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>
+            from the provided <see cref="T:Footloose.DataModel.ICommunicationEndpoint"/> Uri.</returns>
+        </member>
+        <member name="M:Footloose.TransportChannels.Xmpp.XmppUriBuilder.BuildCommunicationEndpointUri(System.String,System.String,System.String)">
+            <summary>
+            Builds a new <see cref="T:System.Uri"/> for a <see cref="T:Footloose.DataModel.ICommunicationEndpoint"/>
+            with the specified user name, host and endpoint identifier.
+            </summary>
+            <param name="user">The user name.</param>
+            <param name="host">The host.</param>
+            <param name="endpointIdentifier">The endpoint identifier.</param>
+            <returns>A <see cref="T:System.Uri"/> for the <see cref="T:Footloose.DataModel.ICommunicationEndpoint"/>
+            with the specified user name, host and endpoint identifier.</returns>
+        </member>
+        <member name="M:Footloose.TransportChannels.Xmpp.XmppUriBuilder.GetCommunicationEndpointUri(System.Uri,System.String)">
+            <summary>
+            Returns the <see cref="T:System.Uri"/> of a <see cref="T:Footloose.DataModel.ICommunicationEndpoint"/>
+            with the specified <see cref="T:System.Uri"/> from an <see cref="T:Footloose.DataModel.IEndpointIdentity"/>
+            and it's endpoint identifier.
+            </summary>
+            <param name="identitiyUri">The <see cref="T:System.Uri"/> of the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>.</param>
+            <param name="endpointIdentifier">The endpoint identifier.</param>
+            <returns>A <see cref="T:System.Uri"/> for the <see cref="T:Footloose.DataModel.ICommunicationEndpoint"/>
+            with the specified <see cref="T:System.Uri"/> from an <see cref="T:Footloose.DataModel.IEndpointIdentity"/>
+            and it's endpoint identifier.</returns>
+        </member>
+        <member name="M:Footloose.TransportChannels.Xmpp.XmppUriBuilder.GetEqualityComparer">
+            <summary>
+            Gets a instance of a <see cref="T:System.Collections.Generic.IEqualityComparer`1"/>.
+            </summary>
+            <returns>A instance of <see cref="T:System.Collections.Generic.IEqualityComparer`1"/>.</returns>
+        </member>
         <member name="T:Footloose.TransportChannels.Xmpp.MessageContainer">
             <summary>
             Represents a XML element embedded in a XMPP stanza like an IQ or Message,
@@ -318,9 +374,9 @@
             </summary>
             <param name="sender"></param>
         </member>
-        <member name="M:Footloose.TransportChannels.Xmpp.XmppConnectionManager.XmppClientConnection_OnBinded(System.Object)">
+        <member name="M:Footloose.TransportChannels.Xmpp.XmppConnectionManager.XmppClientConnection_OnRosterEnd(System.Object)">
             <summary>
-            Event that occurs after the resource was binded .
+            Event that occurs after the resource was binded and all roster items are received.
             Which means we're successfully connected.
             </summary>
             <param name="sender"></param>
@@ -358,7 +414,7 @@
             true if the class has been disposed of; otherwise, false. 
             </summary>
         </member>
-        <member name="M:Footloose.TransportChannels.Xmpp.XmppEndpointIdentityManager.#ctor(Footloose.DataModel.EndpointIdentityDictionary,Footloose.DataModel.SelfEndpointIdentity,System.Func{System.Uri,Footloose.DataModel.EndpointIdentity},System.Lazy{Footloose.TransportChannels.IMessageOriginator},Footloose.Security.Cryptography.IHashAlgorithm)">
+        <member name="M:Footloose.TransportChannels.Xmpp.XmppEndpointIdentityManager.#ctor(Footloose.DataModel.EndpointIdentityDictionary,Footloose.DataModel.SelfEndpointIdentity,System.Func{System.Uri,Footloose.DataModel.EndpointIdentity},System.Lazy{Footloose.TransportChannels.IMessageOriginator},Footloose.Security.Cryptography.IHashAlgorithm,Footloose.TransportChannels.IUriBuilder)">
             <summary>
             Initializes a new instance of the <see cref="T:Footloose.TransportChannels.Xmpp.XmppEndpointIdentityManager"/> class.
             </summary>
@@ -374,30 +430,12 @@
             </summary>
             <param name="presence">The <see cref="T:Footloose.DataModel.DataTransferObjects.Presence"/> of this instance.</param>
         </member>
-        <member name="M:Footloose.TransportChannels.Xmpp.XmppEndpointIdentityManager.GetIdentityUri(System.Uri)">
-            <summary>
-            Gets the <see cref="T:System.Uri"/> from the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>
-            of this <see cref="T:System.Uri"/>.
-            </summary>
-            <param name="uri">The <see cref="T:System.Uri"/>.</param>
-            <returns>The <see cref="T:System.Uri"/> of the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>.</returns>
-        </member>
-        <member name="M:Footloose.TransportChannels.Xmpp.XmppEndpointIdentityManager.GetEndpointUri(System.Uri,System.String)">
-            <summary>
-            Gets the <see cref="T:System.Uri"/> from the <see cref="T:Footloose.DataModel.ICommunicationEndpoint"/>
-            with the specified <see cref="T:System.Uri"/> of it's <see cref="T:Footloose.DataModel.IEndpointIdentity"/>
-            and the endpoint identifier.
-            </summary>
-            <param name="identityUri">The <see cref="T:System.Uri"/> of the endpoint's <see cref="T:Footloose.DataModel.IEndpointIdentity"/></param>
-            <param name="endpointIdentifier">The endpoint identifier.</param>
-            <returns>The <see cref="T:System.Uri"/> of the <see cref="T:Footloose.DataModel.ICommunicationEndpoint"/>.</returns>
-        </member>
         <member name="M:Footloose.TransportChannels.Xmpp.XmppEndpointIdentityManager.RequestDiscoInfo(System.Uri,System.String)">
             <summary>
             Request asynchronously service discovery information from the given service with the specified capabilities.
             </summary>
             <param name="to">The service to request the disco information from.</param>
-            <param name="capabilities">The provided capabilities of the service.</param>
+            <param name="capabilitiesVersion">The provided capabilities of the service.</param>
         </member>
         <member name="M:Footloose.TransportChannels.Xmpp.XmppEndpointIdentityManager.AddEndpointIdentity(System.Uri,System.String,System.Collections.Generic.IEnumerable{System.String},System.Boolean)">
             <summary>

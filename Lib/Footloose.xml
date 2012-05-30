@@ -2072,7 +2072,7 @@
             to discover information about another communication endpoint on the network.
             </summary>
         </member>
-        <member name="P:Footloose.DataModel.DataTransferObjects.DiscoInfoRequest.Capabilities">
+        <member name="P:Footloose.DataModel.DataTransferObjects.DiscoInfoRequest.CapabilitiesVersion">
             <summary>
             Gets or sets the capabilities version string.
             </summary>
@@ -2082,7 +2082,7 @@
             A service discovery respose to an <see cref="T:Footloose.DataModel.DataTransferObjects.DiscoInfoRequest"/>.
             </summary>
         </member>
-        <member name="P:Footloose.DataModel.DataTransferObjects.DiscoInfoResponse.Capabilities">
+        <member name="P:Footloose.DataModel.DataTransferObjects.DiscoInfoResponse.CapabilitiesVersion">
             <summary>
             Gets or sets the capabilities version string.
             </summary>
@@ -2225,7 +2225,7 @@
             Gets a string containing detailed description of a status type.
             </summary>
         </member>
-        <member name="P:Footloose.DataModel.IPresence.Capabilities">
+        <member name="P:Footloose.DataModel.IPresence.CapabilitiesVersion">
             <summary>
             Gets a string that contains a hash presentation of the communication endpoint's capabilities.
             </summary>
@@ -2255,7 +2255,7 @@
             Gets a string containing detailed description of a status type.
             </summary>
         </member>
-        <member name="P:Footloose.DataModel.DataTransferObjects.Presence.Capabilities">
+        <member name="P:Footloose.DataModel.DataTransferObjects.Presence.CapabilitiesVersion">
             <summary>
             Gets a string that contains a hash presentation of the communication endpoint's capabilities.
             </summary>
@@ -2523,7 +2523,7 @@
             Notify this <see cref="T:Footloose.IEndpointIdentityManager"/> when a new <see cref="T:Footloose.DataModel.DataTransferObjects.DiscoInfo"/>
             from another endpoint received.
             </summary>
-            <param name="caps">The capabilities version the disco info belongs to.</param>
+            <param name="capabilitiesVersion">The capabilities version the disco info belongs to.</param>
             <param name="discoInfo">The requested disco information.</param>
         </member>
         <member name="M:Footloose.IEndpointIdentityManagerInternal.AddEndpointIdentity(System.Uri,System.String,System.Collections.Generic.IEnumerable{System.String},System.Boolean)">
@@ -2572,24 +2572,6 @@
             Cancel and revoke the identity's subscription to this instance's presence information.
             </summary>
             <param name="to">The uri of the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>.</param>
-        </member>
-        <member name="M:Footloose.IEndpointIdentityManagerInternal.GetIdentityUri(System.Uri)">
-            <summary>
-            Gets the <see cref="T:System.Uri"/> from the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>
-            of this <see cref="T:System.Uri"/>.
-            </summary>
-            <param name="uri">The <see cref="T:System.Uri"/>.</param>
-            <returns>The <see cref="T:System.Uri"/> of the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>.</returns>
-        </member>
-        <member name="M:Footloose.IEndpointIdentityManagerInternal.GetEndpointUri(System.Uri,System.String)">
-            <summary>
-            Gets the <see cref="T:System.Uri"/> from the <see cref="T:Footloose.DataModel.ICommunicationEndpoint"/>
-            with the specified <see cref="T:System.Uri"/> of it's <see cref="T:Footloose.DataModel.IEndpointIdentity"/>
-            and the endpoint identifier.
-            </summary>
-            <param name="identityUri">The <see cref="T:System.Uri"/> of the endpoint's <see cref="T:Footloose.DataModel.IEndpointIdentity"/></param>
-            <param name="endpointIdentifier">The endpoint identifier.</param>
-            <returns>The <see cref="T:System.Uri"/> of the <see cref="T:Footloose.DataModel.ICommunicationEndpoint"/>.</returns>
         </member>
         <member name="P:Footloose.IEndpointIdentityManagerInternal.EndpointIdentities">
             <summary>
@@ -2885,7 +2867,7 @@
             Gets a string containing detailed description of a status type.
             </summary>
         </member>
-        <member name="P:Footloose.DataModel.ICommunicationEndpoint.Capabilities">
+        <member name="P:Footloose.DataModel.ICommunicationEndpoint.CapabilitiesVersion">
             <summary>
             Gets a string that contains a hash presentation of the communication endpoint's capabilities.
             </summary>
@@ -2928,7 +2910,7 @@
             Gets a string containing detailed description of a status type.
             </summary>
         </member>
-        <member name="P:Footloose.DataModel.CommunicationEndpoint.Capabilities">
+        <member name="P:Footloose.DataModel.CommunicationEndpoint.CapabilitiesVersion">
             <summary>
             Gets a string that contains a hash presentation of the communication endpoint's capabilities.
             </summary>
@@ -2948,14 +2930,9 @@
             The communication endpoint is offline and unavailable.
             </summary>
         </member>
-        <member name="F:Footloose.DataModel.CommunicationEndpointStatusType.Online">
+        <member name="F:Footloose.DataModel.CommunicationEndpointStatusType.Unavailable">
             <summary>
-            The communication endpoint is online and available.
-            </summary>
-        </member>
-        <member name="F:Footloose.DataModel.CommunicationEndpointStatusType.Busy">
-            <summary>
-            The communication endpoint is busy.
+            The communication endpoint is unavailable for an extended period.
             </summary>
         </member>
         <member name="F:Footloose.DataModel.CommunicationEndpointStatusType.TemporarilyUnavailable">
@@ -2963,9 +2940,14 @@
             The communication endpoint is temporarily unavailable.
             </summary>
         </member>
-        <member name="F:Footloose.DataModel.CommunicationEndpointStatusType.Unavailable">
+        <member name="F:Footloose.DataModel.CommunicationEndpointStatusType.Busy">
             <summary>
-            The communication endpoint is unavailable for an extended period.
+            The communication endpoint is busy.
+            </summary>
+        </member>
+        <member name="F:Footloose.DataModel.CommunicationEndpointStatusType.Online">
+            <summary>
+            The communication endpoint is online and available.
             </summary>
         </member>
         <member name="T:Footloose.DataModel.DiscoFeatureComparer">
@@ -3148,6 +3130,7 @@
             Set the presence for this <see cref="T:Footloose.DataModel.IEndpointIdentity"/> received from the <see cref="T:Footloose.TransportChannels.ITransportChannel"/>.
             </summary>
             <param name="presence">The <see cref="T:Footloose.DataModel.IPresence"/> object.</param>
+            <returns>The <see cref="T:Footloose.DataModel.CommunicationEndpoint"/> of this <see cref="T:Footloose.DataModel.IPresence"/> notification.</returns>
         </member>
         <member name="P:Footloose.DataModel.EndpointIdentity.Uri">
             <summary>
@@ -3438,15 +3421,6 @@
             Interface to interact with the self identity of this service node.
             </summary>
         </member>
-        <member name="M:Footloose.DataModel.ISelfEndpointIdentity.Initialize(System.Uri,System.String)">
-            <summary>
-            Initializes the self endpoint identity with the specified
-            service uri and endpoint identifier.
-            </summary>
-            <remarks>This method should be called on every connet or reconnect.</remarks>
-            <param name="serviceUri">The <see cref="T:System.Uri"/> of this endpoint.</param>
-            <param name="endpointIdentifier">The identifier of this endpoint.</param>
-        </member>
         <member name="M:Footloose.DataModel.ISelfEndpointIdentity.UpdatePresence">
             <summary>
             Updates the self presence information with the given priority.
@@ -3571,12 +3545,13 @@
             Represents the self endpoint identity.
             </summary>
         </member>
-        <member name="M:Footloose.DataModel.SelfEndpointIdentity.#ctor(System.Lazy{Footloose.IEndpointIdentityManagerInternal})">
+        <member name="M:Footloose.DataModel.SelfEndpointIdentity.#ctor(System.Lazy{Footloose.IEndpointIdentityManagerInternal},Footloose.TransportChannels.IUriBuilder)">
             <summary>
             Initializes a new instance of the <see cref="T:Footloose.DataModel.SelfEndpointIdentity"/> class with
             the specified <see cref="T:Footloose.EndpointIdentityManagerBase"/> instance.
             </summary>
             <param name="endpointIdentityManager">The <see cref="T:Footloose.EndpointIdentityManagerBase"/>.</param>
+            <param name="uriBuilder">The <see cref="T:Footloose.TransportChannels.IUriBuilder"/>.</param>
         </member>
         <member name="M:Footloose.DataModel.SelfEndpointIdentity.Subscribe">
             <summary>
@@ -3755,7 +3730,7 @@
             Abstract base class that manages <see cref="T:Footloose.DataModel.IEndpointIdentity"/> objects.
             </summary>
         </member>
-        <member name="M:Footloose.EndpointIdentityManagerBase.#ctor(Footloose.DataModel.EndpointIdentityDictionary,Footloose.DataModel.SelfEndpointIdentity,System.Func{System.Uri,Footloose.DataModel.EndpointIdentity},System.Lazy{Footloose.TransportChannels.IMessageOriginator},Footloose.Security.Cryptography.IHashAlgorithm)">
+        <member name="M:Footloose.EndpointIdentityManagerBase.#ctor(Footloose.DataModel.EndpointIdentityDictionary,Footloose.DataModel.SelfEndpointIdentity,System.Func{System.Uri,Footloose.DataModel.EndpointIdentity},System.Lazy{Footloose.TransportChannels.IMessageOriginator},Footloose.Security.Cryptography.IHashAlgorithm,Footloose.TransportChannels.IUriBuilder)">
             <summary>
             Initializes a new instance of the <see cref="T:Footloose.EndpointIdentityManagerBase"/> class.
             </summary>
@@ -3764,6 +3739,7 @@
             <param name="endpointIdentityFactory">The <see cref="T:Footloose.DataModel.EndpointIdentity"/> factory.</param>
             <param name="orginator">The <see cref="T:Footloose.TransportChannels.IMessageOriginator"/>.</param>
             <param name="hashAlgorithm">The <see cref="T:Footloose.Security.Cryptography.IHashAlgorithm"/>.</param>
+            <param name="uriBuilder">The <see cref="T:Footloose.TransportChannels.IUriBuilder"/>.</param>
         </member>
         <member name="M:Footloose.EndpointIdentityManagerBase.Find">
             <summary>
@@ -3823,7 +3799,7 @@
             Notify this <see cref="T:Footloose.IEndpointIdentityManager"/> when a new <see cref="T:Footloose.DataModel.DataTransferObjects.DiscoInfo"/>
             from another endpoint received.
             </summary>
-            <param name="caps">The capabilities version the disco info belongs to.</param>
+            <param name="capabilitiesVersion">The capabilities version the disco info belongs to.</param>
             <param name="discoInfo">The requested disco information.</param>
         </member>
         <member name="M:Footloose.EndpointIdentityManagerBase.AddEndpointIdentity(System.Uri,System.String,System.Collections.Generic.IEnumerable{System.String},System.Boolean)">
@@ -3879,30 +3855,12 @@
             </summary>
             <param name="presence">The <see cref="T:Footloose.DataModel.IPresence"/> notification to handle.</param>
         </member>
-        <member name="M:Footloose.EndpointIdentityManagerBase.GetIdentityUri(System.Uri)">
-            <summary>
-            Gets the <see cref="T:System.Uri"/> from the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>
-            of this <see cref="T:System.Uri"/>.
-            </summary>
-            <param name="uri">The <see cref="T:System.Uri"/>.</param>
-            <returns>The <see cref="T:System.Uri"/> of the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>.</returns>
-        </member>
-        <member name="M:Footloose.EndpointIdentityManagerBase.GetEndpointUri(System.Uri,System.String)">
-            <summary>
-            Gets the <see cref="T:System.Uri"/> from the <see cref="T:Footloose.DataModel.ICommunicationEndpoint"/>
-            with the specified <see cref="T:System.Uri"/> of it's <see cref="T:Footloose.DataModel.IEndpointIdentity"/>
-            and the endpoint identifier.
-            </summary>
-            <param name="identityUri">The <see cref="T:System.Uri"/> of the endpoint's <see cref="T:Footloose.DataModel.IEndpointIdentity"/></param>
-            <param name="endpointIdentifier">The endpoint identifier.</param>
-            <returns>The <see cref="T:System.Uri"/> of the <see cref="T:Footloose.DataModel.ICommunicationEndpoint"/>.</returns>
-        </member>
         <member name="M:Footloose.EndpointIdentityManagerBase.RequestDiscoInfo(System.Uri,System.String)">
             <summary>
             Request asynchronously service discovery information from the given service with the specified capabilities.
             </summary>
             <param name="to">The service to request the disco information from.</param>
-            <param name="capabilities">The provided capabilities of the service.</param>
+            <param name="capabilitiesVersion">The provided capabilities of the service.</param>
         </member>
         <member name="M:Footloose.EndpointIdentityManagerBase.SetDiscoInfo(Footloose.DataModel.DataTransferObjects.DiscoInfo)">
             <summary>
@@ -4131,6 +4089,14 @@
         <member name="P:Footloose.IFootlooseConnection.EndpointIdentityManager">
             <summary>
             Gets an instance of the <see cref="T:Footloose.IEndpointIdentityManager"/>.
+            </summary>
+        </member>
+        <member name="P:Footloose.IFootlooseConnection.UriBuilder">
+            <summary>
+            Gets an instance of the <see cref="T:Footloose.TransportChannels.IUriBuilder"/>,
+            a helper for building and modifying <see cref="T:System.Uri"/> references
+            to <see cref="T:Footloose.DataModel.IEndpointIdentity"/> and
+            <see cref="T:Footloose.DataModel.ICommunicationEndpoint"/>.
             </summary>
         </member>
         <member name="P:Footloose.IFootlooseConnection.ExposedServiceContracts">
@@ -4391,6 +4357,13 @@
             <param name="maxChunkLength">Maximum length of the chunk.</param>
             <returns>A IList of chunks of the string.</returns>
         </member>
+        <member name="M:Footloose.Extensions.StringExtensions.ToMD5(System.String)">
+            <summary>
+            Computes an hex encoed MD5 hash of the provided string.
+            </summary>
+            <param name="value">The string.</param>
+            <returns>The hex encoded MD5 hash of the provided string.</returns>
+        </member>
         <member name="M:Footloose.FootlooseConnection.Finalize">
             <summary>
             This destructor will run only if the Dispose method
@@ -4528,6 +4501,14 @@
             Gets an instance of the <see cref="T:Footloose.IEndpointIdentityManager"/>.
             </summary>
         </member>
+        <member name="P:Footloose.FootlooseConnection.UriBuilder">
+            <summary>
+            Gets an instance of the <see cref="T:Footloose.TransportChannels.IUriBuilder"/>,
+            a helper for building and modifying <see cref="T:System.Uri"/> references
+            to <see cref="T:Footloose.DataModel.IEndpointIdentity"/> and
+            <see cref="T:Footloose.DataModel.ICommunicationEndpoint"/>.
+            </summary>
+        </member>
         <member name="P:Footloose.FootlooseConnection.ExposedServiceContracts">
             <summary>
             Gets a list of exposed service contracts from the <see cref="T:Footloose.Configuration.ServiceContractConfigurationSection"/>.
@@ -4566,13 +4547,6 @@
             </summary>
             <param name="to">The Uri of the recipient for the message.</param>
             <param name="messageBody">The body of the message.</param>
-        </member>
-        <member name="M:Footloose.Messaging.Message.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
-            <summary>
-            Serialization constructor.
-            </summary>
-            <param name="info">The SerializationInfo to get the data from.</param>
-            <param name="context">The context of this serialization.</param>
         </member>
         <member name="M:Footloose.Messaging.Message.GetNextId">
             <summary>
@@ -4739,16 +4713,23 @@
             Initializes a new instance of the <see cref="T:Footloose.PresenceEventArgs" /> class.
             </summary>
         </member>
-        <member name="M:Footloose.PresenceEventArgs.#ctor(Footloose.DataModel.IPresence)">
+        <member name="M:Footloose.PresenceEventArgs.#ctor(Footloose.DataModel.IPresence,Footloose.DataModel.ICommunicationEndpoint)">
             <summary>
             Initializes a new instance of the <see cref="T:Footloose.PresenceEventArgs"/> class
             with the specified <see cref="T:Footloose.DataModel.IPresence"/>.
             </summary>
             <param name="presence">The <see cref="T:Footloose.DataModel.IPresence"/> notification.</param>
+            <param name="from">The <see cref="T:Footloose.DataModel.ICommunicationEndpoint"/> which is the sender of the presence notification.</param>
         </member>
         <member name="P:Footloose.PresenceEventArgs.Presence">
             <summary>
             Gets or sets the <see cref="T:Footloose.DataModel.IPresence"/> notification.
+            </summary>
+        </member>
+        <member name="P:Footloose.PresenceEventArgs.From">
+            <summary>
+            Gets or sets the <see cref="T:Footloose.DataModel.ICommunicationEndpoint"/> the 
+            <see cref="T:Footloose.DataModel.IPresence"/> notification was send from.
             </summary>
         </member>
         <member name="T:Footloose.ReflectionMethodInvoker">
@@ -5226,6 +5207,62 @@
             <param name="data">The <see cref="T:System.String"/> that contains the object graph to deserialize.</param>
             <returns>The top (root) of the object graph.</returns>
         </member>
+        <member name="T:Footloose.TransportChannels.IUriBuilder">
+            <summary>
+            Represents a helper for building and modifying <see cref="T:System.Uri"/> references
+            to <see cref="T:Footloose.DataModel.IEndpointIdentity"/> and
+            <see cref="T:Footloose.DataModel.ICommunicationEndpoint"/>.
+            </summary>
+        </member>
+        <member name="M:Footloose.TransportChannels.IUriBuilder.BuildEndpointIdentityUri(System.String,System.String)">
+            <summary>
+            Builds a new <see cref="T:System.Uri"/> for an <see cref="T:Footloose.DataModel.IEndpointIdentity"/>
+            with the specified user name and host.
+            </summary>
+            <param name="user">The user name.</param>
+            <param name="host">The host.</param>
+            <returns>A <see cref="T:System.Uri"/> for the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>
+            with the specified user name and host.</returns>
+        </member>
+        <member name="M:Footloose.TransportChannels.IUriBuilder.GetEndpointIdentityUriFrom(System.Uri)">
+            <summary>
+            Returns the <see cref="T:Footloose.DataModel.IEndpointIdentity"/> part of an <see cref="T:System.Uri"/>
+            from a <see cref="T:Footloose.DataModel.ICommunicationEndpoint"/>.
+            </summary>
+            <param name="endpointUri">The <see cref="T:System.Uri"/> of a
+            <see cref="T:Footloose.DataModel.ICommunicationEndpoint"/>.</param>
+            <returns>A <see cref="T:System.Uri"/> from the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>
+            from the provided <see cref="T:Footloose.DataModel.ICommunicationEndpoint"/> Uri.</returns>
+        </member>
+        <member name="M:Footloose.TransportChannels.IUriBuilder.BuildCommunicationEndpointUri(System.String,System.String,System.String)">
+            <summary>
+            Builds a new <see cref="T:System.Uri"/> for a <see cref="T:Footloose.DataModel.ICommunicationEndpoint"/>
+            with the specified user name, host and endpoint identifier.
+            </summary>
+            <param name="user">The user name.</param>
+            <param name="host">The host.</param>
+            <param name="endpointIdentifier">The endpoint identifier.</param>
+            <returns>A <see cref="T:System.Uri"/> for the <see cref="T:Footloose.DataModel.ICommunicationEndpoint"/>
+            with the specified user name, host and endpoint identifier.</returns>
+        </member>
+        <member name="M:Footloose.TransportChannels.IUriBuilder.GetCommunicationEndpointUri(System.Uri,System.String)">
+            <summary>
+            Returns the <see cref="T:System.Uri"/> of a <see cref="T:Footloose.DataModel.ICommunicationEndpoint"/>
+            with the specified <see cref="T:System.Uri"/> from an <see cref="T:Footloose.DataModel.IEndpointIdentity"/>
+            and it's endpoint identifier.
+            </summary>
+            <param name="identitiyUri">The <see cref="T:System.Uri"/> of the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>.</param>
+            <param name="endpointIdentifier">The endpoint identifier.</param>
+            <returns>A <see cref="T:System.Uri"/> for the <see cref="T:Footloose.DataModel.ICommunicationEndpoint"/>
+            with the specified <see cref="T:System.Uri"/> from an <see cref="T:Footloose.DataModel.IEndpointIdentity"/>
+            and it's endpoint identifier.</returns>
+        </member>
+        <member name="M:Footloose.TransportChannels.IUriBuilder.GetEqualityComparer">
+            <summary>
+            Gets a instance of a <see cref="T:System.Collections.Generic.IEqualityComparer`1"/>.
+            </summary>
+            <returns>A instance of <see cref="T:System.Collections.Generic.IEqualityComparer`1"/>.</returns>
+        </member>
         <member name="T:Footloose.TransportChannels.MessageResponseException">
             <summary>
             Represents errors that occur when a remote <see cref="T:Footloose.DataModel.ICommunicationEndpoint"/> respond with a
@@ -5660,7 +5697,7 @@
             <param name="context">The <see cref="T:System.Runtime.Serialization.StreamingContext"/> that contains
             contextual information about the source or destination.</param>
         </member>
-        <member name="M:Footloose.TransportChannels.Remoting.RemotingEndpointIdentityManager.#ctor(Footloose.DataModel.EndpointIdentityDictionary,Footloose.DataModel.SelfEndpointIdentity,System.Func{System.Uri,Footloose.DataModel.EndpointIdentity},System.Lazy{Footloose.TransportChannels.IMessageOriginator},Footloose.Security.Cryptography.IHashAlgorithm)">
+        <member name="M:Footloose.TransportChannels.Remoting.RemotingEndpointIdentityManager.#ctor(Footloose.DataModel.EndpointIdentityDictionary,Footloose.DataModel.SelfEndpointIdentity,System.Func{System.Uri,Footloose.DataModel.EndpointIdentity},System.Lazy{Footloose.TransportChannels.IMessageOriginator},Footloose.Security.Cryptography.IHashAlgorithm,Footloose.TransportChannels.IUriBuilder)">
             <summary>
             Initializes a new instance of the <see cref="T:Footloose.TransportChannels.Remoting.RemotingEndpointIdentityManager"/> class.
             </summary>
@@ -5669,28 +5706,63 @@
             <param name="endpointIdentityFactory">The <see cref="T:Footloose.DataModel.EndpointIdentity"/> factory.</param>
             <param name="orginator">The <see cref="T:Footloose.TransportChannels.IMessageOriginator"/>.</param>
             <param name="hashAlgorithm">The <see cref="T:Footloose.Security.Cryptography.IHashAlgorithm"/>.</param>
+            <param name="uriBuilder">The <see cref="T:Footloose.TransportChannels.IUriBuilder"/>.</param>
         </member>
-        <member name="M:Footloose.TransportChannels.Remoting.RemotingEndpointIdentityManager.GetIdentityUri(System.Uri)">
+        <member name="M:Footloose.TransportChannels.Remoting.RemotingUriBuilder.#ctor(System.Func{System.Collections.Generic.IEqualityComparer{System.Uri}})">
             <summary>
-            Gets the <see cref="T:System.Uri"/> from the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>
-            of this <see cref="T:System.Uri"/>.
+            Initializes a new instance of the <see cref="T:Footloose.TransportChannels.Remoting.RemotingUriBuilder"/>
+            with the provided uri comparer factory.
             </summary>
-            <param name="uri">The <see cref="T:System.Uri"/>.</param>
-            <returns>The <see cref="T:System.Uri"/> of the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>.</returns>
+            <param name="uriComparerFactory">The factory method for <see cref="T:System.Collections.Generic.IEqualityComparer`1"/> instances.</param>
         </member>
-        <member name="M:Footloose.TransportChannels.Remoting.RemotingEndpointIdentityManager.GetEndpointUri(System.Uri,System.String)">
+        <member name="M:Footloose.TransportChannels.Remoting.RemotingUriBuilder.BuildEndpointIdentityUri(System.String,System.String)">
             <summary>
-            Gets the <see cref="T:System.Uri"/> from the <see cref="T:Footloose.DataModel.ICommunicationEndpoint"/>
-            with the specified <see cref="T:System.Uri"/> of it's <see cref="T:Footloose.DataModel.IEndpointIdentity"/>
-            and the endpoint identifier.
+            Builds a new <see cref="T:System.Uri"/> for an <see cref="T:Footloose.DataModel.IEndpointIdentity"/>
+            with the specified user name and host.
             </summary>
-            <remarks>
-            Creates a full endpoint uri from a specified base uri.
-            Example: "ipc://FootlooseService-1" to "ipc://FootlooseService-1/endpointIdentifier/FootlooseServiceProxy.rem"
-            </remarks>
-            <param name="identityUri">The <see cref="T:System.Uri"/> of the endpoint's <see cref="T:Footloose.DataModel.IEndpointIdentity"/></param>
+            <param name="user">The user name.</param>
+            <param name="host">The host.</param>
+            <returns>A <see cref="T:System.Uri"/> for the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>
+            with the specified user name and host.</returns>
+        </member>
+        <member name="M:Footloose.TransportChannels.Remoting.RemotingUriBuilder.GetEndpointIdentityUriFrom(System.Uri)">
+            <summary>
+            Returns the <see cref="T:Footloose.DataModel.IEndpointIdentity"/> part of an <see cref="T:System.Uri"/>
+            from a <see cref="T:Footloose.DataModel.ICommunicationEndpoint"/>.
+            </summary>
+            <param name="endpointUri">The <see cref="T:System.Uri"/> of a
+            <see cref="T:Footloose.DataModel.ICommunicationEndpoint"/>.</param>
+            <returns>A <see cref="T:System.Uri"/> from the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>
+            from the provided <see cref="T:Footloose.DataModel.ICommunicationEndpoint"/> Uri.</returns>
+        </member>
+        <member name="M:Footloose.TransportChannels.Remoting.RemotingUriBuilder.BuildCommunicationEndpointUri(System.String,System.String,System.String)">
+            <summary>
+            Builds a new <see cref="T:System.Uri"/> for a <see cref="T:Footloose.DataModel.ICommunicationEndpoint"/>
+            with the specified user name, host and endpoint identifier.
+            </summary>
+            <param name="user">The user name.</param>
+            <param name="host">The host.</param>
             <param name="endpointIdentifier">The endpoint identifier.</param>
-            <returns>The <see cref="T:System.Uri"/> of the <see cref="T:Footloose.DataModel.ICommunicationEndpoint"/>.</returns>
+            <returns>A <see cref="T:System.Uri"/> for the <see cref="T:Footloose.DataModel.ICommunicationEndpoint"/>
+            with the specified user name, host and endpoint identifier.</returns>
+        </member>
+        <member name="M:Footloose.TransportChannels.Remoting.RemotingUriBuilder.GetCommunicationEndpointUri(System.Uri,System.String)">
+            <summary>
+            Returns the <see cref="T:System.Uri"/> of a <see cref="T:Footloose.DataModel.ICommunicationEndpoint"/>
+            with the specified <see cref="T:System.Uri"/> from an <see cref="T:Footloose.DataModel.IEndpointIdentity"/>
+            and it's endpoint identifier.
+            </summary>
+            <param name="identitiyUri">The <see cref="T:System.Uri"/> of the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>.</param>
+            <param name="endpointIdentifier">The endpoint identifier.</param>
+            <returns>A <see cref="T:System.Uri"/> for the <see cref="T:Footloose.DataModel.ICommunicationEndpoint"/>
+            with the specified <see cref="T:System.Uri"/> from an <see cref="T:Footloose.DataModel.IEndpointIdentity"/>
+            and it's endpoint identifier.</returns>
+        </member>
+        <member name="M:Footloose.TransportChannels.Remoting.RemotingUriBuilder.GetEqualityComparer">
+            <summary>
+            Gets a instance of a <see cref="T:System.Collections.Generic.IEqualityComparer`1"/>.
+            </summary>
+            <returns>A instance of <see cref="T:System.Collections.Generic.IEqualityComparer`1"/>.</returns>
         </member>
         <member name="T:Footloose.TransportChannels.Remoting.ServiceProxy">
             <summary>
@@ -5707,7 +5779,7 @@
             Send the specified <see cref="T:Footloose.Messaging.Message" />
             to the remote service.
             </summary>
-            <param name="mesage">A <see cref="T:Footloose.Messaging.Message" /> object to send.</param>
+            <param name="message">A <see cref="T:Footloose.Messaging.Message" /> object to send.</param>
         </member>
         <member name="M:Footloose.TransportChannels.Remoting.ServiceProxy.#ctor(System.Action{Footloose.Messaging.Message})">
             <summary>
@@ -5721,7 +5793,7 @@
             Send the specified <see cref="T:Footloose.Messaging.Message" />
             to the remote service.
             </summary>
-            <param name="mesage">A <see cref="T:Footloose.Messaging.Message" /> object to send.</param>
+            <param name="message">A <see cref="T:Footloose.Messaging.Message" /> object to send.</param>
         </member>
         <member name="T:Footloose.TransportChannels.Remoting.RemotingTransportChannel">
             <summary>
@@ -5853,7 +5925,7 @@
              Default is 10.
             </summary>
         </member>
-        <member name="M:Footloose.TransportChannels.Remoting.RemotingTransportChannel.#ctor(Footloose.Configuration.TransportChannelConfigurationSection,Footloose.TransportChannels.IMessageDispatcher,Footloose.TransportChannels.Remoting.RemotingEndpointIdentityManager)">
+        <member name="M:Footloose.TransportChannels.Remoting.RemotingTransportChannel.#ctor(Footloose.Configuration.TransportChannelConfigurationSection,Footloose.TransportChannels.IMessageDispatcher,Footloose.TransportChannels.Remoting.RemotingEndpointIdentityManager,Footloose.TransportChannels.IUriBuilder)">
             <summary>
             Initializes a new instance of the <see cref="T:Footloose.TransportChannels.Remoting.RemotingTransportChannel"/> with the
             specified <see cref="T:Footloose.Configuration.TransportChannelConfigurationSection"/>.
@@ -5861,6 +5933,7 @@
             <param name="configuration">The <see cref="T:Footloose.Configuration.TransportChannelConfigurationSection"/> for this transport channel.</param>
             <param name="messageDispatcher">The <see cref="T:Footloose.TransportChannels.IMessageDispatcher"/> for this transport channel to handle incoming messages.</param>
             <param name="endpointIdentityManager">The <see cref="T:Footloose.TransportChannels.Remoting.RemotingEndpointIdentityManager"/> for this transport channel.</param>
+            <param name="uriBuilder">The <see cref="T:Footloose.TransportChannels.IUriBuilder"/>.</param>
         </member>
         <member name="M:Footloose.TransportChannels.Remoting.RemotingTransportChannel.Connect">
             <summary>
@@ -5889,6 +5962,29 @@
             <summary>
             Gets the Uri of this service node.
             </summary>
+        </member>
+        <member name="T:Footloose.UriComparer">
+            <summary>
+            Provide a simple comparer for <see cref="T:System.Uri"/> objects.
+            </summary>
+        </member>
+        <member name="M:Footloose.UriComparer.Equals(System.Uri,System.Uri)">
+            <summary>
+            Determines whether the specified objects are equal.
+            </summary>
+            <returns>
+            true if the specified objects are equal; otherwise, false.
+            </returns>
+            <param name="x">The first object of type <paramref name="T"/> to compare.</param><param name="y">The second object of type <paramref name="T"/> to compare.</param>
+        </member>
+        <member name="M:Footloose.UriComparer.GetHashCode(System.Uri)">
+            <summary>
+            Returns a hash code for the specified object.
+            </summary>
+            <returns>
+            A hash code for the specified object.
+            </returns>
+            <param name="obj">The <see cref="T:System.Object"/> for which a hash code is to be returned.</param><exception cref="T:System.ArgumentNullException">The type of <paramref name="obj"/> is a reference type and <paramref name="obj"/> is null.</exception>
         </member>
     </members>
 </doc>

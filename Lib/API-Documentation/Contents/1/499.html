@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>IEndpointIdentityManagerInternal.GetEndpointUri Method (Uri, string)</title>
+<title>IEndpointIdentityManager.Capabilities Property </title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">IEndpointIdentityManagerInternal.GetEndpointUri Method (Uri, string)</div>
+<div id="PageTitle">IEndpointIdentityManager.Capabilities Property </div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 </div>
@@ -24,11 +24,9 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Gets the <span class="PseudoLink">System.Uri</span> from the <a href="../../Contents/1/259.html">ICommunicationEndpoint</a>
-            with the specified <span class="PseudoLink">System.Uri</span> of it's <a href="../../Contents/1/357.html">IEndpointIdentity</a>
-            and the endpoint identifier.
+Gets a list of discovered service capabilities.
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/1/373.html">IEndpointIdentityManagerInternal</a><br />
+<b>Declaring type:</b> <a href="../../Contents/1/373.html">IEndpointIdentityManager</a><br />
 <b>Namespace:</b> <a href="../../Contents/1/4.html">Footloose</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">Footloose</a>
 </div>
@@ -42,22 +40,10 @@ Syntax
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public abstract Uri GetEndpointUri (
-        Uri <i>identityUri</i>,
-        string <i>endpointIdentifier</i>
-) </pre></td></tr></table>
-<div class="CommentHeader">Parameters</div>
-<div class="CommentParameterName">identityUri</div>
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public abstract IDictionary&lt;string, DiscoInfo&gt; Capabilities { get; }</pre></td></tr></table>
+<div class="CommentHeader">Property Value</div>
 <div class="ParameterCommentContainer">
-The <span class="PseudoLink">System.Uri</span> of the endpoint's <a href="../../Contents/1/357.html">IEndpointIdentity</a>
-</div>
-<div class="CommentParameterName">endpointIdentifier</div>
-<div class="ParameterCommentContainer">
-The endpoint identifier.
-</div>
-<div class="CommentHeader">Return Value</div>
-<div class="ParameterCommentContainer">
-The <span class="PseudoLink">System.Uri</span> of the <a href="../../Contents/1/259.html">ICommunicationEndpoint</a>.
+<p>There is no description.</p>
 </div>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>

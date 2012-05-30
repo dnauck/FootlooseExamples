@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>AmqpEndpointIdentityManager.GetEndpointUri Method (Uri, string)</title>
+<title>AmqpTransportChannelConfiguration.ServerAddress Method (string)</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">AmqpEndpointIdentityManager.GetEndpointUri Method (Uri, string)</div>
+<div id="PageTitle">AmqpTransportChannelConfiguration.ServerAddress Method (string)</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 </div>
@@ -24,12 +24,10 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Gets the <span class="PseudoLink">System.Uri</span> from the <a href="../../Contents/1/259.html">ICommunicationEndpoint</a>
-            with the specified <span class="PseudoLink">System.Uri</span> of it's <a href="../../Contents/1/357.html">IEndpointIdentity</a>
-            and the endpoint identifier.
+Specify the AMQP broker to connect.
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/3/9.html">AmqpEndpointIdentityManager</a><br />
-<b>Namespace:</b> <a href="../../Contents/2/487.html">Footloose.TransportChannels.Amqp</a><br />
+<b>Declaring type:</b> <a href="../../Contents/3/5.html">AmqpTransportChannelConfiguration</a><br />
+<b>Namespace:</b> <a href="../../Contents/2/493.html">Footloose.Configuration.Fluent</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/2.html">Footloose.Amqp</a>
 </div>
 <div id="SectionHeader0" class="SectionHeader">
@@ -42,22 +40,17 @@ Syntax
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public override Uri GetEndpointUri (
-        Uri <i>identityUri</i>,
-        string <i>endpointIdentifier</i>
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public AmqpTransportChannelConfiguration ServerAddress (
+        string <i>serverAddress</i>
 ) </pre></td></tr></table>
 <div class="CommentHeader">Parameters</div>
-<div class="CommentParameterName">identityUri</div>
+<div class="CommentParameterName">serverAddress</div>
 <div class="ParameterCommentContainer">
-The <span class="PseudoLink">System.Uri</span> of the endpoint's <a href="../../Contents/1/357.html">IEndpointIdentity</a>
-</div>
-<div class="CommentParameterName">endpointIdentifier</div>
-<div class="ParameterCommentContainer">
-The endpoint identifier.
+Address of the AMQP broker to connect.
 </div>
 <div class="CommentHeader">Return Value</div>
 <div class="ParameterCommentContainer">
-The <span class="PseudoLink">System.Uri</span> of the <a href="../../Contents/1/259.html">ICommunicationEndpoint</a>.
+<a href="../../Contents/3/5.html">AmqpTransportChannelConfiguration</a>
 </div>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>

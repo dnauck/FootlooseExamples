@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>DefaultAuthorizationProvider Constructor ()</title>
+<title>AuthenticatedOnlyAuthorizationProvider.ValidateMethodCallRequest Method (Uri, IMethodCallRequest)</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">DefaultAuthorizationProvider Constructor ()</div>
+<div id="PageTitle">AuthenticatedOnlyAuthorizationProvider.ValidateMethodCallRequest Method (Uri, IMethodCallRequest)</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 </div>
@@ -24,9 +24,10 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-<p>There is no summary.</p>
+Validates if the <a href="../../Contents/2/57.html">IMethodCallRequest</a> from the specified sender
+            is authorized.
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/1/67.html">DefaultAuthorizationProvider</a><br />
+<b>Declaring type:</b> <a href="../../Contents/1/60.html">AuthenticatedOnlyAuthorizationProvider</a><br />
 <b>Namespace:</b> <a href="../../Contents/1/12.html">Footloose.Security</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">Footloose</a>
 </div>
@@ -40,7 +41,23 @@ Syntax
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public DefaultAuthorizationProvider ()</pre></td></tr></table>
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public bool ValidateMethodCallRequest (
+        Uri <i>from</i>,
+        IMethodCallRequest <i>methodCallRequest</i>
+) </pre></td></tr></table>
+<div class="CommentHeader">Parameters</div>
+<div class="CommentParameterName">from</div>
+<div class="ParameterCommentContainer">
+The <span class="PseudoLink">System.Uri</span> of the sender.
+</div>
+<div class="CommentParameterName">methodCallRequest</div>
+<div class="ParameterCommentContainer">
+The <a href="../../Contents/2/57.html">IMethodCallRequest</a>.
+</div>
+<div class="CommentHeader">Return Value</div>
+<div class="ParameterCommentContainer">
+True if the <a href="../../Contents/2/57.html">IMethodCallRequest</a> is authorized; otherwise false.
+</div>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>
 <div id="Footer">

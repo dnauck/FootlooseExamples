@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>AmqpEndpointIdentityManager.GetIdentityUri Method (Uri)</title>
+<title>AmqpTransportChannelConfiguration.UseSsl Method ()</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">AmqpEndpointIdentityManager.GetIdentityUri Method (Uri)</div>
+<div id="PageTitle">AmqpTransportChannelConfiguration.UseSsl Method ()</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 </div>
@@ -24,11 +24,10 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Gets the <span class="PseudoLink">System.Uri</span> from the <a href="../../Contents/1/357.html">IEndpointIdentity</a>
-            of this <span class="PseudoLink">System.Uri</span>.
+Enables the use of SSL for AMQP connection encryption. Default is on.
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/3/9.html">AmqpEndpointIdentityManager</a><br />
-<b>Namespace:</b> <a href="../../Contents/2/487.html">Footloose.TransportChannels.Amqp</a><br />
+<b>Declaring type:</b> <a href="../../Contents/3/5.html">AmqpTransportChannelConfiguration</a><br />
+<b>Namespace:</b> <a href="../../Contents/2/493.html">Footloose.Configuration.Fluent</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/2.html">Footloose.Amqp</a>
 </div>
 <div id="SectionHeader0" class="SectionHeader">
@@ -41,17 +40,10 @@ Syntax
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public override Uri GetIdentityUri (
-        Uri <i>uri</i>
-) </pre></td></tr></table>
-<div class="CommentHeader">Parameters</div>
-<div class="CommentParameterName">uri</div>
-<div class="ParameterCommentContainer">
-The <span class="PseudoLink">System.Uri</span>.
-</div>
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public AmqpTransportChannelConfiguration UseSsl ()</pre></td></tr></table>
 <div class="CommentHeader">Return Value</div>
 <div class="ParameterCommentContainer">
-The <span class="PseudoLink">System.Uri</span> of the <a href="../../Contents/1/357.html">IEndpointIdentity</a>.
+<a href="../../Contents/3/5.html">AmqpTransportChannelConfiguration</a>
 </div>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>

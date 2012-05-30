@@ -6,14 +6,15 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>XmppTransportChannel.Connect Method ()</title>
+<title>XmppTransportChannelConfigurationElement.UseTls Property </title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">XmppTransportChannel.Connect Method ()</div>
+<div id="PageTitle">XmppTransportChannelConfigurationElement.UseTls Property </div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
+<a href="#SectionHeader1" onclick="javascript: SetSectionVisibility(1, true); SetExpandCollapseAllToCollapseAll();">Remarks</a>&nbsp;
 </div>
 <div class="DarkLine"></div>
 <div class="LightLine"></div>
@@ -24,10 +25,10 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Brings the transport channel online.
+Enables the use of Start-TLS for TLS XMPP stream encryption and compression. Default is on.
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/3/26.html">XmppTransportChannel</a><br />
-<b>Namespace:</b> <a href="../../Contents/3/24.html">Footloose.TransportChannels.Xmpp</a><br />
+<b>Declaring type:</b> <a href="../../Contents/3/58.html">XmppTransportChannelConfigurationElement</a><br />
+<b>Namespace:</b> <a href="../../Contents/3/40.html">Footloose.Configuration</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/3.html">Footloose.Xmpp</a>
 </div>
 <div id="SectionHeader0" class="SectionHeader">
@@ -40,7 +41,25 @@ Syntax
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public override void Connect ()</pre></td></tr></table>
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public bool UseTls { get; set; }</pre></td></tr></table>
+<div class="CommentHeader">Property Value</div>
+<div class="ParameterCommentContainer">
+<p>There is no description.</p>
+</div>
+<div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
+<div id="SectionHeader1" class="SectionHeader">
+<img id="SectionExpanderImg1" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(1);" />
+<span class="SectionHeader">
+<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(1);">
+Remarks
+</span>
+</span>
+</div>
+
+<div id="SectionContainerDiv1" class="SectionContainer">
+<div class="RemarksContainer">
+See RFC 2246 for further details: http://www.ietf.org/rfc/rfc2246.txt
+</div>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>
 <div id="Footer">
