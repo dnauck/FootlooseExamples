@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>PresenceSubscriptionRequestEventArgs.From Property </title>
+<title>PresenceSubscriptionRequestEventArgs Constructor (IEndpointIdentity, string)</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">PresenceSubscriptionRequestEventArgs.From Property </div>
+<div id="PageTitle">PresenceSubscriptionRequestEventArgs Constructor (IEndpointIdentity, string)</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 </div>
@@ -24,9 +24,10 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Gets the <a href="../../Contents/1/357.html">IEndpointIdentity</a> from the sender of this subscription request.
+Initializes a new instance of the <a href="../../Contents/1/369.html">PresenceSubscriptionRequestEventArgs</a> class
+            with the specified <a href="../../Contents/1/359.html">IEndpointIdentity</a> and reason.
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/1/367.html">PresenceSubscriptionRequestEventArgs</a><br />
+<b>Declaring type:</b> <a href="../../Contents/1/369.html">PresenceSubscriptionRequestEventArgs</a><br />
 <b>Namespace:</b> <a href="../../Contents/1/4.html">Footloose</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">Footloose</a>
 </div>
@@ -40,10 +41,18 @@ Syntax
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public IEndpointIdentity From { get; set; }</pre></td></tr></table>
-<div class="CommentHeader">Property Value</div>
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public PresenceSubscriptionRequestEventArgs (
+        IEndpointIdentity <i>from</i>,
+        string <i>reason</i>
+) </pre></td></tr></table>
+<div class="CommentHeader">Parameters</div>
+<div class="CommentParameterName">from</div>
 <div class="ParameterCommentContainer">
-<p>There is no description.</p>
+The <a href="../../Contents/1/359.html">IEndpointIdentity</a> from the sender of this subscription request.
+</div>
+<div class="CommentParameterName">reason</div>
+<div class="ParameterCommentContainer">
+The reason that explains the subscription request.
 </div>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>

@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>SHA512HashAlgorithm.CheckString Method (string, string, string)</title>
+<title>IAuthorizationManager.ValidateMethodResponseRequest Method (Uri, IMethodResponseRequest)</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">SHA512HashAlgorithm.CheckString Method (string, string, string)</div>
+<div id="PageTitle">IAuthorizationManager.ValidateMethodResponseRequest Method (Uri, IMethodResponseRequest)</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 </div>
@@ -24,10 +24,11 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Cheks a plaintext string matches a previously hashed one.
+Validates if the <a href="../../Contents/2/63.html">IMethodResponseRequest</a> from the specified sender
+            is authorized.
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/2/359.html">SHA512HashAlgorithm</a><br />
-<b>Namespace:</b> <a href="../../Contents/1/13.html">Footloose.Security.Cryptography</a><br />
+<b>Declaring type:</b> <a href="../../Contents/2/340.html">IAuthorizationManager</a><br />
+<b>Namespace:</b> <a href="../../Contents/1/12.html">Footloose.Security</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">Footloose</a>
 </div>
 <div id="SectionHeader0" class="SectionHeader">
@@ -40,27 +41,22 @@ Syntax
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public bool CheckString (
-        string <i>plaintext</i>,
-        string <i>hashed</i>,
-        string <i>key</i>
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public abstract bool ValidateMethodResponseRequest (
+        Uri <i>from</i>,
+        IMethodResponseRequest <i>methodResponseRequest</i>
 ) </pre></td></tr></table>
 <div class="CommentHeader">Parameters</div>
-<div class="CommentParameterName">plaintext</div>
+<div class="CommentParameterName">from</div>
 <div class="ParameterCommentContainer">
-The plaintext string to verify.
+The <span class="PseudoLink">System.Uri</span> of the sender.
 </div>
-<div class="CommentParameterName">hashed</div>
+<div class="CommentParameterName">methodResponseRequest</div>
 <div class="ParameterCommentContainer">
-The previously hashed string.
-</div>
-<div class="CommentParameterName">key</div>
-<div class="ParameterCommentContainer">
-The key to use in the hash algorithm.
+The <a href="../../Contents/2/63.html">IMethodResponseRequest</a>.
 </div>
 <div class="CommentHeader">Return Value</div>
 <div class="ParameterCommentContainer">
-true if the string matches; otherwise false.
+True if the <a href="../../Contents/2/63.html">IMethodResponseRequest</a> is authorized; otherwise false.
 </div>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>

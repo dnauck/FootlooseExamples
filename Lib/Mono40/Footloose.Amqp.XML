@@ -1,0 +1,341 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>obj\Release-Mono-4.0\Footloose.Amqp</name>
+    </assembly>
+    <members>
+        <member name="T:Footloose.Configuration.AmqpTransportChannelConfigurationElement">
+            <summary>
+            Represents a configuration element for the AMQP transport channel within a configuration file.
+            </summary>
+        </member>
+        <member name="M:Footloose.Configuration.AmqpTransportChannelConfigurationElement.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Footloose.Configuration.AmqpTransportChannelConfigurationElement" /> class.
+            </summary>
+        </member>
+        <member name="M:Footloose.Configuration.AmqpTransportChannelConfigurationElement.#ctor(Footloose.Configuration.TransportChannelConfigurationElementBase)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Footloose.Configuration.AmqpTransportChannelConfigurationElement" /> class
+            using values from the provided <see cref="T:Footloose.Configuration.TransportChannelConfigurationElementBase" />.
+            </summary>
+            <param name="configuration">The <see cref="T:Footloose.Configuration.TransportChannelConfigurationElementBase" /> to get values from.</param>
+        </member>
+        <member name="P:Footloose.Configuration.AmqpTransportChannelConfigurationElement.Credentials">
+            <summary>
+            Gets or sets the key of the credentios to use.
+            </summary>
+        </member>
+        <member name="P:Footloose.Configuration.AmqpTransportChannelConfigurationElement.ServerAddress">
+            <summary>
+            Gets or sets the AMQP broker to connect.
+            </summary>
+        </member>
+        <member name="P:Footloose.Configuration.AmqpTransportChannelConfigurationElement.Port">
+            <summary>
+            Gets or sets the AMQP broker port to connect. Default is 5672.
+            </summary>
+        </member>
+        <member name="P:Footloose.Configuration.AmqpTransportChannelConfigurationElement.UseSsl">
+            <summary>
+            Enables the use of SSL for connection encryption. Default is on.
+            </summary>
+        </member>
+        <member name="P:Footloose.Configuration.AmqpTransportChannelConfigurationElement.VirtualHost">
+            <summary>
+            Gets or sets the AMQP virtual host to connect.
+            </summary>
+        </member>
+        <member name="T:Footloose.Configuration.Fluent.AmqpTransportChannelConfiguration">
+            <summary>
+            Configuration class for the <see cref="T:Footloose.TransportChannels.Amqp.AmqpTransportChannel" />.
+            </summary>
+        </member>
+        <member name="M:Footloose.Configuration.Fluent.AmqpTransportChannelConfiguration.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Footloose.Configuration.Fluent.AmqpTransportChannelConfiguration" /> class
+            with default settings.
+            </summary>
+        </member>
+        <member name="P:Footloose.Configuration.Fluent.AmqpTransportChannelConfiguration.Standard">
+            <summary>
+            Initializes a new instance of the <see cref="T:Footloose.Configuration.Fluent.AmqpTransportChannelConfiguration" /> class
+            with default settings.
+            </summary>
+        </member>
+        <member name="M:Footloose.Configuration.Fluent.AmqpTransportChannelConfiguration.Credentials(System.Net.NetworkCredential)">
+            <summary>
+            Specify the <see cref="T:System.Net.NetworkCredential" /> for authentication with the AMQP broker.
+            </summary>
+            <param name="credentials">
+                <see cref="T:System.Net.NetworkCredential" /> with user name and passwort.</param>
+            <returns>
+                <see cref="T:Footloose.Configuration.Fluent.AmqpTransportChannelConfiguration" />
+            </returns>
+        </member>
+        <member name="M:Footloose.Configuration.Fluent.AmqpTransportChannelConfiguration.ServerAddress(System.String)">
+            <summary>
+            Specify the AMQP broker to connect.
+            </summary>
+            <param name="serverAddress">Address of the AMQP broker to connect.</param>
+            <returns>
+                <see cref="T:Footloose.Configuration.Fluent.AmqpTransportChannelConfiguration" />
+            </returns>
+        </member>
+        <member name="M:Footloose.Configuration.Fluent.AmqpTransportChannelConfiguration.Port(System.Int32)">
+            <summary>
+            Specify the AMQP broker port to connect. Default is 5672.
+            </summary>
+            <param name="port">A value between 1 and 65535.</param>
+            <returns>
+                <see cref="T:Footloose.Configuration.Fluent.AmqpTransportChannelConfiguration" />
+            </returns>
+        </member>
+        <member name="M:Footloose.Configuration.Fluent.AmqpTransportChannelConfiguration.UseSsl">
+            <summary>
+            Enables the use of SSL for AMQP connection encryption. Default is on.
+            </summary>
+            <returns>
+                <see cref="T:Footloose.Configuration.Fluent.AmqpTransportChannelConfiguration" />
+            </returns>
+        </member>
+        <member name="M:Footloose.Configuration.Fluent.AmqpTransportChannelConfiguration.VirtualHost(System.String)">
+            <summary>
+            Specify the AMQP broker virtual host to connect.
+            </summary>
+            <param name="virtualHost">Virtual host of the AMQP broker to connect.</param>
+            <returns>
+                <see cref="T:Footloose.Configuration.Fluent.AmqpTransportChannelConfiguration" />
+            </returns>
+        </member>
+        <member name="M:Footloose.Configuration.Fluent.AmqpTransportChannelConfiguration.Apply(Footloose.Configuration.TransportChannelConfigurationSection)">
+            <summary>
+            Applies the transport channel configuration data to the <see cref="T:Footloose.Configuration.TransportChannelConfigurationSection" />.
+            </summary>
+            <param name="configuration">The <see cref="T:Footloose.Configuration.ServiceContractConfigurationSection" /> configuration.</param>
+        </member>
+        <member name="P:Footloose.TransportChannels.Amqp.AmqpConnection.IsConnected">
+            <summary>
+            Gets the current state of the connection.
+            true if the connection is established; otherwise, false.
+            </summary>
+        </member>
+        <member name="P:Footloose.TransportChannels.Amqp.AmqpConnection.ServiceUri">
+            <summary>
+            Gets the Uri of this service node.
+            </summary>
+        </member>
+        <member name="P:Footloose.TransportChannels.Amqp.AmqpConnection.IsDisposed">
+            <summary>
+            Gets or sets a value indicating whether the class has been disposed of.
+            true if the class has been disposed of; otherwise, false.
+            </summary>
+        </member>
+        <member name="M:Footloose.TransportChannels.Amqp.AmqpConnection.Finalize">
+            <summary>
+            This destructor will run only if the Dispose method
+            does not get called.
+            </summary>
+        </member>
+        <member name="M:Footloose.TransportChannels.Amqp.AmqpConnection.Dispose">
+            <summary>
+            Performs application-defined tasks associated with freeing,
+            releasing, or resetting unmanaged resources.
+            </summary>
+        </member>
+        <member name="M:Footloose.TransportChannels.Amqp.AmqpConnection.Dispose(System.Boolean)">
+            <summary>
+            If disposing equals true, the method has been called directly
+            or indirectly by a user's code. Managed and unmanaged resources
+            can be disposed.
+            If disposing equals false, the method has been called by the
+            runtime from inside the finalizer and you should not reference
+            other objects. Only unmanaged resources can be disposed.
+            </summary>
+            <param name="disposing">Indicator that the method as been called by user's code.</param>
+        </member>
+        <member name="E:Footloose.TransportChannels.Amqp.AmqpConnectionManager.ConnectionStateChanged">
+            <summary>
+            Occurs when the <see cref="T:Footloose.ConnectionState" /> is changed.
+            </summary>
+        </member>
+        <member name="E:Footloose.TransportChannels.Amqp.AmqpConnectionManager.ExceptionOccurred">
+            <summary>
+            Occurs when a <see cref="T:System.Exception" /> is thrown.
+            </summary>
+        </member>
+        <member name="P:Footloose.TransportChannels.Amqp.AmqpConnectionManager.ConnectionState">
+            <summary>
+            Gets the current state of the connection.
+            </summary>
+        </member>
+        <member name="P:Footloose.TransportChannels.Amqp.AmqpConnectionManager.IsDisposed">
+            <summary>
+            Gets or sets a value indicating whether the class has been disposed of.
+            true if the class has been disposed of; otherwise, false.
+            </summary>
+        </member>
+        <member name="M:Footloose.TransportChannels.Amqp.AmqpConnectionManager.Finalize">
+            <summary>
+            This destructor will run only if the Dispose method
+            does not get called.
+            </summary>
+        </member>
+        <member name="M:Footloose.TransportChannels.Amqp.AmqpConnectionManager.Connect">
+            <summary>
+            Connect to AMQP broker.
+            </summary>
+        </member>
+        <member name="M:Footloose.TransportChannels.Amqp.AmqpConnectionManager.Disconnect">
+            <summary>
+            Disconnects from the AMQP broker.
+            </summary>
+        </member>
+        <member name="M:Footloose.TransportChannels.Amqp.AmqpConnectionManager.GetFailureDelay(System.Int32)">
+            <summary>
+            Get the delay time escalation in milliseconds.
+            </summary>
+            <param name="failtureCount">Escalation level.</param>
+            <returns>Delay in milliseconds.</returns>
+        </member>
+        <member name="M:Footloose.TransportChannels.Amqp.AmqpConnectionManager.Dispose">
+            <summary>
+            Performs application-defined tasks associated with freeing,
+            releasing, or resetting unmanaged resources.
+            </summary>
+        </member>
+        <member name="M:Footloose.TransportChannels.Amqp.AmqpConnectionManager.Dispose(System.Boolean)">
+            <summary>
+            If disposing equals true, the method has been called directly
+            or indirectly by a user's code. Managed and unmanaged resources
+            can be disposed.
+            If disposing equals false, the method has been called by the
+            runtime from inside the finalizer and you should not reference
+            other objects. Only unmanaged resources can be disposed.
+            </summary>
+            <param name="disposing">Indicator that the method as been called by user's code.</param>
+        </member>
+        <member name="T:Footloose.TransportChannels.Amqp.AmqpEndpointIdentityManager">
+            <summary>
+            EndpointIdentityManager specific implementation of the AmqpTransportChannel.
+            </summary>
+        </member>
+        <member name="M:Footloose.TransportChannels.Amqp.AmqpEndpointIdentityManager.#ctor(Footloose.DataModel.EndpointIdentityDictionary,Footloose.DataModel.SelfEndpointIdentity,System.Func{System.Uri,Footloose.DataModel.EndpointIdentity},System.Lazy{Footloose.TransportChannels.IMessageOriginator},Footloose.Security.Cryptography.IHashAlgorithm,Footloose.TransportChannels.IUriBuilder)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Footloose.TransportChannels.Amqp.AmqpEndpointIdentityManager" /> class.
+            </summary>
+            <param name="endpointIdentityDictionary">The <see cref="T:Footloose.DataModel.EndpointIdentityDictionary" />.</param>
+            <param name="selfEndpointIdentity">The <see cref="P:Footloose.EndpointIdentityManagerBase.SelfEndpointIdentity" />.</param>
+            <param name="endpointIdentityFactory">The <see cref="T:Footloose.DataModel.EndpointIdentity" /> factory.</param>
+            <param name="orginator">The <see cref="T:Footloose.TransportChannels.IMessageOriginator" />.</param>
+            <param name="hashAlgorithm">The <see cref="T:Footloose.Security.Cryptography.IHashAlgorithm" />.</param>
+        </member>
+        <member name="P:Footloose.TransportChannels.Amqp.AmqpTransportChannel.ServiceUri">
+            <summary>
+            Gets the Uri of this service node.
+            </summary>
+        </member>
+        <member name="M:Footloose.TransportChannels.Amqp.AmqpTransportChannel.Connect">
+            <summary>
+            Brings the transport channel online.
+            </summary>
+        </member>
+        <member name="M:Footloose.TransportChannels.Amqp.AmqpTransportChannel.Disconnect">
+            <summary>
+            Disconnects the transport channel.
+            </summary>
+        </member>
+        <member name="M:Footloose.TransportChannels.Amqp.AmqpTransportChannel.SetDiscoInfo(Footloose.DataModel.DataTransferObjects.DiscoInfo)">
+            <summary>
+            Sets the service discovery information the transport channel should
+            send on discovery requests.
+            </summary>
+            <param name="discoInfo">Service discovery information for this service node.</param>
+        </member>
+        <member name="M:Footloose.TransportChannels.Amqp.AmqpTransportChannel.SendMessage(Footloose.Messaging.Message)">
+            <summary>
+            Sends the specified message through this transport channel.
+            </summary>
+            <param name="message">The message to send.</param>
+        </member>
+        <member name="M:Footloose.TransportChannels.Amqp.AmqpUriBuilder.#ctor(System.Func{System.Collections.Generic.IEqualityComparer{System.Uri}})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Footloose.TransportChannels.Amqp.AmqpUriBuilder" />
+            with the provided uri comparer factory.
+            </summary>
+            <param name="uriComparerFactory">The factory method for <see cref="!:IEqualityComparer{Uri}" /> instances.</param>
+        </member>
+        <member name="M:Footloose.TransportChannels.Amqp.AmqpUriBuilder.BuildEndpointIdentityUri(System.String,System.String)">
+            <summary>
+            Builds a new <see cref="T:System.Uri" /> for an <see cref="T:Footloose.DataModel.IEndpointIdentity" />
+            with the specified user name and host.
+            </summary>
+            <param name="user">The user name.</param>
+            <param name="host">The host.</param>
+            <returns>A <see cref="T:System.Uri" /> for the <see cref="T:Footloose.DataModel.IEndpointIdentity" />
+            with the specified user name and host.</returns>
+        </member>
+        <member name="M:Footloose.TransportChannels.Amqp.AmqpUriBuilder.GetEndpointIdentityUriFrom(System.Uri)">
+            <summary>
+            Returns the <see cref="T:Footloose.DataModel.IEndpointIdentity" /> part of an <see cref="T:System.Uri" />
+            from a <see cref="T:Footloose.DataModel.ICommunicationEndpoint" />.
+            </summary>
+            <param name="endpointUri">The <see cref="T:System.Uri" /> of a
+            <see cref="T:Footloose.DataModel.ICommunicationEndpoint" />.</param>
+            <returns>A <see cref="T:System.Uri" /> from the <see cref="T:Footloose.DataModel.IEndpointIdentity" />
+            from the provided <see cref="T:Footloose.DataModel.ICommunicationEndpoint" /> Uri.</returns>
+        </member>
+        <member name="M:Footloose.TransportChannels.Amqp.AmqpUriBuilder.BuildCommunicationEndpointUri(System.String,System.String,System.String)">
+            <summary>
+            Builds a new <see cref="T:System.Uri" /> for a <see cref="T:Footloose.DataModel.ICommunicationEndpoint" />
+            with the specified user name, host and endpoint identifier.
+            </summary>
+            <param name="user">The user name.</param>
+            <param name="host">The host.</param>
+            <param name="endpointIdentifier">The endpoint identifier.</param>
+            <returns>A <see cref="T:System.Uri" /> for the <see cref="T:Footloose.DataModel.ICommunicationEndpoint" />
+            with the specified user name, host and endpoint identifier.</returns>
+        </member>
+        <member name="M:Footloose.TransportChannels.Amqp.AmqpUriBuilder.GetCommunicationEndpointUri(System.Uri,System.String)">
+            <summary>
+            Returns the <see cref="T:System.Uri" /> of a <see cref="T:Footloose.DataModel.ICommunicationEndpoint" />
+            with the specified <see cref="T:System.Uri" /> from an <see cref="T:Footloose.DataModel.IEndpointIdentity" />
+            and it's endpoint identifier.
+            </summary>
+            <param name="identitiyUri">The <see cref="T:System.Uri" /> of the <see cref="T:Footloose.DataModel.IEndpointIdentity" />.</param>
+            <param name="endpointIdentifier">The endpoint identifier.</param>
+            <returns>A <see cref="T:System.Uri" /> for the <see cref="T:Footloose.DataModel.ICommunicationEndpoint" />
+            with the specified <see cref="T:System.Uri" /> from an <see cref="T:Footloose.DataModel.IEndpointIdentity" />
+            and it's endpoint identifier.</returns>
+        </member>
+        <member name="M:Footloose.TransportChannels.Amqp.AmqpUriBuilder.GetEqualityComparer">
+            <summary>
+            Gets a instance of a <see cref="!:IEqualityComparer{Uri}" />.
+            </summary>
+            <returns>A instance of <see cref="!:IEqualityComparer{Uri}" />.</returns>
+        </member>
+        <member name="T:Footloose.TransportChannels.Amqp.IAmqpConnection">
+            <summary>
+            Represents an interface for a wrapper around the RabbitMQ connection
+            that can handle reconnects and is listening to incoming messages on a different thread.
+            </summary>
+        </member>
+        <member name="P:Footloose.TransportChannels.Amqp.IAmqpConnection.IsConnected">
+            <summary>
+            Gets the current state of the connection.
+            true if the connection is established; otherwise, false.
+            </summary>
+        </member>
+        <member name="P:Footloose.TransportChannels.Amqp.IAmqpConnection.ServiceUri">
+            <summary>
+            Gets the Uri of this service node.
+            </summary>
+        </member>
+        <member name="P:Footloose.TransportChannels.Amqp.IAmqpConnection.IsDisposed">
+            <summary>
+            Gets or sets a value indicating whether the class has been disposed of.
+            true if the class has been disposed of; otherwise, false.
+            </summary>
+        </member>
+    </members>
+</doc>

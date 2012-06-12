@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>SharedTypeDataContractResolver Class Members</title>
+<title>ProtocolBuffersSerializer Class Members</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">SharedTypeDataContractResolver Class Members</div>
+<div id="PageTitle">ProtocolBuffersSerializer Class Members</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader30" onclick="javascript: SetSectionVisibility(30, true); SetExpandCollapseAllToCollapseAll();">Constructors</a>&nbsp;
 <a href="#SectionHeader35" onclick="javascript: SetSectionVisibility(35, true); SetExpandCollapseAllToCollapseAll();">Methods</a>&nbsp;
@@ -25,14 +25,10 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-This resolver gives the knownTypeResolver a chance to resolve a type or a name statically, 
-            and if that fails it uses the type and assembly name of the type on the wire instead. 
-            Note that this would only work on the .NET framework for tightly coupled scenarios. 
-            You’re basically getting DataContractSerializer behavior most of the type,
-            and NetDataContractSerializer behavior for known types without ever having to specify a known type yourself.
-            From: http://blogs.msdn.com/b/youssefm/archive/2009/06/05/introducing-a-new-datacontractserializer-feature-the-datacontractresolver.aspx
+Serializes and deserializes an object, or an entire
+            graph of connected objects in Base64 encoded protocol buffers format.
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/2/371.html">SharedTypeDataContractResolver</a><br />
+<b>Declaring type:</b> <a href="../../Contents/2/374.html">ProtocolBuffersSerializer</a><br />
 <b>Namespace:</b> <a href="../../Contents/1/14.html">Footloose.Serialization</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">Footloose</a>
 </div>
@@ -58,8 +54,8 @@ Public Constructors
 <tr>
 <td class="IconColumn">
 <img src="../../GFX/PublicMethod.gif" alt="Public Method" /></td>
-<td><a href="../../Contents/2/390.html">SharedTypeDataContractResolver</a></td>
-<td><p>There is no summary.</p></td>
+<td><a href="../../Contents/2/390.html">ProtocolBuffersSerializer</a></td>
+<td>Initializes a new instance of the <a href="../../Contents/2/374.html">ProtocolBuffersSerializer</a> class.</td>
 </tr>
 </table>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
@@ -84,15 +80,15 @@ Public Methods
 </tr>
 <tr>
 <td class="IconColumn">
-<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Virtual.gif" alt="Virtual" /></td>
-<td><a href="../../Contents/2/391.html">ResolveName</a></td>
-<td>Override this method to map the specified xsi:type name and namespace to a data contract type during deserialization.</td>
+<img src="../../GFX/PublicMethod.gif" alt="Public Method" /></td>
+<td><a href="../../Contents/2/391.html">Deserialize&lt;T&gt;</a></td>
+<td>Deserializes the specified <span class="PseudoLink">System.String</span> into an object graph.</td>
 </tr>
 <tr>
 <td class="IconColumn">
-<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Virtual.gif" alt="Virtual" /></td>
-<td><a href="../../Contents/2/392.html">TryResolveType</a></td>
-<td>Override this method to map a data contract type to an xsi:type name and namespace during serialization.</td>
+<img src="../../GFX/PublicMethod.gif" alt="Public Method" /></td>
+<td><a href="../../Contents/2/392.html">Serialize&lt;T&gt;</a></td>
+<td>Serializes the specified object, or graph of objects.</td>
 </tr>
 </table>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>

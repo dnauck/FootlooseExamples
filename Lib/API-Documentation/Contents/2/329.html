@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>IMessageBufferRepository Interface Members</title>
+<title>IMessageBuilder Interface Members</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">IMessageBufferRepository Interface Members</div>
+<div id="PageTitle">IMessageBuilder Interface Members</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader35" onclick="javascript: SetSectionVisibility(35, true); SetExpandCollapseAllToCollapseAll();">Methods</a>&nbsp;
 </div>
@@ -24,9 +24,9 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-<p>There is no summary.</p>
+This interface defines a factory to build up messages from specific <a href="../../Contents/2/215.html">IMessageBodyData</a> objects.
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/2/280.html">IMessageBufferRepository</a><br />
+<b>Declaring type:</b> <a href="../../Contents/2/280.html">IMessageBuilder</a><br />
 <b>Namespace:</b> <a href="../../Contents/1/11.html">Footloose.Messaging</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">Footloose</a>
 </div>
@@ -52,32 +52,9 @@ Public Methods
 <tr>
 <td class="IconColumn">
 <img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
-<td><a href="../../Contents/2/330.html">AppendMessage</a></td>
-<td><p>There is no summary.</p></td>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
-<td><a href="../../Contents/2/331.html">CreateBuffer</a></td>
-<td><p>There is no summary.</p></td>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
-<td><a href="../../Contents/2/332.html">GetBuffer</a></td>
-<td><p>There is no summary.</p></td>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
-<td><a href="../../Contents/2/333.html">GetStatus</a></td>
-<td><p>There is no summary.</p></td>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
-<td><a href="../../Contents/2/334.html">RemoveBuffer</a></td>
-<td><p>There is no summary.</p></td>
+<td><a href="../../Contents/2/330.html">BuildupMessages</a></td>
+<td>Build up a list of messages for the specified transport channel
+            with the provided message data.</td>
 </tr>
 </table>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>

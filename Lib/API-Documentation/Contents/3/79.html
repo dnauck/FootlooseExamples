@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>XmppEndpointIdentityManager.AddEndpointIdentity Method (Uri, string, IEnumerable&lt;string&gt;, bool)</title>
+<title>XmppTransportChannelConfigurationElement Constructor (TransportChannelConfigurationElementBase)</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">XmppEndpointIdentityManager.AddEndpointIdentity Method (Uri, string, IEnumerable&lt;string&gt;, bool)</div>
+<div id="PageTitle">XmppTransportChannelConfigurationElement Constructor (TransportChannelConfigurationElementBase)</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 </div>
@@ -24,12 +24,11 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Adds a new <a href="../../Contents/1/357.html">IEndpointIdentity</a> with the specified <span class="PseudoLink">System.Uri</span> and name
-            and list of groups to the collection
-            and request subscription to the <a href="../../Contents/1/422.html">IPresence</a> of the <a href="../../Contents/1/357.html">IEndpointIdentity</a>.
+Initializes a new instance of the <a href="../../Contents/3/62.html">XmppTransportChannelConfigurationElement</a> class
+            using values from the provided <a href="../../Contents/1/78.html">TransportChannelConfigurationElementBase</a>.
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/3/76.html">XmppEndpointIdentityManager</a><br />
-<b>Namespace:</b> <a href="../../Contents/3/42.html">Footloose.TransportChannels.Xmpp</a><br />
+<b>Declaring type:</b> <a href="../../Contents/3/62.html">XmppTransportChannelConfigurationElement</a><br />
+<b>Namespace:</b> <a href="../../Contents/3/44.html">Footloose.Configuration</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/3.html">Footloose.Xmpp</a>
 </div>
 <div id="SectionHeader0" class="SectionHeader">
@@ -42,29 +41,13 @@ Syntax
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public override void AddEndpointIdentity (
-        Uri <i>uri</i>,
-        string <i>name</i>,
-        IEnumerable&lt;string&gt; <i>groups</i>,
-        bool <i>requestSubscription</i>
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public XmppTransportChannelConfigurationElement (
+        TransportChannelConfigurationElementBase <i>configuration</i>
 ) </pre></td></tr></table>
 <div class="CommentHeader">Parameters</div>
-<div class="CommentParameterName">uri</div>
+<div class="CommentParameterName">configuration</div>
 <div class="ParameterCommentContainer">
-The <span class="PseudoLink">System.Uri</span> of the <a href="../../Contents/1/357.html">IEndpointIdentity</a>.
-</div>
-<div class="CommentParameterName">name</div>
-<div class="ParameterCommentContainer">
-The name of the <a href="../../Contents/1/357.html">IEndpointIdentity</a>.
-</div>
-<div class="CommentParameterName">groups</div>
-<div class="ParameterCommentContainer">
-The list of groups the <a href="../../Contents/1/357.html">IEndpointIdentity</a> belongs to.
-</div>
-<div class="CommentParameterName">requestSubscription</div>
-<div class="ParameterCommentContainer">
-If true request subscription to the <a href="../../Contents/1/422.html">IPresence</a> of
-            the <a href="../../Contents/1/357.html">IEndpointIdentity</a>; otherwise just add the item to the collection.
+The <a href="../../Contents/1/78.html">TransportChannelConfigurationElementBase</a> to get values from.
 </div>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>

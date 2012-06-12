@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>IMessageOriginator.EnqueueData Method (Uri, IMessageBodyData, CancellationToken)</title>
+<title>IMessageOriginator.EnqueueResponse Method (Message)</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">IMessageOriginator.EnqueueData Method (Uri, IMessageBodyData, CancellationToken)</div>
+<div id="PageTitle">IMessageOriginator.EnqueueResponse Method (Message)</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 <a href="#SectionHeader1" onclick="javascript: SetSectionVisibility(1, true); SetExpandCollapseAllToCollapseAll();">Exceptions</a>&nbsp;
@@ -25,10 +25,9 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Enqueues the given <a href="../../Contents/2/211.html">IMessageBodyData</a> for the recipient with the
-            provided <span class="PseudoLink">System.Uri</span>.
+Enqueues a response <a href="../../Contents/2/277.html">Message</a> of type <a href="../../Contents/2/301.html">Result</a> or <a href="../../Contents/2/304.html">Error</a>.
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/1/452.html">IMessageOriginator</a><br />
+<b>Declaring type:</b> <a href="../../Contents/1/454.html">IMessageOriginator</a><br />
 <b>Namespace:</b> <a href="../../Contents/1/15.html">Footloose.TransportChannels</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">Footloose</a>
 </div>
@@ -42,27 +41,13 @@ Syntax
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public abstract Task EnqueueData (
-        Uri <i>to</i>,
-        IMessageBodyData <i>data</i>,
-        CancellationToken <i>cancellationToken</i>
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public abstract void EnqueueResponse (
+        Message <i>response</i>
 ) </pre></td></tr></table>
 <div class="CommentHeader">Parameters</div>
-<div class="CommentParameterName">to</div>
+<div class="CommentParameterName">response</div>
 <div class="ParameterCommentContainer">
-The <span class="PseudoLink">System.Uri</span> of the recipient.
-</div>
-<div class="CommentParameterName">data</div>
-<div class="ParameterCommentContainer">
-The <a href="../../Contents/2/211.html">IMessageBodyData</a> for the recipient.
-</div>
-<div class="CommentParameterName">cancellationToken</div>
-<div class="ParameterCommentContainer">
-The <span class="PseudoLink">System.Threading.CancellationToken</span> that will be assigned to the new <span class="PseudoLink">System.Threading.Tasks.Task</span>.
-</div>
-<div class="CommentHeader">Return Value</div>
-<div class="ParameterCommentContainer">
-The started <span class="PseudoLink">System.Threading.Tasks.Task</span>.
+The response <a href="../../Contents/2/277.html">Message</a>.
 </div>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 <div id="SectionHeader1" class="SectionHeader">
@@ -84,10 +69,7 @@ Exceptions
 </tr>
 <tr>
 <td><span class="PseudoLink">ArgumentNullException</span></td>
-<td><p>
-  <span class="Code">to</span> is null.</p> 
-            -or-
-            <p><span class="Code">data</span> is null.</p></td>
+<td><span class="Code">response</span> is null.</td>
 </tr>
 </table>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>

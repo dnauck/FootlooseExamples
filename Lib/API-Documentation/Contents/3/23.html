@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>AmqpTransportChannel.Connect Method ()</title>
+<title>AmqpEndpointIdentityManager Constructor (EndpointIdentityDictionary, SelfEndpointIdentity, Func&lt;Uri, EndpointIdentity&gt;, Lazy&lt;IMessageOriginator&gt;, IHashAlgorithm, IUriBuilder)</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">AmqpTransportChannel.Connect Method ()</div>
+<div id="PageTitle">AmqpEndpointIdentityManager Constructor (EndpointIdentityDictionary, SelfEndpointIdentity, Func&lt;Uri, EndpointIdentity&gt;, Lazy&lt;IMessageOriginator&gt;, IHashAlgorithm, IUriBuilder)</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 </div>
@@ -24,10 +24,10 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Brings the transport channel online.
+Initializes a new instance of the <a href="../../Contents/3/20.html">AmqpEndpointIdentityManager</a> class.
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/3/6.html">AmqpTransportChannel</a><br />
-<b>Namespace:</b> <a href="../../Contents/2/494.html">Footloose.TransportChannels.Amqp</a><br />
+<b>Declaring type:</b> <a href="../../Contents/3/20.html">AmqpEndpointIdentityManager</a><br />
+<b>Namespace:</b> <a href="../../Contents/2/498.html">Footloose.TransportChannels.Amqp</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/2.html">Footloose.Amqp</a>
 </div>
 <div id="SectionHeader0" class="SectionHeader">
@@ -40,7 +40,39 @@ Syntax
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public override void Connect ()</pre></td></tr></table>
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public AmqpEndpointIdentityManager (
+        EndpointIdentityDictionary <i>endpointIdentityDictionary</i>,
+        SelfEndpointIdentity <i>selfEndpointIdentity</i>,
+        Func&lt;Uri, EndpointIdentity&gt; <i>endpointIdentityFactory</i>,
+        Lazy&lt;IMessageOriginator&gt; <i>orginator</i>,
+        IHashAlgorithm <i>hashAlgorithm</i>,
+        IUriBuilder <i>uriBuilder</i>
+) </pre></td></tr></table>
+<div class="CommentHeader">Parameters</div>
+<div class="CommentParameterName">endpointIdentityDictionary</div>
+<div class="ParameterCommentContainer">
+The <a href="../../Contents/1/448.html">EndpointIdentityDictionary</a>.
+</div>
+<div class="CommentParameterName">selfEndpointIdentity</div>
+<div class="ParameterCommentContainer">
+The <a href="../../Contents/1/450.html">SelfEndpointIdentity</a>.
+</div>
+<div class="CommentParameterName">endpointIdentityFactory</div>
+<div class="ParameterCommentContainer">
+The <a href="../../Contents/1/449.html">EndpointIdentity</a> factory.
+</div>
+<div class="CommentParameterName">orginator</div>
+<div class="ParameterCommentContainer">
+The <a href="../../Contents/1/454.html">IMessageOriginator</a>.
+</div>
+<div class="CommentParameterName">hashAlgorithm</div>
+<div class="ParameterCommentContainer">
+The <a href="../../Contents/1/455.html">IHashAlgorithm</a>.
+</div>
+<div class="CommentParameterName">uriBuilder</div>
+<div class="ParameterCommentContainer">
+<p>There is no description.</p>
+</div>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>
 <div id="Footer">

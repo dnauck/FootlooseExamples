@@ -6,14 +6,14 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>IMessageDispatcher Interface Members</title>
+<title>IUriBuilder.BuildEndpointIdentityUri Method (string, string)</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">IMessageDispatcher Interface Members</div>
+<div id="PageTitle">IUriBuilder.BuildEndpointIdentityUri Method (string, string)</div>
 <div id="HeaderShortcuts">
-<a href="#SectionHeader35" onclick="javascript: SetSectionVisibility(35, true); SetExpandCollapseAllToCollapseAll();">Methods</a>&nbsp;
+<a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 </div>
 <div class="DarkLine"></div>
 <div class="LightLine"></div>
@@ -24,40 +24,41 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-This interface defines a central dispatcher for incoming <a href="../../Contents/2/273.html">Message</a> objects, dispatching them to
-            registered <a href="../../Contents/2/281.html">IMessageHandler</a>.
+Builds a new <span class="PseudoLink">System.Uri</span> for an <a href="../../Contents/1/359.html">IEndpointIdentity</a>
+            with the specified user name and host.
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/2/282.html">IMessageDispatcher</a><br />
+<b>Declaring type:</b> <a href="../../Contents/1/456.html">IUriBuilder</a><br />
 <b>Namespace:</b> <a href="../../Contents/1/15.html">Footloose.TransportChannels</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">Footloose</a>
 </div>
-<div id="SectionHeader35" class="SectionHeader">
-<img id="SectionExpanderImg35" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(35);" />
+<div id="SectionHeader0" class="SectionHeader">
+<img id="SectionExpanderImg0" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(0);" />
 <span class="SectionHeader">
-<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(35);">
-Public Methods
+<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(0);">
+Syntax
 </span>
 </span>
 </div>
 
-<div id="SectionContainerDiv35" class="SectionContainer">
-<table class="MembersTable">
-<col width="7%" />
-<col width="38%" />
-<col width="55%" />
-<tr>
-<th>&nbsp;</th>
-<th>Name</th>
-<th>Description</th>
-</tr>
-<tr>
-<td class="IconColumn">
-<img src="../../GFX/PublicMethod.gif" alt="Public Method" />&nbsp;<img src="../../GFX/Abstract.gif" alt="Abstract" /></td>
-<td><a href="../../Contents/2/458.html">Dispatch</a></td>
-<td>Dispatches a incoming message to a registered <a href="../../Contents/2/281.html">IMessageHandler</a> according to the
-            messages's body type.</td>
-</tr>
-</table>
+<div id="SectionContainerDiv0" class="SectionContainer">
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public abstract Uri BuildEndpointIdentityUri (
+        string <i>user</i>,
+        string <i>host</i>
+) </pre></td></tr></table>
+<div class="CommentHeader">Parameters</div>
+<div class="CommentParameterName">user</div>
+<div class="ParameterCommentContainer">
+The user name.
+</div>
+<div class="CommentParameterName">host</div>
+<div class="ParameterCommentContainer">
+The host.
+</div>
+<div class="CommentHeader">Return Value</div>
+<div class="ParameterCommentContainer">
+A <span class="PseudoLink">System.Uri</span> for the <a href="../../Contents/1/359.html">IEndpointIdentity</a>
+            with the specified user name and host.
+</div>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>
 <div id="Footer">

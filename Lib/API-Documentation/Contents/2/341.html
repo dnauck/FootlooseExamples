@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>DefaultAuthorizationProvider Class Members</title>
+<title>AuthenticatedOnlyAuthorizationProvider Class Members</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">DefaultAuthorizationProvider Class Members</div>
+<div id="PageTitle">AuthenticatedOnlyAuthorizationProvider Class Members</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader30" onclick="javascript: SetSectionVisibility(30, true); SetExpandCollapseAllToCollapseAll();">Constructors</a>&nbsp;
 <a href="#SectionHeader35" onclick="javascript: SetSectionVisibility(35, true); SetExpandCollapseAllToCollapseAll();">Methods</a>&nbsp;
@@ -25,9 +25,10 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Defines a <a href="../../Contents/1/88.html">IAuthorizationProvider</a> that validate every endpoint.
+Defines a <a href="../../Contents/1/88.html">IAuthorizationProvider</a> that validate only endpoints that
+            are subscribed to the <a href="../../Contents/1/424.html">IPresence</a> of this instance.
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/1/67.html">DefaultAuthorizationProvider</a><br />
+<b>Declaring type:</b> <a href="../../Contents/1/60.html">AuthenticatedOnlyAuthorizationProvider</a><br />
 <b>Namespace:</b> <a href="../../Contents/1/12.html">Footloose.Security</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">Footloose</a>
 </div>
@@ -53,8 +54,9 @@ Public Constructors
 <tr>
 <td class="IconColumn">
 <img src="../../GFX/PublicMethod.gif" alt="Public Method" /></td>
-<td><a href="../../Contents/2/342.html">DefaultAuthorizationProvider</a></td>
-<td><p>There is no summary.</p></td>
+<td><a href="../../Contents/2/342.html">AuthenticatedOnlyAuthorizationProvider</a></td>
+<td>Initializes a new instance of the <a href="../../Contents/1/60.html">AuthenticatedOnlyAuthorizationProvider</a> class
+            with the specified <a href="../../Contents/1/375.html">IEndpointIdentityManager</a>.</td>
 </tr>
 </table>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
@@ -81,14 +83,14 @@ Public Methods
 <td class="IconColumn">
 <img src="../../GFX/PublicMethod.gif" alt="Public Method" /></td>
 <td><a href="../../Contents/2/343.html">ValidateMethodCallRequest</a></td>
-<td>Validates if the <a href="../../Contents/2/57.html">IMethodCallRequest</a> from the specified sender
+<td>Validates if the <a href="../../Contents/2/61.html">IMethodCallRequest</a> from the specified sender
             is authorized.</td>
 </tr>
 <tr>
 <td class="IconColumn">
 <img src="../../GFX/PublicMethod.gif" alt="Public Method" /></td>
 <td><a href="../../Contents/2/344.html">ValidateMethodResponseRequest</a></td>
-<td>Validates if the <a href="../../Contents/2/59.html">IMethodResponseRequest</a> from the specified sender
+<td>Validates if the <a href="../../Contents/2/63.html">IMethodResponseRequest</a> from the specified sender
             is authorized.</td>
 </tr>
 </table>

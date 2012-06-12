@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>EndpointIdentityManagerBase.RemoveEndpointIdentity Method (Uri)</title>
+<title>EndpointIdentityManagerBase.NotifyServiceDiscoveryInfoReceived Method (string, DiscoInfo)</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">EndpointIdentityManagerBase.RemoveEndpointIdentity Method (Uri)</div>
+<div id="PageTitle">EndpointIdentityManagerBase.NotifyServiceDiscoveryInfoReceived Method (string, DiscoInfo)</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 </div>
@@ -24,10 +24,10 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Removes the <a href="../../Contents/1/357.html">IEndpointIdentity</a> with the specified <span class="PseudoLink">System.Uri</span> from the collection
-            and unsubcribe from the <a href="../../Contents/1/422.html">IPresence</a> of the <a href="../../Contents/1/357.html">IEndpointIdentity</a>.
+Notify this <a href="../../Contents/1/375.html">IEndpointIdentityManager</a> when a new <a href="../../Contents/1/436.html">DiscoInfo</a>
+            from another endpoint received.
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/1/356.html">EndpointIdentityManagerBase</a><br />
+<b>Declaring type:</b> <a href="../../Contents/1/358.html">EndpointIdentityManagerBase</a><br />
 <b>Namespace:</b> <a href="../../Contents/1/4.html">Footloose</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">Footloose</a>
 </div>
@@ -41,13 +41,18 @@ Syntax
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public virtual void RemoveEndpointIdentity (
-        Uri <i>uri</i>
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public void NotifyServiceDiscoveryInfoReceived (
+        string <i>capabilitiesVersion</i>,
+        DiscoInfo <i>discoInfo</i>
 ) </pre></td></tr></table>
 <div class="CommentHeader">Parameters</div>
-<div class="CommentParameterName">uri</div>
+<div class="CommentParameterName">capabilitiesVersion</div>
 <div class="ParameterCommentContainer">
-The <span class="PseudoLink">System.Uri</span> of the <a href="../../Contents/1/357.html">IEndpointIdentity</a>.
+The capabilities version the disco info belongs to.
+</div>
+<div class="CommentParameterName">discoInfo</div>
+<div class="ParameterCommentContainer">
+The requested disco information.
 </div>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>

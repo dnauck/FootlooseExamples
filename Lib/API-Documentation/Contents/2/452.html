@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>IUriBuilder.BuildCommunicationEndpointUri Method (string, string, string)</title>
+<title>TransportChannelBase.MessageDispatcher Property </title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">IUriBuilder.BuildCommunicationEndpointUri Method (string, string, string)</div>
+<div id="PageTitle">TransportChannelBase.MessageDispatcher Property </div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 </div>
@@ -24,10 +24,9 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Builds a new <span class="PseudoLink">System.Uri</span> for a <a href="../../Contents/1/259.html">ICommunicationEndpoint</a>
-            with the specified user name, host and endpoint identifier.
+Gets the <a href="../../Contents/2/286.html">IMessageDispatcher</a> for this transport channel to handle incoming messages.
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/1/454.html">IUriBuilder</a><br />
+<b>Declaring type:</b> <a href="../../Contents/2/407.html">TransportChannelBase</a><br />
 <b>Namespace:</b> <a href="../../Contents/1/15.html">Footloose.TransportChannels</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">Footloose</a>
 </div>
@@ -41,28 +40,10 @@ Syntax
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public abstract Uri BuildCommunicationEndpointUri (
-        string <i>user</i>,
-        string <i>host</i>,
-        string <i>endpointIdentifier</i>
-) </pre></td></tr></table>
-<div class="CommentHeader">Parameters</div>
-<div class="CommentParameterName">user</div>
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">protected IMessageDispatcher MessageDispatcher { get; set; }</pre></td></tr></table>
+<div class="CommentHeader">Property Value</div>
 <div class="ParameterCommentContainer">
-The user name.
-</div>
-<div class="CommentParameterName">host</div>
-<div class="ParameterCommentContainer">
-The host.
-</div>
-<div class="CommentParameterName">endpointIdentifier</div>
-<div class="ParameterCommentContainer">
-The endpoint identifier.
-</div>
-<div class="CommentHeader">Return Value</div>
-<div class="ParameterCommentContainer">
-A <span class="PseudoLink">System.Uri</span> for the <a href="../../Contents/1/259.html">ICommunicationEndpoint</a>
-            with the specified user name, host and endpoint identifier.
+<p>There is no description.</p>
 </div>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>

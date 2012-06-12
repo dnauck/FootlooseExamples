@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>IMethodCallManager.CallMethod&lt;TResult, TService&gt; Method (Expression&lt;Action&lt;TService&gt;&gt;, CancellationToken, Uri)</title>
+<title>IFootlooseConnection.CallMethod&lt;TResult, TService&gt; Method (Expression&lt;Action&lt;TService&gt;&gt;, Action&lt;IMethodResponse&lt;TResult&gt;&gt;, Uri)</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">IMethodCallManager.CallMethod&lt;TResult, TService&gt; Method (Expression&lt;Action&lt;TService&gt;&gt;, CancellationToken, Uri)</div>
+<div id="PageTitle">IFootlooseConnection.CallMethod&lt;TResult, TService&gt; Method (Expression&lt;Action&lt;TService&gt;&gt;, Action&lt;IMethodResponse&lt;TResult&gt;&gt;, Uri)</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 </div>
@@ -24,9 +24,11 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-<p>There is no summary.</p>
+Invokes asynchronous the specified method of the given <span class="PseudoLink">System.Type</span> on a remote <a href="../../Contents/1/259.html">ICommunicationEndpoint</a>
+            with the specified endpoint <span class="PseudoLink">System.Uri</span>.
+            Once the method call returns the callback action delegate is called.
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/1/375.html">IMethodCallManager</a><br />
+<b>Declaring type:</b> <a href="../../Contents/1/304.html">IFootlooseConnection</a><br />
 <b>Namespace:</b> <a href="../../Contents/1/4.html">Footloose</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">Footloose</a>
 </div>
@@ -40,36 +42,36 @@ Syntax
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public abstract Task&lt;IMethodResponse&lt;TResult&gt;&gt; CallMethod&lt;TResult, TService&gt; (
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public abstract Guid CallMethod&lt;TResult, TService&gt; (
         Expression&lt;Action&lt;TService&gt;&gt; <i>methodExpression</i>,
-        CancellationToken <i>cancellationToken</i>,
+        Action&lt;IMethodResponse&lt;TResult&gt;&gt; <i>callback</i>,
         Uri <i>service</i>
 ) </pre></td></tr></table>
 <div class="CommentHeader">Type Parameters</div>
 <div class="CommentParameterName">TResult</div>
 <div class="ParameterCommentContainer">
-<p>There is no description.</p>
+The type of the return value of the method.
 </div>
 <div class="CommentParameterName">TService</div>
 <div class="ParameterCommentContainer">
-<p>There is no description.</p>
+The type of the service.
 </div>
 <div class="CommentHeader">Parameters</div>
 <div class="CommentParameterName">methodExpression</div>
 <div class="ParameterCommentContainer">
-<p>There is no description.</p>
+The lambda expression of the method that should be called on the <span class="Code">TService</span> type.
 </div>
-<div class="CommentParameterName">cancellationToken</div>
+<div class="CommentParameterName">callback</div>
 <div class="ParameterCommentContainer">
-<p>There is no description.</p>
+The callback method.
 </div>
 <div class="CommentParameterName">service</div>
 <div class="ParameterCommentContainer">
-<p>There is no description.</p>
+The <span class="PseudoLink">System.Uri</span> of the service the method should invoked on.
 </div>
 <div class="CommentHeader">Return Value</div>
 <div class="ParameterCommentContainer">
-<p>There is no description.</p>
+A unique correlation identifier for this method call.
 </div>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>

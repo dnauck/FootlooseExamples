@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>TextSerializer.Serialize&lt;T&gt; Method (T)</title>
+<title>SharedTypeDataContractResolver.TryResolveType Method (Type, Type, DataContractResolver, out XmlDictionaryString, out XmlDictionaryString)</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">TextSerializer.Serialize&lt;T&gt; Method (T)</div>
+<div id="PageTitle">SharedTypeDataContractResolver.TryResolveType Method (Type, Type, DataContractResolver, out XmlDictionaryString, out XmlDictionaryString)</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 </div>
@@ -24,9 +24,9 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Serializes the specified object, or graph of objects.
+Override this method to map a data contract type to an xsi:type name and namespace during serialization.
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/2/372.html">TextSerializer</a><br />
+<b>Declaring type:</b> <a href="../../Contents/2/375.html">SharedTypeDataContractResolver</a><br />
 <b>Namespace:</b> <a href="../../Contents/1/14.html">Footloose.Serialization</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/1.html">Footloose</a>
 </div>
@@ -40,22 +40,37 @@ Syntax
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public string Serialize&lt;T&gt; (
-        T <i>obj</i>
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public override bool TryResolveType (
+        Type <i>type</i>,
+        Type <i>declaredType</i>,
+        DataContractResolver <i>knownTypeResolver</i>,
+        out XmlDictionaryString <i>typeName</i>,
+        out XmlDictionaryString <i>typeNamespace</i>
 ) </pre></td></tr></table>
-<div class="CommentHeader">Type Parameters</div>
-<div class="CommentParameterName">T</div>
-<div class="ParameterCommentContainer">
-Type of the top (root) of the object graph.
-</div>
 <div class="CommentHeader">Parameters</div>
-<div class="CommentParameterName">obj</div>
+<div class="CommentParameterName">type</div>
 <div class="ParameterCommentContainer">
-The <span class="PseudoLink">System.Object</span> at the root of the graph to serialize.
+The type to map.
+</div>
+<div class="CommentParameterName">declaredType</div>
+<div class="ParameterCommentContainer">
+The type declared in the data contract.
+</div>
+<div class="CommentParameterName">knownTypeResolver</div>
+<div class="ParameterCommentContainer">
+The known type resolver.
+</div>
+<div class="CommentParameterName">typeName</div>
+<div class="ParameterCommentContainer">
+The xsi:type name.
+</div>
+<div class="CommentParameterName">typeNamespace</div>
+<div class="ParameterCommentContainer">
+The xsi:type namespace.
 </div>
 <div class="CommentHeader">Return Value</div>
 <div class="ParameterCommentContainer">
-The <span class="PseudoLink">System.String</span> to which the graph is to be serialized.
+true if mapping succeeded; otherwise, false.
 </div>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>

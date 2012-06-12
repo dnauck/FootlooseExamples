@@ -876,10 +876,18 @@
             <param name="configure">The lambda expression to alter the configuration.</param>
             <returns><see cref="T:Footloose.Configuration.Fluent.FluentConfiguration"/></returns>
         </member>
-        <member name="M:Footloose.Configuration.Fluent.FluentConfiguration.CreateFootlooseConnection">
+        <member name="M:Footloose.Configuration.Fluent.FluentConfiguration.CreateFootlooseConnection(System.IO.FileInfo)">
             <summary>
             Verify's the configuration and creates a new <see cref="T:Footloose.IFootlooseConnection"/> instance.
             </summary>
+            <param name="licenseFile">A <see cref="T:System.IO.FileInfo"/> object containing the path to the license file.</param>
+            <returns>A new <see cref="T:Footloose.IFootlooseConnection"/> instance from supplied settings.</returns>
+        </member>
+        <member name="M:Footloose.Configuration.Fluent.FluentConfiguration.CreateFootlooseConnection(System.String)">
+            <summary>
+            Verify's the configuration and creates a new <see cref="T:Footloose.IFootlooseConnection"/> instance.
+            </summary>
+            <param name="license">The license content as string.</param>
             <returns>A new <see cref="T:Footloose.IFootlooseConnection"/> instance from supplied settings.</returns>
         </member>
         <member name="M:Footloose.Configuration.Fluent.FluentConfiguration.SerializerOfType(System.Type)">
@@ -3976,20 +3984,50 @@
             A static factory to initialize <see cref="T:Footloose.IFootlooseConnection"/> instances.
             </summary>
         </member>
-        <member name="M:Footloose.FootlooseConnectionFactory.CreateFootlooseConnection">
+        <member name="M:Footloose.FootlooseConnectionFactory.CreateFootlooseConnection(System.IO.FileInfo)">
             <summary>
             Initializes a new instance of the <see cref="T:Footloose.IFootlooseConnection"/>
             that uses the configuration properties from the application configuration.
             </summary>
+            <param name="licenseFile">A <see cref="T:System.IO.FileInfo"/> object containing the path to the license file.</param>
             <returns>A new <see cref="T:Footloose.IFootlooseConnection"/> instance.</returns>
         </member>
-        <member name="M:Footloose.FootlooseConnectionFactory.CreateFootlooseConnection(Footloose.Configuration.FootlooseConfigurationSectionGroup)">
+        <member name="M:Footloose.FootlooseConnectionFactory.CreateFootlooseConnection(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Footloose.IFootlooseConnection"/>
+            that uses the configuration properties from the application configuration.
+            </summary>
+            <param name="license">The license content as string.</param>
+            <returns>A new <see cref="T:Footloose.IFootlooseConnection"/> instance.</returns>
+        </member>
+        <member name="M:Footloose.FootlooseConnectionFactory.CreateFootlooseConnection(Footloose.Configuration.FootlooseConfigurationSectionGroup,System.IO.FileInfo)">
             <summary>
             Initializes a new instance of the <see cref="T:Footloose.IFootlooseConnection"/>
             that uses the provided configuration.
             </summary>
             <param name="configuration">The <see cref="T:Footloose.Configuration.FootlooseConfigurationSectionGroup"/> for the new
             <see cref="T:Footloose.IFootlooseConnection"/> instance.</param>
+            <param name="licenseFile">A <see cref="T:System.IO.FileInfo"/> object containing the path to the license file.</param>
+            <returns>A new <see cref="T:Footloose.IFootlooseConnection"/> instance.</returns>
+        </member>
+        <member name="M:Footloose.FootlooseConnectionFactory.CreateFootlooseConnection(Footloose.Configuration.FootlooseConfigurationSectionGroup,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Footloose.IFootlooseConnection"/>
+            that uses the provided configuration.
+            </summary>
+            <param name="configuration">The <see cref="T:Footloose.Configuration.FootlooseConfigurationSectionGroup"/> for the new
+            <see cref="T:Footloose.IFootlooseConnection"/> instance.</param>
+            <param name="license">The license content as string.</param>
+            <returns>A new <see cref="T:Footloose.IFootlooseConnection"/> instance.</returns>
+        </member>
+        <member name="M:Footloose.FootlooseConnectionFactory.CreateFootlooseConnectionInternal(Footloose.Configuration.FootlooseConfigurationSectionGroup,System.Object)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Footloose.IFootlooseConnection"/>
+            that uses the provided configuration.
+            </summary>
+            <param name="configuration">The <see cref="T:Footloose.Configuration.FootlooseConfigurationSectionGroup"/> for the new
+            <see cref="T:Footloose.IFootlooseConnection"/> instance.</param>
+            <param name="license">A <see cref="T:System.IO.FileInfo"/> object containing the path to the license file or a string based license.</param>
             <returns>A new <see cref="T:Footloose.IFootlooseConnection"/> instance.</returns>
         </member>
         <member name="M:Footloose.IFootlooseConnection.CallMethod``2(System.Linq.Expressions.Expression{System.Action{``1}},System.Threading.CancellationToken)">

@@ -6,15 +6,14 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>XmppConnectionType Class</title>
+<title>XmppTransportChannelConfiguration.ServerAddress Method (string)</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">XmppConnectionType Class</div>
+<div id="PageTitle">XmppTransportChannelConfiguration.ServerAddress Method (string)</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
-<a href="#SectionHeader1" onclick="javascript: SetSectionVisibility(1, true); SetExpandCollapseAllToCollapseAll();">Members</a>&nbsp;
 </div>
 <div class="DarkLine"></div>
 <div class="LightLine"></div>
@@ -25,9 +24,11 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Specify the type of connection to a remote XMPP server.
+Specify the XMPP server to connect. Use this setting for XMPP servers
+            without SRV records or HTTP Polling and BOSH connections.
 <div id="ItemLocation">
-<b>Namespace:</b> <a href="../../Contents/3/40.html">Footloose.Configuration</a><br />
+<b>Declaring type:</b> <a href="../../Contents/3/47.html">XmppTransportChannelConfiguration</a><br />
+<b>Namespace:</b> <a href="../../Contents/3/45.html">Footloose.Configuration.Fluent</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/3.html">Footloose.Xmpp</a>
 </div>
 <div id="SectionHeader0" class="SectionHeader">
@@ -40,29 +41,18 @@ Syntax
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><table style="width: 100%;" class="InsideCodeBlock">
-<col width="0%" />
-<col width="100%" />
-<tr>
-<td class="NoWrapTop">public sealed class XmppConnectionType :&nbsp;</td>
-<td>
-Enum<br />
-</td>
-</tr>
-</table>
-</td></tr></table>
-<div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
-<div id="SectionHeader1" class="SectionHeader">
-<img id="SectionExpanderImg1" src="../../GFX/BigSquareExpanded.gif" alt="Collapse/Expand" onclick="javascript: ToggleSectionVisibility(1);" />
-<span class="SectionHeader">
-<span class="ArrowCursor" onclick="javascript: ToggleSectionVisibility(1);">
-Members
-</span>
-</span>
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public XmppTransportChannelConfiguration ServerAddress (
+        string <i>serverAddress</i>
+) </pre></td></tr></table>
+<div class="CommentHeader">Parameters</div>
+<div class="CommentParameterName">serverAddress</div>
+<div class="ParameterCommentContainer">
+Address of the XMPP server to connect.
 </div>
-
-<div id="SectionContainerDiv1" class="SectionContainer">
-<p>Click <a href="../../Contents/3/59.html">here</a> to see the list of members.</p>
+<div class="CommentHeader">Return Value</div>
+<div class="ParameterCommentContainer">
+<a href="../../Contents/3/47.html">XmppTransportChannelConfiguration</a>
+</div>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>
 <div id="Footer">

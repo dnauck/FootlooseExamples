@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>IFootlooseConnection.CallMethod&lt;TResult, TService&gt; Method (Expression&lt;Action&lt;TService&gt;&gt;, Action&lt;IMethodResponse&lt;TResult&gt;&gt;)</title>
+<title>IFootlooseConnection.ExceptionOccurred Field</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">IFootlooseConnection.CallMethod&lt;TResult, TService&gt; Method (Expression&lt;Action&lt;TService&gt;&gt;, Action&lt;IMethodResponse&lt;TResult&gt;&gt;)</div>
+<div id="PageTitle">IFootlooseConnection.ExceptionOccurred Field</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 </div>
@@ -24,9 +24,7 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Invokes asynchronous the specified method of the given <span class="PseudoLink">System.Type</span> on a remote <a href="../../Contents/1/259.html">ICommunicationEndpoint</a>.
-            The remote endpoint <span class="PseudoLink">System.Uri</span> will be determined with the auto service discovery feature.
-            Once the method call returns the callback action delegate is called.
+Occurs when a <span class="PseudoLink">System.Exception</span> is thrown.
 <div id="ItemLocation">
 <b>Declaring type:</b> <a href="../../Contents/1/304.html">IFootlooseConnection</a><br />
 <b>Namespace:</b> <a href="../../Contents/1/4.html">Footloose</a><br />
@@ -42,32 +40,7 @@ Syntax
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public abstract Guid CallMethod&lt;TResult, TService&gt; (
-        Expression&lt;Action&lt;TService&gt;&gt; <i>methodExpression</i>,
-        Action&lt;IMethodResponse&lt;TResult&gt;&gt; <i>callback</i>
-) </pre></td></tr></table>
-<div class="CommentHeader">Type Parameters</div>
-<div class="CommentParameterName">TResult</div>
-<div class="ParameterCommentContainer">
-The type of the return value of the method.
-</div>
-<div class="CommentParameterName">TService</div>
-<div class="ParameterCommentContainer">
-The type of the service.
-</div>
-<div class="CommentHeader">Parameters</div>
-<div class="CommentParameterName">methodExpression</div>
-<div class="ParameterCommentContainer">
-The lambda expression of the method that should be called on the <span class="Code">TService</span> type.
-</div>
-<div class="CommentParameterName">callback</div>
-<div class="ParameterCommentContainer">
-The callback method.
-</div>
-<div class="CommentHeader">Return Value</div>
-<div class="ParameterCommentContainer">
-A unique correlation identifier for this method call.
-</div>
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable">public abstract event EventHandler&lt;ExceptionEventArgs&gt; ExceptionOccurred</td></tr></table>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>
 <div id="Footer">

@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>AmqpTransportChannelConfiguration.VirtualHost Method (string)</title>
+<title>AmqpTransportChannelConfiguration.Credentials Method (NetworkCredential)</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">AmqpTransportChannelConfiguration.VirtualHost Method (string)</div>
+<div id="PageTitle">AmqpTransportChannelConfiguration.Credentials Method (NetworkCredential)</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 </div>
@@ -24,10 +24,10 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Specify the AMQP broker virtual host to connect.
+Specify the <span class="PseudoLink">System.Net.NetworkCredential</span> for authentication with the AMQP broker.
 <div id="ItemLocation">
-<b>Declaring type:</b> <a href="../../Contents/3/5.html">AmqpTransportChannelConfiguration</a><br />
-<b>Namespace:</b> <a href="../../Contents/2/493.html">Footloose.Configuration.Fluent</a><br />
+<b>Declaring type:</b> <a href="../../Contents/3/9.html">AmqpTransportChannelConfiguration</a><br />
+<b>Namespace:</b> <a href="../../Contents/2/497.html">Footloose.Configuration.Fluent</a><br />
 <b>Assembly:</b> <a href="../../Contents/1/2.html">Footloose.Amqp</a>
 </div>
 <div id="SectionHeader0" class="SectionHeader">
@@ -40,17 +40,17 @@ Syntax
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public AmqpTransportChannelConfiguration VirtualHost (
-        string <i>virtualHost</i>
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public AmqpTransportChannelConfiguration Credentials (
+        NetworkCredential <i>credentials</i>
 ) </pre></td></tr></table>
 <div class="CommentHeader">Parameters</div>
-<div class="CommentParameterName">virtualHost</div>
+<div class="CommentParameterName">credentials</div>
 <div class="ParameterCommentContainer">
-Virtual host of the AMQP broker to connect.
+<span class="PseudoLink">System.Net.NetworkCredential</span> with user name and passwort.
 </div>
 <div class="CommentHeader">Return Value</div>
 <div class="ParameterCommentContainer">
-<a href="../../Contents/3/5.html">AmqpTransportChannelConfiguration</a>
+<a href="../../Contents/3/9.html">AmqpTransportChannelConfiguration</a>
 </div>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>

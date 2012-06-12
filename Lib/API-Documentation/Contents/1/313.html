@@ -6,12 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
 <link rel="stylesheet" type="text/css" href="../../CSS/Contents.css"></link>
 <script type="text/javascript" src="../../JS/Common.js"></script>
-<title>FluentConfiguration.TransportChannel Method (IFluentTransportChannelConfiguration)</title>
+<title>FluentConfiguration.CreateFootlooseConnection Method (FileInfo)</title>
 </head>
 <body>
 <div id="Header">
 <div id="ProjectTitle">Footloose</div>
-<div id="PageTitle">FluentConfiguration.TransportChannel Method (IFluentTransportChannelConfiguration)</div>
+<div id="PageTitle">FluentConfiguration.CreateFootlooseConnection Method (FileInfo)</div>
 <div id="HeaderShortcuts">
 <a href="#SectionHeader0" onclick="javascript: SetSectionVisibility(0, true); SetExpandCollapseAllToCollapseAll();">Syntax</a>&nbsp;
 </div>
@@ -24,7 +24,7 @@
 </div>
 <div id="Contents">
 <a id="ContentsAnchor">&nbsp;</a>
-Specify transport channel settings.
+Verify's the configuration and creates a new <a href="../../Contents/1/304.html">IFootlooseConnection</a> instance.
 <div id="ItemLocation">
 <b>Declaring type:</b> <a href="../../Contents/1/265.html">FluentConfiguration</a><br />
 <b>Namespace:</b> <a href="../../Contents/1/7.html">Footloose.Configuration.Fluent</a><br />
@@ -40,17 +40,17 @@ Syntax
 </div>
 
 <div id="SectionContainerDiv0" class="SectionContainer">
-<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public FluentConfiguration TransportChannel (
-        IFluentTransportChannelConfiguration <i>config</i>
+<table class="CodeTable"><col width="100%" /><tr class="CodeTable"><th class="CodeTable">C#</th></tr><tr class="CodeTable"><td class="CodeTable"><pre style="margin-left: 2px;">public IFootlooseConnection CreateFootlooseConnection (
+        FileInfo <i>licenseFile</i>
 ) </pre></td></tr></table>
 <div class="CommentHeader">Parameters</div>
-<div class="CommentParameterName">config</div>
+<div class="CommentParameterName">licenseFile</div>
 <div class="ParameterCommentContainer">
-<a href="../../Contents/1/273.html">IFluentTransportChannelConfiguration</a>
+A <span class="PseudoLink">System.IO.FileInfo</span> object containing the path to the license file.
 </div>
 <div class="CommentHeader">Return Value</div>
 <div class="ParameterCommentContainer">
-<a href="../../Contents/1/265.html">FluentConfiguration</a>
+A new <a href="../../Contents/1/304.html">IFootlooseConnection</a> instance from supplied settings.
 </div>
 <div class="TopLink"><a href="#ContentsAnchor">Top</a></div></div>
 </div>
