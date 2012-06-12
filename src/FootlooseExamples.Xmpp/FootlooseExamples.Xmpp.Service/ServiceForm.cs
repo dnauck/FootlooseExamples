@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Text;
@@ -18,6 +19,8 @@ namespace FootlooseExamples.Xmpp.Service
 {
     public partial class ServiceForm : Form
     {
+        private static readonly FileInfo licenseFile = new FileInfo("Footloose.lic");
+
         private IFootlooseConnection footlooseConnection;
 
         public ServiceForm()
@@ -99,7 +102,7 @@ namespace FootlooseExamples.Xmpp.Service
                                       }
                 )
                 .TransportChannel(() => SetupFootlooseTransportChannel(credentials, serverAddress, priority, endpointIdentifier))
-                .CreateFootlooseConnection();
+                .CreateFootlooseConnection(licenseFile);
 
             return footlooseInstance;
         }

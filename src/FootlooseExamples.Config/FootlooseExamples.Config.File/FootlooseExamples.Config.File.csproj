@@ -86,6 +86,10 @@
     <Compile Include="ServiceLocatorDummy.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\..\..\Footloose.lic">
+      <Link>Footloose.lic</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="..\..\..\Lib\FootlooseConfigurationSchema.xsd">
       <Link>FootlooseConfigurationSchema.xsd</Link>
     </None>

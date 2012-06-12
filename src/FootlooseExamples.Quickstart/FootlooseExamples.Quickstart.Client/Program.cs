@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using Footloose;
@@ -9,6 +10,8 @@ namespace FootlooseExamples.Quickstart.Client
 {
     class Program
     {
+        private static readonly FileInfo licenseFile = new FileInfo("Footloose.lic");
+
         static void Main(string[] args)
         {
             var serviceLocator = new ServiceLocatorDummy();
@@ -90,7 +93,7 @@ namespace FootlooseExamples.Quickstart.Client
                                       .EndpointIdentifier(endpointIdentifier) // Uri will be "ipc://user@host/<endpointIdentifier>"
                                       .TimeOut(5000)
                 )
-                .CreateFootlooseConnection();
+                .CreateFootlooseConnection(licenseFile);
 
             return footloose;
         }

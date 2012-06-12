@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using Footloose.Configuration;
@@ -9,6 +10,8 @@ namespace FootlooseExamples.Config.ByCode
 {
     class Program
     {
+        private static readonly FileInfo licenseFile = new FileInfo("Footloose.lic");
+
         private static readonly IServiceLocator serviceLocator = new ServiceLocatorDummy();
 
         static void Main(string[] args)
@@ -59,7 +62,7 @@ namespace FootlooseExamples.Config.ByCode
 
             // create FootlooseConnection instance from Configuration
             ServiceLocator.SetLocatorProvider(() => serviceLocator);
-            var footlooseConnection = Footloose.FootlooseConnectionFactory.CreateFootlooseConnection(footlooseConfig);
+            var footlooseConnection = Footloose.FootlooseConnectionFactory.CreateFootlooseConnection(footlooseConfig, licenseFile);
             footlooseConnection.ConnectionStateChanged +=
                 (sender, eventArgs) =>
                 Console.WriteLine("Footloose connection state changed to: " + eventArgs.ConnectionState);

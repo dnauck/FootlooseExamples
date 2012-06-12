@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using Microsoft.Practices.ServiceLocation;
@@ -8,6 +9,8 @@ namespace FootlooseExamples.Config.Fluent
 {
     class Program
     {
+        private static readonly FileInfo licenseFile = new FileInfo("Footloose.lic");
+
         private static readonly IServiceLocator serviceLocator = new ServiceLocatorDummy();
 
         static void Main(string[] args)
@@ -26,7 +29,7 @@ namespace FootlooseExamples.Config.Fluent
                         .UseConfigFile("")
                         .TimeOut(5000)
                 )
-                .CreateFootlooseConnection();
+                .CreateFootlooseConnection(licenseFile);
 
             footlooseConnection.ConnectionStateChanged +=
                 (sender, eventArgs) =>

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Text;
@@ -19,6 +20,8 @@ namespace FootlooseExamples.Xmpp.Client
 {
     public partial class ClientForm : Form
     {
+        private static readonly FileInfo licenseFile = new FileInfo("Footloose.lic");
+
         private IFootlooseConnection footlooseConnection;
 
         public ClientForm()
@@ -87,7 +90,7 @@ namespace FootlooseExamples.Xmpp.Client
                 .SerializerOfType<Footloose.Serialization.BinarySerializer>()
                 .ServiceLocator(new ServiceLocatorDummy())
                 .TransportChannel(() => SetupFootlooseTransportChannel(credentials, serverAddress, priority, endpointIdentifier))
-                .CreateFootlooseConnection();
+                .CreateFootlooseConnection(licenseFile);
 
             return footlooseInstance;
         }

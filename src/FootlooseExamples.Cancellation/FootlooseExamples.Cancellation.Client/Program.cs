@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -10,6 +11,8 @@ namespace FootlooseExamples.Cancellation.Client
 {
     class Program
     {
+        private static readonly FileInfo licenseFile = new FileInfo("Footloose.lic");
+
         static void Main(string[] args)
         {
             var endpointIdentifier = "footloose-cancellation-client";
@@ -78,7 +81,7 @@ namespace FootlooseExamples.Cancellation.Client
                                       .EndpointIdentifier(endpointIdentifier) // Uri will be "ipc://user@mashineName/<EndpointIdentifier>"
                                       .TimeOut(5000)
                 )
-                .CreateFootlooseConnection();
+                .CreateFootlooseConnection(licenseFile);
 
             return footloose;
         }
