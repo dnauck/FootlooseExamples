@@ -1,0 +1,74 @@
+﻿LICENSE AGREEMENT
+
+Read the following terms and conditions before using the Footloose SDK (hereafter referred to as the Software). 
+This agreement licenses the Software to you and contains warranty and liability disclaimers.
+By using the software you, the user (“Licensee”), are accepting and agreeing to the terms and conditions of
+this agreement. If you do not agree to the terms of this agreement, do not use the Software.
+ 
+
+LICENSE
+Nauck IT KG (hereafter known as the Author) provides this Software to you and grants to you a non-exclusive
+license to use the Software for your personal use or in your business or profession.
+
+
+DISCLAIMER AND LIMITATIONS OF REMEDIES
+The Software is provided "as is" and the Author specifically disclaims all warranties of any kind, either express or implied,
+including, but not limited to, the implied warranties of merchantability and fitness for a particular purpose. In no event
+will the Author be liable to you for any damages, including any loss of profit or other incidental, special or consequential
+damages even if the Author has been advised of the possibility of such damages.
+The Author does not warrant, guaranty or make any representations regarding the use, or the results of the use, of the Software
+in terms of correctness, accuracy, reliability, currentness, or otherwise, and does not warrant that the operation of any software
+will be uninterrupted or error free. The Author expressly disclaims any warranties not stated herein. No oral or written
+information or advice given by the Author or others shall create a warranty or in any way increase the scope of the foregoing warranty.
+Some jurisdictions do not allow the exclusion of implied warranties or limitations or exclusion of liability for incidential or
+consequential damages so the above exclusions and/or limitations may not apply to you.
+
+
+GENERAL
+The Software is owned by the Author and is protected by German copyright laws and international treaty provisions.
+You may not sublicense, assign, or transfer the license or the Software. You may not translate, reverse engineer,
+decompile, disassemble, modify or create derivative works based on the Software.
+
+Before using the Software you must agree to the following:
+
+1.	You are not allowed to operate more than one (1) copy of this Software package at one time per license.
+	This means that if you have 10 programmers that COULD possibly use the Software at the same time,
+	you must also have ten (10) licenses.
+
+2.	This license grants you the right to use the Software on a royalty-free basis.
+
+3.	You may not rent or lease the Software. You may not transfer this license without the written permission
+	of the author. If this software is an update or upgrade, you may not sell or give away previous versions.
+
+4.	With all new licenses 12 month support and maintenance is included. The purchased license and all updates
+	you receive within support and maintenance are perpetual.
+
+
+PROTECTING THE SOFTWARE
+The Footloose SDK is an distributed computing toolkit for you, the programmer. In order to protect your investment and our
+intellectual property Nauck IT KG uses various protections to help reduce unauthorized distribution of the Software.
+
+1.	License key: The Software is specially serialized with the registered company name. In addition, the license key is
+	specially encoded and encrypted. Each license key is unique to the registered owner. For evaluation you need
+	a free 30-day trial license key. If you have not purchased a license then you may only use the Software for evaluation purposes only.
+
+2.	Obfuscation: Nauck IT KG may use obfuscation technologies for all binary builds protect its intellectual property.
+
+
+DISTRIBUTION OF THE SOFTWARE
+With a purchased license you are allowed to distribute the purchased Software with your application to an unlimited number of users with your license key.
+
+
+SUPPORT AND MAINTENANCE
+With each license one (1) year support and maintenance (S&P) is included. You are eligible to receive all minor and major updates for the version of the software that you license hereunder for a period of one (1) year from the date on you purchase the license for the software. S&P also includes unlimited priority Email support for the version of the software you license hereunder with an average response time of 72 hours during normal business hours (Monday - Friday, Central European Time).
+
+
+
+Thanks,
+
+Nauck IT KG
+info@nauck-it.de
+http://www.nauck-it.de
+
+
+Copyright (c)2008 - 2012 Nauck IT KG ALL RIGHTS RESERVED.
