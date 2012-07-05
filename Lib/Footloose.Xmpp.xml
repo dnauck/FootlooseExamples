@@ -34,9 +34,9 @@
         <member name="M:Footloose.Configuration.Fluent.XmppTransportChannelConfiguration.ServerAddress(System.String)">
             <summary>
             Specify the XMPP server to connect. Use this setting for XMPP servers
-            without SRV records or HTTP Polling and BOSH connections.
+            without SRV records or as Uri for BOSH connections.
             </summary>
-            <param name="serverAddress">Address of the XMPP server to connect.</param>
+            <param name="serverAddress">Address of the XMPP server to connect or a BOSH Uri.</param>
             <returns><see cref="T:Footloose.Configuration.Fluent.XmppTransportChannelConfiguration"/></returns>
         </member>
         <member name="M:Footloose.Configuration.Fluent.XmppTransportChannelConfiguration.Port(System.Int32)">
@@ -67,6 +67,19 @@
             </remarks>
             <returns><see cref="T:Footloose.Configuration.Fluent.XmppTransportChannelConfiguration"/></returns>
         </member>
+        <member name="M:Footloose.Configuration.Fluent.XmppTransportChannelConfiguration.UseSingleSignOn">
+            <summary>
+             Enables the use of Single Sign On (SSO). Default is off.
+            </summary>
+             <remarks>
+             Single Sign on (SSO) is using Kerberos to authenticate you with your
+             Windows credentials on the XMPP server without the need for provide username
+             and password.
+             
+             A XMPP Server which supports Kerberos authentication is  required.
+             </remarks>
+             <returns><see cref="T:Footloose.Configuration.Fluent.XmppTransportChannelConfiguration"/></returns>
+        </member>
         <member name="M:Footloose.Configuration.Fluent.XmppTransportChannelConfiguration.RemoteCertificateValidationCallback(System.Net.Security.RemoteCertificateValidationCallback)">
             <summary>
             Specify the callback that verifies the remote Secure Sockets Layer (SSL) certificate used for authentication.
@@ -95,14 +108,6 @@
             <summary>
             TCP/IP socket connection
             </summary>
-        </member>
-        <member name="F:Footloose.Configuration.XmppConnectionType.HttpPolling">
-            <summary>
-            HTTP polling connection
-            </summary>
-            <remarks>
-            See XEP-0025 for further details: http://www.xmpp.org/extensions/xep-0025.html
-            </remarks>
         </member>
         <member name="F:Footloose.Configuration.XmppConnectionType.Bosh">
             <summary>
@@ -142,7 +147,7 @@
         <member name="P:Footloose.Configuration.XmppTransportChannelConfigurationElement.ServerAddress">
             <summary>
             Gets or sets the XMPP server to connect. Use this setting for XMPP servers
-            without SRV records or HTTP Polling and BOSH connections.
+            without SRV records or as Uri for BOSH connections.
             </summary>
         </member>
         <member name="P:Footloose.Configuration.XmppTransportChannelConfigurationElement.Port">
@@ -168,6 +173,18 @@
              See RFC 2246 for further details: http://www.ietf.org/rfc/rfc2246.txt
              </remarks>
         </member>
+        <member name="P:Footloose.Configuration.XmppTransportChannelConfigurationElement.UseSingleSignOn">
+            <summary>
+             Enables the use of Single Sign On (SSO). Default is off.
+            </summary>
+             <remarks>
+             Single Sign on (SSO) is using Kerberos to authenticate you with your
+             Windows credentials on the XMPP server without the need for provide username
+             and password.
+             
+             A XMPP Server which supports Kerberos authentication is  required.
+             </remarks>
+        </member>
         <member name="P:Footloose.Configuration.XmppTransportChannelConfigurationElement.RemoteCertificateValidationCallback">
             <summary>
             Gets or sets the callback that verifies the remote Secure Sockets Layer (SSL) certificate used for authentication.
@@ -180,19 +197,19 @@
         </member>
         <member name="M:Footloose.Extensions.CommunicationEndpointStatusTypeExtensions.ToShowType(Footloose.DataModel.CommunicationEndpointStatusType)">
             <summary>
-            Converts a <see cref="T:Footloose.DataModel.CommunicationEndpointStatusType"/> into a <see cref="T:agsXMPP.protocol.client.ShowType" />.
+            Converts a <see cref="T:Footloose.DataModel.CommunicationEndpointStatusType"/> into a <see cref="T:Matrix.Xmpp.Show"/>.
             </summary>
             <param name="value"></param>
             <returns></returns>
         </member>
         <member name="T:Footloose.Extensions.JidExtensions">
             <summary>
-            Provide extensions for the <see cref="T:agsXMPP.Jid" /> type.
+            Provide extensions for the <see cref="T:Matrix.Jid"/> type.
             </summary>
         </member>
-        <member name="M:Footloose.Extensions.JidExtensions.ToUri(agsXMPP.Jid)">
+        <member name="M:Footloose.Extensions.JidExtensions.ToUri(Matrix.Jid)">
             <summary>
-            Converts a <see cref="T:agsXMPP.Jid"/> into a <see cref="T:System.Uri"/>.
+            Converts a <see cref="T:Matrix.Jid"/> into a <see cref="T:System.Uri"/>.
             See http://xmpp.org/rfcs/rfc5122.html
             </summary>
             <param name="value"></param>
@@ -200,12 +217,12 @@
         </member>
         <member name="T:Footloose.Extensions.IqTypeExtensions">
             <summary>
-            Provide extensions for the <see cref="T:agsXMPP.protocol.client.IqType" /> type.
+            Provide extensions for the <see cref="T:Matrix.Xmpp.IqType"/> type.
             </summary>
         </member>
-        <member name="M:Footloose.Extensions.IqTypeExtensions.ToMessageType(agsXMPP.protocol.client.IqType)">
+        <member name="M:Footloose.Extensions.IqTypeExtensions.ToMessageType(Matrix.Xmpp.IqType)">
             <summary>
-            Converts a <see cref="T:agsXMPP.protocol.client.IqType" /> into a <see cref="T:Footloose.Messaging.MessageType"/>.
+            Converts a <see cref="T:Matrix.Xmpp.IqType"/> into a <see cref="T:Footloose.Messaging.MessageType"/>.
             </summary>
             <param name="value"></param>
             <returns></returns>
@@ -217,31 +234,31 @@
         </member>
         <member name="M:Footloose.Extensions.MessageTypeExtensions.ToIqType(Footloose.Messaging.MessageType)">
             <summary>
-            Converts a <see cref="T:Footloose.Messaging.MessageType"/> into a <see cref="T:agsXMPP.protocol.client.IqType" />.
+            Converts a <see cref="T:Footloose.Messaging.MessageType"/> into a <see cref="T:Matrix.Xmpp.IqType"/>.
             </summary>
             <param name="value"></param>
             <returns></returns>
         </member>
-        <member name="T:Footloose.Extensions.ShowTypeExtensions">
+        <member name="T:Footloose.Extensions.ShowExtensions">
             <summary>
-            Provide extensions for the <see cref="T:agsXMPP.protocol.client.ShowType" /> type.
+            Provide extensions for the <see cref="T:Matrix.Xmpp.Show"/> type.
             </summary>
         </member>
-        <member name="M:Footloose.Extensions.ShowTypeExtensions.ToCommunicationEndpointStatusType(agsXMPP.protocol.client.ShowType)">
+        <member name="M:Footloose.Extensions.ShowExtensions.ToCommunicationEndpointStatusType(Matrix.Xmpp.Show)">
             <summary>
-            Converts a <see cref="T:agsXMPP.protocol.client.ShowType"/> into a <see cref="T:Footloose.DataModel.CommunicationEndpointStatusType"/>.
+            Converts a <see cref="T:Matrix.Xmpp.Show"/> into a <see cref="T:Footloose.DataModel.CommunicationEndpointStatusType"/>.
             </summary>
             <param name="value"></param>
             <returns></returns>
         </member>
-        <member name="T:Footloose.Extensions.SubscriptionTypeExtensions">
+        <member name="T:Footloose.Extensions.SubscriptionExtensions">
             <summary>
-            Provide extensions for the <see cref="T:agsXMPP.protocol.iq.roster.SubscriptionType" /> type.
+            Provide extensions for the <see cref="T:Matrix.Xmpp.Roster.Subscription"/> type.
             </summary>
         </member>
-        <member name="M:Footloose.Extensions.SubscriptionTypeExtensions.ToPresenceSubscriptionType(agsXMPP.protocol.iq.roster.SubscriptionType)">
+        <member name="M:Footloose.Extensions.SubscriptionExtensions.ToPresenceSubscriptionType(Matrix.Xmpp.Roster.Subscription)">
             <summary>
-            Converts a <see cref="T:agsXMPP.protocol.iq.roster.SubscriptionType"/> into a <see cref="T:Footloose.DataModel.PresenceSubscriptionType"/>.
+            Converts a <see cref="T:Matrix.Xmpp.Roster.Subscription"/> into a <see cref="T:Footloose.DataModel.PresenceSubscriptionType"/>.
             </summary>
             <param name="value"></param>
             <returns></returns>
@@ -253,23 +270,51 @@
         </member>
         <member name="M:Footloose.Extensions.UriExtensions.ToJid(System.Uri)">
             <summary>
-            Converts a <see cref="T:System.Uri"/> into a <see cref="T:agsXMPP.Jid"/>.
+            Converts a <see cref="T:System.Uri"/> into a <see cref="T:Matrix.Jid"/>.
             See http://xmpp.org/rfcs/rfc5122.html
             </summary>
             <param name="value"></param>
-            <returns>A <see cref="T:agsXMPP.Jid"/> from a <see cref="T:System.Uri"/>.</returns>
+            <returns>A <see cref="T:Matrix.Jid"/> from a <see cref="T:System.Uri"/>.</returns>
         </member>
         <member name="T:Footloose.Extensions.XmppConnectionTypeExtensions">
             <summary>
             Provide extensions for the <see cref="T:Footloose.Configuration.XmppConnectionType" /> type.
             </summary>
         </member>
-        <member name="M:Footloose.Extensions.XmppConnectionTypeExtensions.ToSocketConnectionType(Footloose.Configuration.XmppConnectionType)">
+        <member name="M:Footloose.Extensions.XmppConnectionTypeExtensions.ToXmppTransportType(Footloose.Configuration.XmppConnectionType)">
             <summary>
-            Converts a <see cref="T:Footloose.Configuration.XmppConnectionType"/> into a <see cref="T:agsXMPP.Net.SocketConnectionType" />.
+            Converts a <see cref="T:Footloose.Configuration.XmppConnectionType"/> into a <see cref="T:Matrix.Net.Transport"/>.
             </summary>
             <param name="value"></param>
             <returns></returns>
+        </member>
+        <member name="T:Footloose.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Footloose.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Footloose.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Footloose.Properties.Resources.MatrixLicense">
+             <summary>
+               Looks up a localized string similar to eJxkkdtugkAURX/F+ErqeCvSZpzUIEVE8ALShreBGXEsDLdB0K+v1VYf+nKy
+            s9ZJzk4OXLCQ8pK2miTm5biNo6cy3YkaF/Q1vqk2gqsiJVUoDIIcURGWQvAg
+            cF1hLpg4oR4E9wzVqhRpQgsEbZxQNMWc0bhl4yr8guCKoJomGeYndIUtw4Xg
+            j0AtwSxGpMN/1Nt1PjHRIRSCm7rs3g9sM4IF1ZqMFXR6Sajf7Q27cq8PwT8F
+            HRZxLKqCIpt7vT0NPqPQKxYZjbXGss2Np6quHCyKdew7vK72y4XrTI5yVwoc
+            xfC9ZpQfGoEHJDhTvnnnOp3JXh3LjZkBLd+ejbmnea7xokcfxDFrRZ4rk7lm
+            qCtNGllsY0m8HiU7RXre5wUNuH5chhaYDZelpAxMQM5qlqsHPsEuH3JfD32m
+            KIysxxA8ekPw+zP0LYAA.
+             </summary>
         </member>
         <member name="M:Footloose.TransportChannels.Xmpp.XmppUriBuilder.#ctor(System.Func{System.Collections.Generic.IEqualityComparer{System.Uri}})">
             <summary>
@@ -361,25 +406,27 @@
             <param name="failtureCount">Escalation level.</param>
             <returns>Delay in milliseconds.</returns>
         </member>
-        <member name="M:Footloose.TransportChannels.Xmpp.XmppConnectionManager.XmppConnection_OnAuthError(System.Object,agsXMPP.Xml.Dom.Element)">
+        <member name="M:Footloose.TransportChannels.Xmpp.XmppConnectionManager.XmppConnection_OnAuthError(System.Object,Matrix.Xmpp.Sasl.SaslEventArgs)">
             <summary>
             Event that occurs on authentication errors e.g. wrong password, user doesnt exist etc.
             </summary>
             <param name="sender"></param>
             <param name="e"></param>
         </member>
-        <member name="M:Footloose.TransportChannels.Xmpp.XmppConnectionManager.XmppConnection_OnClose(System.Object)">
+        <member name="M:Footloose.TransportChannels.Xmpp.XmppConnectionManager.XmppConnection_OnClose(System.Object,System.EventArgs)">
             <summary>
             Event that occurs when the connection was closed.
             </summary>
             <param name="sender"></param>
+            <param name="e"></param>
         </member>
-        <member name="M:Footloose.TransportChannels.Xmpp.XmppConnectionManager.XmppClientConnection_OnRosterEnd(System.Object)">
+        <member name="M:Footloose.TransportChannels.Xmpp.XmppConnectionManager.XmppClientConnection_OnRosterEnd(System.Object,System.EventArgs)">
             <summary>
             Event that occurs after the resource was binded and all roster items are received.
             Which means we're successfully connected.
             </summary>
             <param name="sender"></param>
+            <param name="e"> </param>
         </member>
         <member name="M:Footloose.TransportChannels.Xmpp.XmppConnectionManager.Dispose">
             <summary>
@@ -484,15 +531,14 @@
             </summary>
             <param name="to">The uri of the <see cref="T:Footloose.DataModel.IEndpointIdentity"/>.</param>
         </member>
-        <member name="M:Footloose.TransportChannels.Xmpp.XmppEndpointIdentityManager.OnDiscoverInformationResult(System.Object,agsXMPP.protocol.client.IQ,System.Object)">
+        <member name="M:Footloose.TransportChannels.Xmpp.XmppEndpointIdentityManager.OnDiscoverInformationResult(System.Object,Matrix.Xmpp.Client.IqEventArgs)">
             <summary>
             Callback method for the asynchronous RequestDiscoInfo method.
             </summary>
             <param name="sender">The sender of this event.</param>
-            <param name="iq">Xmpp result iq containg the disco info results.</param>
-            <param name="data">Data object hat contains the requested capabilities version string.</param>
+            <param name="e">Xmpp result iq containg the disco info results.</param>
         </member>
-        <member name="M:Footloose.TransportChannels.Xmpp.XmppEndpointIdentityManager.CreateDiscoInfo(agsXMPP.protocol.iq.disco.DiscoInfo)">
+        <member name="M:Footloose.TransportChannels.Xmpp.XmppEndpointIdentityManager.CreateDiscoInfo(Matrix.Xmpp.Disco.Info)">
             <summary>
             Creates a <see cref="T:Footloose.DataModel.DataTransferObjects.DiscoInfo"/> from
             a XMPP service discovery information element.
@@ -500,14 +546,14 @@
             <param name="discoInfo">The XMPP service discovery information element.</param>
             <returns>A <see cref="T:Footloose.DataModel.DataTransferObjects.DiscoInfo"/>.</returns>
         </member>
-        <member name="M:Footloose.TransportChannels.Xmpp.XmppEndpointIdentityManager.CreateEndpointIdentity(agsXMPP.protocol.iq.roster.RosterItem)">
+        <member name="M:Footloose.TransportChannels.Xmpp.XmppEndpointIdentityManager.CreateEndpointIdentity(Matrix.Xmpp.Roster.RosterItem)">
             <summary>
             Creates an <see cref="T:Footloose.DataModel.EndpointIdentity"/> from a XMPP roster item.
             </summary>
             <param name="item">The XMPP roster item.</param>
             <returns>An <see cref="T:Footloose.DataModel.EndpointIdentity"/>.</returns>
         </member>
-        <member name="M:Footloose.TransportChannels.Xmpp.XmppEndpointIdentityManager.CreatePresence(agsXMPP.protocol.client.Presence)">
+        <member name="M:Footloose.TransportChannels.Xmpp.XmppEndpointIdentityManager.CreatePresence(Matrix.Xmpp.Client.Presence)">
             <summary>
             Creates a <see cref="T:Footloose.DataModel.DataTransferObjects.Presence"/> from
             a XMPP presence element.
@@ -515,7 +561,7 @@
             <param name="pres">The XMPP presence element.</param>
             <returns>A <see cref="T:Footloose.DataModel.DataTransferObjects.Presence"/>.</returns>
         </member>
-        <member name="M:Footloose.TransportChannels.Xmpp.XmppEndpointIdentityManager.CreatePresenceSubscriptionRequest(agsXMPP.protocol.client.Presence)">
+        <member name="M:Footloose.TransportChannels.Xmpp.XmppEndpointIdentityManager.CreatePresenceSubscriptionRequest(Matrix.Xmpp.Client.Presence)">
             <summary>
             Creates a <see cref="T:Footloose.DataModel.DataTransferObjects.PresenceSubscriptionRequest"/> from
             a XMPP presence element.
@@ -552,84 +598,47 @@
             </summary>
             <param name="message">The message to send.</param>
         </member>
-        <member name="M:Footloose.TransportChannels.Xmpp.XmppTransportChannel.XmppConnection_OnAuthError(System.Object,agsXMPP.Xml.Dom.Element)">
+        <member name="M:Footloose.TransportChannels.Xmpp.XmppTransportChannel.XmppConnection_OnAuthError(System.Object,Matrix.Xmpp.Sasl.SaslEventArgs)">
             <summary>
             Event that occurs on authentication errors e.g. wrong password, user doesnt exist etc.
             </summary>
             <param name="sender"></param>
             <param name="e"></param>
         </member>
-        <member name="M:Footloose.TransportChannels.Xmpp.XmppTransportChannel.XmppConnection_OnError(System.Object,System.Exception)">
+        <member name="M:Footloose.TransportChannels.Xmpp.XmppTransportChannel.XmppConnection_OnError(System.Object,Matrix.ExceptionEventArgs)">
             <summary>
             
             </summary>
             <param name="sender"></param>
-            <param name="ex"></param>
+            <param name="e"></param>
         </member>
-        <member name="M:Footloose.TransportChannels.Xmpp.XmppTransportChannel.XmppConnection_OnIq(System.Object,agsXMPP.protocol.client.IQ)">
+        <member name="M:Footloose.TransportChannels.Xmpp.XmppTransportChannel.XmppClientConnection_OnBind(System.Object,Matrix.JidEventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="sender"></param>
+            <param name="jidEventArgs"></param>
+        </member>
+        <member name="M:Footloose.TransportChannels.Xmpp.XmppTransportChannel.XmppConnection_OnIq(System.Object,Matrix.Xmpp.Client.IqEventArgs)">
             <summary>
             Event that occurs when a info query (iq) is received.
             </summary>
             <param name="sender"></param>
-            <param name="iq"></param>
+            <param name="e"></param>
         </member>
-        <member name="M:Footloose.TransportChannels.Xmpp.XmppTransportChannel.XmppConnection_OnWriteXml(System.Object,System.String)">
+        <member name="M:Footloose.TransportChannels.Xmpp.XmppTransportChannel.XmppConnection_OnSendXml(System.Object,Matrix.TextEventArgs)">
             <summary>
             Event that occurs when a XML packet or text is written to the Socket.
             </summary>
             <param name="sender"></param>
-            <param name="xml"></param>
+            <param name="e"></param>
         </member>
-        <member name="M:Footloose.TransportChannels.Xmpp.XmppTransportChannel.XmppConnection_OnReadXml(System.Object,System.String)">
+        <member name="M:Footloose.TransportChannels.Xmpp.XmppTransportChannel.XmppConnection_OnReceiveXml(System.Object,Matrix.TextEventArgs)">
             <summary>
             Event that occurs when a XML packet or text is received the XMP parser.
             </summary>
             <param name="sender"></param>
-            <param name="xml"></param>
-        </member>
-        <member name="P:Footloose.TransportChannels.Xmpp.XmppTransportChannel.ConnectionType">
-            <summary>
-            Gets r sets the XMPP connection type to the remote XMPP server.
-            </summary>
-        </member>
-        <member name="P:Footloose.TransportChannels.Xmpp.XmppTransportChannel.ServerAddress">
-            <summary>
-            Gets or sets the XMPP server to connect. Use this setting for XMPP servers.
-            without SRV records or HTTP Polling and BOSH connections.
-            </summary>
-        </member>
-        <member name="P:Footloose.TransportChannels.Xmpp.XmppTransportChannel.Port">
-            <summary>
-            Gets or sets the port of the remote XMPP server.
-            </summary>
-        </member>
-        <member name="P:Footloose.TransportChannels.Xmpp.XmppTransportChannel.AutoResolveServerAddress">
-            <summary>
-            Gets or sets a value indicating if the XMPP server address
-            should be auto resolved via SRV DNS Records.
-            </summary>
-        </member>
-        <member name="P:Footloose.TransportChannels.Xmpp.XmppTransportChannel.UseCompression">
-            <summary>
-            Gets or sets a value indicating if XMPP stream compression
-            should be used to save bandwidth.
-            </summary>
-        </member>
-        <member name="P:Footloose.TransportChannels.Xmpp.XmppTransportChannel.UseTls">
-            <summary>
-            Gets or sets a value indicating if Start-TLS
-            for TLS XMPP stream encryption and compression
-            should be used.
-            </summary>
-            <remarks>
-            See RFC 2246 for further details: http://www.ietf.org/rfc/rfc2246.txt
-            </remarks>
-        </member>
-        <member name="P:Footloose.TransportChannels.Xmpp.XmppTransportChannel.RemoteCertificateValidationCallback">
-            <summary>
-            Gets or sets the callback that verifies the remote
-            Secure Sockets Layer (SSL) certificate used for authentication.
-            </summary>
+            <param name="e"></param>
         </member>
         <member name="P:Footloose.TransportChannels.Xmpp.XmppTransportChannel.ServiceUri">
             <summary>

@@ -213,14 +213,13 @@
       <xs:simpleType>
         <xs:restriction base="xs:NMTOKEN">
           <xs:enumeration value="Tcp" />
-          <xs:enumeration value="HttpPolling" />
           <xs:enumeration value="Bosh" />
         </xs:restriction>
       </xs:simpleType>
     </xs:attribute>
     <xs:attribute name="serverAddress" use="optional" type="xs:string">
       <xs:annotation>
-        <xs:documentation>The XMPP server to connect. Use this setting for XMPP servers without SRV records or HTTP Polling and BOSH connections.</xs:documentation>
+        <xs:documentation>The XMPP server to connect. Use this setting for XMPP servers without SRV records or as Uri for BOSH connections.</xs:documentation>
       </xs:annotation>
     </xs:attribute>
     <xs:attribute name="port" use="optional" type="xs:integer">
@@ -241,6 +240,11 @@
     <xs:attribute name="useTls" use="optional" type="xs:boolean">
       <xs:annotation>
         <xs:documentation>Enables the use of Start-TLS for TLS XMPP stream encryption and compression. Default is on.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="useSingleSignOn" use="optional" type="xs:boolean">
+      <xs:annotation>
+        <xs:documentation>Enables the use of Single Sign On (SSO). Default is off.</xs:documentation>
       </xs:annotation>
     </xs:attribute>
   </xs:complexType>
