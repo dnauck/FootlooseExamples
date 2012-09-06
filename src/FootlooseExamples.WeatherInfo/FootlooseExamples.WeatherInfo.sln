@@ -1,4 +1,4 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FootlooseExamples.WeatherInfo.Shared", "FootlooseExamples.WeatherInfo.Shared\FootlooseExamples.WeatherInfo.Shared.csproj", "{A22A01AF-5958-40D4-BE38-63E1E0717636}"
@@ -6,6 +6,12 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FootlooseExamples.WeatherInfo.Client", "FootlooseExamples.WeatherInfo.Client\FootlooseExamples.WeatherInfo.Client.csproj", "{2B756ECD-4607-478D-A279-BB06AA1196C5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FootlooseExamples.WeatherInfo.Service", "FootlooseExamples.WeatherInfo.Service\FootlooseExamples.WeatherInfo.Service.csproj", "{A06ECF22-BBEF-42EE-9EEA-33A359102ECD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{5482B59B-D2B0-4AF4-80DE-559A696AB6BD}"
+	ProjectSection(SolutionItems) = preProject
+		LICENSE.txt = LICENSE.txt
+		README.txt = README.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
