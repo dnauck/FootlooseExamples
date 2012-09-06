@@ -1,4 +1,4 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{D12CC6EB-30DB-48C4-B488-53E6DF22B792}"
@@ -12,6 +12,13 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FootlooseExamples.Config.ByCode", "FootlooseExamples.Config.ByCode\FootlooseExamples.Config.ByCode.csproj", "{3261A1D0-FC7A-4F50-AA3E-018F2DF5675F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FootlooseExamples.Config.Fluent", "FootlooseExamples.Config.Fluent\FootlooseExamples.Config.Fluent.csproj", "{4C7E7A2E-FD72-4CF8-BE69-90122B164655}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{B9C65583-DB3C-48D3-B975-9684B3604DDE}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

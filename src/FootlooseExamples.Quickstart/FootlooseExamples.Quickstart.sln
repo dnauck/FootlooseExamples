@@ -1,4 +1,4 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{EC25FA25-52CB-4B1B-97C6-52DB54A10F38}"
@@ -15,35 +15,40 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FootlooseExamples.Quickstar
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FootlooseExamples.Quickstart.Client", "FootlooseExamples.Quickstart.Client\FootlooseExamples.Quickstart.Client.csproj", "{6CE6A6F6-73B1-4587-9708-71D7E9A0BE20}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{2C5BB4BE-B429-4AFA-9AFF-FAA7A6BF350D}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{2A329C6D-BC62-4D72-8BFE-E70DC87E17B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2A329C6D-BC62-4D72-8BFE-E70DC87E17B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2A329C6D-BC62-4D72-8BFE-E70DC87E17B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2A329C6D-BC62-4D72-8BFE-E70DC87E17B0}.Release|Any CPU.Build.0 = Release|Any CPU
 		{3B6AC14B-A8F6-41E1-ADEC-3DCCDBC2E942}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{3B6AC14B-A8F6-41E1-ADEC-3DCCDBC2E942}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3B6AC14B-A8F6-41E1-ADEC-3DCCDBC2E942}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3B6AC14B-A8F6-41E1-ADEC-3DCCDBC2E942}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6CE6A6F6-73B1-4587-9708-71D7E9A0BE20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6CE6A6F6-73B1-4587-9708-71D7E9A0BE20}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6CE6A6F6-73B1-4587-9708-71D7E9A0BE20}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6CE6A6F6-73B1-4587-9708-71D7E9A0BE20}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A329C6D-BC62-4D72-8BFE-E70DC87E17B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A329C6D-BC62-4D72-8BFE-E70DC87E17B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A329C6D-BC62-4D72-8BFE-E70DC87E17B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A329C6D-BC62-4D72-8BFE-E70DC87E17B0}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D81E89AA-238D-46DA-9D82-B75E08DBA02F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D81E89AA-238D-46DA-9D82-B75E08DBA02F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D81E89AA-238D-46DA-9D82-B75E08DBA02F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D81E89AA-238D-46DA-9D82-B75E08DBA02F}.Release|Any CPU.Build.0 = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-	EndGlobalSection
-	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = FootlooseExamples.Quickstart.Client\FootlooseExamples.Quickstart.Client.csproj
+		{6CE6A6F6-73B1-4587-9708-71D7E9A0BE20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CE6A6F6-73B1-4587-9708-71D7E9A0BE20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CE6A6F6-73B1-4587-9708-71D7E9A0BE20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CE6A6F6-73B1-4587-9708-71D7E9A0BE20}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = FootlooseExamples.Quickstart.Client\FootlooseExamples.Quickstart.Client.csproj
 	EndGlobalSection
 EndGlobal

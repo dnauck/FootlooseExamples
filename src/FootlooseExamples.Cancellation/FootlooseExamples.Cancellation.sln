@@ -1,4 +1,4 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{7E9A882E-FD80-4F36-AA45-8F9F9B97A78D}"
@@ -12,6 +12,13 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FootlooseExamples.Cancellation.Service", "FootlooseExamples.Cancellation.Service\FootlooseExamples.Cancellation.Service.csproj", "{C9A68072-CD03-457A-8986-2FB04CA12AE9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FootlooseExamples.Cancellation.Client", "FootlooseExamples.Cancellation.Client\FootlooseExamples.Cancellation.Client.csproj", "{ACD5564E-26B4-4CB5-8297-A507437FC051}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{290F7E92-0D34-48D3-9CFC-0EFD9936149C}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
