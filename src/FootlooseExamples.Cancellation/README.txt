@@ -30,7 +30,7 @@ the client's console screen to execute methods on the service.
 
 4.) Further information
 
-Footloose is released under the MIT/X11 license.
+FootlooseExamples is released under the MIT/X11 license.
 
 The latest release and documentation can be found on
 the Footloose project website:

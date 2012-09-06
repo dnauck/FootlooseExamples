@@ -23,7 +23,7 @@ Run the "FootlooseExamples.Config.*.exe".
 
 4.) Further information
 
-Footloose is released under the MIT/X11 license.
+FootlooseExamples is released under the MIT/X11 license.
 
 The latest release and documentation can be found on
 the Footloose project website:
