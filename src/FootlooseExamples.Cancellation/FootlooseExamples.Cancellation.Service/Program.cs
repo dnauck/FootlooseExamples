@@ -32,7 +32,7 @@ namespace FootlooseExamples.Cancellation.Service
 
         static void Footloose_ExceptionOccurred(object sender, ExceptionEventArgs e)
         {
-            Console.WriteLine("Exception occured: " + e.Exception);
+            Console.WriteLine("Exception occurred: " + e.Exception);
         }
 
         private static IFootlooseConnection ConfigureFootlooseConnection(ServiceLocatorDummy serviceLocator, string endpointIdentifier)
