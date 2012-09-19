@@ -8,13 +8,14 @@ features like load-balancing, clustering, encryption, service discovery and sing
 
 FEATURES
 
+- easy to use, only a few lines of code to start with Footloose
 - Unobtrusive, no Attributes like [OperationContract] and no base class required
-- No Code-Gen / Client Proxy Classes 
-- several TransportChannels: XMPP, IPC, AMQP 
-- Security, Compression (depends on Transport Channel)
-- Capabilities and Service Discovery
-- Sharing Presence Information
-- Single-SignOn 
+- No Code-Gen / Client Proxy Classes - keep your code clean
+- several TransportChannels: XMPP, IPC, AMQP
+- Security, Encryption and Compression (depends on Transport Channel)
+- Endpoint Capabilities and Service Discovery
+- Sharing Presence Information (Online, Offline, temp. unavailable, etc. incl. priority and reason)
+- Single-SignOn
 - bi-directional communication, no polling
 - Model driven - use your strongly-typed DTOs/POCOs
 
