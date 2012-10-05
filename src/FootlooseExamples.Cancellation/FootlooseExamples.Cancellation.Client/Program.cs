@@ -38,7 +38,7 @@ namespace FootlooseExamples.Cancellation.Client
                                                                                           serviceEndpointIdentifier);
             var cts = new CancellationTokenSource();
 
-            var methodCallTask = footlooseConnection.CallMethod<string, ISimpleService>(s => s.DoIt(), cts.Token,
+            var methodCallTask = footlooseConnection.Invoke<string, ISimpleService>(s => s.DoIt(), cts.Token,
                                                                                         serviceUri);
 
             Console.WriteLine("Called method 'DoIt' of 'ISimpleService' on '" + serviceUri + "'. CorrelationId is '" +
@@ -77,7 +77,7 @@ namespace FootlooseExamples.Cancellation.Client
         {
             var footloose = Fluently.Configure()
                 .SerializerOfType<Footloose.Serialization.TextSerializer>()
-                .TransportChannel(Footloose.Configuration.Fluent.RemotingTransportChannelConfiguration.Standard
+                .TransportChannel(Footloose.Configuration.Fluent.IpcTransportChannelConfiguration.Standard
                                       .EndpointIdentifier(endpointIdentifier) // Uri will be "ipc://user@mashineName/<EndpointIdentifier>"
                                       .TimeOut(5000)
                 )

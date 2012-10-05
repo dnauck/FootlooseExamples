@@ -41,7 +41,7 @@ namespace FootlooseExamples.Cancellation.Service
                 .SerializerOfType<Footloose.Serialization.TextSerializer>()
                 .ServiceLocator(serviceLocator)
                 .ServiceContracts(contracts => contracts.ServiceContract.RegisterOfType<ISimpleService>())
-                .TransportChannel(Footloose.Configuration.Fluent.RemotingTransportChannelConfiguration.Standard
+                .TransportChannel(Footloose.Configuration.Fluent.IpcTransportChannelConfiguration.Standard
                                       .EndpointIdentifier(endpointIdentifier) // Uri will be "ipc://user@mashineName/<EndpointIdentifier>"
                                       .TimeOut(5000)
                 )
