@@ -53,9 +53,9 @@
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Footloose, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Footloose, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Footloose.1.0.0\lib\Net40\Footloose.dll</HintPath>
+      <HintPath>..\..\..\packages\Footloose.2.0.0-alpha1\lib\net40\Footloose.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -110,10 +110,10 @@
       <Link>Footloose.lic</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="..\..\NLog.config">
-      <Link>NLog.config</Link>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    <None Include="FootlooseConfigurationSchema.xsd">
+      <SubType>Designer</SubType>
     </None>
+    <None Include="NLog.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

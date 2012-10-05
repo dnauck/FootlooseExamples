@@ -53,7 +53,7 @@ namespace FootlooseExamples.Quickstart.Service.Runner
                             type.IsPublic &&
                             type.Namespace.EndsWith("Contracts"));
                 })
-                .TransportChannel(Footloose.Configuration.Fluent.RemotingTransportChannelConfiguration.Standard
+                .TransportChannel(Footloose.Configuration.Fluent.IpcTransportChannelConfiguration.Standard
                                       .EndpointIdentifier(endpointIdentifier) // Uri will be "ipc://user@host/<endpointIdentifier>"
                                       .TimeOut(5000)
                 )

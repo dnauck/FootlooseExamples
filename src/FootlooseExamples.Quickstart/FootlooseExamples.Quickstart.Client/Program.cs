@@ -37,7 +37,7 @@ namespace FootlooseExamples.Quickstart.Client
             var serviceUri = footlooseConnection.UriBuilder.BuildCommunicationEndpointUri(userName, mashineName,
                                                                                           serviceEndpointIdentifier);
 
-            var methodCallId = footlooseConnection.CallMethod<ISimpleService>(service => service.DoIt(), serviceUri);
+            var methodCallId = footlooseConnection.Invoke<ISimpleService>(service => service.DoIt(), serviceUri);
             Console.WriteLine("Called method 'DoIt' of 'ISimpleService' on '" + serviceUri + "'. CorrelationId is '" +
                               methodCallId + "'.");
 
@@ -49,7 +49,7 @@ namespace FootlooseExamples.Quickstart.Client
             Console.WriteLine("Press Enter to start second run...");
             Console.ReadLine();
 
-            methodCallId = footlooseConnection.CallMethod<string, ISimpleService>(
+            methodCallId = footlooseConnection.Invoke<string, ISimpleService>(
                             serice => serice.DoIt("Argument 1", "Argument 2"),
                             response => Console.WriteLine("=======" +
                                                         Environment.NewLine +
@@ -89,7 +89,7 @@ namespace FootlooseExamples.Quickstart.Client
             var footloose = Fluently.Configure()
                 .SerializerOfType<Footloose.Serialization.TextSerializer>()
                 .ServiceLocator(serviceLocator)
-                .TransportChannel(Footloose.Configuration.Fluent.RemotingTransportChannelConfiguration.Standard
+                .TransportChannel(Footloose.Configuration.Fluent.IpcTransportChannelConfiguration.Standard
                                       .EndpointIdentifier(endpointIdentifier) // Uri will be "ipc://user@host/<endpointIdentifier>"
                                       .TimeOut(5000)
                 )
