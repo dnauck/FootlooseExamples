@@ -47,11 +47,10 @@ namespace FootlooseExamples.Config.ByCode
 
 
             // configure transport channel
-            var transportChannelConfig = new RemotingTransportChannelConfigurationElement()
+            var transportChannelConfig = new IpcTransportChannelConfigurationElement()
                                              {
                                                  Name = "MyTransportChannel",
-                                                 Type = typeof (Footloose.TransportChannels.Remoting.RemotingTransportChannel).AssemblyQualifiedName,
-                                                 RemotingConfigFile = ""
+                                                 Type = typeof (Footloose.TransportChannels.Ipc.IpcTransportChannel).AssemblyQualifiedName
                                              };
 
             footlooseConfig.TransportChannel.DefaultTransportChannel = "MyTransportChannel";

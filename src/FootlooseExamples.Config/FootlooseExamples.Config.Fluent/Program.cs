@@ -24,9 +24,8 @@ namespace FootlooseExamples.Config.Fluent
                         .Where(types => types.Namespace.EndsWith("Contracts"))
                 )
                 .TransportChannel(
-                    Footloose.Configuration.Fluent.RemotingTransportChannelConfiguration.Standard
+                    Footloose.Configuration.Fluent.IpcTransportChannelConfiguration.Standard
                         .EndpointIdentifier("MyServiceIdentifier")
-                        .UseConfigFile("")
                         .TimeOut(5000)
                 )
                 .CreateFootlooseConnection(licenseFile);
