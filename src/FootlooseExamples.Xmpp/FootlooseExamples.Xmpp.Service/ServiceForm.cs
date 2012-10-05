@@ -144,22 +144,22 @@ namespace FootlooseExamples.Xmpp.Service
             }
         }
 
-        private CommunicationEndpointStatusType GetStatus()
+        private EndpointStatusType GetStatus()
         {
             if (OnlineStatusRadioButton.Checked)
-                return CommunicationEndpointStatusType.Online;
+                return EndpointStatusType.Online;
 
             else if (BusyStatusRadioButton.Checked)
-                return CommunicationEndpointStatusType.Busy;
+                return EndpointStatusType.Busy;
 
             else if (TemporarilyUnavailableStatusRadioButton.Checked)
-                return CommunicationEndpointStatusType.TemporarilyUnavailable;
+                return EndpointStatusType.TemporarilyUnavailable;
 
             else if (UnavailableStatusRadioButton.Checked)
-                return CommunicationEndpointStatusType.Unavailable;
+                return EndpointStatusType.Unavailable;
 
             else
-                return CommunicationEndpointStatusType.Online;
+                return EndpointStatusType.Online;
         }
 
         private void AutoServerResolveCheckBox_CheckedChanged(object sender, EventArgs e)
