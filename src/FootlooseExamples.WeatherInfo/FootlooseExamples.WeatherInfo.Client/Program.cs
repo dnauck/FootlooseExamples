@@ -12,7 +12,7 @@ namespace FootlooseExamples.WeatherInfo.Client
         {
             using (var footlooseConnection = Footloose.Fluently.Configure()
                     .SerializerOfType<Footloose.Serialization.TextSerializer>()
-                    .TransportChannel(Footloose.Configuration.Fluent.RemotingTransportChannelConfiguration.Standard)
+                    .TransportChannel(Footloose.Configuration.Fluent.IpcTransportChannelConfiguration.Standard)
                     .CreateFootlooseConnection(licenseFile))
             {
 
@@ -37,7 +37,7 @@ namespace FootlooseExamples.WeatherInfo.Client
                 var weatherInfoRequest = new WeatherInfoRequest() {City = "Berlin"};
 
                 footlooseConnection
-                    .CallMethod<WeatherInfoResponse, IWeatherInfoService>(service => service.HandleRequest(weatherInfoRequest),
+                    .Invoke<WeatherInfoResponse, IWeatherInfoService>(service => service.HandleRequest(weatherInfoRequest),
 
                     result => 
                         Console.WriteLine("Received result: It is {0} in {1}!",

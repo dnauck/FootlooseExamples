@@ -17,7 +17,7 @@ namespace FootlooseExamples.WeatherInfo.Service
                 .ServiceLocator(serviceLocator)
                 .ServiceContracts(contracts => contracts.ServiceContract.RegisterOfType<IWeatherInfoService>())
                 .TransportChannel(
-                    Footloose.Configuration.Fluent.RemotingTransportChannelConfiguration.Standard
+                    Footloose.Configuration.Fluent.IpcTransportChannelConfiguration.Standard
                         .EndpointIdentifier("footloose-weatherinfoservice")
                 )
                 .CreateFootlooseConnection(licenseFile))
