@@ -57,7 +57,7 @@
   <ItemGroup>
     <Reference Include="Footloose, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\packages\Footloose.2.0.0-alpha1\lib\net40\Footloose.dll</HintPath>
+      <HintPath>..\..\..\packages\Footloose.2.0.0-alpha2\lib\net40\Footloose.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
