@@ -73,7 +73,9 @@
     <None Include="FootlooseConfigurationSchema.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="NLog.config" />
+    <None Include="NLog.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
