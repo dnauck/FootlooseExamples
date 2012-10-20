@@ -31,8 +31,8 @@ namespace FootlooseExamples.WeatherInfo.Client
                 var userName = Environment.UserName;
                 var mashineName = Environment.MachineName;
                 var serviceEndpointIdentifier = "footloose-weatherinfoservice";
-                var serviceUri = footlooseConnection.UriBuilder.BuildCommunicationEndpointUri(userName, mashineName,
-                                                                                              serviceEndpointIdentifier);
+                var serviceUri = footlooseConnection.UriBuilder.BuildEndpointUri(userName, mashineName,
+                                                                                 serviceEndpointIdentifier);
 
                 var weatherInfoRequest = new WeatherInfoRequest() {City = "Berlin"};
 

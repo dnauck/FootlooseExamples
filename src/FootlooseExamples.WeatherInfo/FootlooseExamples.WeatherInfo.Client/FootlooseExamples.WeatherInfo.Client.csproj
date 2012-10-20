@@ -38,7 +38,7 @@
   <ItemGroup>
     <Reference Include="Footloose, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\packages\Footloose.2.0.0-alpha2\lib\net40\Footloose.dll</HintPath>
+      <HintPath>..\..\..\packages\Footloose.2.0.0-alpha3\lib\net40\Footloose.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Practices.ServiceLocation">
       <HintPath>..\..\..\packages\CommonServiceLocator.1.0\lib\NET35\Microsoft.Practices.ServiceLocation.dll</HintPath>
