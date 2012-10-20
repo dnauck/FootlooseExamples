@@ -34,8 +34,8 @@ namespace FootlooseExamples.Cancellation.Client
             var userName = Environment.UserName;
             var mashineName = Environment.MachineName;
             var serviceEndpointIdentifier = "footloose-cancellation-service";
-            var serviceUri = footlooseConnection.UriBuilder.BuildCommunicationEndpointUri(userName, mashineName,
-                                                                                          serviceEndpointIdentifier);
+            var serviceUri = footlooseConnection.UriBuilder.BuildEndpointUri(userName, mashineName,
+                                                                             serviceEndpointIdentifier);
             var cts = new CancellationTokenSource();
 
             var methodCallTask = footlooseConnection.Invoke<string, ISimpleService>(s => s.DoIt(), cts.Token,

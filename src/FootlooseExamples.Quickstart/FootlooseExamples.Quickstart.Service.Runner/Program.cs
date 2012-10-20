@@ -45,7 +45,7 @@ namespace FootlooseExamples.Quickstart.Service.Runner
                     //single registration
                     contracts.ServiceContract.RegisterOfType<ISimpleService>();
 
-                    //other example; automaticly register all public interfaces that are in the "*.Contracts" namespace
+                    //other example; automatically register all public interfaces that are in the "*.Contracts" namespace
                     contracts.AutoServiceContract.RegisterFromAssemblyOf<ISimpleService>().
                         Where(
                             type =>
