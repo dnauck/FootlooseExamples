@@ -34,8 +34,8 @@ namespace FootlooseExamples.Quickstart.Client
             var userName = Environment.UserName;
             var mashineName = Environment.MachineName;
             var serviceEndpointIdentifier = "footloose-quickstart-service";
-            var serviceUri = footlooseConnection.UriBuilder.BuildCommunicationEndpointUri(userName, mashineName,
-                                                                                          serviceEndpointIdentifier);
+            var serviceUri = footlooseConnection.UriBuilder.BuildEndpointUri(userName, mashineName,
+                                                                             serviceEndpointIdentifier);
 
             var methodCallId = footlooseConnection.Invoke<ISimpleService>(service => service.DoIt(), serviceUri);
             Console.WriteLine("Called method 'DoIt' of 'ISimpleService' on '" + serviceUri + "'. CorrelationId is '" +
