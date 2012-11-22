@@ -1,0 +1,16 @@
+return {
+	[false] = {
+		["version"] = 10;
+	};
+	["pending"] = {};
+	["test2@localhost"] = {
+		["subscription"] = "both";
+		["groups"] = {};
+		["name"] = "test2";
+	};
+	["test1@localhost"] = {
+		["subscription"] = "both";
+		["groups"] = {};
+		["name"] = "test1";
+	};
+}

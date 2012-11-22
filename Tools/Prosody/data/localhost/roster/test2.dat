@@ -1,0 +1,18 @@
+return {
+	[false] = {
+		["version"] = 11;
+	};
+	["pending"] = {};
+	["admin@localhost"] = {
+		["subscription"] = "both";
+		["groups"] = {
+			["SysOps"] = true;
+		};
+		["name"] = "Admin";
+	};
+	["test1@localhost"] = {
+		["subscription"] = "both";
+		["groups"] = {};
+		["name"] = "test1";
+	};
+}
