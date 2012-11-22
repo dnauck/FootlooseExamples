@@ -1,0 +1,73 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{93A4AE2B-DBA6-4AF0-838B-7F8A5879506B}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FootlooseExamples.PubSub.Events", "FootlooseExamples.PubSub.Events\FootlooseExamples.PubSub.Events.csproj", "{D569EDDD-FE1E-4F3D-8EEA-0353C7FE962D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FootlooseExamples.PubSub.Publisher", "FootlooseExamples.PubSub.Publisher\FootlooseExamples.PubSub.Publisher.csproj", "{AD6C53C2-B067-4BE7-8C9C-AB56F59E636E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FootlooseExamples.PubSub.Subscriber", "FootlooseExamples.PubSub.Subscriber\FootlooseExamples.PubSub.Subscriber.csproj", "{F4A11523-5070-4475-B3D9-8E2DA0A3430B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{C5BCD378-3FFE-4BBC-A7A4-1914E0A57AD0}"
+	ProjectSection(SolutionItems) = preProject
+		LICENSE.txt = LICENSE.txt
+		README.txt = README.txt
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug-Net-4.0|Any CPU = Debug-Net-4.0|Any CPU
+		Release|Any CPU = Release|Any CPU
+		Release-Android-2.3|Any CPU = Release-Android-2.3|Any CPU
+		Release-Mono-4.0|Any CPU = Release-Mono-4.0|Any CPU
+		Release-Net-4.0|Any CPU = Release-Net-4.0|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D569EDDD-FE1E-4F3D-8EEA-0353C7FE962D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D569EDDD-FE1E-4F3D-8EEA-0353C7FE962D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D569EDDD-FE1E-4F3D-8EEA-0353C7FE962D}.Debug-Net-4.0|Any CPU.ActiveCfg = Debug|Any CPU
+		{D569EDDD-FE1E-4F3D-8EEA-0353C7FE962D}.Debug-Net-4.0|Any CPU.Build.0 = Debug|Any CPU
+		{D569EDDD-FE1E-4F3D-8EEA-0353C7FE962D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D569EDDD-FE1E-4F3D-8EEA-0353C7FE962D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D569EDDD-FE1E-4F3D-8EEA-0353C7FE962D}.Release-Android-2.3|Any CPU.ActiveCfg = Release|Any CPU
+		{D569EDDD-FE1E-4F3D-8EEA-0353C7FE962D}.Release-Android-2.3|Any CPU.Build.0 = Release|Any CPU
+		{D569EDDD-FE1E-4F3D-8EEA-0353C7FE962D}.Release-Mono-4.0|Any CPU.ActiveCfg = Release|Any CPU
+		{D569EDDD-FE1E-4F3D-8EEA-0353C7FE962D}.Release-Mono-4.0|Any CPU.Build.0 = Release|Any CPU
+		{D569EDDD-FE1E-4F3D-8EEA-0353C7FE962D}.Release-Net-4.0|Any CPU.ActiveCfg = Release|Any CPU
+		{D569EDDD-FE1E-4F3D-8EEA-0353C7FE962D}.Release-Net-4.0|Any CPU.Build.0 = Release|Any CPU
+		{AD6C53C2-B067-4BE7-8C9C-AB56F59E636E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD6C53C2-B067-4BE7-8C9C-AB56F59E636E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD6C53C2-B067-4BE7-8C9C-AB56F59E636E}.Debug-Net-4.0|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD6C53C2-B067-4BE7-8C9C-AB56F59E636E}.Debug-Net-4.0|Any CPU.Build.0 = Debug|Any CPU
+		{AD6C53C2-B067-4BE7-8C9C-AB56F59E636E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD6C53C2-B067-4BE7-8C9C-AB56F59E636E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD6C53C2-B067-4BE7-8C9C-AB56F59E636E}.Release-Android-2.3|Any CPU.ActiveCfg = Release|Any CPU
+		{AD6C53C2-B067-4BE7-8C9C-AB56F59E636E}.Release-Android-2.3|Any CPU.Build.0 = Release|Any CPU
+		{AD6C53C2-B067-4BE7-8C9C-AB56F59E636E}.Release-Mono-4.0|Any CPU.ActiveCfg = Release|Any CPU
+		{AD6C53C2-B067-4BE7-8C9C-AB56F59E636E}.Release-Mono-4.0|Any CPU.Build.0 = Release|Any CPU
+		{AD6C53C2-B067-4BE7-8C9C-AB56F59E636E}.Release-Net-4.0|Any CPU.ActiveCfg = Release|Any CPU
+		{AD6C53C2-B067-4BE7-8C9C-AB56F59E636E}.Release-Net-4.0|Any CPU.Build.0 = Release|Any CPU
+		{F4A11523-5070-4475-B3D9-8E2DA0A3430B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4A11523-5070-4475-B3D9-8E2DA0A3430B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4A11523-5070-4475-B3D9-8E2DA0A3430B}.Debug-Net-4.0|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4A11523-5070-4475-B3D9-8E2DA0A3430B}.Debug-Net-4.0|Any CPU.Build.0 = Debug|Any CPU
+		{F4A11523-5070-4475-B3D9-8E2DA0A3430B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4A11523-5070-4475-B3D9-8E2DA0A3430B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4A11523-5070-4475-B3D9-8E2DA0A3430B}.Release-Android-2.3|Any CPU.ActiveCfg = Release|Any CPU
+		{F4A11523-5070-4475-B3D9-8E2DA0A3430B}.Release-Android-2.3|Any CPU.Build.0 = Release|Any CPU
+		{F4A11523-5070-4475-B3D9-8E2DA0A3430B}.Release-Mono-4.0|Any CPU.ActiveCfg = Release|Any CPU
+		{F4A11523-5070-4475-B3D9-8E2DA0A3430B}.Release-Mono-4.0|Any CPU.Build.0 = Release|Any CPU
+		{F4A11523-5070-4475-B3D9-8E2DA0A3430B}.Release-Net-4.0|Any CPU.ActiveCfg = Release|Any CPU
+		{F4A11523-5070-4475-B3D9-8E2DA0A3430B}.Release-Net-4.0|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
