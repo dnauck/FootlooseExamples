@@ -37,7 +37,8 @@ namespace FootlooseExamples.WeatherInfo.Client
                 var weatherInfoRequest = new WeatherInfoRequest() {City = "Berlin"};
 
                 footlooseConnection
-                    .Invoke<WeatherInfoResponse, IWeatherInfoService>(service => service.HandleRequest(weatherInfoRequest),
+                    .Invoke<IWeatherInfoService, WeatherInfoResponse>(
+                        service => service.HandleRequest(weatherInfoRequest),
 
                     result => 
                         Console.WriteLine("Received result: It is {0} in {1}!",
