@@ -11,9 +11,11 @@ namespace FootlooseExamples.WeatherInfo.Client
         private static void Main(string[] args)
         {
             using (var footlooseConnection = Footloose.Fluently.Configure()
-                    .SerializerOfType<Footloose.Serialization.TextSerializer>()
-                    .TransportChannel(Footloose.Configuration.Fluent.IpcTransportChannelConfiguration.Standard)
-                    .CreateFootlooseConnection(licenseFile))
+                                                      .SerializerOfType<Footloose.Serialization.TextSerializer>()
+                                                      .TransportChannel(
+                                                          Footloose.Configuration.Fluent
+                                                                   .IpcTransportChannelConfiguration.Standard)
+                                                      .CreateFootlooseConnection(licenseFile))
             {
 
                 footlooseConnection.ExceptionOccurred +=
@@ -40,18 +42,17 @@ namespace FootlooseExamples.WeatherInfo.Client
                     .Invoke<IWeatherInfoService, WeatherInfoResponse>(
                         service => service.HandleRequest(weatherInfoRequest),
 
-                    result => 
+                        result =>
                         Console.WriteLine("Received result: It is {0} in {1}!",
-                        result.ReturnValue.Temperature, result.ReturnValue.City),
+                                          result.ReturnValue.Temperature, result.ReturnValue.City),
 
-                    serviceUri);
+                        serviceUri);
 
                 Console.WriteLine("Waiting for incoming result... Press ENTER to exit...");
                 Console.ReadLine();
 
                 footlooseConnection.Close();
             }
-
         }
     }
 }
