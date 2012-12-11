@@ -1,0 +1,442 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://www.footloose-project.de/configuration/v1.0" elementFormDefault="qualified" targetNamespace="http://www.footloose-project.de/configuration/v1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <!-- Footloose.Configuration.FootlooseConfigurationSectionGroup -->
+  <xs:element name="Footloose" type="tns:Footloose.Configuration.FootlooseConfigurationSectionGroup" />
+  <xs:complexType name="Footloose.Configuration.FootlooseConfigurationSectionGroup">
+    <xs:sequence>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element minOccurs="1" maxOccurs="1" name="TransportChannel" type="tns:Footloose.Configuration.TransportChannelConfigurationSection" />
+        <xs:element minOccurs="0" maxOccurs="1" name="ServiceContracts" type="tns:Footloose.Configuration.ServiceContractConfigurationSection" />
+        <xs:element minOccurs="1" maxOccurs="1" name="Serializer" type="tns:Footloose.Configuration.SerializerConfigurationSection" />
+        <xs:element minOccurs="0" maxOccurs="1" name="Security" type="tns:Footloose.Configuration.SecurityConfigurationSection" />
+      </xs:choice>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- Footloose.Configuration.TransportChannelConfigurationSection -->
+  <xs:complexType name="Footloose.Configuration.TransportChannelConfigurationSection">
+    <xs:sequence>
+      <xs:element minOccurs="1" name="transportChannels" type="tns:Footloose.Configuration.TransportChannelConfigurationElementCollection">
+        <xs:annotation>
+          <xs:documentation>The list of transport channels.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="credentials" type="tns:Footloose.Configuration.CredentialConfigurationElementCollection">
+        <xs:annotation>
+          <xs:documentation>The list of credentials.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="defaultTransportChannel" use="optional" type="xs:string">
+      <xs:annotation>
+        <xs:documentation>The name of the default transport channel.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="endpointIdentifier" use="optional" type="xs:string">
+      <xs:annotation>
+        <xs:documentation>The identifier of this endpoint.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+
+  <xs:complexType name="Footloose.Configuration.CredentialConfigurationElementCollection">
+    <xs:sequence>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="add" minOccurs="1" maxOccurs="unbounded" type="tns:Footloose.Configuration.CredentialConfigurationElement">
+          <xs:annotation>
+            <xs:documentation>The credential configuration element.</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+
+        <xs:element name="remove">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:documentation>Removes the item from the configuration element list.</xs:documentation>
+            </xs:annotation>
+            <xs:attribute name="name" use="required" type="xs:string">
+              <xs:annotation>
+                <xs:documentation>The unique name of the configuration element.</xs:documentation>
+              </xs:annotation>
+            </xs:attribute>
+          </xs:complexType>
+        </xs:element>
+
+        <xs:element name="clear">
+          <xs:complexType>
+            <!--tag is empty-->
+            <xs:annotation>
+              <xs:documentation>Clears the configuration element list.</xs:documentation>
+            </xs:annotation>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Footloose.Configuration.CredentialConfigurationElement">
+    <xs:sequence>
+      <xs:any minOccurs="0" processContents="lax" />
+    </xs:sequence>
+    <xs:attribute name="name" use="required" type="xs:string">
+      <xs:annotation>
+        <xs:documentation>The unique name of the configuration element.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="userName" use="required" type="xs:string">
+      <xs:annotation>
+        <xs:documentation>The user name associated with the credentials.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="password" use="required" type="xs:string">
+      <xs:annotation>
+        <xs:documentation>The password associated with the credentials.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="domain" use="required" type="xs:string">
+      <xs:annotation>
+        <xs:documentation>The domain associated with the credentials.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+
+  <xs:complexType name="Footloose.Configuration.TransportChannelConfigurationElementCollection">
+    <xs:sequence>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="add" minOccurs="1" maxOccurs="unbounded" type="tns:Footloose.Configuration.TransportChannelConfigurationElementBase">
+          <xs:annotation>
+            <xs:documentation>The transport channel configuration element.</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+
+        <xs:element name="remove">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:documentation>Removes the item from the configuration element list.</xs:documentation>
+            </xs:annotation>
+            <xs:attribute name="name" use="required" type="xs:string">
+              <xs:annotation>
+                <xs:documentation>The unique name of the configuration element.</xs:documentation>
+              </xs:annotation>
+            </xs:attribute>
+          </xs:complexType>
+        </xs:element>
+
+        <xs:element name="clear">
+          <xs:complexType>
+            <!--tag is empty-->
+            <xs:annotation>
+              <xs:documentation>Clears the configuration element list.</xs:documentation>
+            </xs:annotation>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Footloose.Configuration.TransportChannelConfigurationElementBase">
+    <xs:sequence>
+      <xs:any minOccurs="0" processContents="lax" />
+    </xs:sequence>
+    <xs:attribute name="name" use="required" type="xs:string">
+      <xs:annotation>
+        <xs:documentation>The unique name of the configuration element.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="type" use="required" type="xs:string">
+      <xs:annotation>
+        <xs:documentation>The type of the transport channel.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="timeout" use="optional" type="xs:int">
+      <xs:annotation>
+        <xs:documentation>The length of time, in milliseconds, before a request times out.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="maxMessageBodyLength" use="optional" type="xs:int">
+      <xs:annotation>
+        <xs:documentation>The maximum length of the message body. The serializised message body must not exceed the specified maximum message body lenght; otherwise it'll be strip down into several smaller chunks and send separately.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="priority" use="optional" type="xs:integer">
+      <xs:annotation>
+        <xs:documentation>The priority for this endpoint. The value must be an integer between -128 and +127. Default is 10.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:anyAttribute processContents="skip" />
+  </xs:complexType>
+
+  <!-- Footloose.Configuration.IpcTransportChannelConfigurationElement -->
+  <xs:complexType name="Footloose.Configuration.IpcTransportChannelConfigurationElement">
+    <xs:sequence>
+    </xs:sequence>
+    <xs:attribute name="name" use="required" type="xs:string">
+      <xs:annotation>
+        <xs:documentation>The unique name of the configuration element.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="type" use="required" type="xs:string">
+      <xs:annotation>
+        <xs:documentation>The type of the transport channel.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="remotingConfigFile" use="optional" type="xs:string">
+      <xs:annotation>
+        <xs:documentation>The remoting configuration file name. This shouldn't be necessary if you don't want to use the .NET remoting HTTP or TCP channels.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+
+  <!-- Footloose.Configuration.XmppTransportChannelConfigurationElement -->
+  <xs:complexType name="Footloose.Configuration.XmppTransportChannelConfigurationElement">
+    <xs:sequence>
+    </xs:sequence>
+    <xs:attribute name="name" use="required" type="xs:string">
+      <xs:annotation>
+        <xs:documentation>The unique name of the configuration element.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="type" use="required" type="xs:string">
+      <xs:annotation>
+        <xs:documentation>The type of the transport channel.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="credentials" use="required" type="xs:string">
+      <xs:annotation>
+        <xs:documentation>The key of the credentios to use.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="connectionType" use="optional">
+      <xs:annotation>
+        <xs:documentation>The XMPP connection type to the remote XMPP server. Default is TCP.</xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:restriction base="xs:NMTOKEN">
+          <xs:enumeration value="Tcp" />
+          <xs:enumeration value="Bosh" />
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="serverAddress" use="optional" type="xs:string">
+      <xs:annotation>
+        <xs:documentation>The XMPP server to connect. Use this setting for XMPP servers without SRV records or as Uri for BOSH connections.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="port" use="optional" type="xs:integer">
+      <xs:annotation>
+        <xs:documentation>The XMPP server port to connect. Default is 5222.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="autoResolveServerAddress" use="optional" type="xs:boolean">
+      <xs:annotation>
+        <xs:documentation>Enable auto resolve of the XMPP server address via SRV DNS Records. Default is on.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="useCompression" use="optional" type="xs:boolean">
+      <xs:annotation>
+        <xs:documentation>Enables the use of XMPP stream compression to save bandwidth. Default is off.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="useTls" use="optional" type="xs:boolean">
+      <xs:annotation>
+        <xs:documentation>Enables the use of Start-TLS for TLS XMPP stream encryption and compression. Default is on.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="useSingleSignOn" use="optional" type="xs:boolean">
+      <xs:annotation>
+        <xs:documentation>Enables the use of Single Sign On (SSO). Default is off.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+
+  <!-- Footloose.Configuration.SecurityConfigurationSection -->
+  <xs:complexType name="Footloose.Configuration.SecurityConfigurationSection">
+    <xs:sequence>
+      <xs:element minOccurs="1" name="authorizationProvider" type="tns:Footloose.Configuration.AuthorizationProviderConfigurationElementCollection">
+        <xs:annotation>
+          <xs:documentation>The list of authorization provider.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="defaultAuthorizationProvider" use="optional" type="xs:string">
+      <xs:annotation>
+        <xs:documentation>The name of the default authorization provider.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+
+  <xs:complexType name="Footloose.Configuration.AuthorizationProviderConfigurationElementCollection">
+    <xs:sequence>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="add" minOccurs="1" maxOccurs="unbounded" type="tns:Footloose.Configuration.AuthorizationProviderConfigurationElementBase">
+          <xs:annotation>
+            <xs:documentation>The authorization provider configuration element.</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+
+        <xs:element name="remove">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:documentation>Removes the item from the configuration element list.</xs:documentation>
+            </xs:annotation>
+            <xs:attribute name="name" use="required" type="xs:string">
+              <xs:annotation>
+                <xs:documentation>The unique name of the configuration element.</xs:documentation>
+              </xs:annotation>
+            </xs:attribute>
+          </xs:complexType>
+        </xs:element>
+
+        <xs:element name="clear">
+          <xs:complexType>
+            <!--tag is empty-->
+            <xs:annotation>
+              <xs:documentation>Clears the configuration element list.</xs:documentation>
+            </xs:annotation>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Footloose.Configuration.AuthorizationProviderConfigurationElementBase">
+    <xs:sequence>
+      <xs:any minOccurs="0" processContents="lax" />
+    </xs:sequence>
+    <xs:attribute name="name" use="required" type="xs:string">
+      <xs:annotation>
+        <xs:documentation>The unique name of the configuration element.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="type" use="required" type="xs:string">
+      <xs:annotation>
+        <xs:documentation>The type of the authorization provider.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:anyAttribute processContents="skip" />
+  </xs:complexType>
+
+  <!-- Footloose.Configuration.ServiceContractConfigurationSection -->
+  <xs:complexType name="Footloose.Configuration.ServiceContractConfigurationSection">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="types" type="tns:Footloose.Configuration.ServiceContractConfigurationElementCollection">
+        <xs:annotation>
+          <xs:documentation>The list of service contracts.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Footloose.Configuration.ServiceContractConfigurationElementCollection">
+    <xs:sequence>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element minOccurs="0" maxOccurs="unbounded" name="add" type="tns:Footloose.Configuration.ServiceContractConfigurationElement">
+          <xs:annotation>
+            <xs:documentation>The service contracts configuration element.</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+
+        <xs:element name="remove">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:documentation>Removes the item from the configuration element list.</xs:documentation>
+            </xs:annotation>
+            <xs:attribute name="name" use="required" type="xs:string">
+              <xs:annotation>
+                <xs:documentation>The unique name of the configuration element.</xs:documentation>
+              </xs:annotation>
+            </xs:attribute>
+          </xs:complexType>
+        </xs:element>
+
+        <xs:element name="clear">
+          <xs:complexType>
+            <!--tag is empty-->
+            <xs:annotation>
+              <xs:documentation>Clears the configuration element list.</xs:documentation>
+            </xs:annotation>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Footloose.Configuration.ServiceContractConfigurationElement">
+    <xs:sequence>
+      <xs:any minOccurs="0" processContents="lax" />
+    </xs:sequence>
+    <xs:attribute name="type" use="required" type="xs:string">
+      <xs:annotation>
+        <xs:documentation>The type of the service contract.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+
+  <!-- Footloose.Configuration.SerializerConfigurationSection -->
+  <xs:complexType name="Footloose.Configuration.SerializerConfigurationSection">
+    <xs:sequence>
+      <xs:element minOccurs="1" name="types" type="tns:Footloose.Configuration.SerializerConfigurationElementCollection">
+        <xs:annotation>
+          <xs:documentation>The list of serializers.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="defaultSerializer" use="required" type="xs:string">
+      <xs:annotation>
+        <xs:documentation>The name of the default serializer.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+
+  <xs:complexType name="Footloose.Configuration.SerializerConfigurationElementCollection">
+    <xs:sequence>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element minOccurs="1" maxOccurs="unbounded" name="add" type="tns:Footloose.Configuration.SerializerConfigurationElement">
+          <xs:annotation>
+            <xs:documentation>The serializer configuration element.</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+
+        <xs:element name="remove">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:documentation>Removes the item from the configuration element list.</xs:documentation>
+            </xs:annotation>
+            <xs:attribute name="name" use="required" type="xs:string">
+              <xs:annotation>
+                <xs:documentation>The unique name of the configuration element.</xs:documentation>
+              </xs:annotation>
+            </xs:attribute>
+          </xs:complexType>
+        </xs:element>
+
+        <xs:element name="clear">
+          <xs:complexType>
+            <!--tag is empty-->
+            <xs:annotation>
+              <xs:documentation>Clears the configuration element list.</xs:documentation>
+            </xs:annotation>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Footloose.Configuration.SerializerConfigurationElement">
+    <xs:sequence>
+      <xs:any minOccurs="0" processContents="lax" />
+    </xs:sequence>
+    <xs:attribute name="name" use="required" type="xs:string">
+      <xs:annotation>
+        <xs:documentation>The unique name of the configuration element.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="type" use="required" type="xs:string">
+      <xs:annotation>
+        <xs:documentation>The type of the serializer.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+
+
+</xs:schema>
