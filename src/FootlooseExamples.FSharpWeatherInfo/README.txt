@@ -2,7 +2,7 @@ Footloose F# Example
 
 1.) Description
 
-This example shows how to use Footloose with F#. It is a clone of the C# WeatherInfo Example by Steffen Forkmann.
+This example shows how to use Footloose with F#. It is a clone of the C# WeatherInfo example by Steffen Forkmann (see http://www.navision-blog.de/2012/12/11/using-footloose-from-fsharp-part-i/)
 
 
 2.) How to build?
