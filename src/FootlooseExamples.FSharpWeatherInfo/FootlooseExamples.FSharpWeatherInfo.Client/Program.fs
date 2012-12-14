@@ -15,7 +15,7 @@ let openConnection() =
         Fluently.Configure()
             .SerializerOfType<Serialization.BinarySerializer>()
             .TransportChannel(Configuration.Fluent.IpcTransportChannelConfiguration.Standard)
-            .CreateFootlooseConnection(new IO.FileInfo("Footloose.lic"))            
+            .CreateConnection(new IO.FileInfo("Footloose.lic"))            
 
     connection.ExceptionOccurred.Add (fun eventArgs -> printf "Exception occurred: %A" eventArgs.Exception)
     connection.Open()

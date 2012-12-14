@@ -12,7 +12,7 @@ let main argv =
             .ServiceLocator(new ServiceLocatorDummy())
             .ServiceContracts(fun contracts -> contracts.ServiceContract.RegisterOfType<IWeatherInfoService>() |> ignore)
             .TransportChannel(Configuration.Fluent.IpcTransportChannelConfiguration.Standard.EndpointIdentifier("footloose-weatherinfoservice"))
-            .CreateFootlooseConnection(new IO.FileInfo("Footloose.lic"))
+            .CreateConnection(new IO.FileInfo("Footloose.lic"))
     
     connection.ExceptionOccurred.Add (fun eventArgs -> printf "Exception occurred: %A" eventArgs.Exception)
 
