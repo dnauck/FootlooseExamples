@@ -28,7 +28,7 @@ namespace FootlooseExamples.Config.Fluent
                         .EndpointIdentifier("MyServiceIdentifier")
                         .TimeOut(5000)
                 )
-                .CreateFootlooseConnection(licenseFile);
+                .CreateConnection(licenseFile);
 
             footlooseConnection.ConnectionStateChanged +=
                 (sender, eventArgs) =>
