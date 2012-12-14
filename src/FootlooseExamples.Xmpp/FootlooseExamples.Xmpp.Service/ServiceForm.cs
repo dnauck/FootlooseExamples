@@ -21,7 +21,7 @@ namespace FootlooseExamples.Xmpp.Service
     {
         private static readonly FileInfo licenseFile = new FileInfo("Footloose.lic");
 
-        private IFootlooseConnection footlooseConnection;
+        private IConnection footlooseConnection;
 
         public ServiceForm()
         {
@@ -84,7 +84,7 @@ namespace FootlooseExamples.Xmpp.Service
                 EndpointIdentityView.Clear();
         }
 
-        private static IFootlooseConnection SetupFootlooseConnection(NetworkCredential credentials, string serverAddress, int priority, string endpointIdentifier)
+        private static IConnection SetupFootlooseConnection(NetworkCredential credentials, string serverAddress, int priority, string endpointIdentifier)
         {
             var footlooseInstance = Fluently.Configure()
                 .SerializerOfType<Footloose.Serialization.BinarySerializer>()
@@ -102,7 +102,7 @@ namespace FootlooseExamples.Xmpp.Service
                                       }
                 )
                 .TransportChannel(() => SetupFootlooseTransportChannel(credentials, serverAddress, priority, endpointIdentifier))
-                .CreateFootlooseConnection(licenseFile);
+                .CreateConnection(licenseFile);
 
             return footlooseInstance;
         }

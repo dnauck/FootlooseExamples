@@ -22,7 +22,7 @@ namespace FootlooseExamples.Xmpp.Client
     {
         private static readonly FileInfo licenseFile = new FileInfo("Footloose.lic");
 
-        private IFootlooseConnection footlooseConnection;
+        private IConnection footlooseConnection;
 
         public ClientForm()
         {
@@ -84,13 +84,13 @@ namespace FootlooseExamples.Xmpp.Client
             ServiceUriTextBox.Enabled = (!UseServiceDiscoCheckBox.Checked && connected);
         }
 
-        private static IFootlooseConnection SetupFootlooseConnection(NetworkCredential credentials, string serverAddress, int priority, string endpointIdentifier)
+        private static IConnection SetupFootlooseConnection(NetworkCredential credentials, string serverAddress, int priority, string endpointIdentifier)
         {
             var footlooseInstance = Fluently.Configure()
                 .SerializerOfType<Footloose.Serialization.BinarySerializer>()
                 .ServiceLocator(new ServiceLocatorDummy())
                 .TransportChannel(() => SetupFootlooseTransportChannel(credentials, serverAddress, priority, endpointIdentifier))
-                .CreateFootlooseConnection(licenseFile);
+                .CreateConnection(licenseFile);
 
             return footlooseInstance;
         }
@@ -167,14 +167,14 @@ namespace FootlooseExamples.Xmpp.Client
 
             if(UseServiceDiscoCheckBox.Checked)
             {
-                footlooseConnection.Invoke<Northwind.CustomersDataTable, IDataSetNorthwindRepository>(
+                footlooseConnection.Invoke<IDataSetNorthwindRepository, Northwind.CustomersDataTable>(
                     s => s.GetCustomers(), FillDataGrid);
             }
             else
             {
                 var serviceUri = new Uri(ServiceUriTextBox.Text);
 
-                footlooseConnection.Invoke<Northwind.CustomersDataTable, IDataSetNorthwindRepository>(
+                footlooseConnection.Invoke<IDataSetNorthwindRepository, Northwind.CustomersDataTable>(
                     s => s.GetCustomers(), FillDataGrid, serviceUri);
             }
         }
