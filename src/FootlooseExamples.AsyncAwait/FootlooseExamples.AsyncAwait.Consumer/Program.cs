@@ -14,7 +14,7 @@ namespace FootlooseExamples.AsyncAwait.Consumer
             using (var footlooseConnection = Footloose.Fluently.Configure()
                 .SerializerOfType<Footloose.Serialization.TextSerializer>()
                 .TransportChannel(Footloose.Configuration.Fluent.IpcTransportChannelConfiguration.Standard)
-                .CreateFootlooseConnection(licenseFile))
+                .CreateConnection(licenseFile))
             {
 
                 footlooseConnection.ExceptionOccurred +=
@@ -38,7 +38,7 @@ namespace FootlooseExamples.AsyncAwait.Consumer
             }
         }
 
-        private static async void DoAsync(Footloose.IFootlooseConnection footlooseConnection)
+        private static async void DoAsync(Footloose.IConnection footlooseConnection)
         {
             // generate uri of the WeatherInfo Service
             var userName = Environment.UserName;
@@ -52,7 +52,7 @@ namespace FootlooseExamples.AsyncAwait.Consumer
             var requestDto1 = new RequestDto() { InputValue = 1 };
             var result =
                 await footlooseConnection
-                          .Invoke<ResponseDto, IServiceContract>(service => service.HandleRequest(requestDto1),
+                          .Invoke<IServiceContract, ResponseDto>(service => service.HandleRequest(requestDto1),
                                                                  cs.Token,
                                                                  serviceUri);
 
@@ -61,7 +61,7 @@ namespace FootlooseExamples.AsyncAwait.Consumer
             var requestDto2 = new RequestDto() { InputValue = 2 };
             var result2 =
                 await footlooseConnection
-                          .Invoke<ResponseDto, IServiceContract>(service => service.HandleRequest(requestDto2),
+                          .Invoke<IServiceContract, ResponseDto>(service => service.HandleRequest(requestDto2),
                                                                  cs.Token,
                                                                  serviceUri);
 

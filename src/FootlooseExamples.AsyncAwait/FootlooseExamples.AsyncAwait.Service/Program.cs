@@ -22,7 +22,7 @@ namespace FootlooseExamples.AsyncAwait.Service
                     Footloose.Configuration.Fluent.IpcTransportChannelConfiguration.Standard
                         .EndpointIdentifier("footloose-asyncawaitservice")
                 )
-                .CreateFootlooseConnection(licenseFile))
+                .CreateConnection(licenseFile))
             {
 
                 footlooseConnection.ExceptionOccurred +=
