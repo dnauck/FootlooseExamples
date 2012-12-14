@@ -15,7 +15,7 @@ namespace FootlooseExamples.WeatherInfo.Client
                                                       .TransportChannel(
                                                           Footloose.Configuration.Fluent
                                                                    .IpcTransportChannelConfiguration.Standard)
-                                                      .CreateFootlooseConnection(licenseFile))
+                                                      .CreateConnection(licenseFile))
             {
 
                 footlooseConnection.ExceptionOccurred +=

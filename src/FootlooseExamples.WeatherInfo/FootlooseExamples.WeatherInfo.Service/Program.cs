@@ -20,7 +20,7 @@ namespace FootlooseExamples.WeatherInfo.Service
                     Footloose.Configuration.Fluent.IpcTransportChannelConfiguration.Standard
                         .EndpointIdentifier("footloose-weatherinfoservice")
                 )
-                .CreateFootlooseConnection(licenseFile))
+                .CreateConnection(licenseFile))
             {
 
                 footlooseConnection.ExceptionOccurred +=
