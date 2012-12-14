@@ -9,8 +9,9 @@
     <OutputType>Library</OutputType>
     <RootNamespace>FootlooseExamples.FSharpWeatherInfo.Shared</RootNamespace>
     <AssemblyName>FootlooseExamples.FSharpWeatherInfo.Shared</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <Name>FootlooseExamples.FSharpWeatherInfo.Shared</Name>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
