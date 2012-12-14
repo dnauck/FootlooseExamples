@@ -35,7 +35,7 @@ namespace FootlooseExamples.Cancellation.Service
             Console.WriteLine("Exception occurred: " + e.Exception);
         }
 
-        private static IFootlooseConnection ConfigureFootlooseConnection(ServiceLocatorDummy serviceLocator, string endpointIdentifier)
+        private static IConnection ConfigureFootlooseConnection(ServiceLocatorDummy serviceLocator, string endpointIdentifier)
         {
             var footloose = Fluently.Configure()
                 .SerializerOfType<Footloose.Serialization.TextSerializer>()
@@ -45,7 +45,7 @@ namespace FootlooseExamples.Cancellation.Service
                                       .EndpointIdentifier(endpointIdentifier) // Uri will be "ipc://user@mashineName/<EndpointIdentifier>"
                                       .TimeOut(5000)
                 )
-                .CreateFootlooseConnection(licenseFile);
+                .CreateConnection(licenseFile);
 
             return footloose;
         }

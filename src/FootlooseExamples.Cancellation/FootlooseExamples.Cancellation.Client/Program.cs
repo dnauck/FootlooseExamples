@@ -38,7 +38,7 @@ namespace FootlooseExamples.Cancellation.Client
                                                                              serviceEndpointIdentifier);
             var cts = new CancellationTokenSource();
 
-            var methodCallTask = footlooseConnection.Invoke<string, ISimpleService>(s => s.DoIt(), cts.Token,
+            var methodCallTask = footlooseConnection.Invoke<ISimpleService, string>(s => s.DoIt(), cts.Token,
                                                                                         serviceUri);
 
             Console.WriteLine("Called method 'DoIt' of 'ISimpleService' on '" + serviceUri + "'. CorrelationId is '" +
@@ -73,7 +73,7 @@ namespace FootlooseExamples.Cancellation.Client
             Console.WriteLine("Exception occurred: " + e.Exception);
         }
 
-        private static IFootlooseConnection ConfigureFootlooseConnection(string endpointIdentifier)
+        private static IConnection ConfigureFootlooseConnection(string endpointIdentifier)
         {
             var footloose = Fluently.Configure()
                 .SerializerOfType<Footloose.Serialization.TextSerializer>()
@@ -81,7 +81,7 @@ namespace FootlooseExamples.Cancellation.Client
                                       .EndpointIdentifier(endpointIdentifier) // Uri will be "ipc://user@mashineName/<EndpointIdentifier>"
                                       .TimeOut(5000)
                 )
-                .CreateFootlooseConnection(licenseFile);
+                .CreateConnection(licenseFile);
 
             return footloose;
         }
