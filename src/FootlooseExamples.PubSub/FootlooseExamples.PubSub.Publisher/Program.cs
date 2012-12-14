@@ -58,7 +58,7 @@ namespace FootlooseExamples.PubSub.Publisher
             }
         }
 
-        private static IFootlooseConnection ConfigureConnection()
+        private static IConnection ConfigureConnection()
         {
             return Fluently.Configure()
                            .SerializerOfType<Footloose.Serialization.BinarySerializer>()
@@ -68,7 +68,7 @@ namespace FootlooseExamples.PubSub.Publisher
                            .TransportChannel(Footloose.Configuration.Fluent.XmppTransportChannelConfiguration.Standard
                                                       .EndpointIdentifier("Publisher-" + Guid.NewGuid().ToString().Substring(0, 5))
                                                       .Credentials(xmppLoginData))
-                           .CreateFootlooseConnection(licenseFile);
+                           .CreateConnection(licenseFile);
         }
     }
 }

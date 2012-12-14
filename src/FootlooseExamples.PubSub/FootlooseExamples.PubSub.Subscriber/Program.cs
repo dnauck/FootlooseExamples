@@ -44,7 +44,7 @@ namespace FootlooseExamples.PubSub.Subscriber
             }
         }
 
-        private static IFootlooseConnection ConfigureConnection()
+        private static IConnection ConfigureConnection()
         {
             return Fluently.Configure()
                            .ServiceLocator(new ServiceLocatorDummy())
@@ -52,7 +52,7 @@ namespace FootlooseExamples.PubSub.Subscriber
                            .TransportChannel(Footloose.Configuration.Fluent.XmppTransportChannelConfiguration.Standard
                                                       .EndpointIdentifier("Subscriber-" + Guid.NewGuid().ToString().Substring(0, 5))
                                                       .Credentials(xmppLoginData))
-                           .CreateFootlooseConnection(licenseFile);
+                           .CreateConnection(licenseFile);
         }
     }
 }

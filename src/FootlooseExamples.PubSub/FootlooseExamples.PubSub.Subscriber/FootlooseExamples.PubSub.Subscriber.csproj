@@ -34,13 +34,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Footloose, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Footloose, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\packages\Footloose.2.1.0-alpha1\lib\net40\Footloose.dll</HintPath>
+      <HintPath>..\..\..\packages\Footloose.3.0.0-alpha4\lib\net40\Footloose.dll</HintPath>
     </Reference>
-    <Reference Include="Footloose.Xmpp, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Footloose.Xmpp, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\packages\Footloose.Xmpp.2.1.0-alpha1\lib\net40\Footloose.Xmpp.dll</HintPath>
+      <HintPath>..\..\..\packages\Footloose.Xmpp.3.0.0-alpha4\lib\net40\Footloose.Xmpp.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
