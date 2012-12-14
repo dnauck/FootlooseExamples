@@ -37,7 +37,7 @@ namespace FootlooseExamples.Quickstart.Client
             var serviceUri = footlooseConnection.UriBuilder.BuildEndpointUri(userName, mashineName,
                                                                              serviceEndpointIdentifier);
 
-            var methodCallId = footlooseConnection.Invoke<ISimpleService>(service => service.DoIt(), serviceUri);
+            var methodCallId = footlooseConnection.Invoke<ISimpleService, string>(service => service.DoIt(), serviceUri);
             Console.WriteLine("Called method 'DoIt' of 'ISimpleService' on '" + serviceUri + "'. CorrelationId is '" +
                               methodCallId + "'.");
 
@@ -49,7 +49,7 @@ namespace FootlooseExamples.Quickstart.Client
             Console.WriteLine("Press Enter to start second run...");
             Console.ReadLine();
 
-            methodCallId = footlooseConnection.Invoke<string, ISimpleService>(
+            methodCallId = footlooseConnection.Invoke<ISimpleService, string>(
                             serice => serice.DoIt("Argument 1", "Argument 2"),
                             response => Console.WriteLine("=======" +
                                                         Environment.NewLine +
@@ -84,7 +84,7 @@ namespace FootlooseExamples.Quickstart.Client
             Console.WriteLine("Exception occured: " + e.Exception);
         }
 
-        private static IFootlooseConnection ConfigureFootlooseConnection(ServiceLocatorDummy serviceLocator, string endpointIdentifier)
+        private static IConnection ConfigureFootlooseConnection(ServiceLocatorDummy serviceLocator, string endpointIdentifier)
         {
             var footloose = Fluently.Configure()
                 .SerializerOfType<Footloose.Serialization.TextSerializer>()
@@ -93,7 +93,7 @@ namespace FootlooseExamples.Quickstart.Client
                                       .EndpointIdentifier(endpointIdentifier) // Uri will be "ipc://user@host/<endpointIdentifier>"
                                       .TimeOut(5000)
                 )
-                .CreateFootlooseConnection(licenseFile);
+                .CreateConnection(licenseFile);
 
             return footloose;
         }
