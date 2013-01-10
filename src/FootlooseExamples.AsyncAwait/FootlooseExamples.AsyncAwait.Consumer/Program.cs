@@ -24,7 +24,7 @@ namespace FootlooseExamples.AsyncAwait.Consumer
 
                 Console.WriteLine("Footloose started...");
                 Console.WriteLine("Uri of this endpoint is: " +
-                                  footlooseConnection.EndpointIdentityManager.SelfEndpointIdentity.Uri);
+                                  footlooseConnection.EndpointIdentityManager.SelfEndpointIdentity.LocalEndpoint.Uri);
                 Console.WriteLine("Press Enter to start...");
                 Console.ReadLine();
 

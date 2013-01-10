@@ -31,7 +31,7 @@ namespace FootlooseExamples.AsyncAwait.Service
                 footlooseConnection.Open();
 
                 Console.WriteLine("Footloose Connection is now listening on: {0}",
-                                  footlooseConnection.EndpointIdentityManager.SelfEndpointIdentity.Uri);
+                                  footlooseConnection.EndpointIdentityManager.SelfEndpointIdentity.LocalEndpoint.Uri);
 
                 Console.WriteLine("Press ENTER to exit...");
                 Console.ReadLine();
