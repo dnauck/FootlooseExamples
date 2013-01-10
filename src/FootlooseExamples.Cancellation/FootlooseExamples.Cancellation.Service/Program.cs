@@ -24,7 +24,7 @@ namespace FootlooseExamples.Cancellation.Service
             // wait for incoming method calls
             footlooseConnection.Open();
             Console.WriteLine("Footloose started... [Press Enter to exit]");
-            Console.WriteLine("Uri of this endpoint is: " + footlooseConnection.EndpointIdentityManager.SelfEndpointIdentity.Uri);
+            Console.WriteLine("Uri of this endpoint is: " + footlooseConnection.EndpointIdentityManager.SelfEndpointIdentity.LocalEndpoint.Uri);
             Console.ReadLine();
             footlooseConnection.Close();
             footlooseConnection.Dispose();
@@ -38,13 +38,13 @@ namespace FootlooseExamples.Cancellation.Service
         private static IConnection ConfigureFootlooseConnection(ServiceLocatorDummy serviceLocator, string endpointIdentifier)
         {
             var footloose = Fluently.Configure()
-                .SerializerOfType<Footloose.Serialization.TextSerializer>()
-                .ServiceLocator(serviceLocator)
-                .ServiceContracts(contracts => contracts.ServiceContract.RegisterOfType<ISimpleService>())
-                .TransportChannel(Footloose.Configuration.Fluent.IpcTransportChannelConfiguration.Standard
-                                      .EndpointIdentifier(endpointIdentifier) // Uri will be "ipc://user@mashineName/<EndpointIdentifier>"
-                                      .TimeOut(5000)
+                .UseSerializerOfType<Footloose.Serialization.TextSerializer>()
+                .UseServiceLocator(serviceLocator)
+                .WithServiceContracts(contracts => contracts.WithServiceContract.RegisterOfType<ISimpleService>())
+                .UseTransportChannel(Footloose.Configuration.Fluent.IpcTransportChannelConfiguration.Standard
+                                      .WithTimeOut(5000)
                 )
+                .WithEndpointIdentifier(endpointIdentifier) // Uri will be "ipc://user@mashineName/<EndpointIdentifier>"
                 .CreateConnection(licenseFile);
 
             return footloose;

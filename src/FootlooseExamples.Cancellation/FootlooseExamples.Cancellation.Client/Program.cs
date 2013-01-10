@@ -25,7 +25,7 @@ namespace FootlooseExamples.Cancellation.Client
             footlooseConnection.Open();
             Console.WriteLine("Footloose started...");
             Console.WriteLine("Uri of this endpoint is: " +
-                              footlooseConnection.EndpointIdentityManager.SelfEndpointIdentity.Uri);
+                              footlooseConnection.EndpointIdentityManager.SelfEndpointIdentity.LocalEndpoint.Uri);
 
             // let try to call a method of ISimpleService on the service with event
             Console.WriteLine("Press Enter to start...");
@@ -76,11 +76,11 @@ namespace FootlooseExamples.Cancellation.Client
         private static IConnection ConfigureFootlooseConnection(string endpointIdentifier)
         {
             var footloose = Fluently.Configure()
-                .SerializerOfType<Footloose.Serialization.TextSerializer>()
-                .TransportChannel(Footloose.Configuration.Fluent.IpcTransportChannelConfiguration.Standard
-                                      .EndpointIdentifier(endpointIdentifier) // Uri will be "ipc://user@mashineName/<EndpointIdentifier>"
-                                      .TimeOut(5000)
+                .UseSerializerOfType<Footloose.Serialization.TextSerializer>()
+                .UseTransportChannel(Footloose.Configuration.Fluent.IpcTransportChannelConfiguration.Standard
+                                      .WithTimeOut(5000)
                 )
+                .WithEndpointIdentifier(endpointIdentifier) // Uri will be "ipc://user@mashineName/<EndpointIdentifier>"
                 .CreateConnection(licenseFile);
 
             return footloose;
