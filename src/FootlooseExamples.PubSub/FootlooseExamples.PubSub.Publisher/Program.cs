@@ -61,13 +61,13 @@ namespace FootlooseExamples.PubSub.Publisher
         private static IConnection ConfigureConnection()
         {
             return Fluently.Configure()
-                           .SerializerOfType<Footloose.Serialization.BinarySerializer>()
-                           .ServiceContracts(
-                               s => s.ServiceContract.RegisterOfType<Footloose.PublishSubscribe.IPublishEventsOfType<FootlooseExamples.PubSub.Events.TextMessage>>()
+                           .UseSerializerOfType<Footloose.Serialization.BinarySerializer>()
+                           .WithServiceContracts(
+                               s => s.WithServiceContract.RegisterOfType<Footloose.PublishSubscribe.IPublishEventsOfType<FootlooseExamples.PubSub.Events.TextMessage>>()
                             )
-                           .TransportChannel(Footloose.Configuration.Fluent.XmppTransportChannelConfiguration.Standard
-                                                      .EndpointIdentifier("Publisher-" + Guid.NewGuid().ToString().Substring(0, 5))
-                                                      .Credentials(xmppLoginData))
+                           .UseTransportChannel(Footloose.Configuration.Fluent.XmppTransportChannelConfiguration.Standard
+                                .UseCredential(xmppLoginData))
+                           .WithEndpointIdentifier("Publisher-" + Guid.NewGuid().ToString().Substring(0, 5))
                            .CreateConnection(licenseFile);
         }
     }

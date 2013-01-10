@@ -47,11 +47,11 @@ namespace FootlooseExamples.PubSub.Subscriber
         private static IConnection ConfigureConnection()
         {
             return Fluently.Configure()
-                           .ServiceLocator(new ServiceLocatorDummy())
-                           .SerializerOfType<Footloose.Serialization.BinarySerializer>()
-                           .TransportChannel(Footloose.Configuration.Fluent.XmppTransportChannelConfiguration.Standard
-                                                      .EndpointIdentifier("Subscriber-" + Guid.NewGuid().ToString().Substring(0, 5))
-                                                      .Credentials(xmppLoginData))
+                           .UseServiceLocator(new ServiceLocatorDummy())
+                           .UseSerializerOfType<Footloose.Serialization.BinarySerializer>()
+                           .UseTransportChannel(Footloose.Configuration.Fluent.XmppTransportChannelConfiguration.Standard
+                                                      .UseCredential(xmppLoginData))
+                           .WithEndpointIdentifier("Subscriber-" + Guid.NewGuid().ToString().Substring(0, 5))
                            .CreateConnection(licenseFile);
         }
     }
