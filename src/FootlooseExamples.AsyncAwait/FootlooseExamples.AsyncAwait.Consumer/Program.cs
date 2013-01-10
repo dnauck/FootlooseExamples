@@ -12,8 +12,8 @@ namespace FootlooseExamples.AsyncAwait.Consumer
         private static void Main(string[] args)
         {
             using (var footlooseConnection = Footloose.Fluently.Configure()
-                .SerializerOfType<Footloose.Serialization.TextSerializer>()
-                .TransportChannel(Footloose.Configuration.Fluent.IpcTransportChannelConfiguration.Standard)
+                .UseSerializerOfType<Footloose.Serialization.TextSerializer>()
+                .UseTransportChannel(Footloose.Configuration.Fluent.IpcTransportChannelConfiguration.Standard)
                 .CreateConnection(licenseFile))
             {
 

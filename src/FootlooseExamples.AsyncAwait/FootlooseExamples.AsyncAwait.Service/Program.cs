@@ -15,13 +15,13 @@ namespace FootlooseExamples.AsyncAwait.Service
             var serviceLocator = new ServiceLocatorDummy();
 
             using (var footlooseConnection = Footloose.Fluently.Configure()
-                .SerializerOfType<Footloose.Serialization.TextSerializer>()
-                .ServiceLocator(serviceLocator)
-                .ServiceContracts(contracts => contracts.ServiceContract.RegisterOfType<IServiceContract>())
-                .TransportChannel(
+                .UseSerializerOfType<Footloose.Serialization.TextSerializer>()
+                .UseServiceLocator(serviceLocator)
+                .WithServiceContracts(contracts => contracts.WithServiceContract.RegisterOfType<IServiceContract>())
+                .UseTransportChannel(
                     Footloose.Configuration.Fluent.IpcTransportChannelConfiguration.Standard
-                        .EndpointIdentifier("footloose-asyncawaitservice")
                 )
+                .WithEndpointIdentifier("footloose-asyncawaitservice")
                 .CreateConnection(licenseFile))
             {
 
