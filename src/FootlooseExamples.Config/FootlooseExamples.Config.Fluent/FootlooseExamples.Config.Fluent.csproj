@@ -107,9 +107,6 @@
       <Link>Footloose.lic</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="FootlooseConfigurationSchema.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="NLog.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
