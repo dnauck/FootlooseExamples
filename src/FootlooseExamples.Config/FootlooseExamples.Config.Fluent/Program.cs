@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
 using Microsoft.Practices.ServiceLocation;
 
 namespace FootlooseExamples.Config.Fluent
@@ -17,17 +14,17 @@ namespace FootlooseExamples.Config.Fluent
         {
             // create FootlooseConnection instance from fluent config API
             var footlooseConnection = Footloose.Fluently.Configure()
-                .ServiceLocator(serviceLocator)
-                .SerializerOfType<Footloose.Serialization.TextSerializer>()
-                .ServiceContracts(
-                    contracts => contracts.AutoServiceContract.RegisterFromAssemblyOf<FootlooseExamples.Config.Fluent.Program>()
+                .UseServiceLocator(serviceLocator)
+                .UseSerializerOfType<Footloose.Serialization.TextSerializer>()
+                .WithServiceContracts(
+                    contracts => contracts.WithAutoServiceContract.RegisterFromAssemblyOf<FootlooseExamples.Config.Fluent.Program>()
                         .Where(types => types.Namespace.EndsWith("Contracts"))
                 )
-                .TransportChannel(
+                .UseTransportChannel(
                     Footloose.Configuration.Fluent.IpcTransportChannelConfiguration.Standard
-                        .EndpointIdentifier("MyServiceIdentifier")
-                        .TimeOut(5000)
+                        .WithTimeOut(5000)
                 )
+                .WithEndpointIdentifier("MyServiceIdentifier")
                 .CreateConnection(licenseFile);
 
             footlooseConnection.ConnectionStateChanged +=

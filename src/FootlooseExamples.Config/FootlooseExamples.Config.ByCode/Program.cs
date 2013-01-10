@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
 using Footloose.Configuration;
 using Microsoft.Practices.ServiceLocation;
 
@@ -17,46 +14,20 @@ namespace FootlooseExamples.Config.ByCode
         static void Main(string[] args)
         {
             // create configuration instance
-            var footlooseConfig = Footloose.Configuration.FootlooseConfigurationSectionGroup.GetConfiguration();
+            var footlooseConfig = new Footloose.Configuration.FootlooseConfiguration();
+
+            footlooseConfig.EndpointIdentifier = "MyServiceIdentifier";
 
             // configure serializer
-            var serializerConfig = new SerializerConfigurationElement()
-                                       {
-                                           Name = "MyTextSerializer",
-                                           Type = typeof (Footloose.Serialization.TextSerializer).AssemblyQualifiedName
-                                       };
-
-            footlooseConfig.Serializer.DefaultSerializer = "MyTextSerializer";
-            footlooseConfig.Serializer.Types.Clear();
-            footlooseConfig.Serializer.Types.Add(serializerConfig);
+            footlooseConfig.Serializer = typeof (Footloose.Serialization.TextSerializer);
 
             
             // configure service contracts that should be exposed to other services
-            var serviceContractConfig1 = new ServiceContractConfigurationElement()
-                                             {
-                                                 Type = typeof (FootlooseExamples.Config.ByCode.Contracts.IService1).AssemblyQualifiedName
-                                             };
-
-            var serviceContractConfig2 = new ServiceContractConfigurationElement()
-                                             {
-                                                 Type = typeof (FootlooseExamples.Config.ByCode.Contracts.IService1).AssemblyQualifiedName
-                                             };
-
-            footlooseConfig.ServiceContracts.Types.Add(serviceContractConfig1);
-            footlooseConfig.ServiceContracts.Types.Add(serviceContractConfig2);
-
+            footlooseConfig.ServiceContracts.Add(typeof (FootlooseExamples.Config.ByCode.Contracts.IService1));
+            footlooseConfig.ServiceContracts.Add(typeof (FootlooseExamples.Config.ByCode.Contracts.IService2));
 
             // configure transport channel
-            var transportChannelConfig = new IpcTransportChannelConfigurationElement()
-                                             {
-                                                 Name = "MyTransportChannel",
-                                                 Type = typeof (Footloose.TransportChannels.Ipc.IpcTransportChannel).AssemblyQualifiedName
-                                             };
-
-            footlooseConfig.TransportChannel.DefaultTransportChannel = "MyTransportChannel";
-            footlooseConfig.TransportChannel.TransportChannels.Clear();
-            footlooseConfig.TransportChannel.TransportChannels.Add(transportChannelConfig);
-            footlooseConfig.TransportChannel.EndpointIdentifier = "MyServiceIdentifier";
+            footlooseConfig.TransportChannelConfiguration = new IpcTransportChannelConfiguration();
 
 
             // create FootlooseConnection instance from Configuration
