@@ -58,11 +58,10 @@
       <Link>Footloose.lic</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="FootlooseConfigurationSchema.xsd" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Footloose">
-      <HintPath>..\..\..\packages\Footloose.3.0.0-alpha4\lib\net40\Footloose.dll</HintPath>
+      <HintPath>..\..\..\packages\Footloose.3.0.0-beta4\lib\net40\Footloose.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="FSharpx.Core">

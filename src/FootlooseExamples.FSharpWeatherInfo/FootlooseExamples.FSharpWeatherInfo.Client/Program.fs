@@ -13,8 +13,8 @@ open Footloose.DataModel
 let openConnection() =
     let connection = 
         Fluently.Configure()
-            .SerializerOfType<Serialization.BinarySerializer>()
-            .TransportChannel(Configuration.Fluent.IpcTransportChannelConfiguration.Standard)
+            .UseSerializerOfType<Serialization.BinarySerializer>()
+            .UseTransportChannel(Configuration.Fluent.IpcTransportChannelConfiguration.Standard)
             .CreateConnection(new IO.FileInfo("Footloose.lic"))            
 
     connection.ExceptionOccurred.Add (fun eventArgs -> printf "Exception occurred: %A" eventArgs.Exception)

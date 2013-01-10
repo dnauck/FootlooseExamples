@@ -8,10 +8,11 @@ open Footloose
 let main argv =
     use connection = 
         Fluently.Configure()
-            .SerializerOfType<Serialization.BinarySerializer>()
-            .ServiceLocator(new ServiceLocatorDummy())
-            .ServiceContracts(fun contracts -> contracts.ServiceContract.RegisterOfType<IWeatherInfoService>() |> ignore)
-            .TransportChannel(Configuration.Fluent.IpcTransportChannelConfiguration.Standard.EndpointIdentifier("footloose-weatherinfoservice"))
+            .UseSerializerOfType<Serialization.BinarySerializer>()
+            .UseServiceLocator(new ServiceLocatorDummy())
+            .WithServiceContracts(fun contracts -> contracts.WithServiceContract.RegisterOfType<IWeatherInfoService>() |> ignore)
+            .UseTransportChannel(Configuration.Fluent.IpcTransportChannelConfiguration.Standard)
+            .WithEndpointIdentifier("footloose-weatherinfoservice")
             .CreateConnection(new IO.FileInfo("Footloose.lic"))
     
     connection.ExceptionOccurred.Add (fun eventArgs -> printf "Exception occurred: %A" eventArgs.Exception)
