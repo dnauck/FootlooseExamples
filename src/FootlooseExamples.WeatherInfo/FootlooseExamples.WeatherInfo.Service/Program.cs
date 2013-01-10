@@ -13,13 +13,13 @@ namespace FootlooseExamples.WeatherInfo.Service
             var serviceLocator = new ServiceLocatorDummy();
 
             using (var footlooseConnection = Footloose.Fluently.Configure()
-                .SerializerOfType<Footloose.Serialization.TextSerializer>()
-                .ServiceLocator(serviceLocator)
-                .ServiceContracts(contracts => contracts.ServiceContract.RegisterOfType<IWeatherInfoService>())
-                .TransportChannel(
+                .UseSerializerOfType<Footloose.Serialization.TextSerializer>()
+                .UseServiceLocator(serviceLocator)
+                .WithServiceContracts(contracts => contracts.WithServiceContract.RegisterOfType<IWeatherInfoService>())
+                .UseTransportChannel(
                     Footloose.Configuration.Fluent.IpcTransportChannelConfiguration.Standard
-                        .EndpointIdentifier("footloose-weatherinfoservice")
                 )
+                .WithEndpointIdentifier("footloose-weatherinfoservice")
                 .CreateConnection(licenseFile))
             {
 
@@ -29,7 +29,7 @@ namespace FootlooseExamples.WeatherInfo.Service
                 footlooseConnection.Open();
 
                 Console.WriteLine("Footloose Connection is now listening on: {0}",
-                                    footlooseConnection.EndpointIdentityManager.SelfEndpointIdentity.Uri);
+                                    footlooseConnection.EndpointIdentityManager.SelfEndpointIdentity.LocalEndpoint.Uri);
 
                 Console.WriteLine("Press ENTER to exit...");
                 Console.ReadLine();

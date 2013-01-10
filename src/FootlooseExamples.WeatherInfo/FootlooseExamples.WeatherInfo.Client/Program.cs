@@ -11,8 +11,8 @@ namespace FootlooseExamples.WeatherInfo.Client
         private static void Main(string[] args)
         {
             using (var footlooseConnection = Footloose.Fluently.Configure()
-                                                      .SerializerOfType<Footloose.Serialization.TextSerializer>()
-                                                      .TransportChannel(
+                                                      .UseSerializerOfType<Footloose.Serialization.TextSerializer>()
+                                                      .UseTransportChannel(
                                                           Footloose.Configuration.Fluent
                                                                    .IpcTransportChannelConfiguration.Standard)
                                                       .CreateConnection(licenseFile))
@@ -25,7 +25,7 @@ namespace FootlooseExamples.WeatherInfo.Client
 
                 Console.WriteLine("Footloose started...");
                 Console.WriteLine("Uri of this endpoint is: " +
-                                  footlooseConnection.EndpointIdentityManager.SelfEndpointIdentity.Uri);
+                                  footlooseConnection.EndpointIdentityManager.SelfEndpointIdentity.LocalEndpoint.Uri);
                 Console.WriteLine("Press Enter to start...");
                 Console.ReadLine();
 
