@@ -3,7 +3,7 @@ Footloose Configuration Example
 1.) Description
 
 This example shows how to confgure and create a FootlooseConnection instance
-with the .NET Configuration, e.g. the App.Config or by Code, and the Footloose fluent configuration API.
+with the .NET Configuration, e.g. by Code and the Footloose fluent configuration API.
 
 
 
