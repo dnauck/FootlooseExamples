@@ -25,7 +25,7 @@ namespace FootlooseExamples.Quickstart.Client
             // wait for incoming method calls
             footlooseConnection.Open();
             Console.WriteLine("Footloose started...");
-            Console.WriteLine("Uri of this endpoint is: " + footlooseConnection.EndpointIdentityManager.SelfEndpointIdentity.Uri);
+            Console.WriteLine("Uri of this endpoint is: " + footlooseConnection.EndpointIdentityManager.SelfEndpointIdentity.LocalEndpoint.Uri);
 
             // let try to call a method of ISimpleService on the service with event
             Console.WriteLine("Press Enter to start...");
@@ -87,12 +87,12 @@ namespace FootlooseExamples.Quickstart.Client
         private static IConnection ConfigureFootlooseConnection(ServiceLocatorDummy serviceLocator, string endpointIdentifier)
         {
             var footloose = Fluently.Configure()
-                .SerializerOfType<Footloose.Serialization.TextSerializer>()
-                .ServiceLocator(serviceLocator)
-                .TransportChannel(Footloose.Configuration.Fluent.IpcTransportChannelConfiguration.Standard
-                                      .EndpointIdentifier(endpointIdentifier) // Uri will be "ipc://user@host/<endpointIdentifier>"
-                                      .TimeOut(5000)
+                .UseSerializerOfType<Footloose.Serialization.TextSerializer>()
+                .UseServiceLocator(serviceLocator)
+                .UseTransportChannel(Footloose.Configuration.Fluent.IpcTransportChannelConfiguration.Standard
+                                      .WithTimeOut(5000)
                 )
+                .WithEndpointIdentifier(endpointIdentifier) // Uri will be "ipc://user@host/<endpointIdentifier>"
                 .CreateConnection(licenseFile);
 
             return footloose;

@@ -24,7 +24,7 @@ namespace FootlooseExamples.Quickstart.Service.Runner
             // wait for incoming method calls
             footlooseConnection.Open();
             Console.WriteLine("Footloose started... [Press Enter to exit]");
-            Console.WriteLine("Uri of this endpoint is: " + footlooseConnection.EndpointIdentityManager.SelfEndpointIdentity.Uri);
+            Console.WriteLine("Uri of this endpoint is: " + footlooseConnection.EndpointIdentityManager.SelfEndpointIdentity.LocalEndpoint.Uri);
             Console.ReadLine();
             footlooseConnection.Close();
             footlooseConnection.Dispose();
@@ -38,25 +38,25 @@ namespace FootlooseExamples.Quickstart.Service.Runner
         private static IConnection ConfigureFootlooseConnection(ServiceLocatorDummy serviceLocator, string endpointIdentifier)
         {
             var footloose = Fluently.Configure()
-                .SerializerOfType<Footloose.Serialization.TextSerializer>()
-                .ServiceLocator(serviceLocator)
-                .ServiceContracts(contracts =>
+                .UseSerializerOfType<Footloose.Serialization.TextSerializer>()
+                .UseServiceLocator(serviceLocator)
+                .WithServiceContracts(contracts =>
                 {
                     //single registration
-                    contracts.ServiceContract.RegisterOfType<ISimpleService>();
+                    contracts.WithServiceContract.RegisterOfType<ISimpleService>();
 
                     //other example; automatically register all public interfaces that are in the "*.Contracts" namespace
-                    contracts.AutoServiceContract.RegisterFromAssemblyOf<ISimpleService>().
+                    contracts.WithAutoServiceContract.RegisterFromAssemblyOf<ISimpleService>().
                         Where(
                             type =>
                             type.IsInterface &&
                             type.IsPublic &&
                             type.Namespace.EndsWith("Contracts"));
                 })
-                .TransportChannel(Footloose.Configuration.Fluent.IpcTransportChannelConfiguration.Standard
-                                      .EndpointIdentifier(endpointIdentifier) // Uri will be "ipc://user@host/<endpointIdentifier>"
-                                      .TimeOut(5000)
+                .UseTransportChannel(Footloose.Configuration.Fluent.IpcTransportChannelConfiguration.Standard
+                                      .WithTimeOut(5000)
                 )
+                .WithEndpointIdentifier(endpointIdentifier) // Uri will be "ipc://user@host/<endpointIdentifier>"
                 .CreateConnection(licenseFile);
 
             return footloose;

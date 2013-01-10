@@ -55,7 +55,7 @@
   <ItemGroup>
     <Reference Include="Footloose, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\packages\Footloose.3.0.0-alpha4\lib\net40\Footloose.dll</HintPath>
+      <HintPath>..\..\..\packages\Footloose.3.0.0-beta4\lib\net40\Footloose.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Practices.ServiceLocation">
       <HintPath>..\..\..\packages\CommonServiceLocator.1.0\lib\NET35\Microsoft.Practices.ServiceLocation.dll</HintPath>
@@ -108,9 +108,6 @@
     <None Include="..\..\..\Footloose.lic">
       <Link>Footloose.lic</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="FootlooseConfigurationSchema.xsd">
-      <SubType>Designer</SubType>
     </None>
     <None Include="NLog.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
