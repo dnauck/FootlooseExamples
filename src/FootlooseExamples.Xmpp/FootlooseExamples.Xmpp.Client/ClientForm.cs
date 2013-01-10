@@ -87,24 +87,24 @@ namespace FootlooseExamples.Xmpp.Client
         private static IConnection SetupFootlooseConnection(NetworkCredential credentials, string serverAddress, int priority, string endpointIdentifier)
         {
             var footlooseInstance = Fluently.Configure()
-                .SerializerOfType<Footloose.Serialization.BinarySerializer>()
-                .ServiceLocator(new ServiceLocatorDummy())
-                .TransportChannel(() => SetupFootlooseTransportChannel(credentials, serverAddress, priority, endpointIdentifier))
+                .UseSerializerOfType<Footloose.Serialization.BinarySerializer>()
+                .UseServiceLocator(new ServiceLocatorDummy())
+                .UseTransportChannel(() => SetupFootlooseTransportChannel(credentials, serverAddress))
+                .WithPriority(priority)
+                .WithEndpointIdentifier(endpointIdentifier)
                 .CreateConnection(licenseFile);
 
             return footlooseInstance;
         }
 
-        private static IFluentTransportChannelConfiguration SetupFootlooseTransportChannel(NetworkCredential credentials, string serverAddress, int priority, string endpointIdentifier)
+        private static IFluentTransportChannelConfiguration SetupFootlooseTransportChannel(NetworkCredential credentials, string serverAddress)
         {
             var transportChannelConfig = Footloose.Configuration.Fluent.XmppTransportChannelConfiguration.Standard
-                .ConnectionType(XmppConnectionType.Tcp)
+                .WithConnectionType(XmppConnectionType.Tcp)
                 .DoNot.UseCompression()
                 .UseTls()
-                .Credentials(credentials)
-                .Priority(priority)
-                .EndpointIdentifier(endpointIdentifier)
-                .MaxMessageBodyLength(20000);
+                .UseCredential(credentials)
+                .WithMaxMessageBodyLength(20000);
 
             if (string.IsNullOrEmpty(serverAddress))
             {
@@ -114,7 +114,7 @@ namespace FootlooseExamples.Xmpp.Client
             {
                 transportChannelConfig
                     .DoNot.AutoResolveServerAddress()
-                    .ServerAddress(serverAddress);
+                    .UseServerAddress(serverAddress);
             }
 
             return transportChannelConfig;
