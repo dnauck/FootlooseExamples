@@ -42,8 +42,7 @@ let main argv =
             printfn "Waiting for incoming result... "
             let! result =
                 connection.Invoke(
-                    <@ fun (service:IWeatherInfoService) -> service.HandleRequest { City = "Hamburg" } @>
-                    |> toLinqExpression,
+                    (fun (service:IWeatherInfoService) -> service.HandleRequest { City = "Hamburg" }),
                     cts.Token,
                     serviceUri)
 
